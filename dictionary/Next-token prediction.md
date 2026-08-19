@@ -1,15 +1,15 @@
 ---
-description: What the model actually does. Samples one next token from the context, appends it, and runs again. Its only mode of operation.
+description: کاری که مدل واقعاً انجام میدهد. از زمینه یک توکن بعدی نمونهبرداری میکند، آن را ضمیمه میکند و دوباره اجرا میشود. تنها حالت کارکردش همین است.
 ---
 
-What the [model](./Model.md) actually does. Given a [context](./Context.md), it samples one next [token](./Token.md), appends it, and runs again. Every output — a sentence, a [tool call](./Tool%20call.md), a thousand-line file — is built one token at a time. The model has no other mode of operation.
+کاری که [مدل](./Model.md) واقعاً انجام میدهد. با داشتن یک [زمینه](./Context.md)، یک [توکن](./Token.md) بعدی را نمونهبرداری میکند، آن را ضمیمه میکند و دوباره اجرا میشود. هر خروجی — یک جمله، یک [فراخوانی ابزار](./Tool%20call.md)، یک فایل هزارخطی — یکییکی ساخته میشود. مدل هیچ حالت کارکرد دیگری ندارد.
 
-Each step works the same way: the tokens in the [context window](./Context%20window.md) are run through the [parameters](./Parameters.md), which produce a probability for every token in the vocabulary — this one is very likely next, that one less so. One token is sampled from those probabilities, appended, and the loop runs again with the slightly longer context. That sampling step is why the same prompt produces different output on different runs: [non-determinism](./Non-determinism.md) is built into the mechanism, not a bug layered on top.
+هر مرحله به همین شکل کار میکند: توکنهای موجود در [پنجره زمینه](./Context%20window.md) از [پارامترها](./Parameters.md) عبور میکنند، که برای هر توکن واژگان یک احتمال تولید میکنند — این یکی خیلی محتمل است که بعدی باشد، آن یکی کمتر. یک توکن از آن احتمالها نمونهبرداری میشود، ضمیمه میشود و حلقه با زمینه کمی طولانیتر دوباره اجرا میشود. همین مرحله نمونهبرداری است که باعث میشود همان پرامپت در اجراهای مختلف خروجی متفاوتی تولید کند: [غیرقطعی بودن](./Non-determinism.md) در خود سازوکار تعبیه شده، نه یک باگ که روی آن سوار شده.
 
-Holding onto this mechanism explains behaviour that otherwise looks strange. The model never checks whether a token is _true_ before emitting it — only whether it's _likely_ — which is the root of [hallucination](./Hallucination.md). It commits to each token as it goes, so a confident-sounding opening sentence can steer the rest of the answer wrong. And because [output tokens](./Output%20tokens.md) are produced strictly one at a time, generation speed puts a floor on how fast any [agent](./Agent.md) can work.
+چسبیدن به این سازوکار رفتاری را توضیح میدهد که در غیر این صورت عجیب به نظر میرسد. مدل هرگز قبل از تولید یک توکن بررسی نمیکند که _درست_ است — فقط بررسی میکند که _محتمل_ است — و این ریشه [توهم](./Hallucination.md) است. مدل همانطور که پیش میرود به هر توکن متعهد میشود، پس یک جمله آغازین که مطمئن به نظر میرسد میتواند بقیه پاسخ را به بیراهه ببرد. و چون [توکنهای خروجی](./Output%20tokens.md) دقیقاً یکییکی تولید میشوند، سرعت تولید، حد بالای سرعتی است که هر [عامل](./Agent.md) میتواند با آن کار کند.
 
-_Usage:_
+_کاربرد:_
 
-"How does the agent 'decide' to call a tool?"
+«عامل چطور 'تصمیم میگیرد' که ابزاری را صدا بزند؟»
 
-"It doesn't — it's next-token prediction all the way down. The tool call is just a structured string the [harness](./Harness.md) parses out of the output stream."
+«نمیکند — تا تهش همهچیز پیشبینی توکن بعدی است. فراخوانی ابزار فقط یک رشته ساختاریافته است که [بستر اجرایی](./Harness.md) از جریان خروجی بیرون میکشد.»

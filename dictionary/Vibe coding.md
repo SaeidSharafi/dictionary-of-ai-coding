@@ -1,21 +1,21 @@
 ---
-description: A working pattern where the user accepts the agent's code without human review. The diff is treated as opaque.
+description: الگوی کاری که در آن کاربر کد عامل را بدون بازبینی انسانی می‌پذیرد. دیف غیرشفاف فرض می‌شود.
 ---
 
-A working pattern where the user accepts the [agent](./Agent.md)'s code without [human review](./Human%20review.md). The diff is treated as opaque — what matters is whether the program behaves, not what's inside. [Automated review](./Automated%20review.md) and [automated checks](./Automated%20check.md) may still run; vibe coding is silent on both.
+الگوی کاری که در آن کاربر کد [عامل](./Agent.md) را بدون [بازبینی انسانی](./Human%20review.md) می‌پذیرد. دیف غیرشفاف فرض می‌شود — آنچه مهم است این است که برنامه رفتار درستی داشته باشد، نه اینکه داخلش چیست. [بازبینی خودکار](./Automated%20review.md) و [بررسی‌های خودکار](./Automated%20check.md) ممکن است همچنان اجرا شوند؛ ویب‌کدینگ درباره هیچ‌کدام نظر نمی‌دهد.
 
-The term comes from Andrej Karpathy, who [coined it in early 2025](https://x.com/karpathy/status/1886192184808149383): you "fully give in to the vibes" and "forget that the code even exists" — describe what you want, accept what comes back, and judge it by running it.
+این اصطلاح از Andrej Karpathy می‌آید که [اوایل 2025 آن را ساخت](https://x.com/karpathy/status/1886192184808149383): «'کاملاً تسلیم vibes می‌شوید'» و «'فراموش می‌کنید کد اصلاً وجود دارد'» — چیزی را که می‌خواهید توصیف کنید، آنچه برمی‌گردد را بپذیرید، و با اجرا کردنش قضاوتش کنید.
 
-Vibe coding trades inspection for speed. Reading diffs is usually the slowest step in agent-driven work, so dropping it removes the main bottleneck. For code whose failures are cheap — [prototypes](./Prototyping.md), one-off scripts, internal tools — that's a reasonable trade. The risk scales with the code's lifespan and stakes.
+ویب‌کدینگ بازرسی را با سرعت عوض می‌کند. خواندن دیف‌ها معمولاً کندترین قدم کارِ عامل‌محور است، پس حذفش گلوگاه اصلی را برمی‌دارد. برای کدی که شکست‌هایش ارزان‌اند — [نمونه‌سازی اولیه](./Prototyping.md)، اسکریپت‌های یک‌باره، ابزارهای داخلی — این معامله معقولی است. ریسک با عمر و اهمیت کد رشد می‌کند.
 
-The cost arrives later. Vibe-coded changes accumulate into a codebase nobody has read, and behaviour was the only thing checked — so anything behaviour doesn't surface, like a secret written to logs, a missing edge case, or quietly wrong data handling, ships unseen. The first time someone debugs the system is the first time anyone reads the code. With human review gone, whatever automated verification still runs — tests, types, automated review — is the only gate the code passes through.
+هزینه‌اش بعداً می‌رسد. تغییرهای ویب‌کدینگ‌شده در پایگاه کدی انباشته می‌شوند که هیچ‌کس نخوانده، و رفتار تنها چیزی بوده که بررسی شده — پس هر چیزی که رفتار بروزش نمی‌دهد، مثل یک راز که در لاگ‌ها نوشته شده، حالت مرزی از قلم افتاده، یا پردازش دادهِ آرام و غلط، بدون دیده شدن تحویل می‌شود. اولین بار که کسی سیستم را دیباگ می‌کند، اولین بار است که کسی کد را می‌خواند. با رفتن بازبینی انسانی، هر راستی‌آزمایی خودکاری که هنوز اجرا می‌شود — تست‌ها، نوع‌ها، بازبینی خودکار — تنها دروازه‌ای است که کد از آن عبور می‌کند.
 
-_Avoid:_ "vibe coding" as a synonym for "low-quality AI coding" — the term names the review stance, not the resulting code.
+_نبایدها:_ «'vibe coding'» به‌عنوان مترادف «'کدنویسی هوش مصنوعی کم‌کیفیت'» — این اصطلاح موضع بازبینی را نام‌گذاری می‌کند، نه کدِ حاصل را.
 
-_Usage:_
+_کاربرد:_
 
-"Did you read what it changed in the auth flow?"
+«خواندی چه چیزی را در جریان auth تغییر داده؟»
 
-"Vibe coded it — login still works, that's all I checked."
+«ویب‌کدینگ کردم — ورود هنوز کار می‌کند، فقط همین را چک کردم.»
 
-"Read the diff before you push, vibing on auth is how secrets leak into logs."
+«قبل از push دیف را بخوان، ویب کردن روی auth همین‌طوری است که رازها به لاگ‌ها نشت می‌کنند.»

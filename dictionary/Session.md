@@ -1,17 +1,17 @@
 ---
-description: One bounded run of interaction with an agent. Starts empty, accumulates, ends when cleared, closed, or compacted into a fresh session.
+description: یک دورِ محدود تعامل با عامل. خالی شروع می‌شود، انباشته می‌شود، و با پاک‌سازی، بسته شدن یا فشرده‌سازی به نشست تازه پایان می‌یابد.
 ---
 
-One bounded run of interaction with an [agent](./Agent.md). Starts empty, accumulates messages, [tool results](./Tool%20result.md), and files read, and ends when [cleared](./Clearing.md), closed, or [compacted](./Compaction.md) into a fresh session. The session is what _fills_ the [context window](./Context%20window.md): if the context window is the box, the session is the stuff slowly filling it up. Work too large for a single context window must be split across sessions.
+یک دورِ محدود تعامل با یک [عامل](./Agent.md). خالی شروع می‌شود، پیام‌ها، [نتیجه ابزارها](./Tool%20result.md) و فایل‌های خوانده‌شده را انباشته می‌کند، و وقتی [پاک‌سازی](./Clearing.md) شود، بسته شود یا به یک نشست تازه [فشرده‌سازی](./Compaction.md) شود پایان می‌یابد. نشست همان چیزی است که [پنجره زمینه](./Context%20window.md) را _پر_ می‌کند: اگر پنجره زمینه جعبه باشد، نشست محتوایی است که آرام‌آرام آن را پر می‌کند. کاری که از یک پنجره زمینه بزرگ‌تر است باید بین نشست‌ها تقسیم شود.
 
-The session's message history is the agent's working memory. The [model](./Model.md) is [stateless](./Stateless.md), so everything it appears to remember — what you asked for, what the tests said, what it decided three turns ago — is in the message history, re-sent with every [model provider request](./Model%20provider%20request.md). Whatever isn't in the session doesn't exist for the agent.
+تاریخچه پیام‌های نشست، حافظه کاری عامل است. [مدل](./Model.md) [بی‌وضعیت](./Stateless.md) است، پس هر چیزی که به نظر می‌رسد به خاطر می‌آورد — چه خواستید، تست‌ها چه گفتند، سه نوبت پیش چه تصمیمی گرفت — در تاریخچه پیام‌هاست و با هر [درخواست به ارائه‌دهنده مدل](./Model%20provider%20request.md) دوباره فرستاده می‌شود. هر چیزی که در نشست نباشد برای عامل وجود ندارد.
 
-That memory ends with the session. A new session starts from nothing: the agent that knew your codebase well at the end of yesterday's session knows none of it this morning. What survives is the [filesystem](./Filesystem.md) — files written during one session can be read by the next, which is what [handoffs](./Handoff.md), [memory systems](./Memory%20system.md), and [AGENTS.md](./AGENTS.md.md) rely on.
+این حافظه با نشست تمام می‌شود. نشست تازه از هیچ شروع می‌شود: عاملی که پایان نشست دیروز پایگاه کد شما را خوب می‌شناخت، امروز صبح هیچ‌کدامش را نمی‌شناسد. آنچه می‌ماند [سیستم فایل](./Filesystem.md) است — فایل‌هایی که در یک نشست نوشته می‌شوند را نشست بعدی می‌تواند بخواند، و [انتقال‌های زمینه](./Handoff.md)، [سیستم‌های حافظه](./Memory%20system.md) و [AGENTS.md](./AGENTS.md.md) به همین تکیه می‌کنند.
 
-You choose where a session ends. Everything in a session influences every later [turn](./Turn.md), so unrelated tasks done in one session leave residue that colours the next answer. One task per session keeps the context relevant; finishing a task is a natural point to clear.
+این شما هستید که انتخاب می‌کنید نشست کجا تمام شود. هر چیزی در نشست بر هر [نوبت](./Turn.md) بعدی اثر می‌گذارد، پس کارهای نامرتبطی که در یک نشست انجام می‌شوند باقی‌مانده‌ای بر جا می‌گذارند که پاسخ بعدی را رنگ می‌دهد. یک کار در هر نشست زمینه را مرتبط نگه می‌دارد؛ تمام کردن یک کار، نقطه طبیعی پاک‌سازی است.
 
-_Usage:_
+_کاربرد:_
 
-"How long can one session run before it falls apart?"
+«یک نشست چقدر می‌تواند ادامه پیدا کند قبل از اینکه از هم بپاشد؟»
 
-"Depends on the work — a focused refactor stays sharp longer than open-ended research. Once the session bloats, hand off or compact, don't push through."
+«بستگی به کار دارد — یک بازسازی متمرکز بیشتر از تحقیقِ باز تیز می‌ماند. وقتی نشست متورم شد، انتقال بده یا فشرده کن، به زور ادامه نده.»

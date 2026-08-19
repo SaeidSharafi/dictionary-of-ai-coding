@@ -1,21 +1,21 @@
 ---
-description: A mention in one document that points to another, so the agent can pull it into context only when the task calls for it.
+description: اشارهای در یک سند به سند دیگر، تا عامل بتواند آن را فقط وقتی کار ایجاب میکند وارد زمینه کند.
 ---
 
-A mention in one document that points to another, so the [agent](./Agent.md) can pull it into the [context window](./Context%20window.md) only when the task calls for it. The unit [progressive disclosure](./Progressive%20disclosure.md) is built from.
+اشارهای در یک سند به سند دیگر، تا [عامل](./Agent.md) بتواند آن را فقط وقتی کار ایجاب میکند وارد [پنجره زمینه](./Context%20window.md) کند. واحدی که [افشای تدریجی](./Progressive%20disclosure.md) از آن ساخته میشود.
 
-The reason to use a pointer (instead of inlining the content) is cost. A pointer is one line in the context window. The document behind it might be thousands of [tokens](./Token.md), but those tokens cost nothing until the agent actually follows the pointer. Inline a 2,000-token runbook in [AGENTS.md](./AGENTS.md.md) and every [session](./Session.md) pays for it; replace it with "deploy process: see `internal/deploy.md`" and only the sessions that deploy ever load it. The agent follows the pointer with a [tool call](./Tool%20call.md) when the task matches.
+دلیل استفاده از اشارهگر (بهجای درونخطی کردن محتوا) هزینه است. یک اشارهگر یک خط در پنجره زمینه است. سند پشتش شاید هزاران [توکن](./Token.md) باشد، اما آن توکنها تا وقتی عامل واقعاً از اشارهگر دنبال نکند هیچ هزینهای ندارند. یک runbook 2000 توکنی را در [AGENTS.md](./AGENTS.md.md) درونخطی کنید و هر [نشست](./Session.md) هزینهاش را میپردازد؛ بهجایش بنویسید «فرایند استقرار: به `internal/deploy.md` مراجعه کنید» و فقط نشستهایی که استقرار انجام میدهند آن را بارگذاری میکنند. عامل وقتی کار مطابقت داشته باشد با یک [فراخوانی ابزار](./Tool%20call.md) از اشارهگر دنبال میکند.
 
-A pointer needs two parts to work: a stable path, and enough description for the agent to know when following it is worth it. A bare path is a pointer the agent has no reason to follow; "see `internal/deploy.md`" with no hint of what's inside gets skipped by a session that needed it. Write the line so it matches how tasks present: "release, deploy, or rollback — read `internal/deploy.md` first".
+یک اشارهگر برای کار کردن به دو بخش نیاز دارد: یک مسیر پایدار، و توصیفی کافی تا عامل بداند چه زمانی دنبال کردنش ارزش دارد. یک مسیر لخت، اشارهگری است که عامل دلیلی برای دنبال کردن ندارد؛ «به `internal/deploy.md` مراجعه کنید» بدون هیچ نشانهای از داخلش، توسط نشستی که به آن نیاز داشته رد میشود. خط را طوری بنویسید که با شکل ارائه کارها مطابقت داشته باشد: «انتشار، استقرار یا بازگشت — اول `internal/deploy.md` را بخوانید».
 
-Pointers are everywhere once you look: lines in AGENTS.md, [skill](./Skill.md) descriptions (the harness loads the description; the skill body waits behind it), filenames in a directory listing, links between docs.
+اشارهگرها همهجا هستند، کافی است نگاه کنید: خطهایی در AGENTS.md، توصیفهای [مهارت](./Skill.md) (بستر اجرایی توصیف را بارگذاری میکند؛ بدنه مهارت پشت آن منتظر میماند)، نام فایلها در فهرست یک پوشه، پیوندهای بین سندها.
 
-A pointer can also tie a [secondary source](./Secondary%20source.md) back to the [primary source](./Primary%20source.md) it was derived from — the compaction summary that names the original transcript, the doc that names the source file it describes. This makes the secondary source's lossiness recoverable: when the summary turns out not to be enough, the agent follows the pointer and reads the original, instead of working from whatever the summary kept.
+یک اشارهگر میتواند [منبع ثانویه](./Secondary%20source.md) را هم به [منبع اولیه](./Primary%20source.md)ای که از آن مشتق شده پیوند بزند — خلاصه فشردهسازی که نام رونوشت اصلی را میبرد، سندی که نام فایلِ مبدأ را میبرد. این باعث میشود بااتلافیِ منبع ثانویه قابل بازیابی شود: وقتی خلاصه به اندازه کافی نباشد، عامل از اشارهگر دنبال میکند و اصل را میخواند، بهجای اینکه با هرچه خلاصه نگه داشته کار کند.
 
-_Avoid:_ "reference" — too dry; doesn't convey that following it pulls more context in. "Portal" — too florid.
+_نبایدها:_ «ارجاع» — خیلی خشک است؛ نمیرساند که دنبال کردنش زمینه بیشتری وارد میکند. «درگاه» — زیادی پرطمطراق.
 
-_Usage:_
+_کاربرد:_
 
-"AGENTS.md is getting huge."
+«AGENTS.md دارد خیلی بزرگ میشود.»
 
-"Most of it should be context pointers, not content. Keep the always-on rules inline; turn the deploy runbook and the style guide into skills and leave a context pointer behind."
+«بیشترش باید اشارهگر زمینه باشد، نه محتوا. قوانین همیشهروشن را درونخطی نگه دار؛ runbook استقرار و راهنمای سبک را مهارت کن و یک اشارهگر زمینه پشتش بگذار.»

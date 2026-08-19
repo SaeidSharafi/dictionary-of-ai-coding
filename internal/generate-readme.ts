@@ -16,7 +16,12 @@ const TOC_MARKER = "<!-- TOC -->";
 
 const SECTION_RE = /^## Section \d+ — .+$/;
 const BULLET_RE = /^- (.+)$/;
+// Link to another dictionary entry: [text](./Target.md). Target may be %20-encoded.
 const LINK_RE = /\[([^\]]+)\]\(\.\/([^)]+)\.md\)/g;
+// Any relative markdown link, to distinguish entry links from broken/non-entry ones.
+const ANY_RELATIVE_LINK_RE = /\[[^\]]+\]\(\.\/[^)]+\)/g;
+const FRONTMATTER_DESC_RE = /^description:\s*(.+)$/m;
+const DESCRIPTION_MAX = 140;
 
 type Section = { heading: string; terms: string[] };
 
@@ -27,9 +32,14 @@ function fail(msg: string): never {
 
 // Mirrors GitHub's heading slugger: lowercase, strip punctuation (keeping hyphens),
 // then replace spaces with hyphens. "Section 1 — Foundations" → "section-1--foundations".
+// Persian-safe: keeps \p{L} letters, drops zero-width chars (ZWNJ/ZWJ) and normalizes
+// Arabic yeh/kaf variants to Persian so anchors stay stable across editors.
 function headingSlug(heading: string): string {
   return heading
     .toLowerCase()
+    .replace(/\u064A/g, "\u06CC")
+    .replace(/\u0643/g, "\u06A9")
+    .replace(/[\u200C\u200D\u200E\u200F\u00AD]/g, "")
     .replace(/[^\p{L}\p{N} -]/gu, "")
     .replace(/ /g, "-");
 }
@@ -79,17 +89,47 @@ function parseCurriculum(text: string): Section[] {
   return sections;
 }
 
-function stripFrontmatter(body: string): string {
-  if (!body.startsWith("---\n")) return body;
+// Extracts frontmatter metadata and the body. Fails loudly on an unterminated
+// frontmatter block so a malformed entry is caught at build time instead of
+// silently emitting a truncated body (data loss).
+function parseFrontmatter(
+  body: string,
+  term: string
+): { description?: string; rest: string } {
+  if (!body.startsWith("---\n")) return { rest: body };
   const end = body.indexOf("\n---\n", 4);
-  if (end === -1) return body;
-  return body.slice(end + 5).replace(/^\n+/, "");
+  if (end === -1)
+    fail(`${term}.md: unterminated frontmatter (no closing "---" line)`);
+  const frontmatter = body.slice(4, end);
+  const descMatch = frontmatter.match(FRONTMATTER_DESC_RE);
+  return {
+    description: descMatch?.[1]?.trim(),
+    rest: body.slice(end + 5).replace(/^\n+/, ""),
+  };
 }
 
 function rewriteLinks(body: string): string {
   return body.replace(LINK_RE, (_, text: string, target: string) => {
     return `[${text}](#${headingSlug(decodeURIComponent(target))})`;
   });
+}
+
+// Every [text](./Target.md) must resolve to a real entry file, and any relative
+// link that is not an entry link (no .md) is an error — such links would break
+// in the generated README instead of rewriting to an anchor.
+function validateLinks(term: string, body: string, onDisk: Set<string>): void {
+  for (const m of body.matchAll(ANY_RELATIVE_LINK_RE)) {
+    const raw = m[0];
+    if (!/\.md\)$/.test(raw))
+      fail(
+        `${term}.md: relative link "${raw}" does not end in .md — use [text](./Entry.md) form`
+      );
+    const target = decodeURIComponent(
+      raw.match(/\.\/([^)]+)\.md\)/)?.[1] ?? ""
+    );
+    if (!onDisk.has(target))
+      fail(`${term}.md: links to "./${target}.md" which does not exist`);
+  }
 }
 
 function main(): void {
@@ -99,6 +139,12 @@ function main(): void {
     fail(`Template missing ${TOC_MARKER} marker`);
 
   const sections = parseCurriculum(readFileSync(CURRICULUM, "utf8"));
+
+  const onDisk = new Set(
+    readdirSync(DICT_DIR)
+      .filter((n) => n.endsWith(".md"))
+      .map((n) => n.slice(0, -3))
+  );
 
   const seen = new Set<string>();
   const parts: string[] = [];
@@ -116,20 +162,18 @@ function main(): void {
           `Curriculum.md references "${term}" but ${entryPath} does not exist`
         );
       }
-      parts.push(
-        `### ${term}`,
-        "",
-        rewriteLinks(stripFrontmatter(body).trimEnd()),
-        ""
-      );
+      const { description, rest } = parseFrontmatter(body, term);
+      if (description === undefined)
+        fail(`${term}.md: missing frontmatter "description" field`);
+      if (description.length > DESCRIPTION_MAX)
+        fail(
+          `${term}.md: description is ${description.length} chars, max ${DESCRIPTION_MAX}: ${description}`
+        );
+      validateLinks(term, rest, onDisk);
+      parts.push(`### ${term}`, "", rewriteLinks(rest.trimEnd()), "");
     }
   }
 
-  const onDisk = new Set(
-    readdirSync(DICT_DIR)
-      .filter((n) => n.endsWith(".md"))
-      .map((n) => n.slice(0, -3))
-  );
   const orphans = [...onDisk].filter((t) => !seen.has(t)).sort();
   if (orphans.length)
     fail(

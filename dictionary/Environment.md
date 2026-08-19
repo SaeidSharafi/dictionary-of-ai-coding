@@ -1,19 +1,19 @@
 ---
-description: The world the agent acts on — anything outside the harness that the agent perceives via tool results and changes via tool calls.
+description: دنیایی که عامل بر آن اثر می‌گذارد — هر چیزی بیرون از بستر اجرایی که عامل از طریق نتیجه ابزار درکش می‌کند و با فراخوانی ابزار تغییرش می‌دهد.
 ---
 
-The world the [agent](./Agent.md) acts on — anything outside the [harness](./Harness.md) that the agent perceives through [tool results](./Tool%20result.md) and changes through [tool calls](./Tool%20call.md). The harness _runs_ the agent; the environment is what the agent _works in_. A file like [`AGENTS.md`](./AGENTS.md.md) lives in the environment; the harness is what loads it into the [context window](./Context%20window.md). A [filesystem](./Filesystem.md) is the most common kind of environment, but not the only one (a database, a remote API, a browser session can all be environments).
+دنیایی که [عامل](./Agent.md) بر آن اثر می‌گذارد — هر چیزی بیرون از [بستر اجرایی](./Harness.md) که عامل از طریق [نتیجه ابزارها](./Tool%20result.md) درک می‌کند و با [فراخوانی‌های ابزار](./Tool%20call.md) تغییر می‌دهد. بستر اجرایی عامل را _اجرا_ می‌کند؛ محیط همان چیزی است که عامل _در آن کار می‌کند_. فایلی مثل [`AGENTS.md`](./AGENTS.md.md) در محیط زندگی می‌کند؛ بستر اجرایی همان چیزی است که آن را در [پنجره زمینه](./Context%20window.md) بارگذاری می‌کند. [سیستم فایل](./Filesystem.md) رایج‌ترین نوع محیط است، اما تنها نوع آن نیست (یک پایگاه داده، یک API راه دور، یک نشست مرورگر — همه می‌توانند محیط باشند).
 
-The agent only sees the environment when it looks. Everything it knows about the environment arrived through a tool result, so its picture is a collection of snapshots, each accurate at the moment it was taken. If a file changes after the agent read it — you edit it by hand, a build step regenerates it — the agent keeps reasoning from the stale copy until something prompts a re-read. An agent confidently describing a file that no longer looks like that is usually this: the environment moved, the snapshot didn't.
+عامل محیط را فقط وقتی می‌بیند که نگاه کند. هر چیزی که درباره محیط می‌داند از یک نتیجه ابزار رسیده، پس تصویرش مجموعه‌ای از عکس‌های فوری است که هرکدام در لحظه گرفته‌شدن دقیق‌اند. اگر فایلی بعد از خواندن توسط عامل تغییر کند — خودتان دستی ویرایشش کنید، یک مرحله بیلد دوباره تولیدش کند — عامل تا وقتی چیزی او را به خواندن دوباره ترغیب نکند از همان نسخه کهنه استدلال می‌کند. عاملی که با اطمینان فایلی را توصیف می‌کند که دیگر شبیه آن نیست، معمولاً همین است: محیط حرکت کرده، عکس فوری نه.
 
-The environment is also the layer that persists — the only one that is always [stateful](./Stateful.md). A [session](./Session.md)'s context is gone when the session ends, but files written to the environment remain for the next session to read — which is what [memory systems](./Memory%20system.md), [handoff artifacts](./Handoff%20artifact.md), and `AGENTS.md` rely on. Anything an agent should still know tomorrow has to end up in the environment.
+محیط همچنین لایه‌ای است که ماندگار می‌ماند — تنها لایه‌ای که همیشه [وضعیت‌دار](./Stateful.md) است. زمینه یک [نشست](./Session.md) با پایان نشست از بین می‌رود، اما فایل‌هایی که در محیط نوشته شده‌اند می‌مانند تا نشست بعدی بخواندشان — و [سیستم‌های حافظه](./Memory%20system.md)، [سندهای انتقال زمینه](./Handoff%20artifact.md) و `AGENTS.md` به همین تکیه می‌کنند. هر چیزی که عامل باید فردا هم بداند باید در محیط به پایان برسد.
 
-You decide how big the environment is. A [sandbox](./Sandbox.md) shrinks it, limiting what the agent can reach; adding a [tool](./Tool.md) extends it, bringing a database or an API into reach. What's inside the boundary is what the agent can perceive and change; everything outside it doesn't exist for the agent. How well the environment is set up to support the agent's work is the codebase's [AX](./AX.md).
+این شما هستید که تصمیم می‌گیرید محیط چقدر بزرگ باشد. یک [سندباکس](./Sandbox.md) آن را کوچک می‌کند و محدود می‌کند عامل به چه چیزهایی برسد؛ افزودن یک [ابزار](./Tool.md) آن را گسترش می‌دهد و یک پایگاه داده یا API را در دسترس می‌گذارد. آنچه داخل مرز است همان چیزی است که عامل می‌تواند درک و تغییر دهد؛ هر چیزی بیرون از آن برای عامل وجود ندارد. اینکه محیط چقدر خوب برای پشتیبانی از کار عامل آماده شده، [تجربه عامل](./AX.md) پایگاه کد است.
 
-_Avoid:_ using "environment" for the runtime or the harness itself — the harness is the wrapper, the environment is the workspace.
+_نبایدها:_ «به‌کار بردن 'environment' برای زمان اجرا یا خود بستر اجرایی — بستر اجرایی پوشش است، محیط فضای کار.»
 
-_Usage:_
+_کاربرد:_
 
-"The agent can't see the staging DB schema."
+«عامل شِما پایگاه داده staging را نمی‌بیند.»
 
-"Wire it into the environment — give it a `psql` tool scoped to read-only on staging. The harness is fine, it just has nothing to act on."
+«به محیط وصلش کن — یک ابزار `psql` به آن بده که در staging فقط خواندنی باشد. بستر اجرایی ایرادی ندارد، فقط چیزی برای اثرگذاشتن روی آن ندارد.»

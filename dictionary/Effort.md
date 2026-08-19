@@ -1,29 +1,29 @@
 ---
-description: A dial for how much reasoning the model does before it answers. More effort spends more output tokens for a better shot at hard problems.
+description: صفحهگردانی برای میزان استدلال مدل قبل از پاسخ. تلاش بیشتر، توکنهای خروجی بیشتری برای شانس بهتر در مسائل سخت خرج میکند.
 aliases:
   - Reasoning effort
   - Thinking effort
 ---
 
-Effort is a dial for how much reasoning a [model](./Model.md) does before it answers. Set per [model provider request](./Model%20provider%20request.md), it controls the length of the thinking the model works through before it starts writing the response you see. That thinking is generated at [inference](./Inference.md) time like everything else; the [harness](./Harness.md) often hides it, but it's real work the model is doing.
+تلاش یک صفحهگردان است برای میزان استدلالی که یک [مدل](./Model.md) قبل از پاسخ دادن انجام میدهد. این میزان به ازای هر [درخواست به ارائهدهنده مدل](./Model%20provider%20request.md) تنظیم میشود و طول تفکری را کنترل میکند که مدل قبل از شروع به نوشتن پاسخی که میبینید طی میکند. آن تفکر مثل هر چیز دیگر هنگام [استنتاج](./Inference.md) تولید میشود؛ [بستر اجرایی](./Harness.md) اغلب آن را پنهان میکند، اما کار واقعیای است که مدل انجام میدهد.
 
-Higher effort costs more and runs slower. The reasoning is emitted as [tokens](./Token.md), billed as [output tokens](./Output%20tokens.md) even when you never see them, and produced one token at a time — so turning effort up lengthens the wait before the answer arrives and adds to the bill. The trade is more deliberation against speed and cost.
+تلاش بیشتر هزینه بیشتری دارد و کندتر اجرا میشود. استدلال بهصورت [توکنهایی](./Token.md) تولید میشود، بهعنوان [توکنهای خروجی](./Output%20tokens.md) محاسبه میشود حتی وقتی هرگز نمیبینیدشان، و یکییکی تولید میشود — پس بالا بردن تلاش، انتظار قبل از رسیدن پاسخ را طولانیتر میکند و به صورتحساب اضافه میکند. معامله این است: تأمل بیشتر در برابر سرعت و هزینه.
 
-Most harnesses expose effort as a small ladder:
+بیشتر بسترهای اجرایی تلاش را بهصورت نردبان کوچکی عرضه میکنند:
 
-| Level  | What it's for                                                          |
-| ------ | ---------------------------------------------------------------------- |
-| Low    | Mechanical edits, lookups, well-specified changes with one clear path. |
-| Medium | Everyday coding — the usual default.                                   |
-| High   | Tricky bugs, design decisions, multi-step plans.                       |
-| Max    | The hardest problems, where a wrong answer is expensive to unwind.     |
+| سطح    | برای چه کاری است                                                   |
+| ------ | ------------------------------------------------------------------ |
+| کم     | ویرایشهای مکانیکی، جستوجوها، تغییرهای کاملاً مشخص با یک مسیر روشن. |
+| متوسط  | کدنویسی روزمره — پیشفرض معمول.                                     |
+| زیاد   | باگهای پیچیده، تصمیمهای طراحی، برنامههای چندمرحلهای.               |
+| حداکثر | سختترین مسائل، جایی که برگرداندن پاسخ اشتباه گران است.             |
 
-The symptom of getting it wrong cuts both ways. Set effort too low on a hard problem and you get a confident, shallow answer that skipped the reasoning the problem needed — it reads fine and is wrong in a way that costs you later. Set it to max for a one-line rename and you sit through a long think that produces nothing the lowest setting wouldn't have.
+نشانه اشتباه تنظیم کردن، دو روی دارد. اگر تلاش را روی مسئلهای سخت خیلی کم بگذاری، پاسخی مطمئن و سطحی میگیری که استدلال موردنیاز مسئله را رد کرده — خوب به نظر میرسد و به شکلی غلط است که بعداً برایت هزینه دارد. اگر برای یک تغییر نام تکیخطی روی حداکثر بگذاری، یک فکر طولانی را تحمل میکنی که چیزی تولید نمیکند که کمترین تنظیم تولید نمیکرد.
 
-Match effort to the task, not the [session](./Session.md). Turn it up for the part that's genuinely hard to reason about, and back down for the rote work around it.
+تلاش را با کار هماهنگ کن، نه با [نشست](./Session.md). برای بخشی که واقعاً استدلال دربارهاش سخت است بالا ببرش، و برای کار تکراری اطرافش پایین بیاورش.
 
-_Usage:_
+_کاربرد:_
 
-"It keeps botching this concurrency fix — I've re-explained it three times."
+«مدام این اصلاح همروندی را خراب میکند — سه بار دوباره توضیحش دادهام.»
 
-"Bump the effort up. That's a reasoning-heavy bug, and on the default setting it's not thinking long enough before it commits to an approach."
+«تلاش را بالا ببر. این یک باگ سنگین از نظر استدلالی است، و در تنظیم پیشفرض، قبل از اینکه به یک رویکرد متعهد شود به اندازه کافی فکر نمیکند.»

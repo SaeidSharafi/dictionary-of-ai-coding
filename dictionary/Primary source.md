@@ -1,17 +1,17 @@
 ---
-description: The thing itself — code, transcripts, raw data. Complete and authoritative, but expensive to load into context.
+description: خودِ چیز — کد، رونوشت گفتوگو، داده خام. کامل و معتبر، اما گران برای بارگذاری در زمینه.
 ---
 
-A source of truth in its original form — the code, the conversation transcript, the raw log, the actual API response. Not an account of the thing; the thing. Counterpart to [secondary source](./Secondary%20source.md).
+منبع حقیقت در شکل اصلیاش — کد، رونوشت گفتوگو، لاگ خام، پاسخ واقعی API. نه شرحِ آن چیز؛ خودِ آن چیز. در مقابل [منبع ثانویه](./Secondary%20source.md) قرار دارد.
 
-If you want to know what your codebase does, the code is the primary source. The docs, the architecture diagram, and the README are all descriptions of it — accurate when written, on their own schedule ever since. When an [agent](./Agent.md) confidently asserts something wrong about your project, the question to ask is which source it was working from: an agent that read a doc inherits the doc's staleness; an agent that read the code is reading the current truth.
+اگر میخواهید بدانید پایگاه کد شما چه کار میکند، کد همان منبع اولیه است. مستندات، نمودار معماری و README همگی توصیفی از آناند — در زمان نوشتن دقیق بودند، و از آن به بعد هر کدام با برنامه خودشان پیر شدهاند. وقتی [عاملی](./Agent.md) با اطمینان چیزی اشتباه درباره پروژه شما میگوید، سؤال این است که از کدام منبع کار میکرده: عاملی که یک سند را خوانده، کهنگی سند را به ارث برده؛ عاملی که کد را خوانده، حقیقتِ بهروز را میخواند.
 
-The cost is what keeps primary sources from being the default. Loading one into the [context window](./Context%20window.md) is expensive — the full file, the full transcript, every [token](./Token.md) billed as [input](./Input%20tokens.md) and competing for [attention budget](./Attention%20budget.md). What you get for the cost is completeness: nothing has been pre-filtered by someone else's judgement about what mattered. A summary written last month can't contain the detail that turned out to matter today; the primary source still does.
+هزینه، چیزی است که مانع پیشفرض بودن منبع اولیه میشود. بارگذاری یکی از آنها در [پنجره زمینه](./Context%20window.md) گران است — کل فایل، کل رونوشت، هر [توکن](./Token.md) که بهعنوان [ورودی](./Input%20tokens.md) حساب میشود و برای [بودجه توجه](./Attention%20budget.md) رقابت میکند. در برابر این هزینه، کامل بودن را میگیرید: هیچچیز از پیش توسط قضاوت دیگری درباره آنچه مهم بود فیلتر نشده. خلاصهای که ماه پیش نوشته شده نمیتواند جزئیاتی را داشته باشد که امروز مهم از آب درآمده؛ منبع اولیه هنوز داردش.
 
-Reach for the primary source when precision matters — the exact signature, the actual error, the line that throws. Much of managing [context](./Context.md) is deciding when to pay for the primary source and when a secondary source is good enough.
+وقتی دقت مهم است سراغ منبع اولیه بروید — امضای دقیق، خطای واقعی، خطی که خطا میدهد. بخش بزرگی از مدیریت [زمینه](./Context.md) تصمیمگیری درباره این است که چه زمانی هزینه منبع اولیه را بپردازیم و چه زمانی منبع ثانویه کافی است.
 
-_Usage:_
+_کاربرد:_
 
-"The agent says the retry logic backs off exponentially, but I'm watching it hammer the endpoint."
+«عامل میگوید منطق تلاش مجدد بهصورت نمایی عقبنشینی میکند، اما من دارم میبینم که نقطه پایانی را بمباران میکند.»
 
-"It read that out of the design doc. Point it at the actual retry module — work from the primary source when the behaviour matters."
+«این را از سند طراحی خوانده. بفرستش سراغ ماژول تلاش مجددِ واقعی — وقتی رفتار مهم است، از منبع اولیه کار کن.»

@@ -1,17 +1,17 @@
 ---
-description: A model harnessed with tools, a system prompt, and a context window, that takes turns with a user. The model in motion.
+description: مدلی که با ابزار، پرامپت سیستم و پنجره زمینه در بستر اجرایی قرار گرفته و با کاربر نوبت به نوبت گفت‌وگو می‌کند. مدل در حرکت.
 ---
 
-A [model](./Model.md) [harnessed](./Harness.md) with [tools](./Tool.md), a [system prompt](./System%20prompt.md), and a [context window](./Context%20window.md), that takes [turns](./Turn.md) with a user. _Claude Code is an agent. Cursor is an agent. Claude.ai is an agent._ An agent is what you actually talk to — it's the model in motion, configured for a purpose.
+[مدلی](./Model.md) که در [بستر اجرایی](./Harness.md) قرار گرفته، همراه با [ابزار](./Tool.md)، [پرامپت سیستم](./System%20prompt.md) و [پنجره زمینه](./Context%20window.md)، و با کاربر [نوبت‌ها](./Turn.md) را می‌گذراند. _Claude Code یک عامل است. Cursor یک عامل است. Claude.ai یک عامل است._ عامل همان چیزی است که در عمل با آن صحبت می‌کنید — مدل در حرکت، پیکربندی‌شده برای یک هدف.
 
-Unlike most terms in this dictionary, "agent" doesn't name a mechanical part. The model is a file of [parameters](./Parameters.md); the harness is software you can point at. The agent is neither — it's the unit you're speaking to. People anthropomorphize [AI](./AI.md) constantly, and the agent is the anthropomorphized unit: the thing you delegate to, the thing that reads your message and answers, the "it" in "it broke the build again". When you say the agent did something, you mean the model-plus-harness did it, but you're addressing the combination as a single actor.
+برخلاف بیشتر اصطلاح‌های این واژه‌نامه، «agent» نام یک جزء مکانیکی نیست. مدل فایلی از [پارامترها](./Parameters.md) است؛ بستر اجرایی نرم‌افزاری است که می‌توانید به آن اشاره کنید. عامل نه این است نه آن — واحدی است که با آن حرف می‌زنید. مردم مدام به [هوش مصنوعی](./AI.md) جنبه انسانی می‌دهند، و عامل همان واحدِ انسان‌انگاری‌شده است: چیزی که کار به آن می‌سپارید، چیزی که پیام شما را می‌خواند و پاسخ می‌دهد، همان «it» در «it broke the build again». وقتی می‌گویید عامل فلان کار را کرد، منظورتان این است که مدل به‌همراه بستر اجرایی آن را کرده، اما دارید این ترکیب را یک کنشگر واحد خطاب می‌کنید.
 
-The idea is older than this wave of AI. Software agents — programs you delegate a goal to, which act on your behalf — have been a concept for as long as AI has.
+این ایده از این موج هوش مصنوعی قدیمی‌تر است. عامل‌های نرم‌افزاری — برنامه‌هایی که هدفی را به آن‌ها می‌سپارید و از طرف شما عمل می‌کنند — به‌اندازه خود هوش مصنوعی مفهومی شناخته‌شده‌اند.
 
-_Avoid:_ "the AI", "the bot" (too vague — they hide whether you mean the parameters or the harnessed thing).
+_نبایدها:_ «'the AI'، 'the bot' — بیش از حد مبهم‌اند؛ پنهان می‌کنند که منظورتان پارامترهاست یا آن چیزی که در بستر اجرایی قرار گرفته.»
 
-_Usage:_
+_کاربرد:_
 
-"Which agent are you using for the migration?"
+«برای مهاجرت از کدام عامل استفاده می‌کنی؟»
 
-"Claude Code locally, Cursor for the UI work — same model underneath, different harnesses."
+«Claude Code به‌صورت محلی، Cursor برای کارهای UI — مدل زیرین یکسان است، بسترهای اجرایی متفاوت.»

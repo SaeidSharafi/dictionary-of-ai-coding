@@ -1,15 +1,15 @@
 ---
-description: A tree of files and directories the agent reads from, writes to, and executes within — the default environment for a coding agent.
+description: درختی از فایل‌ها و پوشه‌ها که عامل از آن می‌خواند، در آن می‌نویسد و در آن اجرا می‌کند — محیط پیش‌فرض یک عامل کدنویسی.
 ---
 
-A tree of files and directories the [agent](./Agent.md) reads from, writes to, and executes within — the default kind of [environment](./Environment.md) for a coding agent. [AGENTS.md](./AGENTS.md.md), [skills](./Skill.md), source code, build scripts, and [tool](./Tool.md) configs all live in a filesystem. When a [harness](./Harness.md) "starts in your project," it's pointing the agent at a filesystem.
+درختی از فایل‌ها و پوشه‌ها که [عامل](./Agent.md) از آن می‌خواند، در آن می‌نویسد و در آن اجرا می‌کند — نوع پیش‌فرض [محیط](./Environment.md) برای یک عامل کدنویسی. [AGENTS.md](./AGENTS.md.md)، [مهارت‌ها](./Skill.md)، کد منبع، اسکریپت‌های بیلد و تنظیمات [ابزار](./Tool.md) همه در یک سیستم فایل زندگی می‌کنند. وقتی یک [بستر اجرایی](./Harness.md) «در پروژه شما شروع می‌کند»، دارد عامل را به یک سیستم فایل اشاره می‌کند.
 
-The agent touches it only through [tool calls](./Tool%20call.md) — reading a file, writing one, running a shell command. Nothing on disk is in the [context window](./Context%20window.md) until a tool call loads it, which is what lets the agent work in a repository far larger than the window: the filesystem holds everything, the context holds only what the current task has read. Some harnesses do load the current directory's filenames into the context window by default — not the contents, just the tree — which act as [context pointers](./Context%20pointer.md): the agent sees what exists and reads the files it needs.
+عامل فقط از طریق [فراخوانی ابزار](./Tool%20call.md) به آن دست می‌زند — خواندن یک فایل، نوشتن یکی، اجرای یک فرمان شل. هیچ‌چیز روی دیسک در [پنجره زمینه](./Context%20window.md) نیست تا وقتی یک فراخوانی ابزار آن را بارگذاری کند، و همین به عامل اجازه می‌دهد در مخزنی بسیار بزرگ‌تر از پنجره کار کند: سیستم فایل همه‌چیز را نگه می‌دارد، زمینه فقط آنچه کارِ جاری خوانده را. بعضی بسترهای اجرایی به‌طور پیش‌فرض نام فایل‌های پوشه جاری را در پنجره زمینه بارگذاری می‌کنند — نه محتوا، فقط درخت — که به‌عنوان [اشاره‌گرهای زمینه](./Context%20pointer.md) عمل می‌کنند: عامل می‌بیند چه چیزی وجود دارد و فایل‌هایی را که نیاز دارد می‌خواند.
 
-And it's shared with you. The files the agent edits are the same ones you open in your editor and diff in git — the filesystem is the common workspace where you review what the agent did.
+و با شما مشترک است. فایل‌هایی که عامل ویرایش می‌کند همان‌هایی‌اند که شما در ویرایشگرتان باز می‌کنید و در git دیف می‌گیرید — سیستم فایل فضای کار مشترکی است که کار عامل را در آن بازبینی می‌کنید.
 
-_Usage:_
+_کاربرد:_
 
-"Why isn't it picking up my AGENTS.md?"
+«چرا AGENTS.md من را نمی‌خواند؟»
 
-"It's running against a different filesystem — the [sandbox](./Sandbox.md) mounted the parent dir, not the project root. Repoint the harness."
+«دارد روی یک سیستم فایل دیگر کار می‌کند — [سندباکس](./Sandbox.md) پوشه والد را سوار کرده، نه ریشه پروژه را. بستر اجرایی را دوباره اشاره بده.»

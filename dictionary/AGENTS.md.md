@@ -1,19 +1,19 @@
 ---
-description: A file in the environment that the harness loads into the context window at session start — the project's standing brief to the agent.
+description: فایلی در محیط که بستر اجرایی در شروع نشست آن را در پنجره زمینه بارگذاری میکند — دستورالعمل دائمی پروژه به عامل.
 ---
 
-A file in the [environment](./Environment.md) that the [harness](./Harness.md) loads into the [context window](./Context%20window.md) at [session](./Session.md) start — the project's standing brief to the [agent](./Agent.md). Cross-harness convention; some harnesses also have their own variant (Claude Code's is CLAUDE.md).
+فایلی در [محیط](./Environment.md) که [بستر اجرایی](./Harness.md) در شروع [نشست](./Session.md) آن را در [پنجره زمینه](./Context%20window.md) بارگذاری میکند — دستورالعمل دائمی پروژه به [عامل](./Agent.md). قراردادی مشترک بین بسترهای اجرایی؛ برخی بسترهای اجرایی نسخه خودشان را هم دارند (نسخه Claude Code همان CLAUDE.md است).
 
-Because it loads automatically, it's one way to avoid repeating yourself across sessions. The [model](./Model.md) is [stateless](./Stateless.md) — a correction you give in one session is gone in the next, and you end up telling every fresh session that the project uses pnpm, that tests run with a particular flag, that a directory is generated and shouldn't be touched. When you've corrected the agent for the same thing twice, that correction is a candidate line for AGENTS.md.
+چون خودکار بارگذاری میشود، یکی از راههای پرهیز از تکرار حرفهایتان در نشستهای مختلف است. [مدل](./Model.md) [بیوضعیت](./Stateless.md) است — تصحیحی که در یک نشست میدهید در نشست بعدی رفته است، و آخرش مجبورید به هر نشست تازه بگویید که پروژه از pnpm استفاده میکند، که تستها با یک پرچم خاص اجرا میشوند، که یک پوشه تولیدشده است و نباید دستش زد. وقتی دو بار برای یک چیز عامل را تصحیح کردهاید، آن تصحیح کاندیدای یک خط برای AGENTS.md است.
 
-Suitable content is whatever the agent can't derive from the code: build and test commands, conventions the codebase doesn't make obvious, hard constraints ("never edit the generated client"). Short and declarative — it's a brief, not documentation.
+محتوای مناسب، هر چیزی است که عامل نمیتواند از کد استخراج کند: فرمانهای ساخت و تست، قراردادهایی که پایگاه کد آشکار نمیکند، محدودیتهای سخت («هرگز کلاینت تولیدشده را ویرایش نکن»). کوتاه و اعلامی — این یک دستورالعمل کوتاه است، نه مستندات.
 
-The trade-off is that everything in it is always loaded. Instructions accumulate, most of them irrelevant to any given task, and a long AGENTS.md both costs tokens and dilutes itself — the more instructions in context, the less reliably the model follows any one of them.
+بدهبستانش این است که همهچیز داخلش همیشه بارگذاری میشود. دستورالعملها انباشته میشوند، بیشترشان برای هر کار مشخصی بیربطاند، و یک AGENTS.md بلند هم هزینه توکن دارد هم خودش را رقیق میکند — هرچه دستورالعمل در زمینه بیشتر باشد، مدل با قابلیت اطمینان کمتری از تکبهتکشان پیروی میکند.
 
-_Avoid:_ using AGENTS.md for content that should be [progressively disclosed](./Progressive%20disclosure.md) — anything in it pays a [token](./Token.md) cost every [turn](./Turn.md), in every session, whether or not that session needs it. A style guide can go behind a [skill](./Skill.md) or a [context pointer](./Context%20pointer.md) instead; keep AGENTS.md for the lines that apply everywhere.
+_نبایدها:_ از AGENTS.md برای محتوایی که باید [افشای تدریجی](./Progressive%20disclosure.md) شود استفاده نکنید — هر چیزی داخلش در هر [نوبت](./Turn.md)، در هر نشستی، هزینه [توکن](./Token.md) میپردازد، چه آن نشست به آن نیاز داشته باشد چه نه. راهنمای سبک میتواند پشت یک [مهارت](./Skill.md) یا یک [اشارهگر زمینه](./Context%20pointer.md) برود؛ AGENTS.md را برای خطهایی نگه دارید که همهجا کاربرد دارند.
 
-_Usage:_
+_کاربرد:_
 
-"Why is every session starting with 4k tokens already burned?"
+«چرا هر نشستی با 4 هزار توکن سوختهشده شروع میشود؟»
 
-"Check AGENTS.md — someone pasted the entire style guide in there instead of putting it behind a skill."
+«AGENTS.md را چک کن — یک نفر کل راهنمای سبک را آنجا چسبانده بهجای اینکه پشت یک مهارت بگذاردش.»

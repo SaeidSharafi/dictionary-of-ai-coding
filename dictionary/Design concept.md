@@ -1,15 +1,15 @@
 ---
-description: The shared understanding of what's being built, held in common between user and agent but separate from any asset.
+description: درک مشترک از چیزی که ساخته میشود، میان کاربر و عامل مشترک اما جدا از هر دارایی.
 ---
 
-The shared understanding of what's being built, held in common between user and [agent](./Agent.md) but separate from any asset. Brooks' term (_The Design of Design_): the conversation, [handoff artifacts](./Handoff%20artifact.md), and the code are all assets that try to capture or reach the design concept, but none of them _are_ it. Quality of the design concept is felt through the quality of the conversation that built it.
+درک مشترک از آنچه ساخته میشود، میان کاربر و [عامل](./Agent.md) مشترک است اما جدا از هر دارایی. اصطلاح Brooks است (_The Design of Design_): گفتوگو، [سندهای انتقال زمینه](./Handoff%20artifact.md) و کد همگی داراییهاییاند که میکوشند مفهوم طراحی را ثبت کنند یا به آن برسند، اما هیچکدام _خودِ آن_ نیستند. کیفیت مفهوم طراحی از کیفیت گفتوگویی که آن را ساخت حس میشود.
 
-The term names the gap behind a familiar frustration: the agent writes exactly what you asked for and it's still wrong. The usual cause is that you hadn't fully figured out what you wanted. The design concept wasn't finished in your own head — your prompt captured the parts you'd worked out, and was silent on the parts you hadn't. The agent filled those silences with its own assumptions, because there was nothing to align with. Nothing malfunctioned. There was no shared design concept, because there wasn't yet a whole one to share.
+این اصطلاح شکاف پشت یک ناکامی آشنا را نامگذاری میکند: عامل دقیقاً همان چیزی را مینویسد که خواستهاید و باز هم اشتباه است. علت معمول این است که هنوز کاملاً نفهمیده بودید چه میخواهید. مفهوم طراحی در ذهن خودتان کامل نشده بود — پرامپت شما بخشهایی را ثبت کرده بود که به آنها رسیده بودید و درباره بخشهایی که نرسیده بودید ساکت بود. عامل آن سکوتها را با فرضهای خودش پر کرد، چون چیزی برای همسو شدن با آن وجود نداشت. هیچچیز خراب نشده بود. مفهوم طراحی مشترکی وجود نداشت، چون هنوز مفهوم کاملی برای به اشتراک گذاشتن نبود.
 
-You can tell a design concept is shared the same way you can with a colleague: the other party starts answering questions you haven't asked yet the way you would. Until then, the work is conversation — [grilling](./Grilling.md) is the deliberate version — and writing a [spec](./Spec.md) too early just captures the misalignment in a more durable asset. The design concept also moves as you learn; assets lag it, which is why a spec faithful to last week's understanding can still mislead this week's session.
+میتوانید بفهمید مفهوم طراحی مشترک است، همانطور که با یک همکار میفهمید: طرف مقابل شروع میکند به پاسخ دادن به سؤالهایی که هنوز نپرسیدهاید، همانطور که شما پاسخ میدادید. تا آن زمان، کار گفتوگوست — [پرسشگری](./Grilling.md) نسخه عمدی آن است — و نوشتن زودهنگام [مشخصات](./Spec.md) فقط ناهماهنگی را در دارایی ماندگارتری ثبت میکند. مفهوم طراحی هم با یاد گرفتن شما حرکت میکند؛ داراییها از آن عقب میمانند، و به همین دلیل مشخصاتی که به فهم هفته گذشته وفادار است باز هم میتواند نشست این هفته را گمراه کند.
 
-_Usage:_
+_کاربرد:_
 
-"It's writing exactly what I asked for and it's still wrong."
+«دقیقاً همان چیزی را مینویسد که خواستهام و باز هم اشتباه است.»
 
-"You don't share a design concept yet — it's filling gaps with assumptions. Keep talking until cancellation, refunds, and partial fulfilment all line up between you before you let it write a spec."
+«هنوز مفهوم طراحی مشترکی ندارید — دارد شکافها را با فرض پر میکند. به حرف زدن ادامه بده تا لغو، بازپرداخت و اجرای جزئی همگی بین شما هماهنگ شوند، بعد بگذار مشخصات بنویسد.»

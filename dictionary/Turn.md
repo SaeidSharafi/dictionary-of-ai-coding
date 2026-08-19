@@ -1,15 +1,15 @@
 ---
-description: One user message plus everything the agent does in response, up until it yields back to the user. Contains one or more provider requests.
+description: یک پیام کاربر و هر کاری که عامل در پاسخ انجام می‌دهد، تا وقتی کنترل را به کاربر برمی‌گرداند. شامل یک یا چند درخواست به ارائه‌دهنده مدل است.
 ---
 
-One user message plus everything the [agent](./Agent.md) does in response, up until it yields back to the user. Contains one or more [model provider requests](./Model%20provider%20request.md) — many, if the agent calls [tools](./Tool.md). A clarifying question closes the turn; your reply opens the next one. The hierarchy is [session](./Session.md) **> Turn > Model provider request**.
+یک پیام کاربر به‌علاوه هر کاری که [عامل](./Agent.md) در پاسخ انجام می‌دهد، تا وقتی کنترل را به کاربر برمی‌گرداند. شامل یک یا چند [درخواست به ارائه‌دهنده مدل](./Model%20provider%20request.md) است — اگر عامل [ابزار](./Tool.md) فراخوانی کند، بسیاری. یک پرسش شفاف‌کننده نوبت را می‌بندد؛ پاسخ شما نوبت بعدی را باز می‌کند. سلسله‌مراتب این است: [نشست](./Session.md) **> نوبت > درخواست به ارائه‌دهنده مدل**.
 
-What makes the turn worth naming is that its length is the agent's decision, not yours. You hand over one message; the agent decides how many tool calls to chain before yielding. A turn can be a one-sentence answer or twenty minutes of reading, editing, and running tests. That's the same property from two angles: long turns are what make [AFK](./AFK.md) work possible, and long turns are also where things go wrong unsupervised — by the time the agent yields, it may have drifted a long way from what you meant.
+چیزی که نام‌گذاری نوبت را توجیه می‌کند این است که طول آن تصمیم عامل است، نه شما. شما یک پیام می‌دهید؛ عامل تصمیم می‌گیرد قبل از برگرداندن کنترل چند فراخوانی ابزار زنجیر کند. یک نوبت می‌تواند یک پاسخ تک‌سطر باشد یا بیست دقیقه خواندن، ویرایش و اجرای تست. این همان ویژگی از دو زاویه است: نوبت‌های بلند همان چیزی هستند که کار [دور از کیبورد](./AFK.md) را ممکن می‌کنند، و نوبت‌های بلند همان‌جایی‌اند که بدون نظارت همه‌چیز خراب می‌شود — تا وقتی عامل کنترل را برمی‌گرداند، ممکن است خیلی از چیزی که منظورتان بود فاصله گرفته باشد.
 
-The turn is also the natural unit for steering. Everything inside a turn happens without you; the gaps between turns are where you redirect. Most [harnesses](./Harness.md) soften this: you can interrupt mid-turn to stop the agent and redirect it, or type a message while it works, which gets read once the turn completes. If you find yourself repeatedly unhappy with where turns end up, the fix is usually to ask for smaller ones — a plan first, one step at a time — trading autonomy for more frequent gaps to steer in.
+نوبت همچنین واحد طبیعی هدایت است. هر چیزی داخل یک نوبت بدون شما اتفاق می‌افتد؛ فاصله بین نوبت‌ها همان‌جاست که تغییر مسیر می‌دهید. بیشتر [بسترهای اجرایی](./Harness.md) این را نرم می‌کنند: می‌توانید وسط نوبت قطعش کنید تا عامل را متوقف و تغییر مسیر دهید، یا وقتی دارد کار می‌کند پیامی تایپ کنید که با تمام شدن نوبت خوانده شود. اگر مرتباً از جایی که نوبت‌ها به آن می‌رسند ناراضی‌اید، راه‌حل معمولاً خواستن نوبت‌های کوچک‌تر است — اول یک برنامه، قدم‌به‌قدم — مبادله خودمختاری با فاصله‌های بیشتر برای هدایت.
 
-_Usage:_
+_کاربرد:_
 
-"One turn took two minutes?"
+«یک نوبت دو دقیقه طول کشید؟»
 
-"It made fourteen [tool calls](./Tool%20call.md) inside that turn — each one is a separate model provider request. Latency stacks up before the agent finally yields back to you."
+«داخل همان نوبت چهارده [فراخوانی ابزار](./Tool%20call.md) انجام داد — هرکدام یک درخواست جداگانه به ارائه‌دهنده مدل است. تأخیر روی هم جمع می‌شود تا بالاخره عامل کنترل را به شما برگرداند.»

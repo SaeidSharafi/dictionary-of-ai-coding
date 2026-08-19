@@ -1,15 +1,15 @@
 ---
-description: "A technique for developing a design concept: the agent interviews the user Socratically, one decision at a time."
+description: تکنیکی برای توسعه مفهوم طراحی: عامل سقراطوار، یکییکی درباره هر تصمیم از کاربر میپرسد.
 ---
 
-A technique for developing a [design concept](./Design%20concept.md) with an [agent](./Agent.md): the agent interviews the user Socratically, one decision at a time, proposing a recommended answer for each. Slows the rush to a finished plan — no [handoff artifact](./Handoff%20artifact.md) is written until the concept stabilises.
+تکنیکی برای توسعه [مفهوم طراحی](./Design%20concept.md) با یک [عامل](./Agent.md): عامل سقراطوار، یکییکی درباره هر تصمیم از کاربر میپرسد و برای هر کدام پاسخی پیشنهادی ارائه میدهد تا کاربر بتواند سریع تأیید یا ردش کند. شتاب به سمت یک برنامه تمامشده را کند میکند — هیچ [سند انتقال زمینهای](./Handoff%20artifact.md) تا وقتی مفهوم تثبیت نشده نوشته نمیشود.
 
-The technique exists because agents fill gaps silently. Asked to write a [spec](./Spec.md) from a two-line prompt, the agent doesn't stop at the decisions you haven't made — it picks defaults and writes them in. The result looks complete, and the guesses are indistinguishable from the choices, so you discover them late: at review, or when the built feature handles an edge case in a way you never chose. Grilling inverts this — instead of guessing, the agent has to ask.
+این تکنیک وجود دارد چون عاملها شکافها را بیصدا پر میکنند. وقتی از او خواسته شود از یک پرامپت دولینی [مشخصات](./Spec.md) بنویسد، عامل سر تصمیمهایی که نگرفتهاید نمیایستد — پیشفرض انتخاب میکند و مینویسدشان. نتیجه کامل به نظر میرسد و حدسها از انتخابها قابل تشخیص نیستند، پس دیر کشفشان میکنید: سر بازبینی، یا وقتی ویژگی ساختهشده حالتی مرزی را طوریکه هرگز انتخاب نکرده بودید مدیریت میکند. پرسشگری این را برعکس میکند — بهجای حدس زدن، عامل باید بپرسد، و تصمیمهای نگرفتهشده بهجای اینکه بیصدا در سند جا خوش کنند، در خود گفتوگو تصمیم گرفته میشوند.
 
-It's a [human-in-the-loop](./Human-in-the-loop.md) technique: your answers are the input. When a question can't be answered in conversation — you'd have to see the thing — switch to [prototyping](./Prototyping.md).
+تکنیکی است [انسان در حلقه](./Human-in-the-loop.md): پاسخهای شما ورودیاند. وقتی سؤالی را نتوان در گفتوگو پاسخ داد — باید چیز را ببینید — به [نمونهسازی اولیه](./Prototyping.md) بروید.
 
-_Usage:_
+_کاربرد:_
 
-"It went straight to writing the spec and got the cancellation logic wrong."
+«مستقیم رفت سراغ نوشتن مشخصات و منطق لغو را اشتباه درآورد.»
 
-"Grill it first — make it ask you about partial cancels, refunds, and timing before it commits anything to the doc. Cheaper to resolve in conversation than in code."
+«اول پرسشگریاش کن — بگذار از تو درباره لغو جزئی، بازپرداخت و زمانبندی بپرسد قبل از اینکه چیزی را به سند بسپارد. حل کردنش در گفتوگو از حل کردنش در کد ارزانتر است.»

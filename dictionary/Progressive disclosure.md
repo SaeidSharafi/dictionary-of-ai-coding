@@ -1,15 +1,15 @@
 ---
-description: Loading only the context an agent needs right now, with context pointers to the rest. Borrowed from UI design.
+description: بارگذاری فقط زمینهای که عامل همین حالا نیاز دارد، با اشارهگرهای زمینه برای بقیه. وامگرفته از طراحی رابط کاربری.
 ---
 
-Loading only the [context](./Context.md) an [agent](./Agent.md) needs right now, with [context pointers](./Context%20pointer.md) to the rest. Borrowed from UI design, where it means showing users only the controls relevant to their current task and hiding the rest behind a click.
+بارگذاری فقط [زمینهای](./Context.md) که [عاملی](./Agent.md) همین حالا به آن نیاز دارد، با [اشارهگرهای زمینه](./Context%20pointer.md) برای بقیه. از طراحی رابط کاربری وام گرفته شده، جایی که یعنی فقط کنترلهای مرتبط با کار فعلی کاربر نشان داده شود و بقیه پشت یک کلیک پنهان بماند.
 
-The technique exists because context is a cost twice over. Every [token](./Token.md) loaded up front is billed as [input tokens](./Input%20tokens.md) on every [turn](./Turn.md), and every token spends [attention budget](./Attention%20budget.md) whether the agent needs it or not. An [AGENTS.md](./AGENTS.md.md) stuffed with the full style guide, deployment runbook, and database conventions makes the agent worse at all of them — the instructions that matter for the current task are diluted by the ones that don't. The tell is an agent that ignores rules you know are in its context: they're in there, but buried.
+این تکنیک وجود دارد چون زمینه دوبار هزینه دارد. هر [توکن](./Token.md) که از ابتدا بارگذاری میشود در هر [نوبت](./Turn.md) بهعنوان [توکن ورودی](./Input%20tokens.md) حساب میشود، و هر توکن [بودجه توجه](./Attention%20budget.md) خرج میکند، چه عامل به آن نیاز داشته باشد چه نه. یک [AGENTS.md](./AGENTS.md.md) پر از کل راهنمای سبک، runbook استقرار و قراردادهای پایگاه داده، عامل را در همه آنها بدتر میکند — دستورالعملهایی که برای کار فعلی مهماند توسط آنهایی که مهم نیستند رقیق میشوند. نشانهاش عاملی است که قوانینی را نادیده میگیرد که میدانید در زمینهاش هستند: آنجا هستند، اما دفن شدهاند.
 
-Progressive disclosure inverts this. Keep the always-loaded layer small — a sentence per topic and a pointer to where the detail lives. The agent reads the style guide when it's writing a component, the deployment runbook when it's deploying, and neither when it's fixing a test. [Skills](./Skill.md) are the pattern built into the [harness](./Harness.md): a short description loaded every [session](./Session.md), the full instructions only when triggered.
+افشای تدریجی این را برعکس میکند. لایه همیشهبارگذاریشده را کوچک نگه دارید — برای هر موضوع یک جمله و یک اشارهگر به جایی که جزئیات زندگی میکند. عامل راهنمای سبک را میخواند وقتی کامپوننت مینویسد، runbook استقرار را میخواند وقتی استقرار انجام میدهد، و هیچکدام را نمیخواند وقتی تستی را درست میکند. [مهارتها](./Skill.md) الگویی هستند که در [بستر اجرایی](./Harness.md) تعبیه شده: توصیفی کوتاه که هر [نشست](./Session.md) بارگذاری میشود، دستورالعملهای کامل فقط وقتی فعال میشوند.
 
-_Usage:_
+_کاربرد:_
 
-"Should I dump the entire style guide into AGENTS.md?"
+«باید کل راهنمای سبک را بریزم داخل AGENTS.md؟»
 
-"No — progressive disclosure. Reference the style guide as a skill the agent loads when it actually needs to write a component. AGENTS.md pays the token cost every turn."
+«نه — افشای تدریجی. به راهنمای سبک بهعنوان یک مهارت اشاره کن که عامل وقتی واقعاً نیاز دارد کامپوننت بنویسد بارگذاریش میکند. AGENTS.md هزینه توکن را هر نوبت میپردازد.»

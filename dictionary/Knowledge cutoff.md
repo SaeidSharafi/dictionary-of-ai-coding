@@ -1,15 +1,15 @@
 ---
-description: The date past which a model has no parametric knowledge. Post-cutoff libraries and APIs are fabrication traps unless docs are loaded.
+description: تاریخی که بعد از آن مدل دانش پارامتری ندارد. کتابخانه‌ها و APIهای بعد از برش، تله جعل‌اند مگر مستنداتشان بارگذاری شود.
 ---
 
-The date past which a [model](./Model.md) has no [parametric knowledge](./Parametric%20knowledge.md). Libraries, APIs, and events from after the cutoff are fabrication traps unless their docs are loaded as [contextual knowledge](./Contextual%20knowledge.md). Each model release ships with its own cutoff.
+تاریخی که بعد از آن [مدل](./Model.md) هیچ [دانش پارامتری](./Parametric%20knowledge.md)‌ای ندارد. کتابخانه‌ها، APIها و رویدادهای بعد از برش، تله جعل‌اند مگر اینکه مستنداتشان به‌صورت [دانش زمینه‌ای](./Contextual%20knowledge.md) بارگذاری شود. هر نسخه مدل برش مخصوص خودش را دارد — مدلی که در 2024 آموزش دیده نمی‌داند سال بعد چه کتابخانه‌ای عرضه شده.
 
-The cutoff exists because of how models are made: [training](./Training.md) bakes a snapshot of text into the model's [parameters](./Parameters.md), and after that the parameters are frozen. The model doesn't know its knowledge has an edge — asked about something past the cutoff, it doesn't refuse, it extrapolates from the nearest thing it does know. That's what makes the trap quiet: code written against an old version of a library looks plausible, often compiles, and fails on the parts that changed.
+برش به این دلیل وجود دارد که مدل‌ها این‌طور ساخته می‌شوند: [آموزش](./Training.md) عکسی از متن را در [پارامترهای](./Parameters.md) مدل می‌پزد و بعد از آن پارامترها منجمد می‌شوند. مدل نمی‌داند دانشش لبه دارد — وقتی درباره چیزی بعد از برش پرسیده شود، امتناع نمی‌کند، از نزدیک‌ترین چیزی که می‌داند برون‌یابی می‌کند. همین تله را بی‌صدا می‌کند: کدی که بر اساس نسخه قدیمی یک کتابخانه نوشته شده محتمل به نظر می‌رسد، اغلب کامپایل می‌شود و در بخش‌هایی که عوض شده‌اند خراب می‌شود.
 
-The fix is always the same: get current information into [context](./Context.md). Load the changelog, point at the installed version's type definitions, or have the agent read the docs from the web. Anything in context outranks nothing-in-parameters.
+راه‌حل همیشه یکسان است: اطلاعات به‌روز را وارد [زمینه](./Context.md) کنید. changelog را بار کنید، به تعریف نوع‌های نسخه نصب‌شده اشاره کنید، یا از عامل بخواهید مستندات را از وب بخواند. هر چیزی در زمینه بر هیچ‌چیز در پارامترها برتری دارد.
 
-_Usage:_
+_کاربرد:_
 
-"It keeps writing the v3 SDK syntax — we're on v5."
+«مدام سینتکس v3 SDK را می‌نویسد — ما روی v5 هستیم.»
 
-"v5 shipped after the knowledge cutoff. Load the v5 changelog as contextual knowledge, otherwise it'll keep fabricating from the older parametric version."
+«v5 بعد از برش دانش عرضه شده. changelog نسخه v5 را به‌صورت دانش زمینه‌ای بار کن، وگرنه همچنان از نسخه پارامتری قدیمی‌تر جعل می‌کند.»

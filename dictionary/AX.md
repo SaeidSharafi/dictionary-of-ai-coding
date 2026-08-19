@@ -1,25 +1,25 @@
 ---
-description: "Agent experience: how well the environment is set up for an agent to do good work — checks, architecture, and free context."
+description: تجربه عامل — اینکه محیط چقدر برای کار خوب عامل آماده است: بررسیها، معماری و زمینه آزاد.
 aliases:
   - Agent experience
 ---
 
-Agent experience — how well the [environment](./Environment.md) is set up for an [agent](./Agent.md) to do good work in a codebase. The agent-facing counterpart to [DX](./DX.md). When the same agent performs well in one repo and badly in another — same [model](./Model.md), same [harness](./Harness.md) — the difference is usually AX. The instinct is to blame the model or rewrite the prompt; the fix is more often in the repo.
+تجربه عامل — اینکه [محیط](./Environment.md) چقدر برای کار خوب یک [عامل](./Agent.md) در پایگاه کد آماده است. همتای روبهعاملِ [تجربه توسعهدهنده](./DX.md). وقتی همان عامل در یک مخزن خوب کار میکند و در مخزن دیگر بد — همان [مدل](./Model.md)، همان [بستر اجرایی](./Harness.md) — تفاوت معمولاً AX است. غریزه میگوید مدل را مقصر بدانید یا پرامپت را بازنویسی کنید؛ راهحل بیشتر اوقات در مخزن است.
 
-Good AX has three main dimensions:
+AX خوب سه بعد اصلی دارد:
 
-| Dimension        | What good AX looks like                                                                                                                                                                                                                              |
-| ---------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Automated checks | Fast, deterministic [automated checks](./Automated%20check.md) — types, tests, lints — that the agent can self-correct from without a human                                                                                                          |
-| Architecture     | A codebase the agent can navigate without reading everything: predictable structure, a lot of behaviour behind small interfaces, names that say what things do                                                                                       |
-| Free context     | [AGENTS.md](./AGENTS.md.md), [skills](./Skill.md), and [tools](./Tool.md) kept lean, so most of the [context window](./Context%20window.md) is available for the task and the agent stays in the [smart zone](./Smart%20zone.md) instead of drowning |
+| بعد             | AX خوب چه شکلی است                                                                                                                                                                                                                    |
+| --------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| بررسیهای خودکار | [بررسیهای خودکار](./Automated%20check.md) سریع و قطعی — تایپها، تستها، lintها — که عامل بدون انسان بتواند از رویشان خودش را اصلاح کند                                                                                                 |
+| معماری          | پایگاه کدی که عامل بتواند بدون خواندن همهچیز در آن حرکت کند: ساختار قابل پیشبینی، رفتار زیاد پشت رابطهای کوچک، نامهایی که میگویند چیزها چه میکنند                                                                                     |
+| زمینه آزاد      | [AGENTS.md](./AGENTS.md.md)، [مهارتها](./Skill.md) و [ابزارها](./Tool.md) سبک نگه داشته شدهاند تا بیشتر [پنجره زمینه](./Context%20window.md) برای کار آزاد باشد و عامل در [منطقه هوشمند](./Smart%20zone.md) بماند بهجای اینکه غرق شود |
 
-AX and DX overlap — good checks and clean architecture help both audiences — but they diverge. Humans tolerate tribal knowledge, slow CI, and "ask Sarah about the billing module"; agents can't. Agents don't benefit from IDE tooltips or pretty dashboards; they need failures as text in a [tool result](./Tool%20result.md). A codebase can have good DX and poor AX.
+AX و DX همپوشانی دارند — بررسیهای خوب و معماری تمیز به هر دو مخاطب کمک میکنند — اما واگرا میشوند. انسانها دانش قبیلهای، CI کند و «درباره ماژول صورتحساب از سارا بپرس» را تحمل میکنند؛ عاملها نمیتوانند. عاملها از tooltipهای IDE یا داشبوردهای زیبا سودی نمیبرند؛ به خطاها بهصورت متن در [نتیجه ابزار](./Tool%20result.md) نیاز دارند. پایگاه کد میتواند DX خوب و AX ضعیف داشته باشد.
 
-_Avoid:_ treating AX as a synonym for DX — the audiences need different investments.
+_نبایدها:_ با AX مثل مترادف DX رفتار نکنید — مخاطبها سرمایهگذاری متفاوتی میخواهند.
 
-_Usage:_
+_کاربرد:_
 
-"The agent writes great code in the API repo and garbage in the frontend."
+«عامل در مخزن API کد عالی مینویسد و در فرانتاند زباله.»
 
-"The API repo has strict types and a fast test suite; the frontend has neither and forty always-loaded skills. That's an AX gap, not a model problem."
+«مخزن API تایپ سختگیرانه و تستهای سریع دارد؛ فرانتاند هیچکدام را ندارد و چهل مهارت همیشهبارگذاریشده هم دارد. این شکاف AX است، نه مشکل مدل.»

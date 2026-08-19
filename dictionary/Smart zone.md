@@ -1,20 +1,20 @@
 ---
-description: "Early in a session the agent is sharp and focused. As the session grows it drifts into a dumb zone: sloppier, forgetful, more mistakes."
+description: "اوایل نشست عامل تیز و متمرکز است. با رشد نشست به منطقه کمسو می‌لغزد: شلخته‌تر، فراموشکارتر، پرمشکل‌تر."
 aliases:
   - Dumb zone
   - Smart zone / Dumb zone
 ---
 
-Early in a [session](./Session.md) the [agent](./Agent.md) is in a "smart zone" — sharp, focused, recall is good. As the session grows it drifts into a "dumb zone": sloppier, forgetful, more mistakes — and more faithfulness [hallucinations](./Hallucination.md). Same [model](./Model.md), same [harness](./Harness.md) — just more [context](./Context.md). The felt effect of [attention degradation](./Attention%20degradation.md). On frontier models, the dumb zone commonly begins around 125K-150K [tokens](./Token.md) — though this is debated. [Clear](./Clearing.md) or [compact](./Compaction.md) when the session bloats; don't push through.
+اوایل [نشست](./Session.md) [عامل](./Agent.md) در «منطقه هوشمند» است — تیز، متمرکز، یادآوری خوب است. با رشد نشست به «منطقه کمسو» می‌لغزد: شلخته‌تر، فراموشکارتر، پرمشکل‌تر — و [توهم‌های](./Hallucination.md) وفاداری بیشتری. همان [مدل](./Model.md)، همان [بستر اجرایی](./Harness.md) — فقط [زمینه](./Context.md) بیشتری. اثرِ احساس‌شده [افت توجه](./Attention%20degradation.md). در مدل‌های مرزی، منطقه کمسو معمولاً حدود 125 تا 150 هزار [توکن](./Token.md) شروع می‌شود — هرچند این مورد بحث است. وقتی نشست متورم شد [پاک‌سازی](./Clearing.md) یا [فشرده‌سازی](./Compaction.md) کنید؛ با زور رد نشوید.
 
-The decline is gradual, which makes it easy to miss. There's no error message and no visible boundary; the agent just starts performing slightly worse, then noticeably worse. Common signs: it forgets an instruction you gave twenty turns ago, repeats a mistake it had already corrected, or confidently asserts something the context contradicts. Because the slide is smooth, the usual response is to push through and re-explain — which adds more context and makes the problem worse.
+افت تدریجی است، برای همین به راحتی از چشم می‌افتد. پیام خطا و مرز قابل مشاهد‌ه‌ای وجود ندارد؛ عامل فقط شروع می‌کند کمی بدتر عمل کند، بعد به‌طور محسوس بدتر. نشانه‌های رایج: دستوری را که بیست نوبت پیش داده‌اید فراموش می‌کند، اشتباهی را که قبلاً اصلاح کرده تکرار می‌کند، یا با اطمینان چیزی را می‌گوید که زمینه تناقض دارد. چون لغزش نرم است، پاسخ معمول رد شدن و توضیح دوباره است — که زمینه بیشتری اضافه می‌کند و مشکل را بدتر می‌کند.
 
-The zones don't track the [context window](./Context%20window.md) limit. A session can be deep in the dumb zone with most of the window still free: the limit is where the harness refuses to continue, but quality falls off long before that. Plan around the smart zone, not the window — the practical budget for a task is the tokens the agent works well within, not the tokens it can technically hold.
+منطقه‌ها از محدودیت [پنجره زمینه](./Context%20window.md) پیروی نمی‌کنند. نشستی می‌تواند با بیشتر پنجره خالی در عمق منطقه کمسو باشد: محدودیت همان جایی است که بستر اجرایی از ادامه دادن امتناع می‌کند، اما کیفیت خیلی قبل از آن می‌افتد. دور منطقه هوشمند برنامه‌ریزی کنید، نه دور پنجره — بودجه عملی یک کار توکن‌هایی است که عامل در آن‌ها خوب کار می‌کند، نه توکن‌هایی که از نظر فنی می‌تواند نگه دارد.
 
-The smart zone is a budget, and unrelated work spends it. Every task done in a session uses up tokens, so starting a second task in the same session means starting it closer to the dumb zone. Doing one task per session gives each task the sharpest part of the session. When a single task is bigger than one smart zone, split it: [hand off](./Handoff.md) or compact at a natural boundary, and let a fresh session do the next piece.
+منطقه هوشمند یک بودجه است و کار نامرتبط آن را خرج می‌کند. هر کاری که در نشست انجام شود توکن مصرف می‌کند، پس شروع کردن کار دوم در همان نشست یعنی شروع آن نزدیک‌تر به منطقه کمسو. انجام یک کار در هر نشست به هر کار تیزترین بخش نشست را می‌دهد. وقتی یک کار از یک منطقه هوشمند بزرگ‌تر است، تقسیمش کنید: در مرز طبیعی [انتقال زمینه](./Handoff.md) بدهید یا فشرده کنید، و بگذارید نشست تازه بخش بعدی را انجام دهد.
 
-_Usage:_
+_کاربرد:_
 
-"It nailed the first three components and just butchered the fourth."
+«سه کامپوننت اول را عالی ساخت و چهارمی را کباب کرد.»
 
-"You're out of the smart zone — same model, just deep into the dumb zone now. Compact and reload the plan, the next component will land."
+«از منطقه هوشمند بیرون افتاده‌ای — همان مدل، فقط حالا در عمق منطقه کمسو. فشرده کن و برنامه را دوباره بار کن، کامپوننت بعدی درست درمی‌آید.»

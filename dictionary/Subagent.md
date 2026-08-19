@@ -1,15 +1,15 @@
 ---
-description: An agent spawned by another agent via a tool call. Runs in its own session, reports a single tool result. Cannot spawn further subagents.
+description: عاملی که عامل دیگری با یک فراخوانی ابزار ایجادش میکند. در نشست خودش اجرا و یک نتیجه ابزار گزارش میکند. زیرعامل دیگری ایجاد نمیکند.
 ---
 
-An [agent](./Agent.md) spawned by another agent via a [tool call](./Tool%20call.md). Runs in its own [session](./Session.md) with its own [context window](./Context%20window.md), and reports a single [tool result](./Tool%20result.md) back. Distinct from a [handoff](./Handoff.md) — the parent specifically expects a return; a handoff has no return path. **Cannot spawn further subagents** — the tree is one level deep. Subagents exist to isolate [context](./Context.md), not to compose hierarchies.
+[عاملی](./Agent.md) که عامل دیگری از طریق یک [فراخوانی ابزار](./Tool%20call.md) ایجادش میکند. در [نشست](./Session.md) خودش با [پنجره زمینه](./Context%20window.md) خودش اجرا میشود و یک [نتیجه ابزار](./Tool%20result.md) واحد گزارش میکند. با [انتقال زمینه](./Handoff.md) تفاوت دارد — عامل والد صریحاً انتظار بازگشت دارد؛ انتقال زمینه مسیر بازگشت ندارد. **نمیتواند زیرعامل بیشتری ایجاد کند** — درخت فقط یک سطح عمق دارد. زیرعاملها برای ایزوله کردن [زمینه](./Context.md) وجود دارند، نه برای ساختن سلسلهمراتب.
 
-The point is to keep noisy work out of the parent's context. A broad search or a long file-reading expedition produces pages of tool results, most of which matter only long enough to find the answer. Run inside the parent and all of it stays in the parent's context for the rest of the session. Run inside a subagent and the noise fills a disposable window instead — only the final report lands in the parent's context. The report is a [secondary source](./Secondary%20source.md): the parent gets the subagent's account of what it found, not the raw results, so anything the report leaves out is invisible to the parent.
+نکته، بیرون نگه داشتن کار پرسروصدا از زمینه عامل والد است. یک جستوجوی گسترده یا یک گشت طولانی فایلخواندن، صفحاتی نتیجه ابزار تولید میکند که بیشترشان فقط تا وقتی به اندازه کافی مهماند که جواب پیدا شود. اگر داخل عامل والد اجرا شود، همهاش تا پایان نشست در زمینه عامل والد میماند. اگر داخل یک زیرعامل اجرا شود، نویز بهجایش یک پنجره دورریختنی را پر میکند — فقط گزارش نهایی در زمینه عامل والد مینشیند. گزارش یک [منبع ثانویه](./Secondary%20source.md) است: عامل والد شرح زیرعامل از چیزی را که پیدا کرده میگیرد، نه نتیجههای خام، پس هر چیزی که گزارش جا انداخته برای عامل والد نامرئی است.
 
-Subagents also run concurrently — a parent can fan several out at once over independent pieces of work.
+زیرعاملها همزمان هم اجرا میشوند — یک عامل والد میتواند چندتایی را یکجا روی تکههای مستقل کار پخش کند.
 
-_Usage:_
+_کاربرد:_
 
-"The grep results are blowing out my context."
+«نتیجههای grep دارند زمینه من را منفجر میکنند.»
 
-"Spawn a subagent to do the search — it'll burn its own context window on the noise and report back the two file paths you actually need."
+«یک زیرعامل برای جستوجو ایجاد کن — نویز را با پنجره زمینه خودش میسوزاند و آن دو مسیر فایلی را که واقعاً لازم داری گزارش میکند.»

@@ -1,15 +1,15 @@
 ---
-description: Tokens the model generates back. Billed at a higher rate than input tokens, since they cost more compute to produce.
+description: توکنهایی که مدل تولید و برمیگرداند. با نرخ بالاتری نسبت به توکنهای ورودی محاسبه میشوند، چون تولیدشان محاسبه بیشتری میخواهد.
 ---
 
-[Tokens](./Token.md) the [model](./Model.md) generates back. Billed at a higher rate than [input tokens](./Input%20tokens.md) — commonly around five times the rate — since they cost more compute to produce.
+[توکنهایی](./Token.md) که [مدل](./Model.md) تولید میکند و به سمت کاربر برمیگرداند. اینها با نرخ بالاتری نسبت به [توکنهای ورودی](./Input%20tokens.md) محاسبه میشوند — معمولاً چیزی حدود پنج برابر نرخ توکنهای ورودی — چون تولیدشان به محاسبه بیشتری نیاز دارد.
 
-Everything the model writes counts: the prose you read, the code it emits, [tool calls](./Tool%20call.md), and any extended thinking the model does before answering. That last one surprises people — reasoning tokens are billed as output even when the [harness](./Harness.md) often doesn't show them to you, and turning up [effort](./Effort.md) spends more of them.
+هر چیزی که مدل مینویسد در صورتحساب حساب میشود: نثری که شما میخوانید، کدی که بهعنوان خروجی تولید میکند، [فراخوانیهای ابزار](./Tool%20call.md) و هر تفکر گستردهای که مدل قبل از پاسخ دادن از خودش نشان میدهد. همین مورد آخر معمولاً مردم را غافلگیر میکند — توکنهای استدلال بهعنوان خروجی محاسبه میشوند حتی وقتی [بستر اجرایی](./Harness.md) اغلب آنها را به شما نشان نمیدهد، و بالا بردن [تلاش](./Effort.md) تعداد بیشتری از آنها را خرج میکند.
 
-Output tokens also set the pace of a [session](./Session.md). The model reads input quickly but generates output one token at a time, so when a [turn](./Turn.md) feels slow, it's almost always the output being written, not the input being read. A long wait usually means a long answer is coming.
+توکنهای خروجی همچنین سرعت پیشروی یک [نشست](./Session.md) را تعیین میکنند. مدل ورودی را سریع میخواند، اما خروجی را توکنبهتوکن و یکییکی تولید میکند، پس وقتی یک [نوبت](./Turn.md) کند به نظر میرسد، تقریباً همیشه خروجی است که نوشته میشود، نه ورودی که خوانده میشود. وقتی مدت زیادی صبر میکنید، معمولاً یعنی پاسخ بلندی در راه است.
 
-_Usage:_
+_کاربرد:_
 
-"The refactor session is burning through credit even though the inputs are small."
+«نشست بازسازی کد اعتبار را میسوزاند حتی با اینکه ورودیها کوچکاند.»
 
-"Agent's rewriting whole files instead of patching. Output tokens cost roughly five times the input rate — get it emitting edits and the bill drops."
+«عامل بهجای اینکه وصله بزند، کل فایلها را بازنویسی میکند. توکنهای خروجی تقریباً پنج برابر نرخ توکنهای ورودی هزینه دارند — کاریش کن ویرایش تولید کند تا صورتحساب پایین بیاید.»

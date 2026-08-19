@@ -1,17 +1,17 @@
 ---
-description: Whatever serves a model for inference. Usually remote (Anthropic, OpenAI, Google), but can also be local (Ollama, llama.cpp).
+description: هر چیزی که مدلی را برای استنتاج ارائه میدهد. معمولاً راه دور (Anthropic، OpenAI، Google)، اما محلی هم ممکن است (Ollama، llama.cpp).
 ---
 
-Whatever serves a [model](./Model.md) for [inference](./Inference.md). Usually a remote service (Anthropic, OpenAI, Google), but can also be local — Ollama, LM Studio, llama.cpp running on your own machine. The [harness](./Harness.md) doesn't run the model itself; it asks a provider to.
+هر چیزی که یک [مدل](./Model.md) را برای [استنتاج](./Inference.md) ارائه میدهد. معمولاً یک سرویس راه دور (Anthropic، OpenAI، Google)، اما میتواند محلی هم باشد — Ollama، LM Studio، llama.cpp روی ماشین خودتان. [بستر اجرایی](./Harness.md) خودش مدل را اجرا نمیکند؛ از یک ارائهدهنده میخواهد که این کار را بکند.
 
-The provider owns the machinery: the [parameters](./Parameters.md) live on its hardware, and every [model provider request](./Model%20provider%20request.md) is the harness sending [tokens](./Token.md) over the network and getting predictions back. That makes the provider the source of a whole category of problems that get misattributed to the model or the harness — rate limits, degraded capacity, and outages all live here. When the [agent](./Agent.md) stalls mid-[session](./Session.md) or errors on every [turn](./Turn.md), the provider's status page is worth checking before anything else.
+ارائهدهنده صاحب ماشینآلات است: [پارامترها](./Parameters.md) روی سختافزار آن زندگی میکنند، و هر [درخواست به ارائهدهنده مدل](./Model%20provider%20request.md) این است که بستر اجرایی [توکنهایی](./Token.md) را روی شبکه میفرستد و پیشبینیها را برمیگرداند. همین، ارائهدهنده را منشأ یک دسته کامل از مشکلات میکند که به اشتباه به مدل یا بستر اجرایی نسبت داده میشوند — محدودیت نرخ، ظرفیت افتکرده و قطعیها همه اینجا زندگی میکنند. وقتی [عامل](./Agent.md) وسط [نشست](./Session.md) میایستد یا در هر [نوبت](./Turn.md) خطا میدهد، قبل از هر چیز صفحه وضعیت ارائهدهنده را بررسی کنید.
 
-The provider also sets the commercial terms: per-token pricing for [input](./Input%20tokens.md) and [output tokens](./Output%20tokens.md), [prefix cache](./Prefix%20cache.md) discounts, and which models are available at all. Note that the provider and the model's maker can be different companies — Bedrock, Vertex, and OpenRouter serve other people's models.
+ارائهدهنده شرایط تجاری را هم تعیین میکند: قیمتگذاری به ازای هر توکن برای [ورودی](./Input%20tokens.md) و [توکنهای خروجی](./Output%20tokens.md)، تخفیف [کش پیشوند](./Prefix%20cache.md)، و اینکه اصلاً کدام مدلها در دسترساند. توجه کنید که ارائهدهنده و سازنده مدل میتوانند شرکتهای متفاوتی باشند — Bedrock، Vertex و OpenRouter مدلهای دیگران را سرو میکنند.
 
-Local providers trade capability for control: the models that fit on your own hardware are far smaller than the frontier ones, but nothing leaves the machine and there's no bill per token.
+ارائهدهندههای محلی توانایی را با کنترل معاوضه میکنند: مدلهایی که روی سختافزار خودتان جا میشوند بسیار کوچکتر از مدلهای مرزیاند، اما هیچ چیز از ماشین بیرون نمیرود و صورتحسابی به ازای هر توکن نیست.
 
-_Usage:_
+_کاربرد:_
 
-"Can we run this offline for the air-gapped client?"
+«میشود این را برای مشتری air-gapped بهصورت آفلاین اجرا کنیم؟»
 
-"Swap the model provider to a local one — Ollama or llama.cpp on their box. The harness doesn't care, it just hits a different endpoint."
+«ارائهدهنده مدل را با یک نمونه محلی عوض کن — Ollama یا llama.cpp روی سیستمشان. بستر اجرایی اهمیتی نمیدهد، فقط به یک endpoint متفاوت میزند.»

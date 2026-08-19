@@ -1,17 +1,17 @@
 ---
-description: An account of a primary source, one step removed — summaries, docs, compaction summaries. Cheap to load, lossy by construction.
+description: شرحی از منبع اولیه، یک درجه فاصلهگرفته — خلاصهها، مستندات، خلاصههای فشردهسازی. ارزان برای بارگذاری، ذاتاً با اتلاف.
 ---
 
-An account of a [primary source](./Primary%20source.md), one step removed — documentation describing code, a summary describing a transcript, a report describing search results. Cheaper to load into the [context window](./Context%20window.md) than the source it describes, and lossy by construction: whoever wrote it decided what mattered, and whatever they dropped is invisible to a reader who only has the summary.
+شرحی از [منبع اولیه](./Primary%20source.md)، یک درجه فاصلهگرفته از آن — مستنداتی که کد را توصیف میکند، خلاصهای که یک رونوشت را توصیف میکند، گزارشی که نتیجههای جستوجو را توصیف میکند. بارگذاریش در [پنجره زمینه](./Context%20window.md) از منبعی که توصیف میکند ارزانتر است، و ذاتاً با اتلاف است: هر کس آن را نوشته تصمیم گرفته چه چیزی مهم بوده، و هرچه را کنار گذاشته برای خوانندهای که فقط خلاصه را دارد نامرئی است.
 
-A lot of [context](./Context.md) engineering is the manufacture of secondary sources. [Compaction](./Compaction.md) turns the [session](./Session.md) history into a summary that seeds the next session. A [subagent](./Subagent.md) burns its own context on a noisy search and returns a short report. A [handoff artifact](./Handoff%20artifact.md) condenses a session's decisions into a document the next session reads. [Memory systems](./Memory%20system.md) distil what a session learned into notes. Each makes the same trade: fidelity for headroom.
+بخش بزرگی از مهندسی [زمینه](./Context.md) در واقع ساختن منبعهای ثانویه است. [فشردهسازی](./Compaction.md) تاریخچه [نشست](./Session.md) را به خلاصهای تبدیل میکند که نشست بعدی را تغذیه میکند. یک [زیرعامل](./Subagent.md) زمینه خودش را سر یک جستوجوی پرسروصدا میسوزاند و یک گزارش کوتاه برمیگرداند. یک [سند انتقال زمینه](./Handoff%20artifact.md) تصمیمهای یک نشست را در سندی فشرده میکند که نشست بعدی میخواند. [سیستمهای حافظه](./Memory%20system.md) چیزهایی را که یک نشست یاد گرفته به یادداشت تبدیل میکنند. هر کدام همان معامله را انجام میدهد: وفاداری در ازای فضا.
 
-Secondary sources fail in two ways. They're lossy — the compaction summary that lost the schema decision, the report that didn't mention the edge case. And they drift — the primary source changes and the account doesn't follow, so docs describe last quarter's architecture with this quarter's confidence. When an [agent](./Agent.md) acts on a secondary source that has failed either way, it works confidently from wrong information; the fix is sending it back to the primary source.
+منبعهای ثانویه به دو شکل از کار میافتند. با اتلافاند — خلاصه فشردهسازی که تصمیم درباره شِما را گم کرده، گزارشی که به مورد لبهای اشاره نکرده. و انحراف مییابند — منبع اولیه تغییر میکند و شرحش دنبالش نمیرود، پس مستندات معماریِ فصلِ گذشته را با اطمینانِ این فصل توصیف میکنند. وقتی [عاملی](./Agent.md) روی منبع ثانویهای کار میکند که از هر دو راه از کار افتاده، با اطمینان از اطلاعاتِ غلط کار میکند؛ راهحل این است که بفرستیمش دوباره سراغ منبع اولیه.
 
-Neither failure makes secondary sources a mistake. The context window is finite, and primary sources are expensive; without summaries, reports, and handoff documents, nothing large fits. The skill is knowing which details can survive the loss — and verifying against the primary source when one can't. A well-made secondary source carries a [context pointer](./Context%20pointer.md) back to its original — the summary that names the transcript it came from, the doc that names the file it describes — so when the account isn't enough, the reader can follow the pointer rather than work from the loss.
+هیچکدام از این شکستها منبع ثانویه را به اشتباه تبدیل نمیکند. پنجره زمینه متناهی است و منبعهای اولیه گراناند؛ بدون خلاصهها، گزارشها و سندهای انتقال، هیچ کار بزرگی جا نمیشود. مهارت این است که بدانیم کدام جزئیات میتوانند از اتلاف جان به در ببرند — و وقتی نمیتوانند، در برابر منبع اولیه راستیآزمایی کنیم. یک منبع ثانویه خوبساخته یک [اشارهگر زمینه](./Context%20pointer.md) به اصل خودش دارد — خلاصهای که نام رونوشت مبدأ را میبرد، سندی که نام فایلِ توصیفشده را میبرد — تا وقتی شرح کافی نبود، خواننده بهجای کار کردن با باقیمانده خلاصه، از اشارهگر دنبال کند.
 
-_Usage:_
+_کاربرد:_
 
-"The handoff doc says auth is done, but the new session keeps finding broken token refresh."
+«سند انتقال میگوید احراز هویت تمام شده، اما نشست جدید مدام به توکن تازهسازیِ خراب برمیخورد.»
 
-"The doc's a secondary source — the last session wrote down what it believed, not what's true. Have the new session run the auth tests and trust the primary source."
+«آن سند یک منبع ثانویه است — نشست قبلی نوشته چه چیزی را باور داشته، نه چه چیزی درست است. بگذار نشست جدید تستهای احراز هویت را اجرا کند و به منبع اولیه اعتماد کند.»

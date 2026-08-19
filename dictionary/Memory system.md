@@ -1,15 +1,15 @@
 ---
-description: A system that attempts to make an agent stateful across sessions by persisting to the environment and reloading at session start.
+description: سیستمی که تلاش میکند عامل را در طول نشستها وضعیتدار کند، با ماندگار کردن اطلاعات در محیط و بارگذاری دوبارهاش در شروع نشست.
 ---
 
-A system that attempts to make an [agent](./Agent.md) [stateful](./Stateful.md) across [sessions](./Session.md). Persists information into the [environment](./Environment.md) during a session and reloads it into the [context window](./Context%20window.md) at the start of future ones, so the agent carries continuity beyond the user [clearing](./Clearing.md) the session.
+سیستمی که تلاش میکند [عاملی](./Agent.md) را در طول [نشستها](./Session.md) [وضعیتدار](./Stateful.md) کند. در طول یک نشست اطلاعات را در [محیط](./Environment.md) ماندگار میکند و در شروع نشستهای بعدی دوباره در [پنجره زمینه](./Context%20window.md) بارگذاری میکند، تا عامل تداوم را فراتر از [پاکسازی](./Clearing.md) نشست توسط کاربر حمل کند.
 
-A memory system has two halves. The write path: during a session, the agent records what it learned — a preference you stated, a fact about the project — as files in the environment. The read path: at session start, the [harness](./Harness.md) loads those files, or an index of them, back into the context window. Many harnesses ship their own memory system — Claude Code's `/memory` is one — but you can also build one yourself: a directory of notes plus an instruction in [AGENTS.md](./AGENTS.md.md) to consult it.
+یک سیستم حافظه دو نیمه دارد. مسیر نوشتن: در طول نشست، عامل آنچه را یاد گرفته ثبت میکند — ترجیحی که گفتهاید، واقعیتی درباره پروژه — بهصورت فایلهایی در محیط. مسیر خواندن: در شروع نشست، [بستر اجرایی](./Harness.md) آن فایلها یا فهرستی از آنها را دوباره در پنجره زمینه بارگذاری میکند. بسیاری از بسترهای اجرایی سیستم حافظه خودشان را دارند — `/memory` در Claude Code یکی از آنهاست — اما میتوانید خودتان هم بسازید: پوشهای از یادداشتها بهعلاوه یک دستورالعمل در [AGENTS.md](./AGENTS.md.md) برای مراجعه به آن.
 
-The same trade-offs as any always-loaded content apply. Memories accumulate, so most systems load a one-line index and leave the bodies behind [context pointers](./Context%20pointer.md) rather than inlining everything. And memories are [secondary sources](./Secondary%20source.md), so they drift: a fact recorded in March is loaded with equal confidence in June, after the project has moved on. A memory system needs pruning, the same way AGENTS.md does.
+همان بدهبستانهای هر محتوای همیشهبارگذاریشده برقرار است. حافظهها انباشته میشوند، پس بیشتر سیستمها یک فهرست یکخطی بارگذاری میکنند و متن اصلی را پشت [اشارهگرهای زمینه](./Context%20pointer.md) نگه میدارند بهجای اینکه همهچیز را درونخطی کنند. و حافظهها [منبعهای ثانویه](./Secondary%20source.md)اند، پس انحراف مییابند: واقعیتی که در مارس ثبت شده در ژوئن با همان اطمینان بارگذاری میشود، بعد از اینکه پروژه جلو رفته. سیستم حافظه هم مثل AGENTS.md به هرس کردن نیاز دارد.
 
-_Usage:_
+_کاربرد:_
 
-"I keep having to re-tell it I'm on Postgres, not MySQL."
+«مدام باید دوباره بگویمش که من Postgres دارم، نه MySQL.»
 
-"Wire up a memory system — write what it learns to the [filesystem](./Filesystem.md) on the first [turn](./Turn.md), reload it at session start. The [model](./Model.md) itself is [stateless](./Stateless.md); the memory layer fakes continuity."
+«یک سیستم حافظه راه بینداز — چیزهایی که یاد میگیرد را در اولین [نوبت](./Turn.md) در [سیستم فایل](./Filesystem.md) بنویس و در شروع نشست دوباره بارگذاری کن. خود [مدل](./Model.md) [بیوضعیت](./Stateless.md) است؛ لایه حافظه تداوم را جعل میکند.»

@@ -1,17 +1,17 @@
 ---
-description: As a session grows, each token's attention budget spreads across more competitors; signal on meaningful relationships shrinks.
+description: با رشد نشست، بودجه توجه هر توکن بین رقبای بیشتری پخش می‌شود؛ سیگنال روی رابطه‌های معنادار کوچک می‌شود.
 ---
 
-As a [session](./Session.md) grows, each [token](./Token.md)'s [attention budget](./Attention%20budget.md) is spread across more competitors. The signal on any one [meaningful relationship](./Attention%20relationship.md) shrinks; noise from irrelevant [context](./Context.md) crowds in. Same [model](./Model.md), same [parameters](./Parameters.md) — just more mouths to feed from the same plate. Cause of the smart zone / dumb [zone effect](./Smart%20zone.md).
+با رشد [نشست](./Session.md)، هر [توکن](./Token.md) [بودجه توجه](./Attention%20budget.md) خودش را بین رقبای بیشتری پخش می‌کند. سیگنال روی هر [رابطه معنادار](./Attention%20relationship.md) کوچک می‌شود؛ نویز [زمینه](./Context.md) نامرتبط هجوم می‌آورد. همان [مدل](./Model.md)، همان [پارامترها](./Parameters.md) — فقط دهان‌های بیشتری از همان بشقاب باید سیر شوند. علتِ اثر منطقه هوشمند / [منطقه کمسو](./Smart%20zone.md).
 
-It presents as the model getting worse mid-session: constraints it followed for an hour start slipping, it re-asks things it was told, it writes code that ignores a file it read earlier. Nothing about the model changed — the only variable is how much context it's now attending over.
+خودش را به‌صورت بدتر شدن مدل وسط نشست نشان می‌دهد: محدودیت‌هایی که یک ساعت دنبال کرده شروع می‌کنند به لغزیدن، چیزهایی که به او گفته شده دوباره می‌پرسد، کدی می‌نویسد که فایلی را که قبلاً خوانده نادیده می‌گیرد. هیچ چیز درباره مدل عوض نشده — تنها متغیر این است که حالا چقدر زمینه را پوشش می‌دهد.
 
-It's gradual, which is what makes it hard to catch from inside the session. There's no error and no threshold; each [turn](./Turn.md) is only slightly worse than the last, and by the time the slips are obvious you've been in the dumb zone for a while.
+تدریجی است، و همین تشخیصش را از داخل نشست سخت می‌کند. خطا و آستانه‌ای وجود ندارد؛ هر [نوبت](./Turn.md) فقط کمی بدتر از قبلی است، و تا وقتی لغزش‌ها آشکار شوند مدتی است در منطقه کمسو بوده‌اید.
 
-You recover by removing context, not adding more. Re-pasting the ignored instruction adds another competitor to the same crowded window and helps only briefly. What works: [clear](./Clearing.md) and reload only what the task needs, or [compact](./Compaction.md), or [hand off](./Handoff.md) to a fresh session. Treat declining instruction-following as a signal about context length, not about the model.
+با کم کردن زمینه بهبود می‌یابید، نه زیاد کردنش. دوباره چسباندن دستور نادیده‌گرفته‌شده یک رقیب دیگر به همان پنجره شلوغ اضافه می‌کند و فقط مدت کوتاهی کمک می‌کند. آنچه جواب می‌دهد: [پاک‌سازی](./Clearing.md) و بارگذاری دوباره فقط آنچه کار نیاز دارد، یا [فشرده‌سازی](./Compaction.md)، یا [انتقال زمینه](./Handoff.md) به یک نشست تازه. افت پیروی از دستور را سیگنالی درباره طول زمینه بگیرید، نه درباره مدل.
 
-_Usage:_
+_کاربرد:_
 
-"It's deep in the dumb zone — inventing generics that aren't in the type file."
+«کاملاً در منطقه کمسو است — genericهایی اختراع می‌کند که در فایل نوع نیستند.»
 
-"Attention degradation. The type definitions are still in context, but the signal on them is buried under everything we've added since. Clear and reload."
+«افت توجه. تعریف نوع‌ها هنوز در زمینه‌اند، اما سیگنال رویشان زیر هر چیزی که از آن موقع اضافه کرده‌ایم دفن شده. پاک کن و دوباره بار کن.»

@@ -1,24 +1,24 @@
 ---
-description: The permission-gating slice of an agent mode — which tool calls trigger a permission request and which run automatically.
+description: بخش کنترل مجوزِ حالت عامل — کدام فراخوانی‌های ابزار درخواست مجوز را فعال می‌کنند و کدام‌ها خودکار اجرا می‌شوند.
 ---
 
-The permission-gating slice of an [agent mode](./Agent%20mode.md) — which [tool calls](./Tool%20call.md) trigger a [permission request](./Permission%20request.md) and which run automatically. The original purpose of mode systems before [harnesses](./Harness.md) started bundling behavioral instructions on top.
+بخش کنترل مجوزِ یک [حالت عامل](./Agent%20mode.md) — کدام [فراخوانی‌های ابزار](./Tool%20call.md) یک [درخواست مجوز](./Permission%20request.md) را فعال می‌کنند و کدام‌ها خودکار اجرا می‌شوند. هدف اصلی سیستم‌های حالت، قبل از اینکه [بسترهای اجرایی](./Harness.md) شروع به بسته‌بندی دستورالعمل‌های رفتاری روی آن‌ها کنند.
 
-Harnesses ship a ladder of these modes:
+بسترهای اجرایی نردبانی از این حالت‌ها عرضه می‌کنند:
 
-| Mode               | Reads | Writes & shell         | Typical use                                     |
-| ------------------ | ----- | ---------------------- | ----------------------------------------------- |
-| Read-only / plan   | Auto  | Blocked                | Research, planning, reviewing                   |
-| Default            | Auto  | Ask                    | Day-to-day supervised work                      |
-| Auto-edit          | Auto  | Edits auto, shell asks | Trusted repos, mechanical changes               |
-| "Yolo" / full-auto | Auto  | Auto                   | [Sandboxes](./Sandbox.md), [AFK](./AFK.md) runs |
+| حالت                   | خواندن | نوشتن و شل                   | کاربرد معمول                                                |
+| ---------------------- | ------ | ---------------------------- | ----------------------------------------------------------- |
+| فقط‌خواندنی / plan     | خودکار | مسدود                        | تحقیق، برنامه‌ریزی، بازبینی                                 |
+| پیش‌فرض                | خودکار | می‌پرسد                      | کار روزمره با نظارت                                         |
+| ویرایش خودکار          | خودکار | ویرایش‌ها خودکار، شل می‌پرسد | مخازن مورد اعتماد، تغییرهای مکانیکی                         |
+| «Yolo» / کاملاً خودکار | خودکار | خودکار                       | اجراهای [سندباکس](./Sandbox.md) و [دور از کیبورد](./AFK.md) |
 
-Choosing a rung is a trade between safety and interruption, and both failure modes are felt. Too tight, and you become the bottleneck: the [agent](./Agent.md) stops every few seconds for harmless reads, you click approve on autopilot, and the approvals stop meaning anything — rubber-stamping is the worst of both worlds, all the interruption with none of the protection. Too loose, and the agent edits files and runs commands you'd have wanted to see first.
+انتخاب پله، معامله بین امنیت و وقفه است، و هر دو حالت شکست حس می‌شوند. خیلی سفت ببندید و شما گلوگاه می‌شوید: [عامل](./Agent.md) هر چند ثانیه برای خواندن‌های بی‌ضرر می‌ایستد، روی خلبان تأیید را کلیک می‌کنید، و تأییدها دیگر معنایی ندارند — مهر زدن بدترینِ هر دو دنیاست، همه وقفه‌ها با هیچ‌کدام از محافظت‌ها. خیلی شل بگذارید و عامل فایل‌ها را ویرایش می‌کند و فرمان‌هایی را اجرا می‌کند که ترجیح می‌دادید اول ببینیدشان.
 
-The loose end is most defensible inside a sandbox, where the blast radius of a bad [tool](./Tool.md) call is contained. Outside one, most people settle on auto-approving reads and keeping a [human in the loop](./Human-in-the-loop.md) for anything irreversible.
+سمت شل در داخل یک سندباکس قابل دفاع‌ترین است، جایی که شعاع انفجار یک [فراخوانی ابزار](./Tool.md) بد مهار شده. بیرونش، بیشتر مردم روی تأیید خودکار خواندن‌ها و نگه داشتن یک [انسان در حلقه](./Human-in-the-loop.md) برای هر چیزی برگشت‌ناپذیر توافق می‌کنند.
 
-_Usage:_
+_کاربرد:_
 
-"It paused on every grep — totally killed the AFK run."
+«روی هر grep می‌ایستاد — کاملاً اجرای دور از کیبورد را خراب کرد.»
 
-"Loosen the permission mode for read-only tools, keep prompting on writes and shell. Most permission requests on a research [session](./Session.md) are noise."
+«حالت مجوز را برای ابزارهای فقط‌خواندنی شل کن، روی نوشتن و شل همچنان بپرس. بیشتر درخواست‌های مجوز در یک [نشست](./Session.md) تحقیقی نویزند.»

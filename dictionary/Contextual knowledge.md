@@ -1,21 +1,21 @@
 ---
-description: Facts the agent can read directly from the context right now. Counterpart to parametric knowledge.
+description: واقعیت‌هایی که عامل همین حالا می‌تواند مستقیم از زمینه بخواند. در برابر دانش پارامتری.
 ---
 
-Facts the [agent](./Agent.md) can read directly from the [context](./Context.md) right now — the user's task, files the agent has read in, [tool results](./Tool%20result.md), [AGENTS.md](./AGENTS.md.md) content loaded at [session](./Session.md) start. Counterpart to [parametric knowledge](./Parametric%20knowledge.md): parametric is _recalled_ from the parameters; contextual is _read_ from the [window](./Context%20window.md). [Hallucinations](./Hallucination.md) are much less common when the agent works from contextual knowledge — the answer is right in front of it, not dredged up from a blurred memory.
+واقعیت‌هایی که [عامل](./Agent.md) همین حالا می‌تواند مستقیم از [زمینه](./Context.md) بخواند — کار کاربر، فایل‌هایی که عامل خوانده، [نتیجه ابزارها](./Tool%20result.md)، محتوای [AGENTS.md](./AGENTS.md.md) بارگذاری‌شده در شروع [نشست](./Session.md). در برابر [دانش پارامتری](./Parametric%20knowledge.md): پارامتری از پارامترها _به خاطر آورده_ می‌شود؛ زمینه‌ای از [پنجره](./Context%20window.md) _خوانده_ می‌شود. وقتی عامل با دانش زمینه‌ای کار می‌کند، [توهم‌ها](./Hallucination.md) خیلی کمتر رایج‌اند — پاسخ دقیقاً جلویش است، نه اینکه از حافظه محوشده بیرون کشیده شود.
 
-Of the two kinds of knowledge, only contextual knowledge is in your control. The parameters are frozen, so the only way to give the [model](./Model.md) knowledge it lacks — an internal SDK, a library released after the [knowledge cutoff](./Knowledge%20cutoff.md), a decision made yesterday — is to put it in the context. A lot of practical [AI](./AI.md) coding work reduces to this: getting the right facts in front of the model at the moment it needs them.
+از این دو نوع دانش، فقط دانش زمینه‌ای در کنترل شماست. پارامترها منجمدند، پس تنها راه دادن دانشی که [مدل](./Model.md) کم دارد — یک SDK داخلی، کتابخانه‌ای که بعد از [برش دانش](./Knowledge%20cutoff.md) عرضه شده، تصمیمی که دیروز گرفته شده — گذاشتن آن در زمینه است. بخش بزرگی از کار عملی کدنویسی با [هوش مصنوعی](./AI.md) به همین ختم می‌شود: رساندن واقعیت‌های درست جلوی مدل در لحظه‌ای که به آن‌ها نیاز دارد.
 
-When contextual and parametric knowledge conflict, the contextual usually wins. Paste the current API docs and the model follows them rather than its stale memory of the old API — though the old version can still bleed through, especially deep into a long session. If the agent keeps reverting to an outdated pattern despite the docs being loaded, that's parametric knowledge leaking past the contextual; restating the correction or moving it closer to the work helps.
+وقتی دانش زمینه‌ای و پارامتری تعارض کنند، معمولاً زمینه‌ای برنده است. مستندات API فعلی را بچسبانید و مدل به‌جای حافظه کهنه‌اش از API قدیمی، از آن‌ها پیروی می‌کند — هرچند نسخه قدیمی هنوز می‌تواند نشت کند، مخصوصاً در عمق یک نشست طولانی. اگر عامل با وجود بارگذاری مستندات مدام به الگوی قدیمی برمی‌گردد، یعنی دانش پارامتری از دانش زمینه‌ای نشت می‌کند؛ بازگویی تصحیح یا نزدیک‌تر کردنش به کار کمک می‌کند.
 
-Unlike parametric knowledge, contextual knowledge costs something to use. Everything loaded into the window spends [tokens](./Token.md) and competes for the model's [attention budget](./Attention%20budget.md), so loading more is not automatically better — the aim is the relevant facts in the window, not all the facts.
+برخلاف دانش پارامتری، استفاده از دانش زمینه‌ای هزینه دارد. هر چیزی که در پنجره بارگذاری می‌شود [توکن](./Token.md) خرج می‌کند و برای [بودجه توجه](./Attention%20budget.md) مدل رقابت می‌کند، پس بارگذاری بیشتر به‌طور خودکار بهتر نیست — هدف واقعیت‌های مرتبط در پنجره است، نه همه واقعیت‌ها.
 
-_Reach for this term_ only when contrasting with parametric knowledge; otherwise just say **context**.
+_به این واژه دست بزنید_ فقط وقتی با دانش پارامتری مقایسه می‌کنید؛ وگرنه فقط بگویید **زمینه**.
 
-_Avoid:_ "working memory" — contextual knowledge is what's in the window _now_; a [memory system](./Memory%20system.md) is what gets cross-session content into it. Different scales, don't conflate.
+_نبایدها:_ «حافظه کاری» — دانش زمینه‌ای همان چیزی است که همین حالا در پنجره است؛ [سیستم حافظه](./Memory%20system.md) همان چیزی است که محتوای بین‌نشستی را وارد آن می‌کند. مقیاس‌های متفاوت، قاطی نکنید.
 
-_Usage:_
+_کاربرد:_
 
-"Why does it nail the API when I paste the docs and fabricate it when I don't?"
+«چرا وقتی مستندات را می‌چسبانم API را درست می‌زند و وقتی نمی‌چسبانم جعلش می‌کند؟»
 
-"With the docs in, it's contextual knowledge — reading off the page. Without, it's parametric and the rare endpoints blur."
+«با مستندات، دانش زمینه‌ای است — از روی صفحه می‌خواند. بدون آن، پارامتری است و endpointهای کمیاب محو می‌شوند.»

@@ -1,21 +1,21 @@
 ---
-description: A deterministic verification that runs in the environment — tests, type checks, lints, build, pre-commit hooks. Pass/fail, no judgement.
+description: راستی‌آزمایی قطعی که در محیط اجرا می‌شود — تست‌ها، بررسی نوع، lint، بیلد، قلاب‌های pre-commit. قبول/رد، بدون قضاوت.
 ---
 
-A deterministic verification that runs in the [environment](./Environment.md) — tests, type checks, lints, build, pre-commit hooks. Pass/fail, no judgement. The signal an [agent](./Agent.md) can self-correct from without involving anyone else. A flaky test is a broken check, not a non-check; automated checks are deterministic _by design_.
+راستی‌آزمایی قطعی که در [محیط](./Environment.md) اجرا می‌شود — تست‌ها، بررسی نوع، lint، بیلد، قلاب‌های pre-commit. قبول یا رد، بدون قضاوت. سیگنالی که [عامل](./Agent.md) می‌تواند بدون درگیر کردن کس دیگری از روی آن خودش را اصلاح کند. تست ناپایدار یک بررسی خراب است، نه نبودِ بررسی؛ بررسی‌های خودکار _ماهیتاً_ قطعی‌اند.
 
-Self-correction works as a loop. The agent makes a change, runs the check as a [tool call](./Tool%20call.md), and the failure output lands in its [context window](./Context%20window.md) — a type error with a file and line, a failing assertion with expected and actual values. That's enough for the agent to fix the problem and run the check again, around and around until it passes, with no human in the loop. Determinism is what makes the loop trustworthy: the same code always produces the same verdict, so a pass means something. A flaky check poisons this — the agent "fixes" code that was fine, or retries past a real failure.
+اصلاح خودکار به‌صورت یک حلقه کار می‌کند. عامل تغییری ایجاد می‌کند، بررسی را به‌صورت [فراخوانی ابزار](./Tool%20call.md) اجرا می‌کند، و خروجی شکست در [پنجره زمینه](./Context%20window.md)‌اش می‌نشیند — خطای نوع با فایل و شماره خط، assertion ناموفق با مقادیر مورد انتظار و واقعی. همین برای عامل کافی است که مشکل را درست کند و بررسی را دوباره اجرا کند، دور و بر، تا پاس شود، بدون انسان در حلقه. قطعی بودن چیزی است که حلقه را قابل اعتماد می‌کند: همان کد همیشه همان حکم را تولید می‌کند، پس پاس شدن معنایی دارد. بررسی ناپایدار این را مسموم می‌کند — عامل کدی را که سالم بوده «درست» می‌کند، یا از یک شکست واقعی رد می‌شود.
 
-This is why good checks are a large part of a codebase's [AX](./AX.md). An agent in a repo with strict types, a fast test suite, and a linter catches most of its own mistakes before you see them; an agent in a repo with none of those ships whatever it produces. The difference matters most in [AFK](./AFK.md) runs, where checks are the only verification happening during the run. But a check only catches what it asserts — green checks mean the asserted properties hold, not that the code is right. The judgement-shaped gaps are what [automated review](./Automated%20review.md) and [human review](./Human%20review.md) are for.
+به همین دلیل بررسی‌های خوب بخش بزرگی از [تجربه عامل](./AX.md) یک پایگاه کدند. عامل در مخزنی با نوع‌های سخت‌گیر، تست‌سوئیت سریع و linter بیشتر اشتباه‌های خودش را قبل از اینکه ببینید می‌گیرد؛ عامل در مخزنی که هیچ‌کدام را ندارد، هر چیزی که تولید می‌کند را تحویل می‌دهد. این تفاوت بیشترین اهمیت را در اجراهای [AFK](./AFK.md) دارد، جایی که بررسی‌ها تنها راستی‌آزمایی‌ای هستند که وسط اجرا اتفاق می‌افتد. اما بررسی فقط چیزی را می‌گیرد که assert می‌کند — سبز بودن یعنی ویژگی‌های assertشده برقرارند، نه اینکه کد درست است. جاهای قضاوتی چیزی است که [بازبینی خودکار](./Automated%20review.md) و [بازبینی انسانی](./Human%20review.md) برایش هستند.
 
-_Avoid:_ "feedback loop" / "backpressure" — both lump checks together with review. _Avoid:_ "test" — tests are automated checks, but not all automated checks are tests.
+_نبایدها:_ «'feedback loop'» / «'backpressure'» — هر دو بررسی و بازبینی را با هم قاطی می‌کنند. _نبایدها:_ «'test'» — تست‌ها بررسی خودکارند، اما همه بررسی‌های خودکار تست نیستند.
 
-_Usage:_
+_کاربرد:_
 
-"The agent keeps shipping broken code in the AFK runs."
+«عامل در اجراهای AFK مدام کد خراب تحویل می‌دهد.»
 
-"What automated checks are wired into the [sandbox](./Sandbox.md)?"
+«چه بررسی‌های خودکاری به [سندباکس](./Sandbox.md) وصل شده؟»
 
-"Just the unit tests."
+«فقط تست‌های واحد.»
 
-"Add typecheck and lint — it'll self-correct from those before the PR ever lands."
+«typecheck و lint را هم اضافه کن — قبل از اینکه PR اصلاً برسد از روی آن‌ها خودش را اصلاح می‌کند.»

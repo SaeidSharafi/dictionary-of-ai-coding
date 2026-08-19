@@ -1,15 +1,15 @@
 ---
-description: The numbers inside a model — often billions — tuned during training. Everything the model knows lives in them. Also called weights.
+description: اعداد داخل یک مدل — اغلب میلیاردها عدد — که هنگام آموزش تنظیم میشوند. هر آنچه مدل «میداند» در آنها جای دارد. وزنها نیز نامیده میشوند.
 ---
 
-The numbers inside a [model](./Model.md) — often billions of them — tuned during [training](./Training.md). Everything the model "knows" lives in them. Training sets them; [inference](./Inference.md) uses them unchanged. Also called _weights_.
+اعداد داخل یک [مدل](./Model.md) — اغلب میلیاردها عدد — که هنگام [آموزش](./Training.md) تنظیم میشوند. هر آنچه مدل «میداند» در آنها جای دارد. آموزش آنها را تعیین میکند؛ [استنتاج](./Inference.md) بدون تغییر از آنها استفاده میکند. _وزنها_ هم نامیده میشوند.
 
-Mechanically, the parameters are what turn input into output. [Next-token prediction](./Next-token%20prediction.md) is a giant calculation: the [tokens](./Token.md) in the [context window](./Context%20window.md) go in, get multiplied through the parameters, and a prediction for the next token comes out. There is no database of facts inside the model, no code lookup table — just these numbers, arranged so that the calculation tends to produce useful output. Facts the model can recite from training, like a standard library API, are [parametric knowledge](./Parametric%20knowledge.md): stored in the parameters, not retrieved from anywhere.
+از نظر مکانیکی، پارامترها همان چیزهایی هستند که ورودی را به خروجی تبدیل میکنند. [پیشبینی توکن بعدی](./Next-token%20prediction.md) یک محاسبه عظیم است: [توکنهای](./Token.md) موجود در [پنجره زمینه](./Context%20window.md) وارد میشوند، در پارامترها ضرب میشوند و پیشبینی توکن بعدی بیرون میآید. هیچ پایگاهداده حقایقی داخل مدل نیست، هیچ جدول جستوجوی کدی وجود ندارد — فقط همین اعداد، چنان چیده شدهاند که محاسبه معمولاً خروجی مفیدی تولید کند. حقایقی که مدل میتواند از آموزش بازگو کند، مثل API یک کتابخانه استاندارد، [دانش پارامتری](./Parametric%20knowledge.md) هستند: در پارامترها ذخیره شدهاند، نه از جایی بازیابی شدهاند.
 
-The detail worth internalising is that parameters are frozen after training. Nothing you do in a [session](./Session.md) changes them — no correction you make, no codebase you show it, no mistake it learns from. Every session runs on the same numbers. This is why the model is [stateless](./Stateless.md), why its built-in knowledge stops at the [knowledge cutoff](./Knowledge%20cutoff.md), and why anything project-specific has to arrive via [context](./Context.md) instead. The only way parameters change is more training — which produces, in effect, a different model.
+نکته مهمی که ارزش درونی کردن دارد این است که پارامترها بعد از آموزش منجمد میشوند. هیچ کاری که در یک [نشست](./Session.md) میکنید آنها را تغییر نمیدهد — نه تصحیحی که انجام میدهید، نه پایگاه کدی که نشانش میدهید، نه اشتباهی که از آن درس میگیرد. هر نشست با همین اعداد اجرا میشود. به همین دلیل مدل [بیوضعیت](./Stateless.md) است، دانش درونیاش در [برش دانش](./Knowledge%20cutoff.md) متوقف میشود، و هر چیزی که مخصوص یک پروژه است باید از طریق [زمینه](./Context.md) وارد شود. تنها راه تغییر پارامترها آموزش بیشتر است — که در عمل، مدلی متفاوت میسازد.
 
-_Usage:_
+_کاربرد:_
 
-"Can we fine-tune it on our codebase?"
+«میشود آن را روی پایگاه کد خودمان تنظیم دقیق کنیم؟»
 
-"That'd update the parameters — different model afterwards. For one project it's almost always cheaper to load the codebase as context than to retrain."
+«این یعنی بهروزرسانی پارامترها — مدل بعدش متفاوت خواهد بود. برای یک پروژه، تقریباً همیشه ارزانتر است که پایگاه کد را بهعنوان زمینه بارگذاری کنی تا اینکه دوباره آموزشش دهی.»

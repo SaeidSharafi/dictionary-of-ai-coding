@@ -1,26 +1,26 @@
 ---
-description: A function the harness exposes for the agent to call — Read, Write, Bash, Search. How an agent perceives and acts on the environment.
+description: تابعی که بستر اجرایی برای فراخوانی توسط عامل در دسترس می‌گذارد — Read، Write، Bash، Search. چگونگی درک و اثرگذاری عامل بر محیط.
 ---
 
-A function the [harness](./Harness.md) exposes for the [agent](./Agent.md) to call — Read, Write, Bash, Search. Tools are how an agent perceives and acts on the [environment](./Environment.md): it can't see the environment except through [tool results](./Tool%20result.md), and can't change it except through [tool calls](./Tool%20call.md). Each tool call costs an extra [model provider request](./Model%20provider%20request.md), since the result has to go back to the model before it can decide what to do next.
+تابعی که [بستر اجرایی](./Harness.md) برای [عامل](./Agent.md) در دسترس می‌گذارد تا فراخوانی کند — Read، Write، Bash، Search. ابزارها چگونگی درک و اثرگذاری عامل بر [محیط](./Environment.md) هستند: عامل نمی‌تواند محیط را ببیند مگر از طریق [نتیجه ابزارها](./Tool%20result.md)، و نمی‌تواند تغییرش دهد مگر با [فراخوانی ابزار](./Tool%20call.md). هر فراخوانی ابزار یک [درخواست به ارائه‌دهنده مدل](./Model%20provider%20request.md) اضافی هزینه دارد، چون نتیجه باید به مدل برگردد تا بتواند تصمیم بگیرد بعد چه کند.
 
-Tools most coding agents ship with:
+ابزارهایی که بیشتر عامل‌های کدنویسی با خود دارند:
 
-| Tool   | What it does                                                 |
-| ------ | ------------------------------------------------------------ |
-| Read   | Returns a file's contents as a tool result                   |
-| Write  | Creates or edits a file in the [filesystem](./Filesystem.md) |
-| Bash   | Runs a shell command and returns its output                  |
-| Search | Finds files or text matching a pattern across the codebase   |
+| ابزار  | چه کار می‌کند                                                      |
+| ------ | ------------------------------------------------------------------ |
+| Read   | محتوای یک فایل را به‌صورت نتیجه ابزار برمی‌گرداند                  |
+| Write  | فایلی را در [سیستم فایل](./Filesystem.md) می‌سازد یا ویرایش می‌کند |
+| Bash   | یک فرمان شل اجرا می‌کند و خروجی‌اش را برمی‌گرداند                  |
+| Search | فایل‌هایی را می‌یابد که با الگویی در پایگاه کد همخوانی دارند       |
 
-A tool is defined by three things: a name, a description of what it does, and a schema for its parameters. The harness sends these definitions to the [model](./Model.md) with every request, and the model chooses a tool the same way it produces everything else — by writing [tokens](./Token.md), in this case a structured call with arguments. The model never executes anything itself; the harness reads the call, runs the function, and sends back the result.
+یک ابزار با سه چیز تعریف می‌شود: یک نام، توصیفی از کاری که می‌کند، و یک شِما برای پارامترهایش. بستر اجرایی این تعریف‌ها را با هر درخواست به [مدل](./Model.md) می‌فرستد، و مدل ابزار را همان‌طور انتخاب می‌کند که هر چیز دیگر را تولید می‌کند — با نوشتن [توکن](./Token.md)، در این مورد یک فراخوانی ساختاریافته با آرگومان. خود مدل هرگز چیزی را اجرا نمی‌کند؛ بستر اجرایی فراخوانی را می‌خواند، تابع را اجرا می‌کند و نتیجه را برمی‌گرداند.
 
-The tool list sets what the agent can do. A capable model with a narrow tool set is a narrow agent: it will route everything through whatever it has, which is why agents lean so heavily on Bash — a shell is one tool that reaches most of the system. To give an agent a capability cleanly, add a tool for it; [MCP](./MCP.md) is the standard for plugging in tools from outside the harness.
+فهرست ابزار تعیین می‌کند عامل چه کاری از دستش برمی‌آید. مدلی توانمند با فهرست ابزار محدود، عاملی محدود است: همه‌چیز را از هر چه دارد عبور می‌دهد، و به همین دلیل عامل‌ها این‌قدر به Bash تکیه می‌کنند — یک شل ابزاری است که به بیشتر سیستم می‌رسد. برای اینکه قابلیتی را تمیز به عامل بدهید، ابزاری برایش اضافه کنید؛ [MCP](./MCP.md) استانداردِ وصل کردن ابزارهای بیرون از بستر اجرایی است.
 
-Tool definitions occupy [context](./Context.md) on every request, so a large tool set has a standing cost before any tool is called — and many similarly-described tools make the model worse at picking the right one.
+تعریف ابزارها در هر درخواست [زمینه](./Context.md) اشغال می‌کنند، پس یک فهرست ابزار بزرگ پیش از فراخوانی هر ابزاری هزینه ثابتی دارد — و ابزارهای زیادِ شبیه‌به‌هم انتخاب درست را برای مدل سخت‌تر می‌کنند.
 
-_Usage:_
+_کاربرد:_
 
-"Can the agent query staging directly?"
+«آیا عامل می‌تواند مستقیم از staging پرس‌وجو کند؟»
 
-"Add a `psql` tool to the harness, scoped read-only on staging. Without a tool for it, the agent's blind to anything outside the filesystem."
+«یک ابزار `psql` به بستر اجرایی اضافه کن، محدود به فقط‌خواندنی روی staging. بدون ابزار برایش، عامل نسبت به هر چیزی بیرون از سیستم فایل کور است.»

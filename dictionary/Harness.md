@@ -1,17 +1,17 @@
 ---
-description: "Everything around the model that turns it into an agent: tools, system prompt, context-window management, permissions, hooks."
+description: هر چیزی که دور مدل است و آن را به یک عامل تبدیل میکند: ابزارها، پرامپت سیستم، مدیریت پنجره زمینه، مجوزها، قلابها.
 ---
 
-Everything around the [model](./Model.md) that turns it into an [agent](./Agent.md): [tools](./Tool.md), [system prompt](./System%20prompt.md), [context-window management](./Context%20window.md), permissions, hooks. **Claude.ai** and **Claude Code** run on the same model but behave differently because their harnesses differ.
+هر چیزی که دور [مدل](./Model.md) است و آن را به یک [عامل](./Agent.md) تبدیل میکند: [ابزارها](./Tool.md)، [پرامپت سیستم](./System%20prompt.md)، [مدیریت پنجره زمینه](./Context%20window.md)، مجوزها، قلابها. **Claude.ai** و **Claude Code** روی همان مدل اجرا میشوند اما رفتار متفاوتی دارند چون بسترهای اجراییشان فرق میکند.
 
-The model itself only does one thing: take text in, produce text out. It can't read a file, run a command, or remember the last [turn](./Turn.md). The harness supplies all of that. It assembles the [context](./Context.md) for each [model provider request](./Model%20provider%20request.md), executes the [tool calls](./Tool%20call.md) the model asks for, feeds the [tool results](./Tool%20result.md) back in, stores the [session](./Session.md) history, asks you for permission before risky actions, and decides when to [compact](./Compaction.md). The agent loop — model proposes, harness executes, repeat — is run by the harness.
+خود مدل فقط یک کار میکند: متن میگیرد، متن میدهد. نمیتواند فایل بخواند، فرمان اجرا کند یا آخرین [نوبت](./Turn.md) را به خاطر بسپارد. بستر اجرایی همه اینها را تأمین میکند. [زمینه](./Context.md) هر [درخواست به ارائهدهنده مدل](./Model%20provider%20request.md) را کنار هم میچیند، [فراخوانیهای ابزار](./Tool%20call.md)ای که مدل میخواهد را اجرا میکند، [نتیجههای ابزار](./Tool%20result.md) را برمیگرداند، تاریخچه [نشست](./Session.md) را ذخیره میکند، قبل از اقدامهای پرخطر از شما مجوز میخواهد و تصمیم میگیرد کی [فشردهسازی](./Compaction.md) کند. حلقه عامل — مدل پیشنهاد میدهد، بستر اجرایی اجرا میکند، تکرار — را بستر اجرایی میچرخاند.
 
-This matters for diagnosis. When behaviour differs between two products, or between yesterday and today, the model is often not the variable — the harness is. A different system prompt, a different set of tools, a changed permission default, or a new context-management strategy all change behaviour without any change to the model. It also means the harness is where most of your configuration lives: [AGENTS.md](./AGENTS.md.md) files, permission settings, and hooks are all instructions to the harness, not the model.
+این برای تشخیص مهم است. وقتی رفتار بین دو محصول، یا بین دیروز و امروز فرق میکند، اغلب مدل متغیر نیست — بستر اجرایی است. پرامپت سیستم متفاوت، مجموعه ابزار متفاوت، پیشفرض مجوز تغییرکرده یا استراتژی تازه مدیریت زمینه، همه رفتار را بدون هیچ تغییری در مدل عوض میکنند. همچنین یعنی بستر اجرایی جایی است که بیشتر تنظیمات شما آنجا زندگی میکند: فایلهای [AGENTS.md](./AGENTS.md.md)، تنظیمات مجوز و قلابها همگی دستورالعملهایی برای بستر اجراییاند، نه برای مدل.
 
-Examples: Claude Code, Cursor, Codex CLI — and Claude.ai, which is a chat harness rather than a coding one.
+مثالها: Claude Code، Cursor، Codex CLI — و Claude.ai که بستر اجرایی گفتوگوست نه بستر کدنویسی.
 
-_Usage:_
+_کاربرد:_
 
-"Same model, why is Claude Code editing files and Claude.ai just answering questions?"
+«همان مدل، چرا Claude Code فایل ویرایش میکند و Claude.ai فقط به سؤالها جواب میدهد؟»
 
-"Different harnesses — Claude Code has [filesystem](./Filesystem.md) tools, a different system prompt, and a permission layer. The model isn't the variable here."
+«بسترهای اجرایی متفاوتاند — Claude Code ابزارهای [سیستم فایل](./Filesystem.md) دارد، پرامپت سیستماش فرق میکند و لایه مجوز دارد. مدل اینجا متغیر نیست.»

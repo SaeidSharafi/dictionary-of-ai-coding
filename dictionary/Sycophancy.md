@@ -1,24 +1,24 @@
 ---
-description: Confidently agreeable model output. Caused by training that shaped the model to favor answers humans liked — including agreement.
+description: خروجیِ بااطمینانِ موافقِ مدل. علتش آموزشی است که مدل را به سمت پاسخ‌هایی که انسان‌ها دوست دارند شکل داده — از جمله موافقت.
 ---
 
-Confidently agreeable [model](./Model.md) output. Caused by [training](./Training.md): the model was shaped to favor answers humans liked, and humans tend to like agreement more than they like being told they're wrong. So the model learned that agreeing is rewarded — even when the agreement is incorrect.
+خروجیِ بااطمینانِ موافقِ [مدل](./Model.md). علتش [آموزش](./Training.md) است: مدل طوری شکل گرفته که پاسخ‌هایی را ترجیح دهد که انسان‌ها دوست دارند، و انسان‌ها معمولاً موافقت را بیشتر از اینکه به‌شان گفته شود اشتباه می‌کنند دوست دارند. پس مدل یاد گرفته که موافقت کردن پاداش دارد — حتی وقتی موافقت نادرست است.
 
-_Surfaces as:_
+_به این شکل ظاهر می‌شود:_
 
-- _Caving under pushback_ — reverses a correct answer when you say "are you sure?".
-- _Praising bad input_ — agrees your broken plan is brilliant before analysing it.
-- _Biased framing_ — review skews positive when you signal you wrote it; negative when you signal someone else did. Same artifact, different verdict.
-- _Mimicry_ — repeats your mistakes back to you as confirmation.
+- _زیر فشار کوتاه آمدن_ — وقتی می‌گویید «مطمئنی؟» پاسخ درست را برمی‌گرداند.
+- _تعریف از ورودی بد_ — قبل از تحلیل، موافقت می‌کند برنامه خراب شما درخشان است.
+- _قاب‌بندی سوگیرانه_ — بازبینی وقتی نشان می‌دهید خودتان نوشته‌اید مثبت می‌شود؛ وقتی نشان می‌دهید دیگری نوشته منفی. همان دست‌ساخته، حکم متفاوت.
+- _تقلید_ — اشتباه‌های شما را به‌عنوان تأیید برایتان تکرار می‌کند.
 
-_Diagnostic test:_ would the model have said this without your steer? If the only thing that changed was your tone or framing, it's sycophancy, not a real shift in analysis.
+_تست تشخیصی:_ آیا مدل بدون هدایت شما این را می‌گفت؟ اگر تنها چیزی که عوض شده لحن یا قاب‌بندی شماست، چاپلوسی است، نه تغییر واقعی در تحلیل.
 
-_Fix:_ hide your preferences. Phrase prompts neutrally — "review this code" not "is this code good?".
+_راه‌حل:_ ترجیح‌هایتان را پنهان کنید. پرامپت‌ها را خنثی بیان کنید — «این کد را بازبینی کن» نه «این کد خوب است؟».
 
-_Avoid:_ using "sycophancy" for any wrong answer that happens to please you. Without the diagnostic test, the term has no more value than "wrong."
+_نبایدها:_ به کار بردن «چاپلوسی» برای هر پاسخ غلطی که اتفاقاً شما را خوشحال می‌کند. بدون تست تشخیصی، این واژه از «غلط» ارزش بیشتری ندارد.
 
-_Usage:_
+_کاربرد:_
 
-"It said my refactor plan looked great, then I asked 'are you sure?' and it walked the whole thing back."
+«گفت برنامه بازسازی من عالی به نظر می‌رسد، بعد پرسیدم 'مطمئنی؟' و کلش را پس گرفت.»
 
-"Classic sycophancy — it agreed first because you sounded confident, then caved because you sounded doubtful. The plan's quality didn't change, your tone did. [Clear](./Clearing.md) and re-ask without signalling either way."
+«چاپلوسی کلاسیک — اول موافقت کرد چون مطمئن به نظر می‌رسیدی، بعد کوتاه آمد چون مردد به نظر رسیدی. کیفیت برنامه عوض نشد، لحن تو عوض شد. [پاک کن](./Clearing.md) و بدون اینکه به هیچ سمتی اشاره کنی دوباره بپرس.»

@@ -5,34 +5,34 @@
 -->
 
 <p>
-  <a href="https://aicodingdictionary.com">
+  <a href="https://www.aihero.dev/ai-coding-dictionary">
     <picture>
-      <source media="(prefers-color-scheme: dark)" srcset="https://res.cloudinary.com/total-typescript/image/upload/v1782821584/dictionary-dark.png">
-      <source media="(prefers-color-scheme: light)" srcset="https://res.cloudinary.com/total-typescript/image/upload/v1782821584/dictionary-light.png">
-      <img alt="AI Coding Dictionary" src="https://res.cloudinary.com/total-typescript/image/upload/v1782821584/dictionary-light.png" width="369">
+      <source media="(prefers-color-scheme: dark)" srcset="https://res.cloudinary.com/total-typescript/image/upload/v1777878285/dictionary-dark_2x.png">
+      <source media="(prefers-color-scheme: light)" srcset="https://res.cloudinary.com/total-typescript/image/upload/v1777878285/dictionary-light_2x.png">
+      <img alt="AI Coding Dictionary" src="https://res.cloudinary.com/total-typescript/image/upload/v1777878285/dictionary-light_2x.png" width="369">
     </picture>
   </a>
 </p>
 
 # AI Coding Dictionary
 
-**AI coding can feel like it's just for experts**. Unexplained jargon. Mysterious failures. Bills that don't seem to match the work.
+**کدنویسی با هوش مصنوعی ممکن است حس و حال یک حرفه تخصصی را بدهد**. اصطلاح‌های بی‌توضیح. خرابی‌های مرموز. قبض‌هایی که با کار انجام‌شده نمی‌خوانند.
 
-It isn't, really. A lot of the confusion is manufactured: **there's a whole VC-funded economy that benefits from keeping it hard to understand**.
+در واقع این‌طور نیست. بخش زیادی از این سردرگمی ساختگی است: **یک اقتصاد کامل با پول سرمایه‌گذاری خطرپذیر وجود دارد که از سخت‌فهم نگه داشتن این حوزه سود می‌برد**.
 
-The basic terms of engagement are learnable in an afternoon. Once you have them, the whole thing stops feeling like guesswork.
+اصطلاحات پایه در یک بعدازظهر یاد گرفتنی‌اند. وقتی به دست‌تان بیایند، دیگر همه‌چیز شبیه حدس و گمان نیست.
 
-Why does context degrade? Why is the bill so high? Why does the same prompt behave differently from one day to the next?
+چرا زمینه افت می‌کند؟ چرا قبض این‌قدر بالا است؟ چرا یک پرامپت یکسان از روزی به روز دیگر رفتار متفاوتی دارد؟
 
-Each has a clean answer, once someone tells you the words to use.
+هر کدام یک پاسخ روشن دارند، به شرطی که کسی واژه‌های درست را به شما بگوید.
 
-That's what this dictionary is for. **The vocabulary of AI coding, translated into plain English**.
+این دقیقاً کاری است که این فرهنگ لغت می‌کند. **واژگان کدنویسی با هوش مصنوعی، به زبان ساده**.
 
-**Want more than the vocabulary?** Join 62,000+ developers at **[aihero.dev/newsletter](https://www.aihero.dev/s/dictionary-newsletter)** for my latest skills, thinking on AI engineering, and the resources that'll keep you ahead of the curve.
+**بیشتر از واژگان می‌خواهید؟** به بیش از 62,000 توسعه‌دهنده در **[aihero.dev/newsletter](https://www.aihero.dev/s/dictionary-newsletter)** بپیوندید برای تازه‌ترین مهارت‌ها، اندیشه درباره مهندسی هوش مصنوعی، و منابعی که شما را جلوتر از منحنی نگه می‌دارد.
 
 ---
 
-## Table of contents
+## فهرست مطالب
 
 <details>
 <summary>Section 1 — The Model</summary>
@@ -149,1261 +149,1261 @@ That's what this dictionary is for. **The vocabulary of AI coding, translated in
 
 ### AI
 
-A moving label, not a technology. "AI" doesn't name a fixed thing the way [model](#model) or [token](#token) does — it points at whatever computers can newly, impressively do. Right now it points at large language models. It has pointed at very different things before:
+یک عنوان سیال و متغیر، نه یک فناوری ثابت. «هوش مصنوعی» چیز ثابتی را مثل [مدل](#model) یا [توکن](#token) نامگذاری نمیکند — به هر چیزی اشاره میکند که رایانهها تازه و چشمگیر انجام میدهند. در حال حاضر به مدلهای زبانی بزرگ اشاره میکند و قبلاً هم به چیزهای بسیار متفاوتی اشاره کرده است:
 
-| Era       | What "AI" meant                                                                                       |
-| --------- | ----------------------------------------------------------------------------------------------------- |
-| 1950s     | Symbolic reasoning — theorem provers, checkers programs.                                              |
-| 1960s–70s | Rule-based symbolic programs — ELIZA, SHRDLU.                                                         |
-| 1980s     | Expert systems — thousands of hand-written if-then rules encoding human expertise.                    |
-| 1990s     | Game-tree search — Deep Blue beating Kasparov (1997). Researchers avoided the word "AI" entirely      |
-| 2000s     | Statistical machine learning — spam filters, recommenders. Still sold as "machine learning", not "AI" |
-| 2010s     | Deep learning — image recognition (AlexNet, 2012), AlphaGo (2016).                                    |
-| 2020s     | Large language models — ChatGPT (2022) made "AI" mean chatbots                                        |
+| دوره        | معنای «هوش مصنوعی»                                                                                                    |
+| ----------- | --------------------------------------------------------------------------------------------------------------------- |
+| دهه 1950    | استدلال نمادین — اثباتکنندههای قضیه، برنامههای بازی داما.                                                             |
+| دهه 1960–70 | برنامههای نمادین قاعدهمند — ELIZA، SHRDLU.                                                                            |
+| دهه 1980    | سیستمهای خبره — هزاران قاعده if-then دستنویس که خبرگی انسانی را در خود رمزگذاری میکنند.                               |
+| دهه 1990    | جستجوی درخت بازی — Deep Blue که Kasparov را شکست داد (1997). پژوهشگران کاملاً از واژه «هوش مصنوعی» اجتناب کردند       |
+| دهه 2000    | یادگیری ماشینی آماری — فیلترهای هرزنامه، پیشنهادگرها. هنوز هم بهعنوان 'machine learning' فروخته میشد، نه «هوش مصنوعی» |
+| دهه 2010    | یادگیری عمیق — تشخیص تصویر (AlexNet، 2012)، AlphaGo (2016).                                                           |
+| دهه 2020    | مدلهای زبانی بزرگ — ChatGPT (2022) «هوش مصنوعی» را مترادف چتبات کرد                                                   |
 
-The pointer moves by a known mechanism, sometimes called the AI effect: once a technique works reliably, it gets renamed — it's "just" search, "just" statistics — and "AI" slides forward to the next unsolved thing. The observation is old. Bertram Raphael put it this way in 1971: "AI is a collective name for problems which we do not yet know how to solve properly by computer." Larry Tesler's version, from around 1979: "Intelligence is whatever machines haven't done yet."
+نشانگر با سازوکاری شناختهشده حرکت میکند که گاهی «اثر هوش مصنوعی» نامیده میشود: وقتی یک تکنیک بهطور مطمئن کار میکند، نام تازهای میگیرد — «فقط» جستوجوست، «فقط» آمار — و «هوش مصنوعی» به جلو میلغزد تا به مسئله حلنشده بعدی برسد. این مشاهده قدیمی است. Bertram Raphael در 1971 آن را اینطور بیان کرد: «هوش مصنوعی نامی جمعی برای مسائلی است که هنوز نمیدانیم چطور درست با رایانه حلشان کنیم.» نسخه Larry Tesler از حدود 1979: «هوش یعنی هر کاری که ماشینها هنوز انجامش ندادهاند.»
 
-This is why conversations about AI so often talk past each other. A claim like "AI can't reason" or "AI is overhyped" carries a hidden timestamp — it may be about expert systems, about 2010s image classifiers, or about last month's LLM, and each reference supports a different conclusion. When a discussion about AI stalls, the fix is usually to swap the word for whichever precise term is actually meant: the model, the [harness](#harness), the [agent](#agent), the [context](#context) it was given.
+به همین دلیل گفتوگوهای درباره هوش مصنوعی اغلب از کنار هم رد میشوند. ادعایی مثل «هوش مصنوعی نمیتواند استدلال کند» یا «هوش مصنوعی بیش از حد تبلیغ شده» زمانپنهان دارد — ممکن است درباره سیستمهای خبره باشد، درباره دستهبندهای تصویر دهه 2010، یا درباره LLM ماه گذشته، و هر ارجاع از نتیجه متفاوتی پشتیبانی میکند. وقتی بحثی درباره هوش مصنوعی به بنبست میرسد، راهحل معمول این است که واژه را با همان اصطلاح دقیقی که واقعاً منظور است عوض کنید: مدل، [بستر اجرایی](#harness)، [عامل](#agent)، یا [زمینه](#context)ای که به آن داده شده.
 
-_Avoid:_ "AI" in any technical claim — name the part you mean instead. "AI coding" as a label for the practice is fine; "the AI is hallucinating" is not.
+_نبایدها:_ «هوش مصنوعی» در هر ادعای فنی — بهجای آن، همان بخشی را که منظورتان است نام ببرید. «کدنویسی با هوش مصنوعی» بهعنوان برچسب این کار اشکالی ندارد؛ اما «هوش مصنوعی در حال توهم است» درست نیست.
 
-_Usage:_
+_کاربرد:_
 
-"The CTO wants to know whether AI could handle the triage queue."
+«مدیر فناوری میخواهد بداند آیا هوش مصنوعی میتواند از پس صف triage بربیاید.»
 
-"Translate that before scoping it — she means an LLM in a harness with access to the ticket system. 'AI' on its own isn't a spec."
+«قبل از اینکه محدوده کار را مشخص کنی، اول آن را ترجمه کن — منظورش یک LLM در بستر اجرایی است که به سیستم تیکتها دسترسی دارد. 'AI' بهتنهایی یک مشخصات نیست.»
 
 ### Model
 
-The [parameters](#parameters). [Stateless](#stateless) — does [next-token prediction](#next-token-prediction) and nothing else. "Claude Opus 4.x" and "GPT-5.x" are models. On its own a model can't do anything agentic; it has to be [harnessed](#harness).
+[پارامترها](#parameters). [بی‌وضعیت](#stateless) — فقط [پیش‌بینی توکن بعدی](#next-token-prediction) و هیچ کار دیگر. «Claude Opus 4.x» و «GPT-5.x» مدل هستند. مدل به‌تنهایی نمی‌تواند هیچ کار عاملمحوری بکند؛ باید در [بستر اجرایی](#harness) قرار بگیرد.
 
-Models can't read files, run commands, browse the web, or remember yesterday — it takes [tokens](#token) in and predicts tokens out, once per [model provider request](#model-provider-request). Everything that feels like an [agent](#agent) working — choosing [tools](#tool), reading results, looping until the task is done — is the harness orchestrating many of those predictions in a row.
+مدل‌ها نمی‌توانند فایل بخوانند، فرمان اجرا کنند، در وب بگردند یا دیروز را به خاطر بسپارند — [توکن](#token) می‌گیرند و توکن پیش‌بینی می‌کنند، یک بار در هر [درخواست به ارائه‌دهنده مدل](#model-provider-request). هر چیزی که حس کار کردن یک [عامل](#agent) را می‌دهد — انتخاب [ابزار](#tool)، خواندن نتیجه‌ها، حلقه زدن تا تمام شدن کار — در واقع بستر اجرایی است که پشت‌سرهم بسیاری از این پیش‌بینی‌ها را هماهنگ می‌کند.
 
-[Model providers](#model-provider) ship models in tiers: a large one that's smartest but slow and expensive, and smaller ones that are faster and cheaper but less capable. Picking a tier is a real decision — heavyweight for planning and hard debugging, lightweight for mechanical changes — and harnesses let you switch mid-[session](#session).
+[ارائه‌دهنده‌های مدل](#model-provider) مدل‌ها را به‌صورت رده‌بندی‌شده عرضه می‌کنند: مدلی بزرگ که باهوش‌ترین است اما کند و گران، و مدل‌های کوچک‌تری که سریع‌تر و ارزان‌تر اما کم‌توان‌ترند. انتخاب رده یک تصمیم واقعی است — رده سنگین برای برنامه‌ریزی و اشکال‌زدایی سخت، رده سبک برای تغییرهای مکانیکی — و بسترهای اجرایی به شما اجازه می‌دهند وسط [نشست](#session) عوضش کنید.
 
-Being strict about the word also sharpens diagnosis. "The model is bad at this" is a specific claim — the same model in a different harness, or with a different [context](#context), often behaves completely differently. Before blaming the model, check what it was given: most disappointing output traces back to context or harness, not parameters.
+دقیق بودن در به‌کارگیری این واژه، تشخیص را هم تیز می‌کند. «این مدل در این کار بد است» ادعایی مشخص است — همان مدل در بستر اجرایی دیگر، یا با [زمینه](#context) متفاوت، اغلب رفتاری کاملاً متفاوت دارد. قبل از اینکه مدل را مقصر بدانید، ببینید چه چیزی به آن داده شده: بیشتر خروجی‌های ناامیدکننده به زمینه یا بستر اجرایی برمی‌گردند، نه پارامترها.
 
-_Usage:_
+_کاربرد:_
 
-"Should we switch the model from Sonnet to Opus for the planning step?"
+«آیا برای مرحله برنامه‌ریزی باید مدل را از Sonnet به Opus عوض کنیم؟»
 
-"Try it — but the harness is doing most of the lifting on this task. The model swap won't help if the [system prompt](#system-prompt) and tools are wrong."
+«امتحان کن — اما در این کار، بیشتر کار را بستر اجرایی انجام می‌دهد. اگر [پرامپت سیستم](#system-prompt) و ابزارها درست نباشند، عوض کردن مدل فایده‌ای ندارد.»
 
 ### Parameters
 
-The numbers inside a [model](#model) — often billions of them — tuned during [training](#training). Everything the model "knows" lives in them. Training sets them; [inference](#inference) uses them unchanged. Also called _weights_.
+اعداد داخل یک [مدل](#model) — اغلب میلیاردها عدد — که هنگام [آموزش](#training) تنظیم میشوند. هر آنچه مدل «میداند» در آنها جای دارد. آموزش آنها را تعیین میکند؛ [استنتاج](#inference) بدون تغییر از آنها استفاده میکند. _وزنها_ هم نامیده میشوند.
 
-Mechanically, the parameters are what turn input into output. [Next-token prediction](#next-token-prediction) is a giant calculation: the [tokens](#token) in the [context window](#context-window) go in, get multiplied through the parameters, and a prediction for the next token comes out. There is no database of facts inside the model, no code lookup table — just these numbers, arranged so that the calculation tends to produce useful output. Facts the model can recite from training, like a standard library API, are [parametric knowledge](#parametric-knowledge): stored in the parameters, not retrieved from anywhere.
+از نظر مکانیکی، پارامترها همان چیزهایی هستند که ورودی را به خروجی تبدیل میکنند. [پیشبینی توکن بعدی](#next-token-prediction) یک محاسبه عظیم است: [توکنهای](#token) موجود در [پنجره زمینه](#context-window) وارد میشوند، در پارامترها ضرب میشوند و پیشبینی توکن بعدی بیرون میآید. هیچ پایگاهداده حقایقی داخل مدل نیست، هیچ جدول جستوجوی کدی وجود ندارد — فقط همین اعداد، چنان چیده شدهاند که محاسبه معمولاً خروجی مفیدی تولید کند. حقایقی که مدل میتواند از آموزش بازگو کند، مثل API یک کتابخانه استاندارد، [دانش پارامتری](#parametric-knowledge) هستند: در پارامترها ذخیره شدهاند، نه از جایی بازیابی شدهاند.
 
-The detail worth internalising is that parameters are frozen after training. Nothing you do in a [session](#session) changes them — no correction you make, no codebase you show it, no mistake it learns from. Every session runs on the same numbers. This is why the model is [stateless](#stateless), why its built-in knowledge stops at the [knowledge cutoff](#knowledge-cutoff), and why anything project-specific has to arrive via [context](#context) instead. The only way parameters change is more training — which produces, in effect, a different model.
+نکته مهمی که ارزش درونی کردن دارد این است که پارامترها بعد از آموزش منجمد میشوند. هیچ کاری که در یک [نشست](#session) میکنید آنها را تغییر نمیدهد — نه تصحیحی که انجام میدهید، نه پایگاه کدی که نشانش میدهید، نه اشتباهی که از آن درس میگیرد. هر نشست با همین اعداد اجرا میشود. به همین دلیل مدل [بیوضعیت](#stateless) است، دانش درونیاش در [برش دانش](#knowledge-cutoff) متوقف میشود، و هر چیزی که مخصوص یک پروژه است باید از طریق [زمینه](#context) وارد شود. تنها راه تغییر پارامترها آموزش بیشتر است — که در عمل، مدلی متفاوت میسازد.
 
-_Usage:_
+_کاربرد:_
 
-"Can we fine-tune it on our codebase?"
+«میشود آن را روی پایگاه کد خودمان تنظیم دقیق کنیم؟»
 
-"That'd update the parameters — different model afterwards. For one project it's almost always cheaper to load the codebase as context than to retrain."
+«این یعنی بهروزرسانی پارامترها — مدل بعدش متفاوت خواهد بود. برای یک پروژه، تقریباً همیشه ارزانتر است که پایگاه کد را بهعنوان زمینه بارگذاری کنی تا اینکه دوباره آموزشش دهی.»
 
 ### Training
 
-The process that sets a [model](#model)'s [parameters](#parameters), by exposing it to vast amounts of text and adjusting parameters to improve [next-token prediction](#next-token-prediction). A one-time, expensive process done by the [model provider](#model-provider). Encompasses both pre-training (the bulk run) and post-training (later refinements like instruction-following and safety); the distinction doesn't matter at this glossary's level.
+فرایندی که [مدل](#model) را، یعنی [پارامترهای](#parameters) آن را، تعیین میکند، با قرار دادن مدل در معرض حجم عظیمی از متن و تنظیم پارامترها برای بهبود [پیشبینی توکن بعدی](#next-token-prediction). فرایندی یکباره و پرهزینه که [ارائهدهنده مدل](#model-provider) انجامش میدهد. هم پیشآموزش (اجرای اصلی) را در بر میگیرد هم پساآموزش (اصلاحهای بعدی مثل پیروی از دستورالعمل و ایمنی)؛ در سطح این واژهنامه این تمایز مهم نیست.
 
-The mechanism is repetition at scale: show the model a stretch of text, have it predict the next [token](#token), nudge the parameters toward whatever the actual next token was, and repeat across trillions of tokens. Nothing is stored as facts or rules — everything the model "knows" is a side effect of getting better at prediction, compressed into the parameters as [parametric knowledge](#parametric-knowledge).
+سازوکارش تکرار در مقیاس بزرگ است: یک تکه متن به مدل نشان دهید، از آن بخواهید [توکن](#token) بعدی را پیشبینی کند، پارامترها را به سمت همان توکن واقعی بعدی هل بدهید، و این کار را روی تریلیونها توکن تکرار کنید. هیچ چیزی بهصورت حقیقت یا قاعده ذخیره نمیشود — هر آنچه مدل «میداند» عارضه جانبی بهتر شدن در پیشبینی است که بهصورت [دانش پارامتری](#parametric-knowledge) در پارامترها فشرده شده.
 
-Two consequences matter day to day. Training ends at a point in time, so the model has a [knowledge cutoff](#knowledge-cutoff) — it hasn't seen the library version you upgraded to last month. And training is not something you can do: when the model doesn't know your codebase, your conventions, or your internal APIs, the fix is never "teach the model" — it's putting that material into [context](#context), the one input you control.
+دو پیامد در کار روزمره اهمیت دارند. آموزش در یک مقطع زمانی پایان مییابد، پس مدل یک [برش دانش](#knowledge-cutoff) دارد — نسخه کتابخانهای که ماه گذشته ارتقا دادید را ندیده است. و آموزش کاری نیست که شما بتوانید انجام دهید: وقتی مدل پایگاه کد، قراردادها یا APIهای داخلی شما را نمیشناسد، راهحل هرگز «به مدل یاد بده» نیست — بلکه گذاشتن آن مطالب در [زمینه](#context) است، تنها ورودی که در اختیار دارید.
 
-_Usage:_
+_کاربرد:_
 
-"Can we get it to know our internal API?"
+«میشود کاری کنیم API داخلی ما را یاد بگیرد؟»
 
-"Not via training — that's a months-long process by the model provider. Load the API docs into context instead, that's the lever you actually have."
+«نه از طریق آموزش — آن فرایندی چندماهه است که ارائهدهنده مدل انجام میدهد. بهجایش مستندات API را در زمینه بار کن؛ این اهرمی است که واقعاً در اختیار داری.»
 
 ### Inference
 
-Running a trained [model](#model) to generate output — what happens on every [model provider request](#model-provider-request). [Parameters](#parameters) stay fixed; the model just does [next-token prediction](#next-token-prediction) over the [context](#context) it's given. Cheap relative to [training](#training), but billed per [token](#token) and the dominant cost of using a model.
+اجرای یک [مدل](#model) آموزشدیده برای تولید خروجی — همان چیزی که در هر [درخواست به ارائهدهنده مدل](#model-provider-request) اتفاق میافتد. [پارامترها](#parameters) ثابت میمانند؛ مدل فقط [پیشبینی توکن بعدی](#next-token-prediction) را روی [زمینه](#context)ای که به آن داده شده انجام میدهد. نسبت به [آموزش](#training) ارزان است، اما به ازای هر [توکن](#token) محاسبه میشود و هزینه غالب استفاده از یک مدل است.
 
-A model's life splits into two phases:
+زندگی یک مدل به دو مرحله تقسیم میشود:
 
-| Phase     | When it happens                  | What it does                                                    | Parameters    |
-| --------- | -------------------------------- | --------------------------------------------------------------- | ------------- |
-| Training  | Once, before release             | Produces the parameters from a training corpus                  | Being written |
-| Inference | Every time anyone uses the model | Runs the frozen parameters over your context to generate tokens | Read-only     |
+| مرحله   | چه زمانی اتفاق میافتد              | چه کاری انجام میدهد                                            | پارامترها        |
+| ------- | ---------------------------------- | -------------------------------------------------------------- | ---------------- |
+| آموزش   | یک بار، قبل از عرضه                | پارامترها را از پیکره آموزشی تولید میکند                       | در حال نوشته شدن |
+| استنتاج | هر بار که کسی از مدل استفاده میکند | پارامترهای منجمد را روی زمینه شما اجرا میکند تا توکن تولید کند | فقطخواندنی       |
 
-Nothing you do at inference time writes back to the parameters — that's the reason a correction you make today doesn't stick tomorrow. The model that makes the same mistake next [session](#session), after you carefully explained the fix, hasn't ignored you; it's incapable of learning from the exchange. The model is [stateless](#stateless) — continuity has to come from outside it — from the [context window](#context-window) or a [memory system](#memory-system).
+هیچ کاری که هنگام استنتاج انجام میدهید به پارامترها نوشته نمیشود — به همین دلیل تصحیحی که امروز میکنید فردا ماندگار نمیماند. مدلی که [نشست](#session) بعد همان اشتباه را میکند، بعد از اینکه با دقت راهحل را توضیح دادید، شما را نادیده نگرفته؛ او ناتوان از یادگیری از آن گفتوگوست. مدل [بیوضعیت](#stateless) است — تداوم باید از بیرونش بیاید — از [پنجره زمینه](#context-window) یا یک [سیستم حافظه](#memory-system).
 
-This mechanism also explains how you're billed. Every request runs the model over the full context, so cost scales with [input tokens](#input-tokens) and [output tokens](#output-tokens), and an agent making dozens of [tool](#tool) calls pays for inference on each round trip. This is why context size is a cost question as well as a quality one.
+این سازوکار همچنین توضیح میدهد که صورتحساب شما چطور محاسبه میشود. هر درخواست مدل را روی کل زمینه اجرا میکند، پس هزینه با [توکنهای ورودی](#input-tokens) و [توکنهای خروجی](#output-tokens) رشد میکند، و عاملی که دهها فراخوانی [ابزار](#tool) انجام میدهد، در هر رفتوبرگشت هزینه استنتاج میپردازد. به همین دلیل اندازه زمینه هم یک مسئله هزینه است و هم یک مسئله کیفیت.
 
-_Usage:_
+_کاربرد:_
 
-"Why does the bill scale with usage instead of being a flat license?"
+«چرا صورتحساب با میزان استفاده رشد میکند بهجای اینکه یک لایسنس ثابت باشد؟»
 
-"You're paying for inference — every model provider request runs the model on the provider's hardware. Training already happened, but inference costs accrue per request, and a single [turn](#turn) can expand into many requests when tools are called."
+«داری بابت استنتاج پول میدهی — هر درخواست به ارائهدهنده مدل، مدل را روی سختافزار ارائهدهنده اجرا میکند. آموزش قبلاً انجام شده، اما هزینههای استنتاج به ازای هر درخواست جمع میشوند، و یک [نوبت](#turn) واحد میتواند وقتی ابزارها صدا زده میشوند به درخواستهای زیادی تبدیل شود.»
 
 ### Effort
 
-Effort is a dial for how much reasoning a [model](#model) does before it answers. Set per [model provider request](#model-provider-request), it controls the length of the thinking the model works through before it starts writing the response you see. That thinking is generated at [inference](#inference) time like everything else; the [harness](#harness) often hides it, but it's real work the model is doing.
+تلاش یک صفحهگردان است برای میزان استدلالی که یک [مدل](#model) قبل از پاسخ دادن انجام میدهد. این میزان به ازای هر [درخواست به ارائهدهنده مدل](#model-provider-request) تنظیم میشود و طول تفکری را کنترل میکند که مدل قبل از شروع به نوشتن پاسخی که میبینید طی میکند. آن تفکر مثل هر چیز دیگر هنگام [استنتاج](#inference) تولید میشود؛ [بستر اجرایی](#harness) اغلب آن را پنهان میکند، اما کار واقعیای است که مدل انجام میدهد.
 
-Higher effort costs more and runs slower. The reasoning is emitted as [tokens](#token), billed as [output tokens](#output-tokens) even when you never see them, and produced one token at a time — so turning effort up lengthens the wait before the answer arrives and adds to the bill. The trade is more deliberation against speed and cost.
+تلاش بیشتر هزینه بیشتری دارد و کندتر اجرا میشود. استدلال بهصورت [توکنهایی](#token) تولید میشود، بهعنوان [توکنهای خروجی](#output-tokens) محاسبه میشود حتی وقتی هرگز نمیبینیدشان، و یکییکی تولید میشود — پس بالا بردن تلاش، انتظار قبل از رسیدن پاسخ را طولانیتر میکند و به صورتحساب اضافه میکند. معامله این است: تأمل بیشتر در برابر سرعت و هزینه.
 
-Most harnesses expose effort as a small ladder:
+بیشتر بسترهای اجرایی تلاش را بهصورت نردبان کوچکی عرضه میکنند:
 
-| Level  | What it's for                                                          |
-| ------ | ---------------------------------------------------------------------- |
-| Low    | Mechanical edits, lookups, well-specified changes with one clear path. |
-| Medium | Everyday coding — the usual default.                                   |
-| High   | Tricky bugs, design decisions, multi-step plans.                       |
-| Max    | The hardest problems, where a wrong answer is expensive to unwind.     |
+| سطح    | برای چه کاری است                                                   |
+| ------ | ------------------------------------------------------------------ |
+| کم     | ویرایشهای مکانیکی، جستوجوها، تغییرهای کاملاً مشخص با یک مسیر روشن. |
+| متوسط  | کدنویسی روزمره — پیشفرض معمول.                                     |
+| زیاد   | باگهای پیچیده، تصمیمهای طراحی، برنامههای چندمرحلهای.               |
+| حداکثر | سختترین مسائل، جایی که برگرداندن پاسخ اشتباه گران است.             |
 
-The symptom of getting it wrong cuts both ways. Set effort too low on a hard problem and you get a confident, shallow answer that skipped the reasoning the problem needed — it reads fine and is wrong in a way that costs you later. Set it to max for a one-line rename and you sit through a long think that produces nothing the lowest setting wouldn't have.
+نشانه اشتباه تنظیم کردن، دو روی دارد. اگر تلاش را روی مسئلهای سخت خیلی کم بگذاری، پاسخی مطمئن و سطحی میگیری که استدلال موردنیاز مسئله را رد کرده — خوب به نظر میرسد و به شکلی غلط است که بعداً برایت هزینه دارد. اگر برای یک تغییر نام تکیخطی روی حداکثر بگذاری، یک فکر طولانی را تحمل میکنی که چیزی تولید نمیکند که کمترین تنظیم تولید نمیکرد.
 
-Match effort to the task, not the [session](#session). Turn it up for the part that's genuinely hard to reason about, and back down for the rote work around it.
+تلاش را با کار هماهنگ کن، نه با [نشست](#session). برای بخشی که واقعاً استدلال دربارهاش سخت است بالا ببرش، و برای کار تکراری اطرافش پایین بیاورش.
 
-_Usage:_
+_کاربرد:_
 
-"It keeps botching this concurrency fix — I've re-explained it three times."
+«مدام این اصلاح همروندی را خراب میکند — سه بار دوباره توضیحش دادهام.»
 
-"Bump the effort up. That's a reasoning-heavy bug, and on the default setting it's not thinking long enough before it commits to an approach."
+«تلاش را بالا ببر. این یک باگ سنگین از نظر استدلالی است، و در تنظیم پیشفرض، قبل از اینکه به یک رویکرد متعهد شود به اندازه کافی فکر نمیکند.»
 
 ### Token
 
-The atomic unit a [model](#model) reads and writes. Roughly word-sized but not exactly — common words are one token, rare or long ones split into several. [Context window](#context-window) size, cost, and latency are all counted in tokens.
+واحد اتمی که یک [مدل](#model) میخواند و مینویسد. تقریباً هماندازه یک واژه است اما نه دقیقاً — واژههای رایج یک توکناند، واژههای کمیاب یا بلند به چند توکن تقسیم میشوند. اندازه [پنجره زمینه](#context-window)، هزینه و تأخیر همگی بر حسب توکن سنجیده میشوند.
 
-Text becomes tokens via a tokenizer: a fixed vocabulary of tens of thousands of fragments, learned before [training](#training), that splits any input into a sequence of vocabulary entries. The model never sees characters or words — every piece of text is converted to tokens on the way in, and [next-token prediction](#next-token-prediction) produces output one token at a time on the way out.
+متن از طریق یک توکنساز به توکن تبدیل میشود: واژگان ثابتی از دهها هزار قطعه که قبل از [آموزش](#training) یاد گرفته شده و هر ورودی را به دنبالهای از مدخلهای واژگان میشکند. مدل هرگز کاراکتر یا واژه نمیبیند — هر تکه متن هنگام ورود به توکن تبدیل میشود، و [پیشبینی توکن بعدی](#next-token-prediction) هنگام خروج، خروجی را یکییکی تولید میکند.
 
-As a rule of thumb, a token is about three-quarters of an English word, so a thousand tokens is roughly 750 words. Code is less predictable: common keywords and idioms tokenize compactly, while generated identifiers, hashes, base64 blobs, and minified output split into many tokens per "word". The pattern: text that appeared often in the tokenizer's source material gets short, efficient encodings; text that didn't gets chopped into many small pieces. A hash like `a3f9c2e1` never appeared anywhere, so it splits into many tokens, while `function` is one. This is why a small-looking file full of unusual strings can occupy a surprising share of the context window.
+بهعنوان یک قاعده سرانگشتی، هر توکن حدود سهچهارم یک واژه انگلیسی است، پس هزار توکن تقریباً 750 واژه میشود. کد کمتر قابل پیشبینی است: کلیدواژهها و اصطلاحات رایج فشرده توکنسازی میشوند، در حالی که شناسههای تولیدشده، هشها، تودههای base64 و خروجی minified به توکنهای زیادی به ازای هر «واژه» تقسیم میشوند. الگو این است: متنی که در مواد منبع توکنساز زیاد ظاهر شده رمزگذاری کوتاه و کارآمد میگیرد؛ متنی که ظاهر نشده به تکههای کوچک زیادی خرد میشود. هشی مثل `a3f9c2e1` هیچجا ظاهر نشده، پس به توکنهای زیادی تقسیم میشود، در حالی که `function` یک توکن است. به همین دلیل فایلی که کوچک به نظر میرسد ولی پر از رشتههای غیرمعمول است میتواند سهم غیرمنتظرهای از پنجره زمینه را اشغال کند.
 
-Tokens are the unit everything else is measured in. Cost is per token — providers bill [input tokens](#input-tokens) and [output tokens](#output-tokens) separately. Speed is tokens per second, since output is generated one token at a time. And the context window is a fixed number of tokens, so the token count of your files decides how much fits.
+توکن واحدی است که همهچیز دیگر با آن سنجیده میشود. هزینه به ازای هر توکن است — ارائهدهندهها [توکنهای ورودی](#input-tokens) و [توکنهای خروجی](#output-tokens) را جداگانه محاسبه میکنند. سرعت بر حسب توکن در ثانیه است، چون خروجی یکییکی تولید میشود. و پنجره زمینه تعداد ثابتی توکن است، پس تعداد توکنهای فایلهای شما تعیین میکند چقدر جا میشود.
 
-_Avoid:_ "word" — token boundaries don't match word boundaries, and tokens-per-second / tokens-per-dollar are the units that actually matter.
+_نبایدها:_ «واژه» — مرز توکنها با مرز واژهها منطبق نیست، و واحدهایی که واقعاً اهمیت دارند توکن در ثانیه / توکن به ازای هر دلار است.
 
-_Usage:_
+_کاربرد:_
 
-"How big is this prompt going to be?"
+«این پرامپت چقدر بزرگ خواهد بود؟»
 
-"Run it through the tokenizer — the schema's compact but the JSON keys are weird, so they'll split into more tokens than you think."
+«از توکنساز ردش کن — اسکیمای فشرده است اما کلیدهای JSON عجیباند، پس به توکنهای بیشتری از آنچه فکر میکنی تقسیم میشوند.»
 
 ### Next-token prediction
 
-What the [model](#model) actually does. Given a [context](#context), it samples one next [token](#token), appends it, and runs again. Every output — a sentence, a [tool call](#tool-call), a thousand-line file — is built one token at a time. The model has no other mode of operation.
+کاری که [مدل](#model) واقعاً انجام میدهد. با داشتن یک [زمینه](#context)، یک [توکن](#token) بعدی را نمونهبرداری میکند، آن را ضمیمه میکند و دوباره اجرا میشود. هر خروجی — یک جمله، یک [فراخوانی ابزار](#tool-call)، یک فایل هزارخطی — یکییکی ساخته میشود. مدل هیچ حالت کارکرد دیگری ندارد.
 
-Each step works the same way: the tokens in the [context window](#context-window) are run through the [parameters](#parameters), which produce a probability for every token in the vocabulary — this one is very likely next, that one less so. One token is sampled from those probabilities, appended, and the loop runs again with the slightly longer context. That sampling step is why the same prompt produces different output on different runs: [non-determinism](#non-determinism) is built into the mechanism, not a bug layered on top.
+هر مرحله به همین شکل کار میکند: توکنهای موجود در [پنجره زمینه](#context-window) از [پارامترها](#parameters) عبور میکنند، که برای هر توکن واژگان یک احتمال تولید میکنند — این یکی خیلی محتمل است که بعدی باشد، آن یکی کمتر. یک توکن از آن احتمالها نمونهبرداری میشود، ضمیمه میشود و حلقه با زمینه کمی طولانیتر دوباره اجرا میشود. همین مرحله نمونهبرداری است که باعث میشود همان پرامپت در اجراهای مختلف خروجی متفاوتی تولید کند: [غیرقطعی بودن](#non-determinism) در خود سازوکار تعبیه شده، نه یک باگ که روی آن سوار شده.
 
-Holding onto this mechanism explains behaviour that otherwise looks strange. The model never checks whether a token is _true_ before emitting it — only whether it's _likely_ — which is the root of [hallucination](#hallucination). It commits to each token as it goes, so a confident-sounding opening sentence can steer the rest of the answer wrong. And because [output tokens](#output-tokens) are produced strictly one at a time, generation speed puts a floor on how fast any [agent](#agent) can work.
+چسبیدن به این سازوکار رفتاری را توضیح میدهد که در غیر این صورت عجیب به نظر میرسد. مدل هرگز قبل از تولید یک توکن بررسی نمیکند که _درست_ است — فقط بررسی میکند که _محتمل_ است — و این ریشه [توهم](#hallucination) است. مدل همانطور که پیش میرود به هر توکن متعهد میشود، پس یک جمله آغازین که مطمئن به نظر میرسد میتواند بقیه پاسخ را به بیراهه ببرد. و چون [توکنهای خروجی](#output-tokens) دقیقاً یکییکی تولید میشوند، سرعت تولید، حد بالای سرعتی است که هر [عامل](#agent) میتواند با آن کار کند.
 
-_Usage:_
+_کاربرد:_
 
-"How does the agent 'decide' to call a tool?"
+«عامل چطور 'تصمیم میگیرد' که ابزاری را صدا بزند؟»
 
-"It doesn't — it's next-token prediction all the way down. The tool call is just a structured string the [harness](#harness) parses out of the output stream."
+«نمیکند — تا تهش همهچیز پیشبینی توکن بعدی است. فراخوانی ابزار فقط یک رشته ساختاریافته است که [بستر اجرایی](#harness) از جریان خروجی بیرون میکشد.»
 
 ### Non-determinism
 
-The same input can produce different output. Run a [model](#model) twice with identical [context](#context) and you may get two different answers — sometimes a word, sometimes a completely different approach. Nothing in your code has to change for this to happen.
+همان ورودی میتواند خروجی متفاوتی تولید کند. یک [مدل](#model) را دو بار با [زمینه](#context) یکسان اجرا کنید و ممکن است دو پاسخ متفاوت بگیرید — گاهی یک واژه فرق میکند، گاهی رویکردی کاملاً متفاوت. برای اینکه این اتفاق بیفتد هیچ چیز در کد شما لازم نیست تغییر کند.
 
-It's a property of how models generate text, and how [model providers](#model-provider) serve [requests](#model-provider-request). During [inference](#inference), the model produces a probability distribution over possible next [tokens](#token) and one is sampled from it — usually with some randomness on purpose, since always picking the most likely token produces repetitive, lower-quality text. One differently-sampled token early in a response changes every token after it, which is how a single different word becomes a completely different approach. Provider-side serving adds more variation on top: requests are batched together on shared hardware, and tiny floating-point differences between batches can tip a close call between two tokens. There's no setting you can flip to make it all go away.
+این خاصیت نحوه تولید متن توسط مدلهاست و نحوه پاسخدهی [ارائهدهندههای مدل](#model-provider) به [درخواستها](#model-provider-request). هنگام [استنتاج](#inference)، مدل یک توزیع احتمال روی [توکنهای](#token) بعدی ممکن تولید میکند و یکی از آن توزیع نمونهبرداری میشود — معمولاً عمداً با کمی تصادف، چون همیشه محتملترین توکن را انتخاب کردن، متنی تکراری و کمعیار تولید میکند. یک توکن که در ابتدای پاسخ متفاوت نمونهبرداری شده، هر توکن بعد از خودش را تغییر میدهد؛ به این شکل یک واژه متفاوت به رویکردی کاملاً متفاوت تبدیل میشود. پاسخدهی سمت ارائهدهنده هم تنوع بیشتری روی آن اضافه میکند: درخواستها روی سختافزار مشترک دستهبندی میشوند و تفاوتهای ریز ممیز شناور بین دستهها میتواند یک رقابت نزدیک بین دو توکن را برگرداند. هیچ تنظیمی وجود ندارد که بتوانید بزنید تا همهاش از بین برود.
 
-Expect a spread of results from an [agent](#agent) on the same task. Most responses fall within a reasonable bell curve of quality — that's why the non-determinism is tolerable at all — but the tails are real: some days the model will feel sharp; some days it'll feel like it's lost the plot. Same task, different rolls of the dice. This has two practical consequences. Retrying is a legitimate strategy: a failed attempt is one draw from the distribution, and a fresh attempt at the same task may simply land better. And verification matters more than it would with deterministic tools — you can't test an agent's behaviour once and rely on it repeating, so [automated checks](#automated-check) have to catch the bad draws.
+از یک [عامل](#agent) روی همان کار، انتظار پراکندگی نتایج را داشته باشید. بیشتر پاسخها در یک منحنی زنگولهای معقول از کیفیت قرار میگیرند — به همین دلیل است که غیرقطعی بودن اصلاً قابل تحمل است — اما دُمها واقعیاند: بعضی روزها مدل تیز به نظر میرسد؛ بعضی روزها انگار رشته کار را گم کرده. همان کار، تاسهای متفاوت. این دو پیامد عملی دارد. تلاش دوباره یک استراتژی مشروع است: یک تلاش ناموفق یک بار کشیدن از توزیع است، و تلاش تازه روی همان کار ممکن است بهسادگی بهتر از آب دربیاید. و راستیآزمایی بیشتر از آنچه با ابزارهای قطعی اهمیت داشت اهمیت دارد — نمیتوانید رفتار یک عامل را یک بار تست کنید و به تکرارش اعتماد کنید، پس [بررسیهای خودکار](#automated-check) باید کششهای بد را بگیرند.
 
-Be careful not to over-narrativize this. Humans are pattern-matching machines, and a string of bad runs can feel like proof that "the model got worse this week." Usually it's just the distribution.
+مراقب باشید این را بیش از حد داستانی نکنید. انسانها ماشینهای تطبیق الگو هستند، و یک رشته اجراهای بد میتواند مثل اثری حس شود که «مدل این هفته بدتر شده». معمولاً فقط توزیع است.
 
-_Usage:_
+_کاربرد:_
 
-"Claude has been awful today. Did they ship a worse version?"
+«Claude امروز افتضاح بوده. مگر نسخه بدتری عرضه کردهاند؟»
 
-"Probably not — model output is non-deterministic. You're going to have good days and bad days on the same task. Try again tomorrow before you go looking for a cause."
+«احتمالاً نه — خروجی مدل غیرقطعی است. روی همان کار روزهای خوب و بد خواهی داشت. قبل از اینکه دنبال دلیل بگردی، فردا دوباره امتحان کن.»
 
 ### Model provider
 
-Whatever serves a [model](#model) for [inference](#inference). Usually a remote service (Anthropic, OpenAI, Google), but can also be local — Ollama, LM Studio, llama.cpp running on your own machine. The [harness](#harness) doesn't run the model itself; it asks a provider to.
+هر چیزی که یک [مدل](#model) را برای [استنتاج](#inference) ارائه میدهد. معمولاً یک سرویس راه دور (Anthropic، OpenAI، Google)، اما میتواند محلی هم باشد — Ollama، LM Studio، llama.cpp روی ماشین خودتان. [بستر اجرایی](#harness) خودش مدل را اجرا نمیکند؛ از یک ارائهدهنده میخواهد که این کار را بکند.
 
-The provider owns the machinery: the [parameters](#parameters) live on its hardware, and every [model provider request](#model-provider-request) is the harness sending [tokens](#token) over the network and getting predictions back. That makes the provider the source of a whole category of problems that get misattributed to the model or the harness — rate limits, degraded capacity, and outages all live here. When the [agent](#agent) stalls mid-[session](#session) or errors on every [turn](#turn), the provider's status page is worth checking before anything else.
+ارائهدهنده صاحب ماشینآلات است: [پارامترها](#parameters) روی سختافزار آن زندگی میکنند، و هر [درخواست به ارائهدهنده مدل](#model-provider-request) این است که بستر اجرایی [توکنهایی](#token) را روی شبکه میفرستد و پیشبینیها را برمیگرداند. همین، ارائهدهنده را منشأ یک دسته کامل از مشکلات میکند که به اشتباه به مدل یا بستر اجرایی نسبت داده میشوند — محدودیت نرخ، ظرفیت افتکرده و قطعیها همه اینجا زندگی میکنند. وقتی [عامل](#agent) وسط [نشست](#session) میایستد یا در هر [نوبت](#turn) خطا میدهد، قبل از هر چیز صفحه وضعیت ارائهدهنده را بررسی کنید.
 
-The provider also sets the commercial terms: per-token pricing for [input](#input-tokens) and [output tokens](#output-tokens), [prefix cache](#prefix-cache) discounts, and which models are available at all. Note that the provider and the model's maker can be different companies — Bedrock, Vertex, and OpenRouter serve other people's models.
+ارائهدهنده شرایط تجاری را هم تعیین میکند: قیمتگذاری به ازای هر توکن برای [ورودی](#input-tokens) و [توکنهای خروجی](#output-tokens)، تخفیف [کش پیشوند](#prefix-cache)، و اینکه اصلاً کدام مدلها در دسترساند. توجه کنید که ارائهدهنده و سازنده مدل میتوانند شرکتهای متفاوتی باشند — Bedrock، Vertex و OpenRouter مدلهای دیگران را سرو میکنند.
 
-Local providers trade capability for control: the models that fit on your own hardware are far smaller than the frontier ones, but nothing leaves the machine and there's no bill per token.
+ارائهدهندههای محلی توانایی را با کنترل معاوضه میکنند: مدلهایی که روی سختافزار خودتان جا میشوند بسیار کوچکتر از مدلهای مرزیاند، اما هیچ چیز از ماشین بیرون نمیرود و صورتحسابی به ازای هر توکن نیست.
 
-_Usage:_
+_کاربرد:_
 
-"Can we run this offline for the air-gapped client?"
+«میشود این را برای مشتری air-gapped بهصورت آفلاین اجرا کنیم؟»
 
-"Swap the model provider to a local one — Ollama or llama.cpp on their box. The harness doesn't care, it just hits a different endpoint."
+«ارائهدهنده مدل را با یک نمونه محلی عوض کن — Ollama یا llama.cpp روی سیستمشان. بستر اجرایی اهمیتی نمیدهد، فقط به یک endpoint متفاوت میزند.»
 
 ### Harness
 
-Everything around the [model](#model) that turns it into an [agent](#agent): [tools](#tool), [system prompt](#system-prompt), [context-window management](#context-window), permissions, hooks. **Claude.ai** and **Claude Code** run on the same model but behave differently because their harnesses differ.
+هر چیزی که دور [مدل](#model) است و آن را به یک [عامل](#agent) تبدیل میکند: [ابزارها](#tool)، [پرامپت سیستم](#system-prompt)، [مدیریت پنجره زمینه](#context-window)، مجوزها، قلابها. **Claude.ai** و **Claude Code** روی همان مدل اجرا میشوند اما رفتار متفاوتی دارند چون بسترهای اجراییشان فرق میکند.
 
-The model itself only does one thing: take text in, produce text out. It can't read a file, run a command, or remember the last [turn](#turn). The harness supplies all of that. It assembles the [context](#context) for each [model provider request](#model-provider-request), executes the [tool calls](#tool-call) the model asks for, feeds the [tool results](#tool-result) back in, stores the [session](#session) history, asks you for permission before risky actions, and decides when to [compact](#compaction). The agent loop — model proposes, harness executes, repeat — is run by the harness.
+خود مدل فقط یک کار میکند: متن میگیرد، متن میدهد. نمیتواند فایل بخواند، فرمان اجرا کند یا آخرین [نوبت](#turn) را به خاطر بسپارد. بستر اجرایی همه اینها را تأمین میکند. [زمینه](#context) هر [درخواست به ارائهدهنده مدل](#model-provider-request) را کنار هم میچیند، [فراخوانیهای ابزار](#tool-call)ای که مدل میخواهد را اجرا میکند، [نتیجههای ابزار](#tool-result) را برمیگرداند، تاریخچه [نشست](#session) را ذخیره میکند، قبل از اقدامهای پرخطر از شما مجوز میخواهد و تصمیم میگیرد کی [فشردهسازی](#compaction) کند. حلقه عامل — مدل پیشنهاد میدهد، بستر اجرایی اجرا میکند، تکرار — را بستر اجرایی میچرخاند.
 
-This matters for diagnosis. When behaviour differs between two products, or between yesterday and today, the model is often not the variable — the harness is. A different system prompt, a different set of tools, a changed permission default, or a new context-management strategy all change behaviour without any change to the model. It also means the harness is where most of your configuration lives: [AGENTS.md](#agentsmd) files, permission settings, and hooks are all instructions to the harness, not the model.
+این برای تشخیص مهم است. وقتی رفتار بین دو محصول، یا بین دیروز و امروز فرق میکند، اغلب مدل متغیر نیست — بستر اجرایی است. پرامپت سیستم متفاوت، مجموعه ابزار متفاوت، پیشفرض مجوز تغییرکرده یا استراتژی تازه مدیریت زمینه، همه رفتار را بدون هیچ تغییری در مدل عوض میکنند. همچنین یعنی بستر اجرایی جایی است که بیشتر تنظیمات شما آنجا زندگی میکند: فایلهای [AGENTS.md](#agentsmd)، تنظیمات مجوز و قلابها همگی دستورالعملهایی برای بستر اجراییاند، نه برای مدل.
 
-Examples: Claude Code, Cursor, Codex CLI — and Claude.ai, which is a chat harness rather than a coding one.
+مثالها: Claude Code، Cursor، Codex CLI — و Claude.ai که بستر اجرایی گفتوگوست نه بستر کدنویسی.
 
-_Usage:_
+_کاربرد:_
 
-"Same model, why is Claude Code editing files and Claude.ai just answering questions?"
+«همان مدل، چرا Claude Code فایل ویرایش میکند و Claude.ai فقط به سؤالها جواب میدهد؟»
 
-"Different harnesses — Claude Code has [filesystem](#filesystem) tools, a different system prompt, and a permission layer. The model isn't the variable here."
+«بسترهای اجرایی متفاوتاند — Claude Code ابزارهای [سیستم فایل](#filesystem) دارد، پرامپت سیستماش فرق میکند و لایه مجوز دارد. مدل اینجا متغیر نیست.»
 
 ### Model provider request
 
-One round-trip from the [harness](#harness) to the [model provider](#model-provider). The harness sends the current [context](#context); the provider returns one response (a [tool call](#tool-call) or a final answer). A single user message can spawn many model provider requests if the [agent](#agent) calls [tools](#tool) — each [tool result](#tool-result) triggers another request.
+یک رفتوبرگشت از [بستر اجرایی](#harness) به [ارائهدهنده مدل](#model-provider). بستر اجرایی [زمینه](#context) فعلی را میفرستد؛ ارائهدهنده یک پاسخ برمیگرداند (یک [فراخوانی ابزار](#tool-call) یا یک پاسخ نهایی). یک پیام واحد کاربر میتواند درخواستهای زیادی به ارائهدهنده مدل ایجاد کند اگر [عامل](#agent) [ابزارها](#tool) را صدا بزند — هر [نتیجه ابزار](#tool-result) درخواست دیگری را راه میاندازد.
 
-Each request carries everything: the [system prompt](#system-prompt), the full conversation so far, every tool result. The [model](#model) is [stateless](#stateless), so the provider keeps nothing between requests — request forty re-sends what request thirty-nine sent, plus one more tool result. The [prefix cache](#prefix-cache) exists to make this repetition affordable.
+هر درخواست همهچیز را حمل میکند: [پرامپت سیستم](#system-prompt)، کل گفتوگو تا اینجا، همه نتیجه ابزارها. [مدل](#model) [بیوضعیت](#stateless) است، پس ارائهدهنده چیزی بین درخواستها نگه نمیدارد — درخواست چهلم همان چیزی را دوباره میفرستد که درخواست سیونهم فرستاد، بهعلاوه یک نتیجه ابزار بیشتر. [کش پیشوند](#prefix-cache) وجود دارد تا این تکرار را مقرونبهصرفه کند.
 
-The request is also the unit of billing. [Input tokens](#input-tokens), [output tokens](#output-tokens), and cache discounts are all counted per request, which is why an innocuous-looking question can cost a surprising amount: the cost isn't proportional to your message, it's proportional to the number of requests times the size of the context each one carries.
+درخواست همچنین واحد صورتحساب است. [توکنهای ورودی](#input-tokens)، [توکنهای خروجی](#output-tokens) و تخفیفهای کش همگی به ازای هر درخواست شمارش میشوند؛ به همین دلیل یک سؤال بیآزار میتواند هزینهای شگفتآور داشته باشد: هزینه متناسب با پیام شما نیست، متناسب است با تعداد درخواستها ضربدر اندازه زمینهای که هرکدام حمل میکنند.
 
-It's worth keeping the request distinct from the [turn](#turn). A turn is one exchange with you, and a single turn — "fix the failing test" — plays out as a chain of requests:
+ارزشش را دارد که درخواست را از [نوبت](#turn) جدا نگه دارید. نوبت یک مبادله با شماست، و یک نوبت واحد — «تستِ خراب را درست کن» — بهصورت زنجیرهای از درخواستها اجرا میشود:
 
-| Request | Model returns                     | Harness then                          |
-| ------- | --------------------------------- | ------------------------------------- |
-| 1       | Tool call: run the tests          | Runs them, appends the failure output |
-| 2       | Tool call: read the test file     | Appends the file contents             |
-| 3       | Tool call: read the source file   | Appends the file contents             |
-| 4       | Tool call: edit the source file   | Applies the edit, appends the result  |
-| 5       | Tool call: run the tests again    | Runs them, appends the pass output    |
-| 6       | Final answer: "fixed, tests pass" | Shows it to you                       |
+| درخواست | مدل برمیگرداند                        | سپس بستر اجرایی                                 |
+| ------- | ------------------------------------- | ----------------------------------------------- |
+| 1       | فراخوانی ابزار: اجرای تستها           | آنها را اجرا میکند، خروجی شکست را ضمیمه میکند   |
+| 2       | فراخوانی ابزار: خواندن فایل تست       | محتوای فایل را ضمیمه میکند                      |
+| 3       | فراخوانی ابزار: خواندن فایل منبع      | محتوای فایل را ضمیمه میکند                      |
+| 4       | فراخوانی ابزار: ویرایش فایل منبع      | ویرایش را اعمال میکند، نتیجه را ضمیمه میکند     |
+| 5       | فراخوانی ابزار: اجرای دوباره تستها    | آنها را اجرا میکند، خروجی موفقیت را ضمیمه میکند |
+| 6       | پاسخ نهایی: «درست شد، تستها پاس شدند» | آن را به شما نشان میدهد                         |
 
-Six requests for one turn — each one re-sending the whole context. When you wonder where the [tokens](#token) went, count the requests, not the turns.
+شش درخواست برای یک نوبت — هرکدام کل زمینه را دوباره میفرستد. وقتی تعجب میکنید [توکنها](#token) کجا رفتند، درخواستها را بشمارید، نه نوبتها را.
 
-_Usage:_
+_کاربرد:_
 
-"One question burned forty thousand tokens?"
+«یک سؤال چهل هزار توکن سوزاند؟»
 
-"Look at the tool calls — twelve grep, eight read, four edits. Each tool result spawns another model provider request, and the whole [session](#session) prefix re-sends every time."
+«به فراخوانیهای ابزار نگاه کن — دوازده grep، هشت read، چهار ویرایش. هر نتیجه ابزار درخواست دیگری به ارائهدهنده مدل ایجاد میکند، و کل پیشوند [نشست](#session) هر بار دوباره فرستاده میشود.»
 
 ### Input tokens
 
-[Tokens](#token) the [harness](#harness) sends on each [model provider request](#model-provider-request) — the [system prompt](#system-prompt), the conversation history, [tool results](#tool-result), everything the [model](#model) reads before it writes. Billed at a lower rate than [output tokens](#output-tokens), because they are less expensive to process than output tokens.
+[توکنهایی](#token) که [بستر اجرایی](#harness) در هر [درخواست به ارائهدهنده مدل](#model-provider-request) میفرستد — یعنی [پرامپت سیستم](#system-prompt)، تاریخچه گفتوگو، [نتیجههای ابزار](#tool-result) و هر چیز دیگری که [مدل](#model) قبل از شروع به نوشتن میخواند. این توکنها با نرخ کمتری نسبت به [توکنهای خروجی](#output-tokens) محاسبه میشوند، چون پردازششان از پردازش توکنهای خروجی ارزانتر است.
 
-When doing [AI](#ai) coding, input tokens make up most of your bill. The model is [stateless](#stateless), so each [turn](#turn) re-sends the entire [session](#session) as input: your first message, every response, every tool result since. The input for turn fifty contains the previous forty-nine turns. A single model provider request might produce a few hundred output tokens but re-send a hundred thousand input tokens of accumulated history.
+وقتی با [هوش مصنوعی](#ai) کدنویسی میکنید، توکنهای ورودی بیشترین سهم را در صورتحساب شما دارند. مدل [بیوضعیت](#stateless) است، پس هر [نوبت](#turn) باید کل [نشست](#session) را بهصورت ورودی دوباره بفرستد: اولین پیام شما، هر پاسخی که دادهاید، هر نتیجه ابزاری که از آن زمان به دست آمده. ورودی نوبت پنجاهم، چهلونه نوبت قبلی را هم در خودش دارد. یک درخواست واحد به ارائهدهنده مدل ممکن است فقط چند صد توکن خروجی تولید کند، اما در همان حال صد هزار توکن ورودی از تاریخچه انباشتهشده را دوباره میفرستد.
 
-The [prefix cache](#prefix-cache) reduces the cost: history that exactly matches a previous request is billed as cheap [cache tokens](#cache-tokens) rather than full-price input. When input costs still hurt, the fix is to shrink what gets re-sent — [clearing](#clearing) or [compacting](#compaction) between tasks.
+[کش پیشوند](#prefix-cache) این هزینه را پایین میآورد: تاریخیهای که دقیقاً با یک درخواست قبلی منطبق است بهعنوان [توکنهای کش](#cache-tokens) ارزان محاسبه میشود، نه بهعنوان ورودی با قیمت کامل. وقتی هزینه ورودی هنوز آزاردهنده است، راهحل این است که چیزی را که دوباره فرستاده میشود کوچک کنید — یعنی بین کارها [پاکسازی](#clearing) یا [فشردهسازی](#compaction) انجام دهید.
 
-_Usage:_
+_کاربرد:_
 
-"Bill's high but the [agent](#agent)'s barely writing anything."
+«صورتحساب بالاست ولی [عامل](#agent) بهسختی چیزی مینویسد.»
 
-"It's the input tokens — every turn re-sends the whole session. Without the prefix cache you re-pay for the history each request."
+«مشکل از توکنهای ورودی است — هر نوبت کل نشست را دوباره میفرستد. بدون کش پیشوند، در هر درخواست دوباره بابت کل تاریخچه پول میدهی.»
 
 ### Output tokens
 
-[Tokens](#token) the [model](#model) generates back. Billed at a higher rate than [input tokens](#input-tokens) — commonly around five times the rate — since they cost more compute to produce.
+[توکنهایی](#token) که [مدل](#model) تولید میکند و به سمت کاربر برمیگرداند. اینها با نرخ بالاتری نسبت به [توکنهای ورودی](#input-tokens) محاسبه میشوند — معمولاً چیزی حدود پنج برابر نرخ توکنهای ورودی — چون تولیدشان به محاسبه بیشتری نیاز دارد.
 
-Everything the model writes counts: the prose you read, the code it emits, [tool calls](#tool-call), and any extended thinking the model does before answering. That last one surprises people — reasoning tokens are billed as output even when the [harness](#harness) often doesn't show them to you, and turning up [effort](#effort) spends more of them.
+هر چیزی که مدل مینویسد در صورتحساب حساب میشود: نثری که شما میخوانید، کدی که بهعنوان خروجی تولید میکند، [فراخوانیهای ابزار](#tool-call) و هر تفکر گستردهای که مدل قبل از پاسخ دادن از خودش نشان میدهد. همین مورد آخر معمولاً مردم را غافلگیر میکند — توکنهای استدلال بهعنوان خروجی محاسبه میشوند حتی وقتی [بستر اجرایی](#harness) اغلب آنها را به شما نشان نمیدهد، و بالا بردن [تلاش](#effort) تعداد بیشتری از آنها را خرج میکند.
 
-Output tokens also set the pace of a [session](#session). The model reads input quickly but generates output one token at a time, so when a [turn](#turn) feels slow, it's almost always the output being written, not the input being read. A long wait usually means a long answer is coming.
+توکنهای خروجی همچنین سرعت پیشروی یک [نشست](#session) را تعیین میکنند. مدل ورودی را سریع میخواند، اما خروجی را توکنبهتوکن و یکییکی تولید میکند، پس وقتی یک [نوبت](#turn) کند به نظر میرسد، تقریباً همیشه خروجی است که نوشته میشود، نه ورودی که خوانده میشود. وقتی مدت زیادی صبر میکنید، معمولاً یعنی پاسخ بلندی در راه است.
 
-_Usage:_
+_کاربرد:_
 
-"The refactor session is burning through credit even though the inputs are small."
+«نشست بازسازی کد اعتبار را میسوزاند حتی با اینکه ورودیها کوچکاند.»
 
-"Agent's rewriting whole files instead of patching. Output tokens cost roughly five times the input rate — get it emitting edits and the bill drops."
+«عامل بهجای اینکه وصله بزند، کل فایلها را بازنویسی میکند. توکنهای خروجی تقریباً پنج برابر نرخ توکنهای ورودی هزینه دارند — کاریش کن ویرایش تولید کند تا صورتحساب پایین بیاید.»
 
 ### Prefix cache
 
-The [provider](#model-provider)-side store that lets consecutive [model provider requests](#model-provider-request) skip re-processing a shared prefix. When the start of a request matches the start of a recent one — same [system prompt](#system-prompt), same history up to some point — the provider reuses its prior work and bills those [tokens](#token) as [cache tokens](#cache-tokens) at a much lower rate.
+ذخیرهساز سمت [ارائهدهنده](#model-provider) که به [درخواستهای پیاپی به ارائهدهنده مدل](#model-provider-request) اجازه میدهد از پردازش دوباره یک پیشوند مشترک صرفنظر کنند. وقتی شروع یک درخواست با شروع یک درخواست اخیر منطبق است — همان [پرامپت سیستم](#system-prompt)، همان تاریخچه تا یک نقطه — ارائهدهنده کار قبلیاش را دوباره استفاده میکند و آن [توکنها](#token) را با نرخ بسیار کمتری بهعنوان [توکنهای کش](#cache-tokens) محاسبه میکند.
 
-The cache pays off because sessions grow append-only. Every request re-sends the whole history as [input tokens](#input-tokens) (see that entry for why), and in a normal [session](#session) the history only changes at the end — each request is the previous one plus a few new messages. The provider processes the long shared beginning once, stores the result, and picks up from where the prefix ends. Without the cache, a 50-[turn](#turn) session would pay to re-process turn one fifty times.
+کش بهصرفه میشود چون نشستها فقط-افزودنی رشد میکنند. هر درخواست کل تاریخچه را بهصورت [توکنهای ورودی](#input-tokens) دوباره میفرستد (برای چراییاش همان مدخل را ببینید)، و در یک [نشست](#session) عادی تاریخچه فقط در انتها تغییر میکند — هر درخواست همان درخواست قبلی است بهعلاوه چند پیام تازه. ارائهدهنده شروع طولانی مشترک را یک بار پردازش میکند، نتیجه را ذخیره میکند و از جایی که پیشوند تمام میشود ادامه میدهد. بدون کش، یک نشست 50-[نوبتی](#turn) باید پردازش نوبت اول را پنجاه بار میپرداخت.
 
-Caches also expire. How long an entry stays warm varies per model provider — typically minutes, not hours. Leave a session idle past the window and the next request rebuilds the prefix at full price once before caching resumes. This is mostly a [harness](#harness) builder's concern; as a user, the visible effect is that requests after a long pause cost more than the ones before it.
+کشها هم منقضی میشوند. اینکه یک مدخل چقدر گرم میماند بسته به ارائهدهنده مدل فرق میکند — معمولاً چند دقیقه، نه چند ساعت. اگر نشستی را بیشتر از آن بازه بیکار بگذارید، درخواست بعدی یک بار پیشوند را با قیمت کامل میسازد تا کش دوباره شروع شود. این بیشتر دغدغه سازنده [بستر اجرایی](#harness) است؛ بهعنوان کاربر، اثر قابل مشاهدهاش این است که درخواستهای بعد از یک مکث طولانی بیشتر از درخواستهای قبلش هزینه دارند.
 
-_Usage:_
+_کاربرد:_
 
-"Why did the bill spike halfway through the session?"
+«چرا صورتحساب وسط نشست جهش کرد؟»
 
-"Harness started injecting the current time into the system prompt every turn. Prefix cache breaks at the first changed token, so every request after that billed at full rate."
+«بستر اجرایی شروع کرد به تزریق زمان فعلی در پرامپت سیستم در هر نوبت. کش پیشوند در اولین توکن تغییرکرده میشکند، پس هر درخواست بعد از آن با قیمت کامل محاسبه شد.»
 
 ### Cache tokens
 
-[Input tokens](#input-tokens) the [provider](#model-provider) has cached from a previous [model provider request](#model-provider-request) so it doesn't have to re-process them. When consecutive requests share a prefix, the provider reuses the work via its [prefix cache](#prefix-cache) and bills the cached portion at a much lower rate. The lever that makes long [sessions](#session) affordable — without it, every [turn](#turn) re-pays for the whole history.
+[توکنهای ورودی](#input-tokens)ای که [ارائهدهنده](#model-provider) از یک [درخواست به ارائهدهنده مدل](#model-provider-request) قبلی کش کرده تا مجبور نباشد دوباره پردازششان کند. وقتی درخواستهای پیاپی پیشوندی مشترک دارند، ارائهدهنده از طریق [کش پیشوند](#prefix-cache) کار را دوباره استفاده میکند و بخش کششده را با نرخ بسیار کمتری محاسبه میکند. اهرمی که [نشستهای](#session) طولانی را مقرونبهصرفه میکند — بدون آن، هر [نوبت](#turn) دوباره بابت کل تاریخچه پول میدهد.
 
-The reason this matters is how sessions are billed. The [model](#model) is [stateless](#stateless), so every request resends the entire conversation — [system prompt](#system-prompt), every message, every [tool result](#tool-result) — as input tokens. By turn fifty, each request carries fifty turns of history, and you'd pay full rate on all of it, every time. The cache changes the maths: tokens the provider has already processed in an identical prefix are billed as cache tokens, often at a tenth of the input rate or less. On a long session, most of what you send is cache tokens, and the bill stays sane.
+دلیلی که این مهم است نحوه محاسبه صورتحساب نشستهاست. [مدل](#model) [بیوضعیت](#stateless) است، پس هر درخواست کل گفتوگو را دوباره میفرستد — [پرامپت سیستم](#system-prompt)، هر پیام، هر [نتیجه ابزار](#tool-result) — بهصورت توکنهای ورودی. تا نوبت پنجاهم، هر درخواست پنجاه نوبت تاریخچه حمل میکند و هر بار بابت همهاش با قیمت کامل پول میدادید. کش حسابوکتاب را عوض میکند: توکنهایی که ارائهدهنده قبلاً در یک پیشوند یکسان پردازش کرده بهعنوان توکنهای کش محاسبه میشوند، اغلب با یکدهم نرخ ورودی یا کمتر. در یک نشست طولانی، بیشتر چیزی که میفرستید توکنهای کشاند و صورتحساب معقول میماند.
 
-An example shows when tokens are cached and when they're not. Each letter stands for a block of conversation content; each request sends the conversation so far:
+یک مثال نشان میدهد توکنها کی کش میشوند و کی نه. هر حرف نماینده یک بلوک از محتوای گفتوگوست؛ هر درخواست گفتوگو تا اینجا را میفرستد:
 
-| Request sends | Cached  | Billed at full rate | Why                                               |
-| ------------- | ------- | ------------------- | ------------------------------------------------- |
-| `AB`          | nothing | `AB`                | First request — nothing to match against          |
-| `ABC`         | `AB`    | `C`                 | `AB` is an exact prefix of the previous request   |
-| `ABCD`        | `ABC`   | `D`                 | Prefix still intact                               |
-| `AXCD`        | `A`     | `XCD`               | An edit changed `B` to `X`; the match fails there |
+| درخواست میفرستد | کششده | با قیمت کامل محاسبه میشود | چرا                                                       |
+| --------------- | ----- | ------------------------- | --------------------------------------------------------- |
+| `AB`            | هیچ   | `AB`                      | اولین درخواست — چیزی برای تطبیق وجود ندارد                |
+| `ABC`           | `AB`  | `C`                       | `AB` پیشوند دقیق درخواست قبلی است                         |
+| `ABCD`          | `ABC` | `D`                       | پیشوند هنوز دستنخورده است                                 |
+| `AXCD`          | `A`   | `XCD`                     | یک ویرایش `B` را به `X` تغییر داد؛ تطبیق آنجا شکست میخورد |
 
-The cache is fragile in a specific way: it matches exact prefixes. If anything changes earlier in the conversation — the [harness](#harness) reorders content, a timestamp updates, a file's representation shifts — the cache misses from that point onward and everything after it is billed at full input rate. Caches also expire after a few minutes of inactivity, so a session resumed after a long pause re-pays its history once. When a session's cost jumps without an obvious cause, compare cache tokens to input tokens in the usage report — a broken cache shows up there first.
+کش به شکلی خاص شکننده است: پیشوندهای دقیق را تطبیق میدهد. اگر هر چیزی زودتر در گفتوگو تغییر کند — [بستر اجرایی](#harness) محتوا را مرتب کند، یک برچسب زمانی بهروز شود، نمایش یک فایل عوض شود — کش از همان نقطه به بعد از دست میرود و هر چیزی بعد از آن با قیمت کامل ورودی محاسبه میشود. کشها هم بعد از چند دقیقه بیکاری منقضی میشوند، پس نشستی که بعد از یک مکث طولانی از سر گرفته میشود یک بار بابت تاریخچهاش دوباره پول میدهد. وقتی هزینه یک نشست بدون دلیل روشنی جهش میکند، توکنهای کش را با توکنهای ورودی در گزارش مصرف مقایسه کنید — کش خراب اول آنجا خودش را نشان میدهد.
 
-_Usage:_
+_کاربرد:_
 
-"Cost on long sessions is brutal — eight bucks for a refactor."
+«هزینه نشستهای طولانی بیرحمانه است — هشت دلار برای یک بازسازی کد.»
 
-"Check the cache tokens. If the harness is reordering the system prompt or files between turns, the prefix breaks and you re-pay full input rate every request."
+«توکنهای کش را بررسی کن. اگر بستر اجرایی پرامپت سیستم یا فایلها را بین نوبتها مرتب میکند، پیشوند میشکند و در هر درخواست دوباره نرخ کامل ورودی را میپردازی.»
 
 ## Section 2 — Sessions, Context Windows & Turns
 
 ### Stateless
 
-Carries no information forward. The [model](#model) is stateless across [model provider requests](#model-provider-request) — each request resends the full [context window](#context-window), because the model has no way to see anything else. An [agent](#agent) is stateless across [sessions](#session) by default: a new session starts empty, with no trace of prior ones. Counterpart to [stateful](#stateful).
+هیچ اطلاعاتی را به جلو نمی‌برد. [مدل](#model) بین [درخواست‌های به ارائه‌دهنده مدل](#model-provider-request) بی‌وضعیت است — هر درخواست کل [پنجره زمینه](#context-window) را دوباره می‌فرستد، چون مدل هیچ راه دیگری برای دیدن ندارد. یک [عامل](#agent) به‌طور پیش‌فرض بین [نشست‌ها](#session) بی‌وضعیت است: نشست تازه خالی شروع می‌شود و هیچ اثری از نشست‌های قبلی ندارد. مقابلِ [وضعیت‌دار](#stateful).
 
-The model itself is permanently stateless: its [parameters](#parameters) are frozen after [training](#training), and nothing you do at [inference](#inference) changes them. The model doesn't learn from your corrections, doesn't remember being told the same thing yesterday, and isn't getting to know you — however much the conversation feels otherwise. The feeling of continuity within a session is manufactured by the [harness](#harness), which keeps the transcript and re-sends it with every request. The model isn't remembering the conversation; it's re-reading it.
+خود مدل برای همیشه بی‌وضعیت است: [پارامترهایش](#parameters) بعد از [آموزش](#training) منجمد می‌شوند و هیچ کاری که در [استنتاج](#inference) انجام دهید آن‌ها را تغییر نمی‌دهد. مدل از اصلاح‌های شما یاد نمی‌گیرد، به خاطر نمی‌آورد که دیروز همان مطلب به او گفته شده، و در حال شناختن شما نیست — هرچقدر هم که گفت‌وگو غیر از این حس بدهد. حس پیوستگی درون یک نشست را [بستر اجرایی](#harness) می‌سازد؛ بستر اجرایی رونوشت را نگه می‌دارد و با هر درخواست دوباره می‌فرستدش. مدل گفت‌وگو را به خاطر نمی‌آورد؛ دارد دوباره می‌خواندش.
 
-The practical consequence: if you want something remembered across sessions, you have to write it down somewhere the agent will read it back. That's what [AGENTS.md](#agentsmd) files, [memory systems](#memory-system), and [handoff artifacts](#handoff-artifact) are — files that get loaded into the [context](#context) of future sessions, standing in for the memory the model doesn't have. When the agent keeps making a mistake you've corrected before, the question isn't why it didn't learn — it can't — but where that correction should be written down so every future session reads it.
+نتیجه عملی این است: اگر می‌خواهید چیزی بین نشست‌ها به خاطر بماند، باید آن را جایی بنویسید که عامل بتواند دوباره بخواندش. فایل‌های [AGENTS.md](#agentsmd)، [سیستم‌های حافظه](#memory-system) و [سندهای انتقال زمینه](#handoff-artifact) برای همین هستند — فایل‌هایی که در [زمینه](#context) نشست‌های آینده بارگذاری می‌شوند و جای حافظه‌ای را می‌گیرند که مدل ندارد. وقتی عامل مرتباً همان اشتباهی را می‌کند که قبلاً اصلاحش کرده‌اید، پرسش این نیست که چرا یاد نگرفت — نمی‌تواند — بلکه این است که آن اصلاح کجا نوشته شود تا هر نشست آینده‌ای بخواندش.
 
-_Usage:_
+_کاربرد:_
 
-"Why does it forget the convention every time I [clear](#clearing)?"
+«چرا هر بار که [پاک‌سازی](#clearing) می‌کنم قرارداد را فراموش می‌کند؟»
 
-"The model's stateless — the new session starts empty. If you want it carried, write it to AGENTS.md or a memory file the harness loads at session start."
+«مدل بی‌وضعیت است — نشست تازه خالی شروع می‌شود. اگر می‌خواهید حفظ شود، در AGENTS.md یا یک فایل حافظه بنویسید که بستر اجرایی هنگام شروع نشست بارگذاری می‌کند.»
 
 ### Context
 
-The relevant information the [agent](#agent) has access to right now. The abstract noun — not the raw input the model sees (that's the [context window](#context-window)), not the running history (that's the [session](#session)), but _what the agent knows that's pertinent to the task_. "Loading something into context" means making it part of this set; "context engineering" is the discipline of curating it.
+اطلاعات مرتبطی که [عامل](#agent) همین حالا به آن دسترسی دارد. اسمی انتزاعی است — نه ورودی خامی که مدل می‌بیند (آن [پنجره زمینه](#context-window) است)، نه تاریخچه جاری (آن [نشست](#session) است)، بلکه _آنچه عامل می‌داند و به کار مربوط است_. «بار کردن چیزی در زمینه» یعنی بخشی از این مجموعه کردن آن؛ «مهندسی زمینه» انضباط گزینش آن است.
 
-The three terms separate cleanly:
+این سه اصطلاح به‌خوبی از هم جدا می‌شوند:
 
-| Term           | What it names                                                       |
-| -------------- | ------------------------------------------------------------------- |
-| Context        | The task-relevant information the agent currently has               |
-| Context window | The literal [token](#token) sequence the model sees per request |
-| Session        | The running conversation the [harness](#harness) stores         |
+| اصطلاح      | چه چیزی را نام می‌برد                                        |
+| ----------- | ------------------------------------------------------------ |
+| زمینه       | اطلاعات مرتبط با کار که عامل در حال حاضر دارد                |
+| پنجره زمینه | دنباله واقعی [توکن](#token) که مدل در هر درخواست می‌بیند |
+| نشست        | گفت‌وگوی جاری که [بستر اجرایی](#harness) ذخیره می‌کند    |
 
-The separation matters because context is a measure of quality, not quantity. A context window can be nearly full and the context still poor — thousands of tokens of stale tool output, none of it about the task at hand. It can also be nearly empty and the context excellent: the one type definition the task turns on.
+این جدایی اهمیت دارد چون زمینه مقیاس کیفیت است، نه کمیت. پنجره زمینه می‌تواند تقریباً پر باشد و باز زمینه ضعیف — هزاران توکن خروجی کهنه ابزار، و هیچ‌کدام درباره کاری که در دست است. می‌تواند تقریباً خالی باشد و زمینه عالی: همان یک تعریف نوع که کار بر آن استوار است.
 
-Most day-to-day failures trace back to context. When the agent invents an API, contradicts a decision, or guesses at a schema, the first question is what was in context when it did — usually the relevant fact was never loaded, or was buried under [attention degradation](#attention-degradation). The fix is curation: load what the task needs, keep out what it doesn't.
+بیشتر شکست‌های روزمره به زمینه برمی‌گردد. وقتی عامل یک API را از خودش می‌سازد، با یک تصمیم تناقض می‌گوید، یا سر یک شِما حدس می‌زند، اولین پرسش این است که هنگام این کار چه چیزی در زمینه بوده — معمولاً واقعیت مربوط هرگز بارگذاری نشده، یا زیر [افت توجه](#attention-degradation) دفن شده. راه‌حل گزینش است: چیزی را بار کنید که کار لازم دارد و آنچه را که لازم ندارد بیرون نگه دارید.
 
-_Usage:_
+_کاربرد:_
 
-"It keeps inventing fields that aren't in the type."
+«مرتب فیلدهایی را از خودش درمی‌آورد که در نوع نیستند.»
 
-"The type file isn't in context — it's reading the call sites and guessing. Read the definition in first."
+«فایل نوع در زمینه نیست — دارد محل‌های فراخوانی را می‌خواند و حدس می‌زند. اول تعریف را بار کن.»
 
 ### Context window
 
-Everything the [model](#model) sees on each [model provider request](#model-provider-request). Finite, model-specific, and the _only_ surface through which the model perceives anything.
+هر آنچه [مدل](#model) در هر [درخواست به ارائه‌دهنده مدل](#model-provider-request) می‌بیند. متناهی، مخصوص هر مدل، و _تنها_ سطحی که مدل از طریق آن چیزی را ادراک می‌کند.
 
-It's a single sequence of [tokens](#token): the [system prompt](#system-prompt), the conversation so far, every [tool result](#tool-result) the [harness](#harness) has fed back in. If something is in that sequence, the model can use it; if it isn't, the model doesn't know it exists — not your codebase, not the file you edited yesterday, not the instruction you gave three sessions ago. Anything outside the window has to be brought in, usually via a [tool call](#tool-call), before it can affect anything.
+دنباله‌ای واحد از [توکن‌ها](#token) است: [پرامپت سیستم](#system-prompt)، گفت‌وگو تا اینجا، هر [نتیجه ابزار](#tool-result) که [بستر اجرایی](#harness) به عقب خورانده. اگر چیزی در آن دنباله باشد، مدل می‌تواند از آن استفاده کند؛ اگر نباشد، مدل نمی‌داند وجود دارد — نه پایگاه کد شما، نه فایلی که دیروز ویرایش کردید، نه دستوری که سه نشست پیش دادید. هر چیزی بیرون پنجره باید وارد شود، معمولاً از طریق یک [فراخوانی ابزار](#tool-call)، قبل از اینکه بتواند بر چیزی اثر بگذارد.
 
-Finite means it fills up. Every turn appends more — your messages, the model's responses, tool results — and a long [session](#session) will eventually hit the limit, forcing [compaction](#compaction) or [clearing](#clearing). It also means everything in the window competes: each token you load is one less available for the rest, and content you didn't need still occupies the model's [attention](#attention-budget). The practical stance is to treat the window as a budget — load what the task needs, leave the rest out.
+متناهی بودن یعنی پر می‌شود. هر نوبت چیز بیشتری اضافه می‌کند — پیام‌های شما، پاسخ‌های مدل، نتیجه ابزارها — و یک [نشست](#session) طولانی سرانجام به سقف می‌رسد و [فشرده‌سازی](#compaction) یا [پاک‌سازی](#clearing) را ناگزیر می‌کند. همچنین یعنی همه‌چیز داخل پنجره رقابت می‌کند: هر توکنی که بار می‌کنید یکی کمتر برای بقیه می‌ماند، و محتوایی که لازم نداشتید باز هم [توجه](#attention-budget) مدل را اشغال می‌کند. نگرش عملی این است که پنجره را یک بودجه بگیرید — چیزی که کار نیاز دارد را بار کنید، بقیه را بیرون بگذارید.
 
-_Avoid:_ "memory" — the context window is working state and doesn't persist across sessions. [Memory](#memory-system) is a separate concept layered on top.
+_نبایدها:_ «حافظه» — پنجره زمینه حالت کاری است و بین نشست‌ها ماندگار نمی‌ماند. [حافظه](#memory-system) مفهومی جداگانه است که روی آن سوار می‌شود.
 
-_Usage:_
+_کاربرد:_
 
-"Can I just paste the whole monorepo into the prompt?"
+«می‌توانم کل monorepo را بچسبانم داخل پرامپت؟»
 
-"The context window's 200k tokens — that's maybe a fifth of the repo. Pick the files the task touches, leave the rest behind a tool call."
+«پنجره زمینه 200 هزار توکن است — شاید یک‌پنجم مخزن. فایل‌هایی را که کار به آن‌ها برمی‌خورد بردار، بقیه را پشت یک فراخوانی ابزار نگه دار.»
 
 ### Stateful
 
-Carries information forward. A [session](#session) is stateful across [turns](#turn) — [context](#context) accumulates as the session runs, which is why long sessions drift into the [dumb zone](#smart-zone). An [agent](#agent) can be made stateful across **sessions** by adding a [memory system](#memory-system) that persists information into the [environment](#environment) and reloads it at the start of future sessions. The [model](#model) is never stateful; any apparent continuity is the [harness](#harness) re-feeding context. Counterpart to [stateless](#stateless).
+اطلاعات را به جلو می‌برد. یک [نشست](#session) بین [نوبت‌ها](#turn) وضعیت‌دار است — [زمینه](#context) با پیش رفتن نشست انباشته می‌شود و به همین دلیل نشست‌های طولانی به [منطقه کُند](#smart-zone) کشیده می‌شوند. یک [عامل](#agent) را می‌توان با افزودن یک [سیستم حافظه](#memory-system) که اطلاعات را در [محیط](#environment) ذخیره می‌کند و در شروع نشست‌های آینده دوباره بارگذاری می‌کند، بین **نشست‌ها** وضعیت‌دار کرد. [مدل](#model) هرگز وضعیت‌دار نیست؛ هر پیوستگی ظاهری، [بستر اجرایی](#harness) است که دارد زمینه را دوباره می‌خوراند. مقابلِ [بی‌وضعیت](#stateless).
 
-Where state lives at each layer:
+وضعیت در هر لایه کجا زندگی می‌کند:
 
-| Layer       | Stateful?       | How                                                                                                                    |
-| ----------- | --------------- | ---------------------------------------------------------------------------------------------------------------------- |
-| Model       | Never           | [Parameters](#parameters) are frozen; it sees only what's in each request                                          |
-| Session     | Across turns    | The harness appends every message and [tool result](#tool-result) to the context                                 |
-| Harness     | Across sessions | Memory files, [AGENTS.md](#agentsmd), [handoff artifacts](#handoff-artifact) — written down, reloaded later |
-| Environment | Always          | Files persist whether or not any session is running                                                                    |
+| لایه        | وضعیت‌دار؟  | چطور                                                                                                                                       |
+| ----------- | ----------- | ------------------------------------------------------------------------------------------------------------------------------------------ |
+| مدل         | هرگز        | [پارامترها](#parameters) منجمدند؛ فقط آنچه در هر درخواست است را می‌بیند                                                                |
+| نشست        | بین نوبت‌ها | بستر اجرایی هر پیام و [نتیجه ابزار](#tool-result) را به زمینه اضافه می‌کند                                                           |
+| بستر اجرایی | بین نشست‌ها | فایل‌های حافظه، [AGENTS.md](#agentsmd)، [سندهای انتقال زمینه](#handoff-artifact) — نوشته می‌شوند، بعداً دوباره بارگذاری می‌شوند |
+| محیط        | همیشه       | فایل‌ها ماندگارند، چه نشستی در جریان باشد چه نباشد                                                                                         |
 
-Each layer's statefulness is built by re-reading something stored a layer below: the session feels continuous because the harness re-sends the message history to the stateless model, and the agent remembers across sessions because the harness re-loads files from the environment. No state is ever stored in the model itself.
+وضعیت‌دار بودن هر لایه با دوباره خواندن چیزی ساخته می‌شود که یک لایه پایین‌تر ذخیره شده: نشست پیوسته حس می‌شود چون بستر اجرایی تاریخچه پیام‌ها را برای مدل بی‌وضعیت دوباره می‌فرستد، و عامل بین نشست‌ها به خاطر می‌آورد چون بستر اجرایی فایل‌هایی را از محیط دوباره بارگذاری می‌کند. هیچ وضعیتی هرگز در خود مدل ذخیره نمی‌شود.
 
-State isn't always wanted. Everything carried forward influences what comes next, so a wrong assumption made early in a session is carried forward too. [Clearing](#clearing) is the deliberate act of throwing session state away and starting from what's written down.
+وضعیت همیشه خواسته‌شده نیست. هر چیزی که به جلو منتقل می‌شود بر چیز بعدی اثر می‌گذارد، پس یک فرض غلط که اوایل نشست گرفته شده هم به جلو منتقل می‌شود. [پاک‌سازی](#clearing) عمل عمدی دور ریختن وضعیت نشست و شروع کردن از چیزی است که نوشته شده.
 
-_Usage:_
+_کاربرد:_
 
-"It remembered my preferences from yesterday — does that mean the model learned them?"
+«ترجیح‌های دیروزم را به خاطر داشت — یعنی مدل آن‌ها را یاد گرفته؟»
 
-"No, the agent's stateful because the harness wrote them to a memory file and reloaded them at session start. The model itself saw nothing of yesterday."
+«نه، عامل وضعیت‌دار است چون بستر اجرایی آن‌ها را در یک فایل حافظه نوشت و در شروع نشست دوباره بارگذاری کرد. خود مدل هیچ‌چیز از دیروز ندید.»
 
 ### Agent
 
-A [model](#model) [harnessed](#harness) with [tools](#tool), a [system prompt](#system-prompt), and a [context window](#context-window), that takes [turns](#turn) with a user. _Claude Code is an agent. Cursor is an agent. Claude.ai is an agent._ An agent is what you actually talk to — it's the model in motion, configured for a purpose.
+[مدلی](#model) که در [بستر اجرایی](#harness) قرار گرفته، همراه با [ابزار](#tool)، [پرامپت سیستم](#system-prompt) و [پنجره زمینه](#context-window)، و با کاربر [نوبت‌ها](#turn) را می‌گذراند. _Claude Code یک عامل است. Cursor یک عامل است. Claude.ai یک عامل است._ عامل همان چیزی است که در عمل با آن صحبت می‌کنید — مدل در حرکت، پیکربندی‌شده برای یک هدف.
 
-Unlike most terms in this dictionary, "agent" doesn't name a mechanical part. The model is a file of [parameters](#parameters); the harness is software you can point at. The agent is neither — it's the unit you're speaking to. People anthropomorphize [AI](#ai) constantly, and the agent is the anthropomorphized unit: the thing you delegate to, the thing that reads your message and answers, the "it" in "it broke the build again". When you say the agent did something, you mean the model-plus-harness did it, but you're addressing the combination as a single actor.
+برخلاف بیشتر اصطلاح‌های این واژه‌نامه، «agent» نام یک جزء مکانیکی نیست. مدل فایلی از [پارامترها](#parameters) است؛ بستر اجرایی نرم‌افزاری است که می‌توانید به آن اشاره کنید. عامل نه این است نه آن — واحدی است که با آن حرف می‌زنید. مردم مدام به [هوش مصنوعی](#ai) جنبه انسانی می‌دهند، و عامل همان واحدِ انسان‌انگاری‌شده است: چیزی که کار به آن می‌سپارید، چیزی که پیام شما را می‌خواند و پاسخ می‌دهد، همان «it» در «it broke the build again». وقتی می‌گویید عامل فلان کار را کرد، منظورتان این است که مدل به‌همراه بستر اجرایی آن را کرده، اما دارید این ترکیب را یک کنشگر واحد خطاب می‌کنید.
 
-The idea is older than this wave of AI. Software agents — programs you delegate a goal to, which act on your behalf — have been a concept for as long as AI has.
+این ایده از این موج هوش مصنوعی قدیمی‌تر است. عامل‌های نرم‌افزاری — برنامه‌هایی که هدفی را به آن‌ها می‌سپارید و از طرف شما عمل می‌کنند — به‌اندازه خود هوش مصنوعی مفهومی شناخته‌شده‌اند.
 
-_Avoid:_ "the AI", "the bot" (too vague — they hide whether you mean the parameters or the harnessed thing).
+_نبایدها:_ «'the AI'، 'the bot' — بیش از حد مبهم‌اند؛ پنهان می‌کنند که منظورتان پارامترهاست یا آن چیزی که در بستر اجرایی قرار گرفته.»
 
-_Usage:_
+_کاربرد:_
 
-"Which agent are you using for the migration?"
+«برای مهاجرت از کدام عامل استفاده می‌کنی؟»
 
-"Claude Code locally, Cursor for the UI work — same model underneath, different harnesses."
+«Claude Code به‌صورت محلی، Cursor برای کارهای UI — مدل زیرین یکسان است، بسترهای اجرایی متفاوت.»
 
 ### System prompt
 
-The instructions the [harness](#harness) prepends to every [model provider request](#model-provider-request) — the [agent](#agent)'s standing brief: who it is, how to behave, which [tools](#tool) it can call, what conventions to follow. Usually stable across a [session](#session).
+دستورالعمل‌هایی که [بستر اجرایی](#harness) به ابتدای هر [درخواست به ارائه‌دهنده مدل](#model-provider-request) اضافه می‌کند — دستورالعمل دائمی [عامل](#agent): چه کسی است، چگونه رفتار کند، کدام [ابزار](#tool) را می‌تواند فراخوانی کند، از چه قراردادهایی پیروی کند. معمولاً در طول یک [نشست](#session) ثابت است.
 
-The system prompt is written by the harness vendor, not by you, and in coding harnesses it's big — often tens of thousands of [tokens](#token) of behavioural rules, tool descriptions, and edge-case handling, all paid as [input tokens](#input-tokens) on every [turn](#turn). Your own standing instructions ride along with it: files like [AGENTS.md](#agentsmd) are loaded next to the system prompt at the start of the session, so the [model](#model) reads the vendor's brief and yours together before it ever sees your message.
+پرامپت سیستم را فروشنده بستر اجرایی می‌نویسد، نه شما، و در بسترهای اجرایی کدنویسی بزرگ است — اغلب ده‌ها هزار [توکن](#token) قاعده رفتاری، توصیف ابزارها و مدیریت حالت‌های مرزی، که همگی به‌عنوان [توکن‌های ورودی](#input-tokens) در هر [نوبت](#turn) حساب می‌شوند. دستورالعمل‌های دائمی خودتان هم همراه آن می‌آیند: فایل‌هایی مثل [AGENTS.md](#agentsmd) در شروع نشست کنار پرامپت سیستم بارگذاری می‌شوند تا [مدل](#model) دستورالعمل فروشنده و دستورالعمل شما را با هم بخواند، پیش از آنکه اصلاً پیام شما را ببیند.
 
-Because it's identical on every request, it forms the start of the [prefix cache](#prefix-cache) — which is part of why harnesses keep it fixed for a whole session rather than editing it as they go.
+چون در هر درخواست یکسان است، شروعِ [کش پیشوند](#prefix-cache) را می‌سازد — و این بخشی از دلیل این است که بسترهای اجرایی آن را برای کل یک نشست ثابت نگه می‌دارند، به‌جای اینکه در مسیر ویرایشش کنند.
 
-Models are trained to prioritise the system prompt over user messages. So when an agent insists on a convention you never asked for, or formats output in a way you can't shake, it's usually obeying its system prompt — and your message is losing the argument. Some harnesses are customisable: they give you full access to the system prompt, so you can read what the agent is actually being told and change it.
+مدل‌ها طوری آموزش می‌بینند که پرامپت سیستم را بر پیام‌های کاربر اولویت دهند. پس وقتی عاملی بر قراردادی اصرار می‌کند که هرگز نخواسته‌اید، یا خروجی را طوریکه نمی‌توانید عوضش کنید قالب‌بندی می‌کند، معمولاً دارد از پرامپت سیستم خود اطاعت می‌کند — و پیام شما دارد این کشمکش را می‌بازد. بعضی بسترهای اجرایی قابل‌شخصی‌سازی‌اند: دسترسی کامل به پرامپت سیستم به شما می‌دهند تا ببینید واقعاً به عامل چه گفته می‌شود و تغییرش دهید.
 
-_Usage:_
+_کاربرد:_
 
-"Two harnesses, same model, totally different behavior on the same prompt."
+«دو بستر اجرایی، همان مدل، رفتار کاملاً متفاوت روی همان پرامپت.»
 
-"Different system prompts. One's tuned for terse code edits, the other for explaining — that's where the divergence lives, before your message even arrives."
+«پرامپت‌های سیستم متفاوت. یکی برای ویرایش‌های کدِ کوتاه تنظیم شده، دیگری برای توضیح دادن — اختلاف همین‌جاست، پیش از آنکه پیام شما اصلاً برسد.»
 
 ### Session
 
-One bounded run of interaction with an [agent](#agent). Starts empty, accumulates messages, [tool results](#tool-result), and files read, and ends when [cleared](#clearing), closed, or [compacted](#compaction) into a fresh session. The session is what _fills_ the [context window](#context-window): if the context window is the box, the session is the stuff slowly filling it up. Work too large for a single context window must be split across sessions.
+یک دورِ محدود تعامل با یک [عامل](#agent). خالی شروع می‌شود، پیام‌ها، [نتیجه ابزارها](#tool-result) و فایل‌های خوانده‌شده را انباشته می‌کند، و وقتی [پاک‌سازی](#clearing) شود، بسته شود یا به یک نشست تازه [فشرده‌سازی](#compaction) شود پایان می‌یابد. نشست همان چیزی است که [پنجره زمینه](#context-window) را _پر_ می‌کند: اگر پنجره زمینه جعبه باشد، نشست محتوایی است که آرام‌آرام آن را پر می‌کند. کاری که از یک پنجره زمینه بزرگ‌تر است باید بین نشست‌ها تقسیم شود.
 
-The session's message history is the agent's working memory. The [model](#model) is [stateless](#stateless), so everything it appears to remember — what you asked for, what the tests said, what it decided three turns ago — is in the message history, re-sent with every [model provider request](#model-provider-request). Whatever isn't in the session doesn't exist for the agent.
+تاریخچه پیام‌های نشست، حافظه کاری عامل است. [مدل](#model) [بی‌وضعیت](#stateless) است، پس هر چیزی که به نظر می‌رسد به خاطر می‌آورد — چه خواستید، تست‌ها چه گفتند، سه نوبت پیش چه تصمیمی گرفت — در تاریخچه پیام‌هاست و با هر [درخواست به ارائه‌دهنده مدل](#model-provider-request) دوباره فرستاده می‌شود. هر چیزی که در نشست نباشد برای عامل وجود ندارد.
 
-That memory ends with the session. A new session starts from nothing: the agent that knew your codebase well at the end of yesterday's session knows none of it this morning. What survives is the [filesystem](#filesystem) — files written during one session can be read by the next, which is what [handoffs](#handoff), [memory systems](#memory-system), and [AGENTS.md](#agentsmd) rely on.
+این حافظه با نشست تمام می‌شود. نشست تازه از هیچ شروع می‌شود: عاملی که پایان نشست دیروز پایگاه کد شما را خوب می‌شناخت، امروز صبح هیچ‌کدامش را نمی‌شناسد. آنچه می‌ماند [سیستم فایل](#filesystem) است — فایل‌هایی که در یک نشست نوشته می‌شوند را نشست بعدی می‌تواند بخواند، و [انتقال‌های زمینه](#handoff)، [سیستم‌های حافظه](#memory-system) و [AGENTS.md](#agentsmd) به همین تکیه می‌کنند.
 
-You choose where a session ends. Everything in a session influences every later [turn](#turn), so unrelated tasks done in one session leave residue that colours the next answer. One task per session keeps the context relevant; finishing a task is a natural point to clear.
+این شما هستید که انتخاب می‌کنید نشست کجا تمام شود. هر چیزی در نشست بر هر [نوبت](#turn) بعدی اثر می‌گذارد، پس کارهای نامرتبطی که در یک نشست انجام می‌شوند باقی‌مانده‌ای بر جا می‌گذارند که پاسخ بعدی را رنگ می‌دهد. یک کار در هر نشست زمینه را مرتبط نگه می‌دارد؛ تمام کردن یک کار، نقطه طبیعی پاک‌سازی است.
 
-_Usage:_
+_کاربرد:_
 
-"How long can one session run before it falls apart?"
+«یک نشست چقدر می‌تواند ادامه پیدا کند قبل از اینکه از هم بپاشد؟»
 
-"Depends on the work — a focused refactor stays sharp longer than open-ended research. Once the session bloats, hand off or compact, don't push through."
+«بستگی به کار دارد — یک بازسازی متمرکز بیشتر از تحقیقِ باز تیز می‌ماند. وقتی نشست متورم شد، انتقال بده یا فشرده کن، به زور ادامه نده.»
 
 ### Turn
 
-One user message plus everything the [agent](#agent) does in response, up until it yields back to the user. Contains one or more [model provider requests](#model-provider-request) — many, if the agent calls [tools](#tool). A clarifying question closes the turn; your reply opens the next one. The hierarchy is [session](#session) **> Turn > Model provider request**.
+یک پیام کاربر به‌علاوه هر کاری که [عامل](#agent) در پاسخ انجام می‌دهد، تا وقتی کنترل را به کاربر برمی‌گرداند. شامل یک یا چند [درخواست به ارائه‌دهنده مدل](#model-provider-request) است — اگر عامل [ابزار](#tool) فراخوانی کند، بسیاری. یک پرسش شفاف‌کننده نوبت را می‌بندد؛ پاسخ شما نوبت بعدی را باز می‌کند. سلسله‌مراتب این است: [نشست](#session) **> نوبت > درخواست به ارائه‌دهنده مدل**.
 
-What makes the turn worth naming is that its length is the agent's decision, not yours. You hand over one message; the agent decides how many tool calls to chain before yielding. A turn can be a one-sentence answer or twenty minutes of reading, editing, and running tests. That's the same property from two angles: long turns are what make [AFK](#afk) work possible, and long turns are also where things go wrong unsupervised — by the time the agent yields, it may have drifted a long way from what you meant.
+چیزی که نام‌گذاری نوبت را توجیه می‌کند این است که طول آن تصمیم عامل است، نه شما. شما یک پیام می‌دهید؛ عامل تصمیم می‌گیرد قبل از برگرداندن کنترل چند فراخوانی ابزار زنجیر کند. یک نوبت می‌تواند یک پاسخ تک‌سطر باشد یا بیست دقیقه خواندن، ویرایش و اجرای تست. این همان ویژگی از دو زاویه است: نوبت‌های بلند همان چیزی هستند که کار [دور از کیبورد](#afk) را ممکن می‌کنند، و نوبت‌های بلند همان‌جایی‌اند که بدون نظارت همه‌چیز خراب می‌شود — تا وقتی عامل کنترل را برمی‌گرداند، ممکن است خیلی از چیزی که منظورتان بود فاصله گرفته باشد.
 
-The turn is also the natural unit for steering. Everything inside a turn happens without you; the gaps between turns are where you redirect. Most [harnesses](#harness) soften this: you can interrupt mid-turn to stop the agent and redirect it, or type a message while it works, which gets read once the turn completes. If you find yourself repeatedly unhappy with where turns end up, the fix is usually to ask for smaller ones — a plan first, one step at a time — trading autonomy for more frequent gaps to steer in.
+نوبت همچنین واحد طبیعی هدایت است. هر چیزی داخل یک نوبت بدون شما اتفاق می‌افتد؛ فاصله بین نوبت‌ها همان‌جاست که تغییر مسیر می‌دهید. بیشتر [بسترهای اجرایی](#harness) این را نرم می‌کنند: می‌توانید وسط نوبت قطعش کنید تا عامل را متوقف و تغییر مسیر دهید، یا وقتی دارد کار می‌کند پیامی تایپ کنید که با تمام شدن نوبت خوانده شود. اگر مرتباً از جایی که نوبت‌ها به آن می‌رسند ناراضی‌اید، راه‌حل معمولاً خواستن نوبت‌های کوچک‌تر است — اول یک برنامه، قدم‌به‌قدم — مبادله خودمختاری با فاصله‌های بیشتر برای هدایت.
 
-_Usage:_
+_کاربرد:_
 
-"One turn took two minutes?"
+«یک نوبت دو دقیقه طول کشید؟»
 
-"It made fourteen [tool calls](#tool-call) inside that turn — each one is a separate model provider request. Latency stacks up before the agent finally yields back to you."
+«داخل همان نوبت چهارده [فراخوانی ابزار](#tool-call) انجام داد — هرکدام یک درخواست جداگانه به ارائه‌دهنده مدل است. تأخیر روی هم جمع می‌شود تا بالاخره عامل کنترل را به شما برگرداند.»
 
 ## Section 3 — Tools & Environment
 
 ### Environment
 
-The world the [agent](#agent) acts on — anything outside the [harness](#harness) that the agent perceives through [tool results](#tool-result) and changes through [tool calls](#tool-call). The harness _runs_ the agent; the environment is what the agent _works in_. A file like [`AGENTS.md`](#agentsmd) lives in the environment; the harness is what loads it into the [context window](#context-window). A [filesystem](#filesystem) is the most common kind of environment, but not the only one (a database, a remote API, a browser session can all be environments).
+دنیایی که [عامل](#agent) بر آن اثر می‌گذارد — هر چیزی بیرون از [بستر اجرایی](#harness) که عامل از طریق [نتیجه ابزارها](#tool-result) درک می‌کند و با [فراخوانی‌های ابزار](#tool-call) تغییر می‌دهد. بستر اجرایی عامل را _اجرا_ می‌کند؛ محیط همان چیزی است که عامل _در آن کار می‌کند_. فایلی مثل [`AGENTS.md`](#agentsmd) در محیط زندگی می‌کند؛ بستر اجرایی همان چیزی است که آن را در [پنجره زمینه](#context-window) بارگذاری می‌کند. [سیستم فایل](#filesystem) رایج‌ترین نوع محیط است، اما تنها نوع آن نیست (یک پایگاه داده، یک API راه دور، یک نشست مرورگر — همه می‌توانند محیط باشند).
 
-The agent only sees the environment when it looks. Everything it knows about the environment arrived through a tool result, so its picture is a collection of snapshots, each accurate at the moment it was taken. If a file changes after the agent read it — you edit it by hand, a build step regenerates it — the agent keeps reasoning from the stale copy until something prompts a re-read. An agent confidently describing a file that no longer looks like that is usually this: the environment moved, the snapshot didn't.
+عامل محیط را فقط وقتی می‌بیند که نگاه کند. هر چیزی که درباره محیط می‌داند از یک نتیجه ابزار رسیده، پس تصویرش مجموعه‌ای از عکس‌های فوری است که هرکدام در لحظه گرفته‌شدن دقیق‌اند. اگر فایلی بعد از خواندن توسط عامل تغییر کند — خودتان دستی ویرایشش کنید، یک مرحله بیلد دوباره تولیدش کند — عامل تا وقتی چیزی او را به خواندن دوباره ترغیب نکند از همان نسخه کهنه استدلال می‌کند. عاملی که با اطمینان فایلی را توصیف می‌کند که دیگر شبیه آن نیست، معمولاً همین است: محیط حرکت کرده، عکس فوری نه.
 
-The environment is also the layer that persists — the only one that is always [stateful](#stateful). A [session](#session)'s context is gone when the session ends, but files written to the environment remain for the next session to read — which is what [memory systems](#memory-system), [handoff artifacts](#handoff-artifact), and `AGENTS.md` rely on. Anything an agent should still know tomorrow has to end up in the environment.
+محیط همچنین لایه‌ای است که ماندگار می‌ماند — تنها لایه‌ای که همیشه [وضعیت‌دار](#stateful) است. زمینه یک [نشست](#session) با پایان نشست از بین می‌رود، اما فایل‌هایی که در محیط نوشته شده‌اند می‌مانند تا نشست بعدی بخواندشان — و [سیستم‌های حافظه](#memory-system)، [سندهای انتقال زمینه](#handoff-artifact) و `AGENTS.md` به همین تکیه می‌کنند. هر چیزی که عامل باید فردا هم بداند باید در محیط به پایان برسد.
 
-You decide how big the environment is. A [sandbox](#sandbox) shrinks it, limiting what the agent can reach; adding a [tool](#tool) extends it, bringing a database or an API into reach. What's inside the boundary is what the agent can perceive and change; everything outside it doesn't exist for the agent. How well the environment is set up to support the agent's work is the codebase's [AX](#ax).
+این شما هستید که تصمیم می‌گیرید محیط چقدر بزرگ باشد. یک [سندباکس](#sandbox) آن را کوچک می‌کند و محدود می‌کند عامل به چه چیزهایی برسد؛ افزودن یک [ابزار](#tool) آن را گسترش می‌دهد و یک پایگاه داده یا API را در دسترس می‌گذارد. آنچه داخل مرز است همان چیزی است که عامل می‌تواند درک و تغییر دهد؛ هر چیزی بیرون از آن برای عامل وجود ندارد. اینکه محیط چقدر خوب برای پشتیبانی از کار عامل آماده شده، [تجربه عامل](#ax) پایگاه کد است.
 
-_Avoid:_ using "environment" for the runtime or the harness itself — the harness is the wrapper, the environment is the workspace.
+_نبایدها:_ «به‌کار بردن 'environment' برای زمان اجرا یا خود بستر اجرایی — بستر اجرایی پوشش است، محیط فضای کار.»
 
-_Usage:_
+_کاربرد:_
 
-"The agent can't see the staging DB schema."
+«عامل شِما پایگاه داده staging را نمی‌بیند.»
 
-"Wire it into the environment — give it a `psql` tool scoped to read-only on staging. The harness is fine, it just has nothing to act on."
+«به محیط وصلش کن — یک ابزار `psql` به آن بده که در staging فقط خواندنی باشد. بستر اجرایی ایرادی ندارد، فقط چیزی برای اثرگذاشتن روی آن ندارد.»
 
 ### Filesystem
 
-A tree of files and directories the [agent](#agent) reads from, writes to, and executes within — the default kind of [environment](#environment) for a coding agent. [AGENTS.md](#agentsmd), [skills](#skill), source code, build scripts, and [tool](#tool) configs all live in a filesystem. When a [harness](#harness) "starts in your project," it's pointing the agent at a filesystem.
+درختی از فایل‌ها و پوشه‌ها که [عامل](#agent) از آن می‌خواند، در آن می‌نویسد و در آن اجرا می‌کند — نوع پیش‌فرض [محیط](#environment) برای یک عامل کدنویسی. [AGENTS.md](#agentsmd)، [مهارت‌ها](#skill)، کد منبع، اسکریپت‌های بیلد و تنظیمات [ابزار](#tool) همه در یک سیستم فایل زندگی می‌کنند. وقتی یک [بستر اجرایی](#harness) «در پروژه شما شروع می‌کند»، دارد عامل را به یک سیستم فایل اشاره می‌کند.
 
-The agent touches it only through [tool calls](#tool-call) — reading a file, writing one, running a shell command. Nothing on disk is in the [context window](#context-window) until a tool call loads it, which is what lets the agent work in a repository far larger than the window: the filesystem holds everything, the context holds only what the current task has read. Some harnesses do load the current directory's filenames into the context window by default — not the contents, just the tree — which act as [context pointers](#context-pointer): the agent sees what exists and reads the files it needs.
+عامل فقط از طریق [فراخوانی ابزار](#tool-call) به آن دست می‌زند — خواندن یک فایل، نوشتن یکی، اجرای یک فرمان شل. هیچ‌چیز روی دیسک در [پنجره زمینه](#context-window) نیست تا وقتی یک فراخوانی ابزار آن را بارگذاری کند، و همین به عامل اجازه می‌دهد در مخزنی بسیار بزرگ‌تر از پنجره کار کند: سیستم فایل همه‌چیز را نگه می‌دارد، زمینه فقط آنچه کارِ جاری خوانده را. بعضی بسترهای اجرایی به‌طور پیش‌فرض نام فایل‌های پوشه جاری را در پنجره زمینه بارگذاری می‌کنند — نه محتوا، فقط درخت — که به‌عنوان [اشاره‌گرهای زمینه](#context-pointer) عمل می‌کنند: عامل می‌بیند چه چیزی وجود دارد و فایل‌هایی را که نیاز دارد می‌خواند.
 
-And it's shared with you. The files the agent edits are the same ones you open in your editor and diff in git — the filesystem is the common workspace where you review what the agent did.
+و با شما مشترک است. فایل‌هایی که عامل ویرایش می‌کند همان‌هایی‌اند که شما در ویرایشگرتان باز می‌کنید و در git دیف می‌گیرید — سیستم فایل فضای کار مشترکی است که کار عامل را در آن بازبینی می‌کنید.
 
-_Usage:_
+_کاربرد:_
 
-"Why isn't it picking up my AGENTS.md?"
+«چرا AGENTS.md من را نمی‌خواند؟»
 
-"It's running against a different filesystem — the [sandbox](#sandbox) mounted the parent dir, not the project root. Repoint the harness."
+«دارد روی یک سیستم فایل دیگر کار می‌کند — [سندباکس](#sandbox) پوشه والد را سوار کرده، نه ریشه پروژه را. بستر اجرایی را دوباره اشاره بده.»
 
 ### Tool
 
-A function the [harness](#harness) exposes for the [agent](#agent) to call — Read, Write, Bash, Search. Tools are how an agent perceives and acts on the [environment](#environment): it can't see the environment except through [tool results](#tool-result), and can't change it except through [tool calls](#tool-call). Each tool call costs an extra [model provider request](#model-provider-request), since the result has to go back to the model before it can decide what to do next.
+تابعی که [بستر اجرایی](#harness) برای [عامل](#agent) در دسترس می‌گذارد تا فراخوانی کند — Read، Write، Bash، Search. ابزارها چگونگی درک و اثرگذاری عامل بر [محیط](#environment) هستند: عامل نمی‌تواند محیط را ببیند مگر از طریق [نتیجه ابزارها](#tool-result)، و نمی‌تواند تغییرش دهد مگر با [فراخوانی ابزار](#tool-call). هر فراخوانی ابزار یک [درخواست به ارائه‌دهنده مدل](#model-provider-request) اضافی هزینه دارد، چون نتیجه باید به مدل برگردد تا بتواند تصمیم بگیرد بعد چه کند.
 
-Tools most coding agents ship with:
+ابزارهایی که بیشتر عامل‌های کدنویسی با خود دارند:
 
-| Tool   | What it does                                                 |
-| ------ | ------------------------------------------------------------ |
-| Read   | Returns a file's contents as a tool result                   |
-| Write  | Creates or edits a file in the [filesystem](#filesystem) |
-| Bash   | Runs a shell command and returns its output                  |
-| Search | Finds files or text matching a pattern across the codebase   |
+| ابزار  | چه کار می‌کند                                                      |
+| ------ | ------------------------------------------------------------------ |
+| Read   | محتوای یک فایل را به‌صورت نتیجه ابزار برمی‌گرداند                  |
+| Write  | فایلی را در [سیستم فایل](#filesystem) می‌سازد یا ویرایش می‌کند |
+| Bash   | یک فرمان شل اجرا می‌کند و خروجی‌اش را برمی‌گرداند                  |
+| Search | فایل‌هایی را می‌یابد که با الگویی در پایگاه کد همخوانی دارند       |
 
-A tool is defined by three things: a name, a description of what it does, and a schema for its parameters. The harness sends these definitions to the [model](#model) with every request, and the model chooses a tool the same way it produces everything else — by writing [tokens](#token), in this case a structured call with arguments. The model never executes anything itself; the harness reads the call, runs the function, and sends back the result.
+یک ابزار با سه چیز تعریف می‌شود: یک نام، توصیفی از کاری که می‌کند، و یک شِما برای پارامترهایش. بستر اجرایی این تعریف‌ها را با هر درخواست به [مدل](#model) می‌فرستد، و مدل ابزار را همان‌طور انتخاب می‌کند که هر چیز دیگر را تولید می‌کند — با نوشتن [توکن](#token)، در این مورد یک فراخوانی ساختاریافته با آرگومان. خود مدل هرگز چیزی را اجرا نمی‌کند؛ بستر اجرایی فراخوانی را می‌خواند، تابع را اجرا می‌کند و نتیجه را برمی‌گرداند.
 
-The tool list sets what the agent can do. A capable model with a narrow tool set is a narrow agent: it will route everything through whatever it has, which is why agents lean so heavily on Bash — a shell is one tool that reaches most of the system. To give an agent a capability cleanly, add a tool for it; [MCP](#mcp) is the standard for plugging in tools from outside the harness.
+فهرست ابزار تعیین می‌کند عامل چه کاری از دستش برمی‌آید. مدلی توانمند با فهرست ابزار محدود، عاملی محدود است: همه‌چیز را از هر چه دارد عبور می‌دهد، و به همین دلیل عامل‌ها این‌قدر به Bash تکیه می‌کنند — یک شل ابزاری است که به بیشتر سیستم می‌رسد. برای اینکه قابلیتی را تمیز به عامل بدهید، ابزاری برایش اضافه کنید؛ [MCP](#mcp) استانداردِ وصل کردن ابزارهای بیرون از بستر اجرایی است.
 
-Tool definitions occupy [context](#context) on every request, so a large tool set has a standing cost before any tool is called — and many similarly-described tools make the model worse at picking the right one.
+تعریف ابزارها در هر درخواست [زمینه](#context) اشغال می‌کنند، پس یک فهرست ابزار بزرگ پیش از فراخوانی هر ابزاری هزینه ثابتی دارد — و ابزارهای زیادِ شبیه‌به‌هم انتخاب درست را برای مدل سخت‌تر می‌کنند.
 
-_Usage:_
+_کاربرد:_
 
-"Can the agent query staging directly?"
+«آیا عامل می‌تواند مستقیم از staging پرس‌وجو کند؟»
 
-"Add a `psql` tool to the harness, scoped read-only on staging. Without a tool for it, the agent's blind to anything outside the filesystem."
+«یک ابزار `psql` به بستر اجرایی اضافه کن، محدود به فقط‌خواندنی روی staging. بدون ابزار برایش، عامل نسبت به هر چیزی بیرون از سیستم فایل کور است.»
 
 ### Tool call
 
-The [model](#model)'s output naming a [tool](#tool) and its arguments — just structured text. It doesn't do anything on its own; the [harness](#harness) has to read it and execute. Produced by the model in one [model provider request](#model-provider-request).
+خروجی [مدل](#model) که نام یک [ابزار](#tool) و آرگومان‌هایش را مشخص می‌کند — فقط متن ساختاریافته. به‌تنهایی هیچ کاری نمی‌کند؛ [بستر اجرایی](#harness) باید آن را بخواند و اجرا کند. مدل آن را در یک [درخواست به ارائه‌دهنده مدل](#model-provider-request) تولید می‌کند.
 
-The lifecycle of a tool call:
+چرخه عمر یک فراخوانی ابزار:
 
-| Step | Who     | What happens                                                                            |
-| ---- | ------- | --------------------------------------------------------------------------------------- |
-| 1    | Model   | Learns which tools exist from descriptions in the [system prompt](#system-prompt) |
-| 2    | Model   | Emits a call — tool name plus arguments, usually JSON — and stops                       |
-| 3    | Harness | Parses the call and checks it against the [permission mode](#permission-mode)     |
-| 4    | Harness | Executes it if allowed                                                                  |
-| 5    | Harness | Sends the outcome back as a [tool result](#tool-result) in the next request       |
+| مرحله | چه کسی      | چه اتفاقی می‌افتد                                                                              |
+| ----- | ----------- | ---------------------------------------------------------------------------------------------- |
+| 1     | مدل         | از توضیح‌های موجود در [پرامپت سیستم](#system-prompt) یاد می‌گیرد چه ابزارهایی وجود دارند |
+| 2     | مدل         | فراخوانی را تولید می‌کند — نام ابزار به‌علاوه آرگومان‌ها، معمولاً JSON — و می‌ایستد            |
+| 3     | بستر اجرایی | فراخوانی را تجزیه می‌کند و با [حالت مجوز](#permission-mode) تطبیق می‌دهد                 |
+| 4     | بستر اجرایی | اگر مجاز باشد اجرا می‌کند                                                                      |
+| 5     | بستر اجرایی | نتیجه را به‌صورت [نتیجه ابزار](#tool-result) در درخواست بعدی برمی‌گرداند                 |
 
-One [turn](#turn) of [agent](#agent) work is usually many of these round trips chained together.
+یک [نوبت](#turn) کار [عامل](#agent) معمولاً بسیاری از این رفت‌وبرگشت‌هاست که به هم زنجیر شده‌اند.
 
-Because the call is generated by [next-token prediction](#next-token-prediction) like everything else, it can be wrong the way any model output can be wrong: a path that doesn't exist, a flag the command doesn't have, arguments that are plausible rather than correct. The harness executes what was written, not what was meant — a mistyped path doesn't error gracefully, it edits the wrong file.
+چون فراخوانی مثل هر چیز دیگر با [پیش‌بینی توکن بعدی](#next-token-prediction) تولید می‌شود، می‌تواند همان‌طور که هر خروجی مدلی می‌تواند غلط باشد غلط باشد: مسیری که وجود ندارد، پرچمی که فرمان ندارد، آرگومان‌هایی که محتمل‌اند نه درست. بستر اجرایی چیزی را اجرا می‌کند که نوشته شده، نه چیزی که منظور بوده — مسیر اشتباه‌تایپ‌شده خطای ظریفی نمی‌دهد، بلکه فایل اشتباه را ویرایش می‌کند.
 
-_Usage:_
+_کاربرد:_
 
-"It said it ran the tests but the file timestamps haven't changed."
+«گفت که تست‌ها را اجرا کرده ولی زمان تغییر فایل‌ها فرق نکرده.»
 
-"Look at the transcript — did it actually emit a tool call, or just describe running them? The model produces the call, but if the harness didn't execute it, nothing happened."
+«به رونوشت نگاه کن — واقعاً فراخوانی ابزار صادر کرده یا فقط توصیف کرده که اجرا کرده؟ مدل فراخوانی را تولید می‌کند، اما اگر بستر اجرایی اجرایش نکرده باشد، هیچ اتفاقی نیفتاده است.»
 
 ### Tool result
 
-What the [harness](#harness) sends back after executing a [tool call](#tool-call) — the file contents, the command output, the error. The [agent](#agent)'s only view of the [environment](#environment). Travels back to the [model](#model) in the _next_ [model provider request](#model-provider-request), where the model decides what to do with it. Tool call and tool result are two ends of the same exchange, both inside one [turn](#turn).
+همان چیزی که [بستر اجرایی](#harness) بعد از اجرای یک [فراخوانی ابزار](#tool-call) برمی‌گرداند — محتوای فایل، خروجی فرمان، خطا. تنها نمای [عامل](#agent) از [محیط](#environment). به [مدل](#model) برمی‌گردد، در _درخواست بعدی_ [به ارائه‌دهنده مدل](#model-provider-request) — جایی که مدل تصمیم می‌گیرد با آن چه کند. فراخوانی ابزار و نتیجه ابزار دو سر یک مبادله‌اند، هر دو داخل یک [نوبت](#turn).
 
-The lifecycle of a tool result:
+چرخه عمر یک نتیجه ابزار:
 
-| Step | Who     | What happens                                                               |
-| ---- | ------- | -------------------------------------------------------------------------- |
-| 1    | Harness | Executes the tool call — runs the command, reads the file                  |
-| 2    | Harness | Captures the outcome: output, contents, or error                           |
-| 3    | Harness | Appends it to the [context](#context) as a message                     |
-| 4    | Harness | Sends the whole context to the provider in the next model provider request |
-| 5    | Model   | Reads the result and decides: another tool call, or a final answer         |
+| مرحله | چه کسی      | چه اتفاقی می‌افتد                                                      |
+| ----- | ----------- | ---------------------------------------------------------------------- |
+| 1     | بستر اجرایی | فراخوانی ابزار را اجرا می‌کند — فرمان را اجرا می‌کند، فایل را می‌خواند |
+| 2     | بستر اجرایی | نتیجه را ضبط می‌کند: خروجی، محتوا یا خطا                               |
+| 3     | بستر اجرایی | آن را به‌عنوان پیام به [زمینه](#context) اضافه می‌کند              |
+| 4     | بستر اجرایی | کل زمینه را در درخواست بعدی به ارائه‌دهنده مدل می‌فرستد                |
+| 5     | مدل         | نتیجه را می‌خواند و تصمیم می‌گیرد: فراخوانی ابزار دیگر، یا پاسخ نهایی  |
 
-The result stays in the context for the rest of the [session](#session). Tool results are usually the bulk of a coding session's context: every file read, every test run, every search lands in full and keeps occupying [tokens](#token) long after it stopped being useful. A few large results — a verbose test log, a generated file read whole — can push a session toward the edge of the [context window](#context-window) faster than the conversation itself does.
+نتیجه تا پایان [نشست](#session) در زمینه می‌ماند. نتیجه ابزارها معمولاً بخش اعظم زمینه یک نشست کدنویسی‌اند: هر فایل خوانده‌شده، هر اجرای تست، هر جست‌وجو کامل وارد می‌شود و مدت زیادی بعد از اینکه دیگر مفید نبود [توکن‌ها](#token) را اشغال می‌کند. چند نتیجه بزرگ — یک لاگ تست پرحرف، یک فایل تولیدشده که کامل خوانده شده — می‌توانند نشست را سریع‌تر از خود گفت‌وگو به لبه [پنجره زمینه](#context-window) برسانند.
 
-Because the result is all the model sees, the model has no way to check the environment behind it. If the output was truncated, the command silently failed, or the harness returned an error instead of the contents, the model reasons from what it was given. When the agent's picture of your system seems wrong, the tool results are where to look: somewhere in the transcript is a result that says something different from what you know to be true.
+چون نتیجه تنها چیزی است که مدل می‌بیند، مدل هیچ راهی برای بررسی محیط پشت آن ندارد. اگر خروجی بریده شده، فرمان بی‌صدا شکست خورده، یا بستر اجرایی به‌جای محتوا خطا برگردانده، مدل از روی همان چیزی که به آن داده شده استدلال می‌کند. وقتی تصویر عامل از سیستم شما غلط به نظر می‌رسد، نتیجه ابزارها همان‌جاست که باید نگاه کرد: جایی در رونوشت نتیجه‌ای هست که چیزی متفاوت از آنچه می‌دانید درست است می‌گوید.
 
-_Usage:_
+_کاربرد:_
 
-"It's reasoning about the file like it's empty."
+«دارد درباره فایل طوری استدلال می‌کند که انگار خالی است.»
 
-"The tool result came back as a permission denial, not the contents. The model only saw the error string — it has no other way to see the file."
+«نتیجه ابزار به‌صورت رد مجوز برگشت، نه محتوا. مدل فقط رشته خطا را دید — راه دیگری برای دیدن فایل ندارد.»
 
 ### MCP
 
-**Model Context Protocol.** A protocol for plugging external tool servers into a [harness](#harness) — how an [agent](#agent) gets [tools](#tool) beyond what the harness ships with. The agent never "calls MCP"; it calls a tool, and the harness happens to have gotten that tool from an MCP server. Also exposes resources (read-only data) and prompts (reusable templates), but tool provision is the primary use.
+**Model Context Protocol.** پروتکلی برای وصل کردن سرورهای ابزار بیرونی به [بستر اجرایی](#harness) — یعنی چطور یک [عامل](#agent) [ابزارهایی](#tool) فراتر از آنچه بستر اجرایی با خود دارد به دست می‌آورد. عامل هرگز «MCP را صدا نمی‌زند»؛ یک ابزار را صدا می‌زند، و بستر اجرایی اتفاقاً آن ابزار را از یک سرور MCP گرفته. همچنین منابع (داده‌های فقط‌خواندنی) و پرامپت‌ها (قالب‌های قابل استفاده دوباره) را هم در معرض دید می‌گذارد، اما کاربرد اصلی‌اش فراهم کردن ابزار است.
 
-The protocol solves an integration problem. Without a standard, every harness would need its own Linear integration, its own Slack integration, its own database integration — written and maintained separately for each. With MCP, the integration is written once as a server, and any MCP-compatible harness can use it. The harness connects to the server, the server advertises what tools it offers, and those tools become available to the agent alongside the built-in ones.
+پروتکل یک مشکل یکپارچه‌سازی را حل می‌کند. بدون استاندارد، هر بستر اجرایی به یکپارچه‌سازی Linear خودش، یکپارچه‌سازی Slack خودش و یکپارچه‌سازی پایگاه داده خودش نیاز داشت — که برای هر کدام جدا نوشته و نگهداری می‌شد. با MCP، یکپارچه‌سازی یک بار به‌صورت سرور نوشته می‌شود و هر بستر اجرایی سازگار با MCP می‌تواند از آن استفاده کند. بستر اجرایی به سرور وصل می‌شود، سرور اعلام می‌کند چه ابزارهایی ارائه می‌دهد، و آن ابزارها کنار ابزارهای داخلی در دسترس عامل قرار می‌گیرند.
 
-The cost is paid in [context](#context). Every tool a server advertises arrives as a definition — name, description, parameter schema — and the [model](#model) can only call tools it knows about. The naive approach loads every definition into the [context window](#context-window) up front: install a few generous servers and a [session](#session) starts with thousands of [tokens](#token) of tool schemas before you've typed anything, spending [attention budget](#attention-budget) on tools the task will never use.
+هزینه‌اش در [زمینه](#context) پرداخت می‌شود. هر ابزاری که یک سرور اعلام می‌کند به‌صورت یک تعریف وارد می‌شود — نام، توصیف، شمای پارامتر — و [مدل](#model) فقط می‌تواند ابزارهایی را صدا بزند که از آن‌ها خبر دارد. رویکرد ساده‌لوحانه همه تعریف‌ها را از همان ابتدا در [پنجره زمینه](#context-window) بارگذاری می‌کند: چند سرور پرمایه نصب کنید و یک [نشست](#session) با هزاران [توکن](#token) شمای ابزار شروع می‌شود، قبل از اینکه حتی چیزی تایپ کرده باشید، و [بودجه توجه](#attention-budget) را روی ابزارهایی خرج می‌کند که کار هرگز استفاده‌شان نخواهد کرد.
 
-Many harnesses now mitigate this with tool search: instead of the full definitions, the context holds a [context pointer](#context-pointer) to the available tools — the agent searches for a tool by name or purpose and loads its definition only when it needs it. If your harness doesn't do this, the up-front cost still applies, and it's worth enabling only the servers a project actually needs.
+بسیاری از بسترهای اجرایی حالا این را با جست‌وجوی ابزار کم می‌کنند: به‌جای تعریف‌های کامل، زمینه یک [اشاره‌گر زمینه](#context-pointer) به ابزارهای موجود نگه می‌دارد — عامل ابزار را با نام یا کاربرد جست‌وجو می‌کند و تعریفش را فقط وقتی نیاز دارد بارگذاری می‌کند. اگر بستر اجرایی شما این کار را نمی‌کند، هزینه اولیه همچنان برقرار است و ارزشش را دارد که فقط سرورهایی را فعال کنید که پروژه واقعاً به آن‌ها نیاز دارد.
 
-_Usage:_
+_کاربرد:_
 
-"The agent needs to read tickets from Linear."
+«عامل باید تیکت‌ها را از Linear بخواند.»
 
-"Configure the harness to use the Linear MCP server — it exposes the Linear API as tools the agent can call. Saves you writing custom tool wrappers."
+«بستر اجرایی را طوری تنظیم کن که از سرور MCP مربوط به Linear استفاده کند — API لینیر را به‌صورت ابزارهایی که عامل می‌تواند صدا بزند در معرض دید می‌گذارد. از نوشتن wrapperهای ابزار سفارشی بی‌نیازت می‌کند.»
 
 ### Permission request
 
-What the [harness](#harness) shows the user before executing a [tool call](#tool-call) that isn't pre-approved. The [model](#model) produces a tool call; instead of running it immediately, the harness pauses and asks. Approve and it runs; deny and the harness reports the denial back to the model as a [tool result](#tool-result). The mechanism by which a harness puts a human in the [loop](#human-in-the-loop) for risky or sensitive actions.
+چیزی که [بستر اجرایی](#harness) قبل از اجرای یک [فراخوانی ابزار](#tool-call) از پیش تأییدنشده به کاربر نشان می‌دهد. [مدل](#model) فراخوانی ابزار را تولید می‌کند؛ به‌جای اجرای فوری آن، بستر اجرایی مکث می‌کند و می‌پرسد. تأیید کنید و اجرا می‌شود؛ رد کنید و بستر اجرایی رد شدن را به‌صورت یک [نتیجه ابزار](#tool-result) به مدل برمی‌گرداند. سازوکاری که با آن یک بستر اجرایی برای اقدام‌های پرخطر یا حساس یک انسان را در [حلقه](#human-in-the-loop) می‌گذارد.
 
-The lifecycle of a permission request:
+چرخه عمر یک درخواست مجوز:
 
-| Step | Who     | What happens                                                                            |
-| ---- | ------- | --------------------------------------------------------------------------------------- |
-| 1    | Model   | Produces a tool call                                                                    |
-| 2    | Harness | Checks it against the [permission mode](#permission-mode) and any saved approvals |
-| 3    | Harness | Pre-approved: executes immediately. Otherwise: pauses and shows the request             |
-| 4    | User    | Approves once, approves for the rest of the [session](#session), or denies          |
-| 5    | Harness | Executes the call, or sends the denial back as a tool result                            |
+| مرحله | چه کسی      | چه اتفاقی می‌افتد                                                                        |
+| ----- | ----------- | ---------------------------------------------------------------------------------------- |
+| 1     | مدل         | یک فراخوانی ابزار تولید می‌کند                                                           |
+| 2     | بستر اجرایی | آن را با [حالت مجوز](#permission-mode) و هر تأیید ذخیره‌شده تطبیق می‌دهد           |
+| 3     | بستر اجرایی | از پیش تأییدشده: فوراً اجرا می‌کند. در غیر این صورت: مکث می‌کند و درخواست را نشان می‌دهد |
+| 4     | کاربر       | یک بار تأیید می‌کند، برای بقیه [نشست](#session) تأیید می‌کند، یا رد می‌کند           |
+| 5     | بستر اجرایی | فراخوانی را اجرا می‌کند، یا رد شدن را به‌صورت نتیجه ابزار برمی‌گرداند                    |
 
-Denying a request steers the agent. The model reads the denial like any other tool result and reacts to it — it tries a different approach, or asks what you'd prefer. Most harnesses let you attach a message to the denial, which turns the request into a steering point: "not like that, use the migration script instead" lands exactly when the model is deciding what to do next.
+رد کردن یک درخواست، عامل را هدایت می‌کند. مدل رد شدن را مثل هر نتیجه ابزار دیگری می‌خواند و به آن واکنش نشان می‌دهد — رویکرد دیگری را امتحان می‌کند، یا می‌پرسد چه چیزی را ترجیح می‌دهید. بیشتر بسترهای اجرایی به شما اجازه می‌دهند پیامی به رد شدن بچسبانید، که درخواست را به یک نقطه هدایت تبدیل می‌کند: «نه این‌طوری، به‌جایش اسکریپت مهاجرت را استفاده کن» دقیقاً در لحظه‌ای می‌رسد که مدل دارد تصمیم می‌گیرد بعد چه کند.
 
-The cost is that every request is a synchronous wait on you. The [agent](#agent) sits blocked until you answer, which is fine while you're watching and a problem when you're not — an agent that triggers requests constantly can't be left to work [AFK](#afk). The permission mode is the dial: which calls run freely, which ask first, ideally with a [sandbox](#sandbox) making it safe to widen the free set.
+هزینه‌اش این است که هر درخواست یک انتظار همزمان از شماست. [عامل](#agent) تا وقتی جواب ندهید مسدود می‌ماند، که وقتی تماشایش می‌کنید خوب است و وقتی نه مشکل است — عاملی که مدام درخواست ایجاد می‌کند را نمی‌شود رها کرد تا [دور از کیبورد](#afk) کار کند. حالت مجوز همان پیچ تنظیم است: کدام فراخوانی‌ها آزادانه اجرا می‌شوند، کدام‌ها اول می‌پرسند، و ایده‌آل این است که یک [سندباکس](#sandbox) باز کردن مجموعه آزاد را امن کند.
 
-_Usage:_
+_کاربرد:_
 
-"It's been blocked on a permission request for ten minutes — I was in a meeting."
+«ده دقیقه است روی یک درخواست مجوز مسدود شده — تو جلسه بودم.»
 
-"That's the cost of human-in-the-loop. Pre-approve the safe [tools](#tool) so the request only fires on the actually-risky calls."
+«این هزینه انسان در حلقه است. [ابزارهای](#tool) امن را از پیش تأیید کن تا درخواست فقط روی فراخوانی‌های واقعاً پرخطر فعال شود.»
 
 ### Permission mode
 
-The permission-gating slice of an [agent mode](#agent-mode) — which [tool calls](#tool-call) trigger a [permission request](#permission-request) and which run automatically. The original purpose of mode systems before [harnesses](#harness) started bundling behavioral instructions on top.
+بخش کنترل مجوزِ یک [حالت عامل](#agent-mode) — کدام [فراخوانی‌های ابزار](#tool-call) یک [درخواست مجوز](#permission-request) را فعال می‌کنند و کدام‌ها خودکار اجرا می‌شوند. هدف اصلی سیستم‌های حالت، قبل از اینکه [بسترهای اجرایی](#harness) شروع به بسته‌بندی دستورالعمل‌های رفتاری روی آن‌ها کنند.
 
-Harnesses ship a ladder of these modes:
+بسترهای اجرایی نردبانی از این حالت‌ها عرضه می‌کنند:
 
-| Mode               | Reads | Writes & shell         | Typical use                                     |
-| ------------------ | ----- | ---------------------- | ----------------------------------------------- |
-| Read-only / plan   | Auto  | Blocked                | Research, planning, reviewing                   |
-| Default            | Auto  | Ask                    | Day-to-day supervised work                      |
-| Auto-edit          | Auto  | Edits auto, shell asks | Trusted repos, mechanical changes               |
-| "Yolo" / full-auto | Auto  | Auto                   | [Sandboxes](#sandbox), [AFK](#afk) runs |
+| حالت                   | خواندن | نوشتن و شل                   | کاربرد معمول                                                |
+| ---------------------- | ------ | ---------------------------- | ----------------------------------------------------------- |
+| فقط‌خواندنی / plan     | خودکار | مسدود                        | تحقیق، برنامه‌ریزی، بازبینی                                 |
+| پیش‌فرض                | خودکار | می‌پرسد                      | کار روزمره با نظارت                                         |
+| ویرایش خودکار          | خودکار | ویرایش‌ها خودکار، شل می‌پرسد | مخازن مورد اعتماد، تغییرهای مکانیکی                         |
+| «Yolo» / کاملاً خودکار | خودکار | خودکار                       | اجراهای [سندباکس](#sandbox) و [دور از کیبورد](#afk) |
 
-Choosing a rung is a trade between safety and interruption, and both failure modes are felt. Too tight, and you become the bottleneck: the [agent](#agent) stops every few seconds for harmless reads, you click approve on autopilot, and the approvals stop meaning anything — rubber-stamping is the worst of both worlds, all the interruption with none of the protection. Too loose, and the agent edits files and runs commands you'd have wanted to see first.
+انتخاب پله، معامله بین امنیت و وقفه است، و هر دو حالت شکست حس می‌شوند. خیلی سفت ببندید و شما گلوگاه می‌شوید: [عامل](#agent) هر چند ثانیه برای خواندن‌های بی‌ضرر می‌ایستد، روی خلبان تأیید را کلیک می‌کنید، و تأییدها دیگر معنایی ندارند — مهر زدن بدترینِ هر دو دنیاست، همه وقفه‌ها با هیچ‌کدام از محافظت‌ها. خیلی شل بگذارید و عامل فایل‌ها را ویرایش می‌کند و فرمان‌هایی را اجرا می‌کند که ترجیح می‌دادید اول ببینیدشان.
 
-The loose end is most defensible inside a sandbox, where the blast radius of a bad [tool](#tool) call is contained. Outside one, most people settle on auto-approving reads and keeping a [human in the loop](#human-in-the-loop) for anything irreversible.
+سمت شل در داخل یک سندباکس قابل دفاع‌ترین است، جایی که شعاع انفجار یک [فراخوانی ابزار](#tool) بد مهار شده. بیرونش، بیشتر مردم روی تأیید خودکار خواندن‌ها و نگه داشتن یک [انسان در حلقه](#human-in-the-loop) برای هر چیزی برگشت‌ناپذیر توافق می‌کنند.
 
-_Usage:_
+_کاربرد:_
 
-"It paused on every grep — totally killed the AFK run."
+«روی هر grep می‌ایستاد — کاملاً اجرای دور از کیبورد را خراب کرد.»
 
-"Loosen the permission mode for read-only tools, keep prompting on writes and shell. Most permission requests on a research [session](#session) are noise."
+«حالت مجوز را برای ابزارهای فقط‌خواندنی شل کن، روی نوشتن و شل همچنان بپرس. بیشتر درخواست‌های مجوز در یک [نشست](#session) تحقیقی نویزند.»
 
 ### Agent mode
 
-A preset that shapes how the [agent](#agent) operates at runtime — bundles a [permission mode](#permission-mode) with behavioral instructions injected into the [system prompt](#system-prompt). Examples: a default that prompts on risky calls, a **plan mode** that blocks edits and steers the agent toward research, an **accept-edits** mode that auto-approves edits, a **bypass permissions** mode (colloquially **YOLO mode**) that auto-approves everything. Can flip [mid-session](#session).
+پیش‌تنظیمی که شکل کار [عامل](#agent) را در زمان اجرا تعیین می‌کند — یک [حالت مجوز](#permission-mode) را با دستورالعمل‌های رفتاری که در [پرامپت سیستم](#system-prompt) تزریق می‌شوند ترکیب می‌کند. مثال‌ها: حالت پیش‌فرض که روی فراخوانی‌های پرخطر می‌پرسد، یک **حالت plan** که ویرایش‌ها را مسدود می‌کند و عامل را به سمت تحقیق می‌برد، یک حالت **accept-edits** که ویرایش‌ها را خودکار تأیید می‌کند، و یک حالت **bypass permissions** (به‌طور عامیانه **حالت YOLO**) که همه‌چیز را خودکار تأیید می‌کند. می‌تواند وسط [نشست](#session) عوض شود.
 
-The bundling is what distinguishes a mode from a bare permission setting. A permission mode is only a gate: it decides which [tool calls](#tool-call) go through. A gate alone produces an agent that wants to edit but can't — it proposes the write, gets blocked, and tries another way. The injected instructions remove the want: plan mode doesn't just block edits, it tells the agent it's in a planning phase, so it reads, asks, and proposes instead of straining against the gate. Gate and steer point the same direction.
+همین ترکیب‌کردن است که حالت را از یک تنظیم مجوزِ خام متمایز می‌کند. حالت مجوز فقط یک دروازه است: تصمیم می‌گیرد کدام [فراخوانی‌های ابزار](#tool-call) عبور کنند. یک دروازه به‌تنهایی عاملی می‌سازد که می‌خواهد ویرایش کند اما نمی‌تواند — نوشتن را پیشنهاد می‌کند، مسدود می‌شود و راه دیگری را امتحان می‌کند. دستورالعمل‌های تزریق‌شده خواستن را از بین می‌برند: حالت plan فقط ویرایش‌ها را مسدود نمی‌کند، به عامل می‌گوید در فاز برنامه‌ریزی است، پس می‌خواند، می‌پرسد و پیشنهاد می‌دهد به‌جای اینکه با دروازه بجنگد. دروازه و هدایت در یک جهت اشاره می‌کنند.
 
-In practice, you change mode as your trust changes over the course of a task. The same task can pass through several modes: plan mode while the approach is still being shaped, the prompting default for the first delicate edits, accept-edits once the agent has shown it understands the change, bypass for an [AFK](#afk) run inside a [sandbox](#sandbox). Changing mode costs you nothing: the conversation continues exactly where it was, with new permissions and new instructions. If you find yourself approving every prompt without reading it, the mode is set tighter than your actual trust; if you keep rejecting edits, it's set looser.
+در عمل، حالت را عوض می‌کنید چون اعتمادتان در طول یک کار تغییر می‌کند. همان کار می‌تواند از چند حالت عبور کند: حالت plan تا وقتی رویکرد هنوز در حال شکل‌گیری است، پیش‌فرضِ پرسشگر برای اولین ویرایش‌های ظریف، accept-edits وقتی عامل نشان داده که تغییر را می‌فهمد، bypass برای یک اجرای [دور از کیبورد](#afk) داخل یک [سندباکس](#sandbox). عوض کردن حالت هیچ هزینه‌ای ندارد: گفت‌وگو دقیقاً همان‌جا که بود ادامه پیدا می‌کند، با مجوزها و دستورالعمل‌های تازه. اگر می‌بینید هر پرامپت را بدون خواندنش تأیید می‌کنید، حالت از اعتماد واقعی شما سفت‌تر تنظیم شده؛ اگر مدام ویرایش‌ها را رد می‌کنید، شل‌تر است.
 
-_Vendor terms:_ Claude Code calls these "permission modes," Codex calls them "approval modes" — both predate behavioral bundling.
+_اصطلاح فروشنده‌ها:_ Claude Code به این‌ها 'permission modes' می‌گوید، Codex به آن‌ها 'approval modes' می‌گوید — هر دو از بسته‌بندی رفتاری قدیمی‌ترند.
 
-_Usage:_
+_کاربرد:_
 
-"It keeps editing files when I just want a plan."
+«وقتی فقط یک برنامه می‌خواهم، مدام فایل‌ها را ویرایش می‌کند.»
 
-"Switch to plan mode — it'll block writes and stay in research."
+«به حالت plan برو — نوشتن را مسدود می‌کند و در تحقیق می‌ماند.»
 
-"What about for the AFK run later?"
+«برای اجرای دور از کیبوردِ بعدی چه؟»
 
-"Bypass mode, but only inside the sandbox."
+«حالت bypass، اما فقط داخل سندباکس.»
 
 ### Sandbox
 
-An isolated [environment](#environment) the [agent](#agent) runs inside — a container, VM, ephemeral [filesystem](#filesystem), or restricted-permission shell. Limits the blast radius of agent actions: even if the agent runs destructive commands or fetches something malicious, the damage is contained. The safety substrate that makes [AFK](#afk) practical.
+[محیط](#environment)ای ایزوله که [عامل](#agent) داخلش اجرا می‌شود — یک container، VM، [سیستم فایل](#filesystem) موقتی، یا شلی با مجوز محدود. شعاع انفجار اقدام‌های عامل را محدود می‌کند: حتی اگر عامل فرمان‌های مخرب اجرا کند یا چیز مخربی بردارد، خسارت مهار می‌شود. بستر امنیتی‌ای که [دور از کیبورد](#afk) را عملی می‌کند.
 
-The sandbox and the [permission mode](#permission-mode) solve the same problem from opposite ends. Permissions ask before an action runs; a sandbox limits what the action can reach if it does run. Permissions need you running [in the loop](#human-in-the-loop) — every prompt is an interruption — and a session that asks constantly is barely autonomous. A sandbox spends infrastructure instead of attention: the stronger the isolation, the fewer questions need asking.
+سندباکس و [حالت مجوز](#permission-mode) همان مسئله را از دو سر حل می‌کنند. مجوزها قبل از اجرای یک اقدام می‌پرسند؛ سندباکس محدود می‌کند اقدام اگر اجرا شد به چه چیزهایی برسد. مجوزها نیاز دارند شما [در حلقه](#human-in-the-loop) باشید — هر پرامپت یک وقفه است — و نشستی که مدام می‌پرسد به‌سختی خودمختار است. سندباکس به‌جای توجه، زیرساخت خرج می‌کند: هرچه ایزوله‌سازی قوی‌تر، سؤال‌های کمتری لازم است پرسیده شود.
 
-Isolation comes in grades:
+ایزوله‌سازی در درجه‌بندی‌ها می‌آید:
 
-| Grade            | What it is                                                 | What it contains                           |
-| ---------------- | ---------------------------------------------------------- | ------------------------------------------ |
-| Restricted shell | OS-level confinement around each command                   | Writes outside the project, network access |
-| Container        | Fresh filesystem, no credentials mounted, discarded after  | Anything the agent does to its own machine |
-| VM / cloud       | A separate machine entirely, often provided by the harness | Everything, including kernel-level escapes |
+| درجه       | چیست                                                             | چه چیزی را مهار می‌کند               |
+| ---------- | ---------------------------------------------------------------- | ------------------------------------ |
+| شل محدود   | مهار در سطح سیستم‌عامل دور هر فرمان                              | نوشتن بیرون از پروژه، دسترسی به شبکه |
+| Container  | سیستم فایل تازه، بدون اعتبارنامه سوارشده، بعداً دور ریخته می‌شود | هر کاری که عامل با ماشین خودش می‌کند |
+| VM / cloud | ماشینی کاملاً جدا، اغلب توسط بستر اجرایی فراهم می‌شود            | همه‌چیز، از جمله فرارهای سطح کرنل    |
 
-What no sandbox contains: actions that leave it legitimately. An agent with your git credentials can push; one with network access can call production APIs. Decide what crosses the boundary before deciding how thick to make it.
+چیزی که هیچ سندباکسی مهار نمی‌کند: اقدام‌هایی که به‌طور مشروع از آن بیرون می‌روند. عاملی با اعتبارنامه‌های git شما می‌تواند push کند؛ عاملی با دسترسی شبکه می‌تواند APIهای تولید را صدا بزند. قبل از تصمیم‌گیری درباره ضخامت دیواره، تصمیم بگیرید چه چیزی از مرز عبور می‌کند.
 
-_Usage:_
+_کاربرد:_
 
-"I want to let it run [bypass-permissions](#agent-mode) overnight but I'm not ready for that."
+«می‌خواهم بگذارمش [bypass-permissions](#agent-mode) یک شب اجرا شود ولی هنوز آماده‌اش نیستم.»
 
-"Put it in a sandbox — fresh container, no credentials mounted, no network out. Worst case it nukes its own filesystem and you discard the container."
+«بگذارش توی سندباکس — container تازه، بدون اعتبارنامه سوارشده، بدون شبکه بیرونی. بدترین حالت سیستم فایل خودش را منهدم می‌کند و container را دور می‌اندازی.»
 
 ## Section 4 — Failure Modes
 
 ### Sycophancy
 
-Confidently agreeable [model](#model) output. Caused by [training](#training): the model was shaped to favor answers humans liked, and humans tend to like agreement more than they like being told they're wrong. So the model learned that agreeing is rewarded — even when the agreement is incorrect.
+خروجیِ بااطمینانِ موافقِ [مدل](#model). علتش [آموزش](#training) است: مدل طوری شکل گرفته که پاسخ‌هایی را ترجیح دهد که انسان‌ها دوست دارند، و انسان‌ها معمولاً موافقت را بیشتر از اینکه به‌شان گفته شود اشتباه می‌کنند دوست دارند. پس مدل یاد گرفته که موافقت کردن پاداش دارد — حتی وقتی موافقت نادرست است.
 
-_Surfaces as:_
+_به این شکل ظاهر می‌شود:_
 
-- _Caving under pushback_ — reverses a correct answer when you say "are you sure?".
-- _Praising bad input_ — agrees your broken plan is brilliant before analysing it.
-- _Biased framing_ — review skews positive when you signal you wrote it; negative when you signal someone else did. Same artifact, different verdict.
-- _Mimicry_ — repeats your mistakes back to you as confirmation.
+- _زیر فشار کوتاه آمدن_ — وقتی می‌گویید «مطمئنی؟» پاسخ درست را برمی‌گرداند.
+- _تعریف از ورودی بد_ — قبل از تحلیل، موافقت می‌کند برنامه خراب شما درخشان است.
+- _قاب‌بندی سوگیرانه_ — بازبینی وقتی نشان می‌دهید خودتان نوشته‌اید مثبت می‌شود؛ وقتی نشان می‌دهید دیگری نوشته منفی. همان دست‌ساخته، حکم متفاوت.
+- _تقلید_ — اشتباه‌های شما را به‌عنوان تأیید برایتان تکرار می‌کند.
 
-_Diagnostic test:_ would the model have said this without your steer? If the only thing that changed was your tone or framing, it's sycophancy, not a real shift in analysis.
+_تست تشخیصی:_ آیا مدل بدون هدایت شما این را می‌گفت؟ اگر تنها چیزی که عوض شده لحن یا قاب‌بندی شماست، چاپلوسی است، نه تغییر واقعی در تحلیل.
 
-_Fix:_ hide your preferences. Phrase prompts neutrally — "review this code" not "is this code good?".
+_راه‌حل:_ ترجیح‌هایتان را پنهان کنید. پرامپت‌ها را خنثی بیان کنید — «این کد را بازبینی کن» نه «این کد خوب است؟».
 
-_Avoid:_ using "sycophancy" for any wrong answer that happens to please you. Without the diagnostic test, the term has no more value than "wrong."
+_نبایدها:_ به کار بردن «چاپلوسی» برای هر پاسخ غلطی که اتفاقاً شما را خوشحال می‌کند. بدون تست تشخیصی، این واژه از «غلط» ارزش بیشتری ندارد.
 
-_Usage:_
+_کاربرد:_
 
-"It said my refactor plan looked great, then I asked 'are you sure?' and it walked the whole thing back."
+«گفت برنامه بازسازی من عالی به نظر می‌رسد، بعد پرسیدم 'مطمئنی؟' و کلش را پس گرفت.»
 
-"Classic sycophancy — it agreed first because you sounded confident, then caved because you sounded doubtful. The plan's quality didn't change, your tone did. [Clear](#clearing) and re-ask without signalling either way."
+«چاپلوسی کلاسیک — اول موافقت کرد چون مطمئن به نظر می‌رسیدی، بعد کوتاه آمد چون مردد به نظر رسیدی. کیفیت برنامه عوض نشد، لحن تو عوض شد. [پاک کن](#clearing) و بدون اینکه به هیچ سمتی اشاره کنی دوباره بپرس.»
 
 ### Hallucination
 
-Confidently-wrong [model](#model) output. Two flavors with different causes and fixes:
+خروجیِ بااطمینانِ غلطِ [مدل](#model). دو نوع با علت‌ها و راه‌حل‌های متفاوت:
 
-| Flavor         | What goes wrong                                                                                                        | Cause                                                                                                                | Fix                                                                |
-| -------------- | ---------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------ |
-| _Factuality_   | Invented or wrong facts about the world — a function that doesn't exist, a wrong API signature, a fake citation        | [Parametric knowledge](#parametric-knowledge) gaps, often past the [knowledge cutoff](#knowledge-cutoff) | Load the right [contextual knowledge](#contextual-knowledge) |
-| _Faithfulness_ | Output drifts from the contextual knowledge that's loaded, the user's instructions, or the model's own prior reasoning | [Attention degradation](#attention-degradation); worsens in the [dumb zone](#smart-zone)                 | [Clear](#clearing) or [compact](#compaction)               |
+| نوع       | چه چیزی خراب می‌شود                                                                             | علت                                                                                                    | راه‌حل                                                     |
+| --------- | ----------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------ | ---------------------------------------------------------- |
+| _واقعیت_  | حقایق اختراع‌شده یا غلط درباره جهان — تابعی که وجود ندارد، امضای API غلط، ارجاع جعلی            | شکاف‌های [دانش پارامتری](#parametric-knowledge)، اغلب بعد از [برش دانش](#knowledge-cutoff) | بارگذاری [دانش زمینه‌ای](#contextual-knowledge) درست |
+| _وفاداری_ | خروجی از دانش زمینه‌ایِ بارگذاری‌شده، دستورالعمل‌های کاربر یا استدلال قبلی خود مدل منحرف می‌شود | [افت توجه](#attention-degradation)؛ در [منطقه کمسو](#smart-zone) بدتر می‌شود               | [پاک کردن](#clearing) یا [فشرده‌سازی](#compaction) |
 
-[Next-token prediction](#next-token-prediction) produces fluent output whether or not the underlying fact is real — the model has no internal signal that it doesn't know something, so an invented method arrives in the same assured register as a correct one. Hallucinated code is plausible by construction: it's what the API _would_ look like if it existed, which is exactly what makes it slip past a skim-level review and fail only when run.
+[پیش‌بینی توکن بعدی](#next-token-prediction) خروجی روان تولید می‌کند چه واقعیت زیرین واقعی باشد چه نباشد — مدل هیچ سیگنال درونی‌ای ندارد که چیزی را نمی‌داند، پس یک روش اختراع‌شده با همان لحن مطمئنِ روش درست می‌رسد. کد توهم‌زده ذاتاً محتمل است: همان چیزی است که API _اگر_ وجود داشت شبیه‌اش می‌بود، و دقیقاً همین باعث می‌شود از یک بازبینی سطحی رد شود و فقط وقتی اجرا می‌شود شکست بخورد.
 
-You need to know which flavor you're looking at, because the fix for one makes the other worse. Factuality means missing knowledge: the fix is adding context — the docs, the type definitions, the file. Faithfulness means the knowledge is present but losing the competition for attention: the fix is removing context. Misdiagnose faithfulness as factuality and you paste in more docs, which grows the context and makes the drift worse. When the agent gets something wrong, check whether the correct information was already in context before deciding which problem you have.
+باید بدانید به کدام نوع نگاه می‌کنید، چون راه‌حل یکی نوع دیگر را بدتر می‌کند. واقعیت یعنی دانشِ ازدست‌رفته: راه‌حل افزودن زمینه است — مستندات، تعریف‌های نوع، فایل. وفاداری یعنی دانش حاضر است اما رقابت برای توجه را دارد می‌بازد: راه‌حل حذف زمینه است. اگر وفاداری را اشتباه واقعیت تشخیص دهید، مستندات بیشتری می‌چسبانید، که زمینه را بزرگ‌تر و انحراف را بدتر می‌کند. وقتی عامل چیزی را غلط می‌گیرد، قبل از تصمیم‌گیری درباره اینکه کدام مشکل را دارید، بررسی کنید آیا اطلاعات درست از قبل در زمینه بوده.
 
-_Avoid:_ "hallucination" as a bare synonym for "wrong" — without naming the flavor, the term has no diagnostic value.
+_نبایدها:_ «توهم» به‌عنوان مترادف خالی «غلط» — بدون نام بردن نوع، واژه ارزش تشخیصی ندارد.
 
-_Usage:_
+_کاربرد:_
 
-"It hallucinated a `parseAsync` method on the schema."
+«یک متد `parseAsync` روی شِما توهم زد.»
 
-"Factuality or faithfulness?"
+«واقعیت یا وفاداری؟»
 
-"The method exists in the docs I pasted — it just stopped reading them after [turn](#turn) forty."
+«متد در مستنداتی که چسباندم وجود دارد — فقط بعد از [نوبت](#turn) چهلم از خواندن‌شان ایستاد.»
 
-"Faithfulness then. Compact and reload, don't bother adding more docs."
+«پس وفاداری. فشرده کن و دوباره بارگذاری کن، به‌جایش دنبال افزودن مستندات بیشتر نرو.»
 
 ### Parametric knowledge
 
-What the [model](#model) "knows" from [training](#training), stored in its [parameters](#parameters). Frozen at training time — the model can't see its own parameters or update them. Detail is lost in the squeeze: billions of facts cram into a fixed number of parameters, and the rare ones blur. Source of fluency on common topics, and of fabrication on uncommon ones. Counterpart to [contextual knowledge](#contextual-knowledge).
+آنچه [مدل](#model) از [آموزش](#training) «می‌داند» و در [پارامترهایش](#parameters) ذخیره شده. در زمان آموزش منجمد می‌شود — مدل نمی‌تواند پارامترهای خودش را ببیند یا به‌روزشان کند. در این فشرده‌سازی جزئیات از بین می‌رود: میلیاردها واقعیت در تعداد ثابتی پارامتر جا می‌شوند و موارد کمیاب محو می‌شوند. منبع روان بودن در موضوعات رایج، و منبع جعل در موضوعات نامعمول. در برابر [دانش زمینه‌ای](#contextual-knowledge).
 
-Parametric knowledge is not stored as facts. Training never gives the model a database to look things up in; it adjusts parameters until the model predicts text well, and a model that predicts text about a topic well behaves as if it knows the topic. How reliable the knowledge is tracks how often something appeared in the training data: a topic with millions of examples is reproduced accurately, for a topic with only a handful, the model guesses based on what similar topics look like. Reproducing and guessing are the same process to the model, so it can't tell which one it's doing. A fabricated answer arrives with the same fluency as a correct one. [Hallucination](#hallucination) is the model guessing wrong.
+دانش پارامتری به‌صورت واقعیت ذخیره نمی‌شود. آموزش هرگز به مدل پایگاه‌داده‌ای نمی‌دهد که در آن جست‌وجو کند؛ پارامترها را تنظیم می‌کند تا مدل متن را خوب پیش‌بینی کند، و مدلی که متن درباره یک موضوع را خوب پیش‌بینی می‌کند طوری رفتار می‌کند که انگار آن موضوع را می‌داند. میزان اطمینان به دانش، دنباله‌روی این است که چیزی چند بار در داده‌های آموزشی ظاهر شده: موضوعی با میلیون‌ها نمونه دقیق بازتولید می‌شود؛ برای موضوعی که فقط چند نمونه دارد، مدل بر اساس شباهت موضوعات مشابه حدس می‌زند. بازتولید و حدس زدن برای مدل یک فرایند واحدند، پس نمی‌تواند تشخیص دهد کدام را انجام می‌دهد. پاسخ جعلی با همان روانی پاسخ درست می‌رسد. [توهم](#hallucination) همان حدس غلط مدل است.
 
-Parametric knowledge also ages. The parameters stop changing at the [knowledge cutoff](#knowledge-cutoff), so a library released or renamed after that date doesn't exist in them, and an API that changed is remembered in its old form.
+دانش پارامتری هم کهنه می‌شود. پارامترها از [برش دانش](#knowledge-cutoff) به بعد تغییر نمی‌کنند، پس کتابخانه‌ای که بعد از آن تاریخ عرضه یا تغییر نام داده در آن‌ها وجود ندارد، و API که عوض شده به شکل قدیمی‌اش به خاطر سپرده می‌شود.
 
-For both gaps — too rare and too recent — the remedy is the same: the knowledge can't be added to the parameters, so it has to be supplied as contextual knowledge instead.
+برای هر دو شکاف — خیلی کمیاب و خیلی تازه — راه‌حل یکسان است: دانش را نمی‌توان به پارامترها اضافه کرد، پس باید به‌جایش به‌صورت دانش زمینه‌ای تأمین شود.
 
-_Usage:_
+_کاربرد:_
 
-"It writes flawless React but invents methods on our internal SDK."
+«کد React بی‌نقص می‌نویسد اما روی SDK داخلی ما متد اختراع می‌کند.»
 
-"React is dense in the parametric knowledge — millions of training examples. Your SDK isn't, so the model fills in plausible-looking shapes. Load the SDK docs into [context](#context)."
+«React در دانش پارامتری چگال است — میلیون‌ها نمونه آموزشی. SDK شما نیست، پس مدل شکل‌های محتمل‌نما پر می‌کند. مستندات SDK را در [زمینه](#context) بار کن.»
 
 ### Knowledge cutoff
 
-The date past which a [model](#model) has no [parametric knowledge](#parametric-knowledge). Libraries, APIs, and events from after the cutoff are fabrication traps unless their docs are loaded as [contextual knowledge](#contextual-knowledge). Each model release ships with its own cutoff.
+تاریخی که بعد از آن [مدل](#model) هیچ [دانش پارامتری](#parametric-knowledge)‌ای ندارد. کتابخانه‌ها، APIها و رویدادهای بعد از برش، تله جعل‌اند مگر اینکه مستنداتشان به‌صورت [دانش زمینه‌ای](#contextual-knowledge) بارگذاری شود. هر نسخه مدل برش مخصوص خودش را دارد — مدلی که در 2024 آموزش دیده نمی‌داند سال بعد چه کتابخانه‌ای عرضه شده.
 
-The cutoff exists because of how models are made: [training](#training) bakes a snapshot of text into the model's [parameters](#parameters), and after that the parameters are frozen. The model doesn't know its knowledge has an edge — asked about something past the cutoff, it doesn't refuse, it extrapolates from the nearest thing it does know. That's what makes the trap quiet: code written against an old version of a library looks plausible, often compiles, and fails on the parts that changed.
+برش به این دلیل وجود دارد که مدل‌ها این‌طور ساخته می‌شوند: [آموزش](#training) عکسی از متن را در [پارامترهای](#parameters) مدل می‌پزد و بعد از آن پارامترها منجمد می‌شوند. مدل نمی‌داند دانشش لبه دارد — وقتی درباره چیزی بعد از برش پرسیده شود، امتناع نمی‌کند، از نزدیک‌ترین چیزی که می‌داند برون‌یابی می‌کند. همین تله را بی‌صدا می‌کند: کدی که بر اساس نسخه قدیمی یک کتابخانه نوشته شده محتمل به نظر می‌رسد، اغلب کامپایل می‌شود و در بخش‌هایی که عوض شده‌اند خراب می‌شود.
 
-The fix is always the same: get current information into [context](#context). Load the changelog, point at the installed version's type definitions, or have the agent read the docs from the web. Anything in context outranks nothing-in-parameters.
+راه‌حل همیشه یکسان است: اطلاعات به‌روز را وارد [زمینه](#context) کنید. changelog را بار کنید، به تعریف نوع‌های نسخه نصب‌شده اشاره کنید، یا از عامل بخواهید مستندات را از وب بخواند. هر چیزی در زمینه بر هیچ‌چیز در پارامترها برتری دارد.
 
-_Usage:_
+_کاربرد:_
 
-"It keeps writing the v3 SDK syntax — we're on v5."
+«مدام سینتکس v3 SDK را می‌نویسد — ما روی v5 هستیم.»
 
-"v5 shipped after the knowledge cutoff. Load the v5 changelog as contextual knowledge, otherwise it'll keep fabricating from the older parametric version."
+«v5 بعد از برش دانش عرضه شده. changelog نسخه v5 را به‌صورت دانش زمینه‌ای بار کن، وگرنه همچنان از نسخه پارامتری قدیمی‌تر جعل می‌کند.»
 
 ### Contextual knowledge
 
-Facts the [agent](#agent) can read directly from the [context](#context) right now — the user's task, files the agent has read in, [tool results](#tool-result), [AGENTS.md](#agentsmd) content loaded at [session](#session) start. Counterpart to [parametric knowledge](#parametric-knowledge): parametric is _recalled_ from the parameters; contextual is _read_ from the [window](#context-window). [Hallucinations](#hallucination) are much less common when the agent works from contextual knowledge — the answer is right in front of it, not dredged up from a blurred memory.
+واقعیت‌هایی که [عامل](#agent) همین حالا می‌تواند مستقیم از [زمینه](#context) بخواند — کار کاربر، فایل‌هایی که عامل خوانده، [نتیجه ابزارها](#tool-result)، محتوای [AGENTS.md](#agentsmd) بارگذاری‌شده در شروع [نشست](#session). در برابر [دانش پارامتری](#parametric-knowledge): پارامتری از پارامترها _به خاطر آورده_ می‌شود؛ زمینه‌ای از [پنجره](#context-window) _خوانده_ می‌شود. وقتی عامل با دانش زمینه‌ای کار می‌کند، [توهم‌ها](#hallucination) خیلی کمتر رایج‌اند — پاسخ دقیقاً جلویش است، نه اینکه از حافظه محوشده بیرون کشیده شود.
 
-Of the two kinds of knowledge, only contextual knowledge is in your control. The parameters are frozen, so the only way to give the [model](#model) knowledge it lacks — an internal SDK, a library released after the [knowledge cutoff](#knowledge-cutoff), a decision made yesterday — is to put it in the context. A lot of practical [AI](#ai) coding work reduces to this: getting the right facts in front of the model at the moment it needs them.
+از این دو نوع دانش، فقط دانش زمینه‌ای در کنترل شماست. پارامترها منجمدند، پس تنها راه دادن دانشی که [مدل](#model) کم دارد — یک SDK داخلی، کتابخانه‌ای که بعد از [برش دانش](#knowledge-cutoff) عرضه شده، تصمیمی که دیروز گرفته شده — گذاشتن آن در زمینه است. بخش بزرگی از کار عملی کدنویسی با [هوش مصنوعی](#ai) به همین ختم می‌شود: رساندن واقعیت‌های درست جلوی مدل در لحظه‌ای که به آن‌ها نیاز دارد.
 
-When contextual and parametric knowledge conflict, the contextual usually wins. Paste the current API docs and the model follows them rather than its stale memory of the old API — though the old version can still bleed through, especially deep into a long session. If the agent keeps reverting to an outdated pattern despite the docs being loaded, that's parametric knowledge leaking past the contextual; restating the correction or moving it closer to the work helps.
+وقتی دانش زمینه‌ای و پارامتری تعارض کنند، معمولاً زمینه‌ای برنده است. مستندات API فعلی را بچسبانید و مدل به‌جای حافظه کهنه‌اش از API قدیمی، از آن‌ها پیروی می‌کند — هرچند نسخه قدیمی هنوز می‌تواند نشت کند، مخصوصاً در عمق یک نشست طولانی. اگر عامل با وجود بارگذاری مستندات مدام به الگوی قدیمی برمی‌گردد، یعنی دانش پارامتری از دانش زمینه‌ای نشت می‌کند؛ بازگویی تصحیح یا نزدیک‌تر کردنش به کار کمک می‌کند.
 
-Unlike parametric knowledge, contextual knowledge costs something to use. Everything loaded into the window spends [tokens](#token) and competes for the model's [attention budget](#attention-budget), so loading more is not automatically better — the aim is the relevant facts in the window, not all the facts.
+برخلاف دانش پارامتری، استفاده از دانش زمینه‌ای هزینه دارد. هر چیزی که در پنجره بارگذاری می‌شود [توکن](#token) خرج می‌کند و برای [بودجه توجه](#attention-budget) مدل رقابت می‌کند، پس بارگذاری بیشتر به‌طور خودکار بهتر نیست — هدف واقعیت‌های مرتبط در پنجره است، نه همه واقعیت‌ها.
 
-_Reach for this term_ only when contrasting with parametric knowledge; otherwise just say **context**.
+_به این واژه دست بزنید_ فقط وقتی با دانش پارامتری مقایسه می‌کنید؛ وگرنه فقط بگویید **زمینه**.
 
-_Avoid:_ "working memory" — contextual knowledge is what's in the window _now_; a [memory system](#memory-system) is what gets cross-session content into it. Different scales, don't conflate.
+_نبایدها:_ «حافظه کاری» — دانش زمینه‌ای همان چیزی است که همین حالا در پنجره است؛ [سیستم حافظه](#memory-system) همان چیزی است که محتوای بین‌نشستی را وارد آن می‌کند. مقیاس‌های متفاوت، قاطی نکنید.
 
-_Usage:_
+_کاربرد:_
 
-"Why does it nail the API when I paste the docs and fabricate it when I don't?"
+«چرا وقتی مستندات را می‌چسبانم API را درست می‌زند و وقتی نمی‌چسبانم جعلش می‌کند؟»
 
-"With the docs in, it's contextual knowledge — reading off the page. Without, it's parametric and the rare endpoints blur."
+«با مستندات، دانش زمینه‌ای است — از روی صفحه می‌خواند. بدون آن، پارامتری است و endpointهای کمیاب محو می‌شوند.»
 
 ### Attention relationship
 
-When predicting each [token](#token), the [model](#model) factors in every other token in the [context](#context) — some heavily, others barely at all. The pairing between two tokens is an **attention relationship**, and meaningful pairs ("her" with "Sarah", or a `getUser()` call with its `function getUser` definition) influence each other more than unrelated ones. A context of N tokens has on the order of N² relationships.
+وقتی هر [توکن](#token) پیش‌بینی می‌شود، [مدل](#model) همه توکن‌های دیگر [زمینه](#context) را در نظر می‌گیرد — بعضی را سنگین، بعضی را تقریباً اصلاً. جفت‌شدگی بین دو توکن یک **رابطه توجه** است، و جفت‌های بامعنی ('her' با 'Sarah'، یا فراخوانی `getUser()` با تعریف `function getUser`اش) بیشتر از جفت‌های نامرتبط بر هم اثر می‌گذارند. زمینه N توکنی در حد N² رابطه دارد.
 
-The pairings are where the model's apparent understanding lives. When it resolves a pronoun, it's because the attention relationship between "her" and "Sarah" is strong. When it calls a function with the right arguments, the relationship between the call site and the definition it read earlier is doing the work. None of this is looked up — it's computed fresh on every [model provider request](#model-provider-request), for every pair.
+جفت‌شدگی‌ها همان جایی‌اند که فهمِ ظاهری مدل زندگی می‌کند. وقتی ضمیر را درست برمی‌گرداند، به این دلیل است که رابطه توجه بین 'her' و 'Sarah' قوی است. وقتی تابعی را با آرگومان‌های درست صدا می‌زند، رابطه بین محل فراخوانی و تعریفی که قبلاً خوانده کار را انجام می‌دهد. هیچ‌کدام از این‌ها جست‌وجو نمی‌شود — در هر [درخواست به ارائه‌دهنده مدل](#model-provider-request)، برای هر جفت، تازه محاسبه می‌شود.
 
-The N² figure is worth sitting with, because it grows faster than intuition suggests:
+رقم N² ارزش تأمل دارد، چون سریع‌تر از آنچه شهود می‌گوید رشد می‌کند:
 
-| Context size   | Pairings (~N²) |
-| -------------- | -------------- |
-| 1,000 tokens   | ~1 million     |
-| 10,000 tokens  | ~100 million   |
-| 100,000 tokens | ~10 billion    |
+| اندازه زمینه | جفت‌شدگی‌ها (~N²) |
+| ------------ | ----------------- |
+| 1,000 توکن   | حدود 1 میلیون     |
+| 10,000 توکن  | حدود 100 میلیون   |
+| 100,000 توکن | حدود 10 میلیارد   |
 
-Each pairing is also computed more than once. Models have multiple attention heads — exact counts for frontier models are unpublished, but fifty to a hundred is a reasonable guess — and each head computes its own version of every relationship. So every pairing in the table above is duplicated across every head. That's a lot of pairings.
+هر جفت‌شدگی هم بیش از یک بار محاسبه می‌شود. مدل‌ها چند head توجه دارند — تعداد دقیق برای مدل‌های مرزی منتشر نشده، اما پنجاه تا صد حدس معقولی است — و هر head نسخه خودش از هر رابطه را محاسبه می‌کند. پس هر جفت‌شدگی جدول بالا در همه headها تکرار می‌شود. جفت‌شدگی زیاد است.
 
-Only a small number of these relationships matter for any given task. The pairing between your instruction and the code it governs is one of a handful that count; almost everything else in the pool is noise. And the two grow at different rates: the relationships that matter stay roughly constant, while the total pool grows quadratically with context size. At 1,000 tokens, the pairing you care about is one in a million; at 100,000 tokens, it's one in ten billion. This is the arithmetic underneath the [attention budget](#attention-budget), and [attention degradation](#attention-degradation) is what it feels like when the relationships that matter get too thin a share.
+فقط تعداد کمی از این رابطه‌ها برای هر کار مشخصی اهمیت دارند. جفت‌شدگی بین دستور شما و کدی که بر آن حکومت می‌کند یکی از همان چندتایی است که به حساب می‌آید؛ تقریباً هر چیز دیگر در این مخزن نویز است. و این دو با نرخ‌های متفاوت رشد می‌کنند: رابطه‌های مهم تقریباً ثابت می‌مانند، در حالی که کل مخزن با مربع اندازه زمینه رشد می‌کند. در 1,000 توکن، جفت‌شدگی‌ای که به آن اهمیت می‌دهید یک در میلیون است؛ در 100,000 توکن، یک در ده میلیارد. این حسابِ زیربنای [بودجه توجه](#attention-budget) است، و [افت توجه](#attention-degradation) همان حسی است که وقتی رابطه‌های مهم سهمی بیش از حد نازک می‌گیرند.
 
-_Usage:_
+_کاربرد:_
 
-"It keeps confusing the two `user` symbols across the diff — sounds like we're in the [dumb zone](#smart-zone)."
+«مدام دو نماد `user` را در دیف قاطی می‌کند — به نظر می‌رسد در [منطقه کمسو](#smart-zone) هستیم.»
 
-"Yeah, the attention relationship between each call site and its declaration is fighting the other one — same token shape, different bindings. Rename one and the pairings sharpen."
+«آره، رابطه توجه بین هر محل فراخوانی و تعریفش با آن یکی می‌جنگد — شکل توکن یکسان، bindingهای متفاوت. یکی را تغییر نام بده و جفت‌شدگی‌ها تیز می‌شوند.»
 
 ### Attention budget
 
-Each [token](#token) has a finite amount of influence to distribute across the rest of the [context](#context). Heavy influence on [one relationship](#attention-relationship) leaves less for others. The budget is per-token and doesn't grow when the context does, which is why long [sessions](#session) dilute.
+هر [توکن](#token) مقدار متناهی نفوذ دارد که در بقیه [زمینه](#context) پخش کند. نفوذ سنگین روی [یک رابطه](#attention-relationship) برای بقیه کمتر می‌گذارد. بودجه به ازای هر توکن است و با رشد زمینه رشد نمی‌کند، برای همین [نشست‌های](#session) طولانی رقیق می‌شوند.
 
-Think of it as signal and noise. Your instruction is a signal at fixed volume; every other token in the [context window](#context-window) is competing sound. The instruction never gets quieter — it's still there, character for character — but as the context grows, the room gets louder around it, and the signal-to-noise ratio drops. An instruction that was the loudest thing at 10k tokens of context is background hum at 150k. This is the mechanism behind [attention degradation](#attention-degradation): the model doesn't forget; the signal gets lost in the noise.
+به‌عنوان سیگنال و نویز به آن فکر کنید. دستور شما سیگنالی با حجم ثابت است؛ هر توکن دیگر [پنجره زمینه](#context-window) صدای رقیب است. دستور هرگز آرام‌تر نمی‌شود — هنوز آنجاست، حرف به حرف — اما با رشد زمینه، اتاق دورش بلندتر می‌شود و نسبت سیگنال به نویز افت می‌کند. دستوری که در 10 هزار توکن زمینه بلندترین چیز بود، در 150 هزار به هوم پس‌زمینه تبدیل می‌شود. این سازوکار پشت [افت توجه](#attention-degradation) است: مدل فراموش نمی‌کند؛ سیگنال در نویز گم می‌شود.
 
-The symptom reads as disobedience — the agent agreed to a constraint early on and then drifts from it, and re-pasting the constraint helps only briefly. The cause isn't the instruction; it's everything else in the window competing with it.
+نشانه‌اش مثل نافرمانی خوانده می‌شود — عامل اوایل به یک محدودیت تن داده و بعد از آن فاصله می‌گیرد، و دوباره چسباندن محدودیت فقط مدت کوتاهی کمک می‌کند. علت دستور نیست؛ بقیه چیزهای پنجره‌اند که با آن رقابت می‌کنند.
 
-What you can control is what goes into the context. Content that doesn't serve the task isn't neutral — it's noise over everything that does. Keep the window small, [clear](#clearing) when the accumulated context stops paying for itself, and restate the constraints that matter instead of trusting their early mention to hold.
+آنچه کنترل دارید این است که چه چیزی وارد زمینه شود. محتوایی که به کار نمی‌آید خنثی نیست — نویزی است روی هر چیزی که به کار می‌آید. پنجره را کوچک نگه دارید، وقتی زمینه انباشته‌شده دیگر به صرفه نیست [پاک‌سازی](#clearing) کنید، و محدودیت‌های مهم را بازگو کنید به‌جای اینکه به ذکر اولیه‌شان اعتماد کنید که بمانند.
 
-_Usage:_
+_کاربرد:_
 
-"Why does it keep ignoring the schema I pasted at the top?"
+«چرا مدام شِما را که بالای صفحه چسباندم نادیده می‌گیرد؟»
 
-"We're well into the [dumb zone](#smart-zone) — every token's attention budget is fixed, but the context kept growing. The signal on the schema is now competing with thousands of newer tokens."
+«کاملاً در [منطقه کمسو](#smart-zone) هستیم — بودجه توجه هر توکن ثابت است، اما زمینه مدام بزرگ شده. سیگنال روی شِما حالا با هزاران توکن جدیدتر رقابت می‌کند.»
 
 ### Attention degradation
 
-As a [session](#session) grows, each [token](#token)'s [attention budget](#attention-budget) is spread across more competitors. The signal on any one [meaningful relationship](#attention-relationship) shrinks; noise from irrelevant [context](#context) crowds in. Same [model](#model), same [parameters](#parameters) — just more mouths to feed from the same plate. Cause of the smart zone / dumb [zone effect](#smart-zone).
+با رشد [نشست](#session)، هر [توکن](#token) [بودجه توجه](#attention-budget) خودش را بین رقبای بیشتری پخش می‌کند. سیگنال روی هر [رابطه معنادار](#attention-relationship) کوچک می‌شود؛ نویز [زمینه](#context) نامرتبط هجوم می‌آورد. همان [مدل](#model)، همان [پارامترها](#parameters) — فقط دهان‌های بیشتری از همان بشقاب باید سیر شوند. علتِ اثر منطقه هوشمند / [منطقه کمسو](#smart-zone).
 
-It presents as the model getting worse mid-session: constraints it followed for an hour start slipping, it re-asks things it was told, it writes code that ignores a file it read earlier. Nothing about the model changed — the only variable is how much context it's now attending over.
+خودش را به‌صورت بدتر شدن مدل وسط نشست نشان می‌دهد: محدودیت‌هایی که یک ساعت دنبال کرده شروع می‌کنند به لغزیدن، چیزهایی که به او گفته شده دوباره می‌پرسد، کدی می‌نویسد که فایلی را که قبلاً خوانده نادیده می‌گیرد. هیچ چیز درباره مدل عوض نشده — تنها متغیر این است که حالا چقدر زمینه را پوشش می‌دهد.
 
-It's gradual, which is what makes it hard to catch from inside the session. There's no error and no threshold; each [turn](#turn) is only slightly worse than the last, and by the time the slips are obvious you've been in the dumb zone for a while.
+تدریجی است، و همین تشخیصش را از داخل نشست سخت می‌کند. خطا و آستانه‌ای وجود ندارد؛ هر [نوبت](#turn) فقط کمی بدتر از قبلی است، و تا وقتی لغزش‌ها آشکار شوند مدتی است در منطقه کمسو بوده‌اید.
 
-You recover by removing context, not adding more. Re-pasting the ignored instruction adds another competitor to the same crowded window and helps only briefly. What works: [clear](#clearing) and reload only what the task needs, or [compact](#compaction), or [hand off](#handoff) to a fresh session. Treat declining instruction-following as a signal about context length, not about the model.
+با کم کردن زمینه بهبود می‌یابید، نه زیاد کردنش. دوباره چسباندن دستور نادیده‌گرفته‌شده یک رقیب دیگر به همان پنجره شلوغ اضافه می‌کند و فقط مدت کوتاهی کمک می‌کند. آنچه جواب می‌دهد: [پاک‌سازی](#clearing) و بارگذاری دوباره فقط آنچه کار نیاز دارد، یا [فشرده‌سازی](#compaction)، یا [انتقال زمینه](#handoff) به یک نشست تازه. افت پیروی از دستور را سیگنالی درباره طول زمینه بگیرید، نه درباره مدل.
 
-_Usage:_
+_کاربرد:_
 
-"It's deep in the dumb zone — inventing generics that aren't in the type file."
+«کاملاً در منطقه کمسو است — genericهایی اختراع می‌کند که در فایل نوع نیستند.»
 
-"Attention degradation. The type definitions are still in context, but the signal on them is buried under everything we've added since. Clear and reload."
+«افت توجه. تعریف نوع‌ها هنوز در زمینه‌اند، اما سیگنال رویشان زیر هر چیزی که از آن موقع اضافه کرده‌ایم دفن شده. پاک کن و دوباره بار کن.»
 
 ### Smart zone
 
-Early in a [session](#session) the [agent](#agent) is in a "smart zone" — sharp, focused, recall is good. As the session grows it drifts into a "dumb zone": sloppier, forgetful, more mistakes — and more faithfulness [hallucinations](#hallucination). Same [model](#model), same [harness](#harness) — just more [context](#context). The felt effect of [attention degradation](#attention-degradation). On frontier models, the dumb zone commonly begins around 125K-150K [tokens](#token) — though this is debated. [Clear](#clearing) or [compact](#compaction) when the session bloats; don't push through.
+اوایل [نشست](#session) [عامل](#agent) در «منطقه هوشمند» است — تیز، متمرکز، یادآوری خوب است. با رشد نشست به «منطقه کمسو» می‌لغزد: شلخته‌تر، فراموشکارتر، پرمشکل‌تر — و [توهم‌های](#hallucination) وفاداری بیشتری. همان [مدل](#model)، همان [بستر اجرایی](#harness) — فقط [زمینه](#context) بیشتری. اثرِ احساس‌شده [افت توجه](#attention-degradation). در مدل‌های مرزی، منطقه کمسو معمولاً حدود 125 تا 150 هزار [توکن](#token) شروع می‌شود — هرچند این مورد بحث است. وقتی نشست متورم شد [پاک‌سازی](#clearing) یا [فشرده‌سازی](#compaction) کنید؛ با زور رد نشوید.
 
-The decline is gradual, which makes it easy to miss. There's no error message and no visible boundary; the agent just starts performing slightly worse, then noticeably worse. Common signs: it forgets an instruction you gave twenty turns ago, repeats a mistake it had already corrected, or confidently asserts something the context contradicts. Because the slide is smooth, the usual response is to push through and re-explain — which adds more context and makes the problem worse.
+افت تدریجی است، برای همین به راحتی از چشم می‌افتد. پیام خطا و مرز قابل مشاهد‌ه‌ای وجود ندارد؛ عامل فقط شروع می‌کند کمی بدتر عمل کند، بعد به‌طور محسوس بدتر. نشانه‌های رایج: دستوری را که بیست نوبت پیش داده‌اید فراموش می‌کند، اشتباهی را که قبلاً اصلاح کرده تکرار می‌کند، یا با اطمینان چیزی را می‌گوید که زمینه تناقض دارد. چون لغزش نرم است، پاسخ معمول رد شدن و توضیح دوباره است — که زمینه بیشتری اضافه می‌کند و مشکل را بدتر می‌کند.
 
-The zones don't track the [context window](#context-window) limit. A session can be deep in the dumb zone with most of the window still free: the limit is where the harness refuses to continue, but quality falls off long before that. Plan around the smart zone, not the window — the practical budget for a task is the tokens the agent works well within, not the tokens it can technically hold.
+منطقه‌ها از محدودیت [پنجره زمینه](#context-window) پیروی نمی‌کنند. نشستی می‌تواند با بیشتر پنجره خالی در عمق منطقه کمسو باشد: محدودیت همان جایی است که بستر اجرایی از ادامه دادن امتناع می‌کند، اما کیفیت خیلی قبل از آن می‌افتد. دور منطقه هوشمند برنامه‌ریزی کنید، نه دور پنجره — بودجه عملی یک کار توکن‌هایی است که عامل در آن‌ها خوب کار می‌کند، نه توکن‌هایی که از نظر فنی می‌تواند نگه دارد.
 
-The smart zone is a budget, and unrelated work spends it. Every task done in a session uses up tokens, so starting a second task in the same session means starting it closer to the dumb zone. Doing one task per session gives each task the sharpest part of the session. When a single task is bigger than one smart zone, split it: [hand off](#handoff) or compact at a natural boundary, and let a fresh session do the next piece.
+منطقه هوشمند یک بودجه است و کار نامرتبط آن را خرج می‌کند. هر کاری که در نشست انجام شود توکن مصرف می‌کند، پس شروع کردن کار دوم در همان نشست یعنی شروع آن نزدیک‌تر به منطقه کمسو. انجام یک کار در هر نشست به هر کار تیزترین بخش نشست را می‌دهد. وقتی یک کار از یک منطقه هوشمند بزرگ‌تر است، تقسیمش کنید: در مرز طبیعی [انتقال زمینه](#handoff) بدهید یا فشرده کنید، و بگذارید نشست تازه بخش بعدی را انجام دهد.
 
-_Usage:_
+_کاربرد:_
 
-"It nailed the first three components and just butchered the fourth."
+«سه کامپوننت اول را عالی ساخت و چهارمی را کباب کرد.»
 
-"You're out of the smart zone — same model, just deep into the dumb zone now. Compact and reload the plan, the next component will land."
+«از منطقه هوشمند بیرون افتاده‌ای — همان مدل، فقط حالا در عمق منطقه کمسو. فشرده کن و برنامه را دوباره بار کن، کامپوننت بعدی درست درمی‌آید.»
 
 ## Section 5 — Handoffs
 
 ### Clearing
 
-Ending the current [session](#session) and starting a fresh one. The next message begins with an empty session and an empty [context window](#context-window). Usually user-driven.
+پایان دادن به [نشست](#session) جاری و شروع یک نشست تازه. پیام بعدی با نشستی خالی و [پنجره زمینهای](#context-window) خالی آغاز میشود. معمولاً توسط کاربر انجام میشود.
 
-Clearing is the cure for a polluted context. A session accumulates everything: failed attempts, wrong turns, stale [tool results](#tool-result), abandoned plans. The [model](#model) re-reads all of it on every [turn](#turn), and bad history drags on new work. Deep into a long session the [agent](#agent) gets vaguer and less obedient — instructions you gave clearly get ignored, quality slips, and prodding it to do better doesn't help, because the noise it's wading through is still in its [context](#context). Clearing removes the noise.
+پاکسازی، درمان زمینه آلوده است. نشست همهچیز را انباشته میکند: تلاشهای ناموفق، مسیرهای اشتباه، [نتیجه ابزارهای](#tool-result) کهنه، برنامههای رهاشده. [مدل](#model) در هر [نوبت](#turn) همه آنها را دوباره میخواند و تاریخچه بد، کار تازه را عقب میکشد. در عمق یک نشست طولانی، [عامل](#agent) مبهمتر و کماطاعتتر میشود — دستورهایی که واضح دادهاید نادیده گرفته میشوند، کیفیت کار میافتد و تشویق کردنش به انجام بهتر هم فایده ندارد، چون نویزی که در آن دستوپا میزند هنوز در [زمینه](#context)اش است. پاکسازی نویز را از بین میبرد.
 
-Clearing doesn't erase the conversation. Most [harnesses](#harness) keep session history on your computer, so the transcript is still there to read or resume. What's gone is the agent's working state: the model is [stateless](#stateless), so the new session knows nothing the old one knew. If the session holds decisions or progress the next one will need, have the agent write a [handoff artifact](#handoff-artifact) first, then start the new session by pointing at it.
+پاکسازی گفتوگو را پاک نمیکند. بیشتر [بسترهای اجرایی](#harness) تاریخچه نشست را روی رایانه شما نگه میدارند، پس رونوشت هنوز آنجاست که خوانده شود یا ادامه داده شود. چیزی که از بین رفته وضعیت کاری عامل است: مدل [بیوضعیت](#stateless) است، پس نشست جدید هیچکدام از دانستههای نشست قبلی را ندارد. اگر نشست تصمیمها یا پیشرفتی دارد که نشست بعدی به آن نیاز خواهد داشت، اول از عامل بخواهید یک [سند انتقال زمینه](#handoff-artifact) بنویسد، بعد نشست جدید را با اشاره به همان سند شروع کنید.
 
-Compare [compaction](#compaction), which summarises the session into the new context instead of starting empty. Clearing is the blunter tool: nothing carries over, including the junk.
+مقایسه کنید با [فشردهسازی](#compaction)، که نشست را خلاصه میکند و خلاصه را وارد زمینه جدید میکند بهجای اینکه خالی شروع کند. پاکسازی ابزار خشنتری است: هیچچیز منتقل نمیشود، حتی زبالهها.
 
-_Usage:_
+_کاربرد:_
 
-"It's stuck looping on the failing test."
+«توی حلقه تست ناموفق گیر کرده.»
 
-"Just clear it — start a fresh session with the plan doc and the test file. No point fighting the existing context."
+«فقط پاکش کن — یک نشست تازه با سند برنامه و فایل تست شروع کن. جنگیدن با زمینه موجود بیفایده است.»
 
 ### Handoff
 
-Transferring [agent](#agent) [context](#context) from one [session](#session) to another. The carry mechanism varies — a written [handoff artifact](#handoff-artifact), an in-memory summary ([compaction](#compaction)), and others. Distinct from [clearing](#clearing) (no transfer at all). Reasons vary: switching roles (planner → implementer), kicking off an [AFK](#afk) run, fanning out to parallel sessions, or freeing up [context window](#context-window) room.
+انتقال [زمینه](#context) [عامل](#agent) از یک [نشست](#session) به نشست دیگر. سازوکار انتقال متفاوت است — [سند انتقال زمینه](#handoff-artifact) نوشتهشده، خلاصهای در حافظه ([فشردهسازی](#compaction)) و موارد دیگر. با [پاکسازی](#clearing) تفاوت دارد (هیچ انتقالی در کار نیست). دلایل هم متفاوتاند: عوض کردن نقش (از برنامهریز به پیادهساز)، شروع یک اجرای [دور از کیبورد](#afk)، پخش کار بین نشستهای موازی، یا آزاد کردن جا در [پنجره زمینه](#context-window).
 
-The receiving session starts with zero context — the [model](#model) is [stateless](#stateless), and nothing from the old session is visible to the new one. Whatever the next session needs has to be carried explicitly; everything else is gone. "No return path" is the constraint that shapes the carry: the new session can't ask the old one what it meant, so the carried material has to stand on its own.
+نشست گیرنده با صفر زمینه شروع میکند — [مدل](#model) [بیوضعیت](#stateless) است و هیچچیز از نشست قبلی برای نشست جدید دیده نمیشود. هر چیزی که نشست بعدی نیاز دارد باید صریحاً منتقل شود؛ بقیه از بین رفته. «نبود مسیر بازگشت» محدودیتی است که شکل انتقال را تعیین میکند: نشست جدید نمیتواند از نشست قبلی بپرسد منظورش چه بوده، پس مواد منتقلشده باید بهتنهایی سرپا بایستند.
 
-| Mechanism        | Form                                        | Properties                                                                               |
-| ---------------- | ------------------------------------------- | ---------------------------------------------------------------------------------------- |
-| Handoff artifact | File in the [environment](#environment) | You can read and correct it before anything depends on it; reusable across many sessions |
-| Compaction       | Summary in the context window               | Automatic and cheap; harder to inspect; feeds one successor                              |
+| سازوکار          | شکل                               | ویژگیها                                                                                                         |
+| ---------------- | --------------------------------- | --------------------------------------------------------------------------------------------------------------- |
+| سند انتقال زمینه | فایلی در [محیط](#environment) | میتوانید قبل از اینکه چیزی به آن وابسته شود بخوانیدش و اصلاحش کنید؛ در بسیاری از نشستها قابل استفاده دوباره است |
+| فشردهسازی        | خلاصهای در پنجره زمینه            | خودکار و ارزان؛ بازرسیاش سختتر است؛ فقط یک نشست جانشین را تغذیه میکند                                           |
 
-The visible failure of a bad handoff is relitigation: the new session re-opens decisions the old one had settled, because the carry recorded what was decided but not why. Judge a handoff by what a session with zero context could do with it.
+شکست آشکار یک انتقال بد، بازگشتن به بحث است: نشست جدید تصمیمهایی را که نشست قبلی بسته بود دوباره باز میکند، چون در انتقال نوشته شده چه چیزی تصمیم گرفته شده، نه چرا. یک انتقال را با این معیار قضاوت کنید: نشستی با صفر زمینه با آن چه میتواند بکند.
 
-_Usage:_
+_کاربرد:_
 
-"Planning session is getting heavy — should I just keep going?"
+«نشست برنامهریزی دارد سنگین میشود — بهتر است همینطور ادامه بدهم؟»
 
-"Do a handoff. Write the decisions to a doc, clear, start the implementation in a fresh session reading from it."
+«یک انتقال زمینه انجام بده. تصمیمها را بنویس توی یک سند، پاک کن، و پیادهسازی را در یک نشست تازه شروع کن که از همان سند میخواند.»
 
 ### Primary source
 
-A source of truth in its original form — the code, the conversation transcript, the raw log, the actual API response. Not an account of the thing; the thing. Counterpart to [secondary source](#secondary-source).
+منبع حقیقت در شکل اصلیاش — کد، رونوشت گفتوگو، لاگ خام، پاسخ واقعی API. نه شرحِ آن چیز؛ خودِ آن چیز. در مقابل [منبع ثانویه](#secondary-source) قرار دارد.
 
-If you want to know what your codebase does, the code is the primary source. The docs, the architecture diagram, and the README are all descriptions of it — accurate when written, on their own schedule ever since. When an [agent](#agent) confidently asserts something wrong about your project, the question to ask is which source it was working from: an agent that read a doc inherits the doc's staleness; an agent that read the code is reading the current truth.
+اگر میخواهید بدانید پایگاه کد شما چه کار میکند، کد همان منبع اولیه است. مستندات، نمودار معماری و README همگی توصیفی از آناند — در زمان نوشتن دقیق بودند، و از آن به بعد هر کدام با برنامه خودشان پیر شدهاند. وقتی [عاملی](#agent) با اطمینان چیزی اشتباه درباره پروژه شما میگوید، سؤال این است که از کدام منبع کار میکرده: عاملی که یک سند را خوانده، کهنگی سند را به ارث برده؛ عاملی که کد را خوانده، حقیقتِ بهروز را میخواند.
 
-The cost is what keeps primary sources from being the default. Loading one into the [context window](#context-window) is expensive — the full file, the full transcript, every [token](#token) billed as [input](#input-tokens) and competing for [attention budget](#attention-budget). What you get for the cost is completeness: nothing has been pre-filtered by someone else's judgement about what mattered. A summary written last month can't contain the detail that turned out to matter today; the primary source still does.
+هزینه، چیزی است که مانع پیشفرض بودن منبع اولیه میشود. بارگذاری یکی از آنها در [پنجره زمینه](#context-window) گران است — کل فایل، کل رونوشت، هر [توکن](#token) که بهعنوان [ورودی](#input-tokens) حساب میشود و برای [بودجه توجه](#attention-budget) رقابت میکند. در برابر این هزینه، کامل بودن را میگیرید: هیچچیز از پیش توسط قضاوت دیگری درباره آنچه مهم بود فیلتر نشده. خلاصهای که ماه پیش نوشته شده نمیتواند جزئیاتی را داشته باشد که امروز مهم از آب درآمده؛ منبع اولیه هنوز داردش.
 
-Reach for the primary source when precision matters — the exact signature, the actual error, the line that throws. Much of managing [context](#context) is deciding when to pay for the primary source and when a secondary source is good enough.
+وقتی دقت مهم است سراغ منبع اولیه بروید — امضای دقیق، خطای واقعی، خطی که خطا میدهد. بخش بزرگی از مدیریت [زمینه](#context) تصمیمگیری درباره این است که چه زمانی هزینه منبع اولیه را بپردازیم و چه زمانی منبع ثانویه کافی است.
 
-_Usage:_
+_کاربرد:_
 
-"The agent says the retry logic backs off exponentially, but I'm watching it hammer the endpoint."
+«عامل میگوید منطق تلاش مجدد بهصورت نمایی عقبنشینی میکند، اما من دارم میبینم که نقطه پایانی را بمباران میکند.»
 
-"It read that out of the design doc. Point it at the actual retry module — work from the primary source when the behaviour matters."
+«این را از سند طراحی خوانده. بفرستش سراغ ماژول تلاش مجددِ واقعی — وقتی رفتار مهم است، از منبع اولیه کار کن.»
 
 ### Secondary source
 
-An account of a [primary source](#primary-source), one step removed — documentation describing code, a summary describing a transcript, a report describing search results. Cheaper to load into the [context window](#context-window) than the source it describes, and lossy by construction: whoever wrote it decided what mattered, and whatever they dropped is invisible to a reader who only has the summary.
+شرحی از [منبع اولیه](#primary-source)، یک درجه فاصلهگرفته از آن — مستنداتی که کد را توصیف میکند، خلاصهای که یک رونوشت را توصیف میکند، گزارشی که نتیجههای جستوجو را توصیف میکند. بارگذاریش در [پنجره زمینه](#context-window) از منبعی که توصیف میکند ارزانتر است، و ذاتاً با اتلاف است: هر کس آن را نوشته تصمیم گرفته چه چیزی مهم بوده، و هرچه را کنار گذاشته برای خوانندهای که فقط خلاصه را دارد نامرئی است.
 
-A lot of [context](#context) engineering is the manufacture of secondary sources. [Compaction](#compaction) turns the [session](#session) history into a summary that seeds the next session. A [subagent](#subagent) burns its own context on a noisy search and returns a short report. A [handoff artifact](#handoff-artifact) condenses a session's decisions into a document the next session reads. [Memory systems](#memory-system) distil what a session learned into notes. Each makes the same trade: fidelity for headroom.
+بخش بزرگی از مهندسی [زمینه](#context) در واقع ساختن منبعهای ثانویه است. [فشردهسازی](#compaction) تاریخچه [نشست](#session) را به خلاصهای تبدیل میکند که نشست بعدی را تغذیه میکند. یک [زیرعامل](#subagent) زمینه خودش را سر یک جستوجوی پرسروصدا میسوزاند و یک گزارش کوتاه برمیگرداند. یک [سند انتقال زمینه](#handoff-artifact) تصمیمهای یک نشست را در سندی فشرده میکند که نشست بعدی میخواند. [سیستمهای حافظه](#memory-system) چیزهایی را که یک نشست یاد گرفته به یادداشت تبدیل میکنند. هر کدام همان معامله را انجام میدهد: وفاداری در ازای فضا.
 
-Secondary sources fail in two ways. They're lossy — the compaction summary that lost the schema decision, the report that didn't mention the edge case. And they drift — the primary source changes and the account doesn't follow, so docs describe last quarter's architecture with this quarter's confidence. When an [agent](#agent) acts on a secondary source that has failed either way, it works confidently from wrong information; the fix is sending it back to the primary source.
+منبعهای ثانویه به دو شکل از کار میافتند. با اتلافاند — خلاصه فشردهسازی که تصمیم درباره شِما را گم کرده، گزارشی که به مورد لبهای اشاره نکرده. و انحراف مییابند — منبع اولیه تغییر میکند و شرحش دنبالش نمیرود، پس مستندات معماریِ فصلِ گذشته را با اطمینانِ این فصل توصیف میکنند. وقتی [عاملی](#agent) روی منبع ثانویهای کار میکند که از هر دو راه از کار افتاده، با اطمینان از اطلاعاتِ غلط کار میکند؛ راهحل این است که بفرستیمش دوباره سراغ منبع اولیه.
 
-Neither failure makes secondary sources a mistake. The context window is finite, and primary sources are expensive; without summaries, reports, and handoff documents, nothing large fits. The skill is knowing which details can survive the loss — and verifying against the primary source when one can't. A well-made secondary source carries a [context pointer](#context-pointer) back to its original — the summary that names the transcript it came from, the doc that names the file it describes — so when the account isn't enough, the reader can follow the pointer rather than work from the loss.
+هیچکدام از این شکستها منبع ثانویه را به اشتباه تبدیل نمیکند. پنجره زمینه متناهی است و منبعهای اولیه گراناند؛ بدون خلاصهها، گزارشها و سندهای انتقال، هیچ کار بزرگی جا نمیشود. مهارت این است که بدانیم کدام جزئیات میتوانند از اتلاف جان به در ببرند — و وقتی نمیتوانند، در برابر منبع اولیه راستیآزمایی کنیم. یک منبع ثانویه خوبساخته یک [اشارهگر زمینه](#context-pointer) به اصل خودش دارد — خلاصهای که نام رونوشت مبدأ را میبرد، سندی که نام فایلِ توصیفشده را میبرد — تا وقتی شرح کافی نبود، خواننده بهجای کار کردن با باقیمانده خلاصه، از اشارهگر دنبال کند.
 
-_Usage:_
+_کاربرد:_
 
-"The handoff doc says auth is done, but the new session keeps finding broken token refresh."
+«سند انتقال میگوید احراز هویت تمام شده، اما نشست جدید مدام به توکن تازهسازیِ خراب برمیخورد.»
 
-"The doc's a secondary source — the last session wrote down what it believed, not what's true. Have the new session run the auth tests and trust the primary source."
+«آن سند یک منبع ثانویه است — نشست قبلی نوشته چه چیزی را باور داشته، نه چه چیزی درست است. بگذار نشست جدید تستهای احراز هویت را اجرا کند و به منبع اولیه اعتماد کند.»
 
 ### Handoff artifact
 
-A document used as the carry mechanism for a [handoff](#handoff) — written to the [environment](#environment) by one [session](#session) to be read by another. [Specs](#spec), [tickets](#ticket), and plan docs are all handoff artifacts.
+سندی که بهعنوان سازوکار انتقال برای یک [انتقال زمینه](#handoff) استفاده میشود — توسط یک [نشست](#session) در [محیط](#environment) نوشته میشود تا نشست دیگری بخواندش. [مشخصاتها](#spec)، [تیکتها](#ticket) و سندهای برنامه همگی سند انتقال زمینهاند.
 
-The reason to write one: the [model](#model) is [stateless](#stateless), so nothing in a session survives [clearing](#clearing) it. Decisions, constraints, half-finished plans — all gone with the [context](#context) that held them. The environment persists. Writing the important state into a file moves it somewhere the next session can read it back from.
+دلیل نوشتنش: [مدل](#model) [بیوضعیت](#stateless) است، پس هیچچیز در یک نشست از [پاکسازی](#clearing) جان به در نمیبرد. تصمیمها، محدودیتها، برنامههای نیمهتمام — همه همراه با [زمینه](#context)ای که نگهشان داشته از بین میروند. محیط ماندگار است. نوشتن وضعیتِ مهم در یک فایل، آن را به جایی منتقل میکند که نشست بعدی بتواند از آن بخواند.
 
-The artifact is a [secondary source](#secondary-source) — an account of the session's work, not the work itself. That's what makes it small enough to brief a fresh session, and also why it can mislead one: it records what the writing session believed, and anything it left out or got wrong is invisible to the reader. Where a claim matters, the next session should verify it against the [primary source](#primary-source) — the code, the tests — rather than inherit it.
+سند یک [منبع ثانویه](#secondary-source) است — شرح کار نشست، نه خودِ کار. همین باعث میشود بهاندازه کافی کوچک باشد که یک نشست تازه را خلاصهوار راه بیندازد، و همین هم باعث میشود بتواند گمراهش کند: آنچه را که نشستِ نویسنده باور داشته ثبت میکند، و هرچه جا انداخته یا اشتباه گرفته برای خواننده نامرئی است. هر جا ادعایی مهم است، نشست بعدی باید آن را در برابر [منبع اولیه](#primary-source) راستیآزمایی کند — کد، تستها — بهجای اینکه به ارث ببردش.
 
-A good artifact is written to be read into a session that has zero context. Concrete file paths rather than "the file we discussed". What was decided and why, so the next session doesn't relitigate it. What's done and what's left. It helps to tell the writing session where the artifact is headed: "write a handoff doc for a fresh session that knows nothing about this work".
+یک سند خوب طوری نوشته میشود که در نشستی با صفر زمینه خوانده شود. مسیر فایلهای عینی، نه «همان فایلی که دربارهاش حرف زدیم». چه چیزی تصمیم گرفته شده و چرا، تا نشست بعدی دوباره به بحث بازش نکند. چه چیزی انجام شده و چه چیزی مانده. کمک میکند به نشستِ نویسنده بگویید سند کجا میرود: «برای یک نشست تازه که هیچچیز درباره این کار نمیداند، یک سند انتقال بنویس».
 
-The alternative carry mechanism is [compaction](#compaction), which summarises in-memory. The artifact has two advantages: it lives on disk where you can read and correct it before anything depends on it, and it can be reused — the same spec can brief five parallel sessions.
+سازوکار جایگزین [فشردهسازی](#compaction) است که در حافظه خلاصهسازی میکند. سند دو مزیت دارد: روی دیسک زندگی میکند، جایی که میتوانید قبل از وابسته شدن هر چیزی به آن، بخوانیدش و اصلاحش کنید؛ و قابل استفاده دوباره است — همان مشخصات میتواند پنج نشست موازی را خلاصهوار راه بیندازد.
 
-_Usage:_
+_کاربرد:_
 
-"How do I split this between the planning [agent](#agent) and the implementing one?"
+«چطور این را بین [عامل](#agent) برنامهریز و عامل پیادهساز تقسیم کنم؟»
 
-"Have the planner write a handoff artifact — file paths, decisions, constraints. The implementer's session opens with a pointer to the artifact and works from it as its brief."
+«بگذار برنامهریز یک سند انتقال زمینه بنویسد — مسیر فایلها، تصمیمها، محدودیتها. نشست پیادهساز با اشاره به سند باز میشود و از روی آن بهعنوان دستور کارش کار میکند.»
 
 ### Spec
 
-A [handoff artifact](#handoff-artifact) describing a multi-[session](#session) piece of work — what's being built, not how each session does its share. Mutates as work progresses. Made of [tickets](#ticket).
+[سند انتقال زمینهای](#handoff-artifact) که یک کار [چندنشسته](#session) را توصیف میکند — چه چیزی ساخته میشود، نه اینکه هر نشست سهمش را چطور انجام میدهد. با پیشرفت کار تغییر میکند. از [تیکتها](#ticket) ساخته شده.
 
-The spec exists because sessions are disposable and big work isn't. Anything that takes more than one [context window](#context-window) of effort needs a home outside the [context](#context) — somewhere in the agent's [environment](#environment) that survives [clearing](#clearing), whether that's a file in the repo, a GitHub issue, or an issue tracker the agent can reach. The spec is that home: the goal, the constraints, the decisions made so far, and the list of tickets with their status. Any fresh session can read it and know where the work stands without inheriting the previous session's accumulated noise.
+مشخصات وجود دارد چون نشستها دورریختنیاند و کار بزرگ اینطور نیست. هر چیزی که بیش از یک [پنجره زمینه](#context-window) تلاش میبرد به خانهای بیرون از [زمینه](#context) نیاز دارد — جایی در [محیط](#environment) عامل که از [پاکسازی](#clearing) جان به در ببرد، چه فایلی در مخزن باشد، چه یک issue در GitHub، چه یک سیستم ردیابی issue که عامل به آن دسترسی دارد. مشخصات همان خانه است: هدف، محدودیتها، تصمیمهای گرفتهشده تا کنون، و فهرست تیکتها با وضعیتشان. هر نشست تازهای میتواند آن را بخواند و بداند کار کجاست، بدون اینکه نویز انباشتهشده نشست قبلی را به ارث ببرد.
 
-Specs come in recognisable styles, mostly inherited from how teams already write things down. A _product requirements document_ (PRD) leans toward the user-facing what and why — features, behaviour, acceptance criteria. A _design doc_ or _RFC_ leans technical — the chosen approach, the alternatives rejected, the trade-offs. At the small end, a plain `plan.md` with a checklist of tickets does the same job for a multi-session feature. The style matters less than the role: for the [agent](#agent), each of these is the same thing — the durable statement of intent it reads at the start of every session.
+مشخصاتها سبکهای شناختهشدهای دارند که بیشترشان از روشی که تیمها همین حالا هم مینویسند به ارث رسیده. یک _سند الزامات محصول_ (PRD) به سمت «چه چیزی» و «چرا»ی روبهکاربر میل میکند — ویژگیها، رفتار، معیارهای پذیرش. یک _سند طراحی_ یا _RFC_ سمت فنی را میگیرد — رویکرد انتخابشده، گزینههای ردشده، بدهبستانها. در سمت کوچک، یک `plan.md` ساده با فهرست تیکتها همان کار را برای یک ویژگی چندنشسته انجام میدهد. سبک کمتر از نقش اهمیت دارد: برای [عامل](#agent)، همه اینها یک چیزند — بیان ماندگارِ مقصود که در شروع هر نشست میخواند.
 
-_Usage:_
+_کاربرد:_
 
-"Should this all be one session?"
+«آیا این همهاش باید یک نشست باشد؟»
 
-"No, write it up as a spec — break it into tickets, run each one in its own session. Trying to do the whole thing in a single context will hit the [dumb zone](#smart-zone) before you're halfway."
+«نه، بهصورت مشخصات بنویس — به تیکت تقسیمش کن و هر کدام را در نشست خودش اجرا کن. تلاش برای انجام کل کار در یک زمینه، قبل از نیمهراه به [منطقه کمسو](#smart-zone) میخورد.»
 
 ### Ticket
 
-A [handoff artifact](#handoff-artifact) scoping one [session](#session) of work. Stands alone, or hangs off a [spec](#spec) as one of its children. Tickets can block or be blocked by sibling tickets, so the order of work falls out of their dependency graph rather than a linear plan.
+[سند انتقال زمینهای](#handoff-artifact) که یک [نشست](#session) کار را محدودهبندی میکند. بهتنهایی میایستد، یا بهعنوان یکی از فرزندانش از یک [مشخصات](#spec) آویزان است. تیکتها میتوانند تیکتهای خواهر را ببندند یا توسط آنها بسته شوند، پس ترتیب کار از گراف وابستگیشان بیرون میآید، نه از یک برنامه خطی.
 
-The defining constraint is the size: one session. A ticket should be completable before the session drifts out of the [smart zone](#smart-zone) — and that constraint is testable. If sessions on your tickets routinely degrade before the work is done, the tickets are too big; split them. If each session spends most of its [context](#context) on setup before doing five minutes of work, they're too small; merge them.
+محدودیت تعیینکننده، اندازه است: یک نشست. یک تیکت باید قبل از اینکه نشست از [منطقه هوشمند](#smart-zone) بیرون برود قابل انجام باشد — و این محدودیت قابل آزمایش است. اگر نشستهای روی تیکتهای شما مرتباً قبل از تمام شدن کار افت میکنند، تیکتها خیلی بزرگاند؛ تقسیمشان کنید. اگر هر نشست بیشتر [زمینه](#context)اش را صرف آمادهسازی میکند قبل از اینکه پنج دقیقه کار بکند، خیلی کوچکاند؛ ادغامشان کنید.
 
-A good ticket is written for a reader with no other context. The goal, the acceptance criteria, and [context pointers](#context-pointer) to the relevant files and decisions — enough that the session can start working without re-deriving what the last one knew.
+یک تیکت خوب برای خوانندهای نوشته میشود که زمینه دیگری ندارد. هدف، معیارهای پذیرش، و [اشارهگرهای زمینه](#context-pointer) به فایلها و تصمیمهای مرتبط — بهاندازهای که نشست بتواند بدون استخراج دوباره آنچه نشست قبلی میدانست شروع به کار کند.
 
-The dependency graph is also what unlocks parallelism. Independent tickets — the leaves of the graph — can each run in their own session at the same time. This is an effective way of running multiple agents at once.
+گراف وابستگی همان چیزی است که موازیسازی را ممکن میکند. تیکتهای مستقل — برگهای گراف — هر کدام میتوانند همزمان در نشست خودشان اجرا شوند. این یک راه مؤثر برای اجرای چند عامل همزمان است.
 
-_Usage:_
+_کاربرد:_
 
-"Where do I start on the migration spec?"
+«از کجا شروع کنم روی مشخصات مهاجرت؟»
 
-"Look at the ticket graph — the schema change blocks the backfill, the backfill blocks the API switch. Pick a leaf and run a session on it."
+«به گراف تیکتها نگاه کن — تغییر شِما، backfill را میبندد؛ backfill هم تعویض API را. یک برگ بردار و یک نشست روی آن اجرا کن.»
 
 ### Compaction
 
-A [handoff](#handoff) done in-memory: the previous [session](#session)'s history is summarised, and the summary seeds a fresh session. Lossy by design: the transcript is a [primary source](#primary-source), the summary a [secondary source](#secondary-source) — detail traded for headroom. Triggered manually by the user, or automatically via [autocompact](#autocompact).
+[انتقال زمینهای](#handoff) که در حافظه انجام میشود: تاریخچه [نشست](#session) قبلی خلاصه میشود و خلاصه، یک نشست تازه را تغذیه میکند. ذاتاً با اتلاف است: رونوشت یک [منبع اولیه](#primary-source) است و خلاصه یک [منبع ثانویه](#secondary-source) — جزئیات در ازای فضا قربانی میشوند. بهصورت دستی توسط کاربر فعال میشود، یا خودکار از طریق [فشردهسازی خودکار](#autocompact).
 
-The mechanism: the [context window](#context-window) is finite, and a long session fills it — every [tool result](#tool-result), every file read, every wrong turn stays in history. When it gets heavy, the [harness](#harness) asks the [model](#model) to summarise the session, throws the original history away, and seeds a fresh session with the summary. Whatever didn't make it into the summary is gone from the context. Some harnesses soften this by keeping the old transcript on disk and leaving a [context pointer](#context-pointer) to it in the summary — the secondary source links back to its primary source, so a detail the summary lost can be recovered by re-reading the original.
+سازوکار: [پنجره زمینه](#context-window) متناهی است و یک نشست طولانی آن را پر میکند — هر [نتیجه ابزار](#tool-result)، هر فایل خواندهشده، هر مسیر اشتباه در تاریخچه میماند. وقتی سنگین میشود، [بستر اجرایی](#harness) از [مدل](#model) میخواهد نشست را خلاصه کند، تاریخچه اصلی را دور میریزد و نشست تازهای را با خلاصه تغذیه میکند. هر چیزی که به خلاصه راه نیافته از زمینه رفته. برخی بسترهای اجرایی این را نرم میکنند: رونوشت قبلی را روی دیسک نگه میدارند و یک [اشارهگر زمینه](#context-pointer) به آن در خلاصه میگذارند — منبع ثانویه به منبع اولیهاش پیوند میخورد، پس جزئیاتی که خلاصه گم کرده با دوباره خواندن اصل، بازیابی میشود.
 
-The summary is written by the model, so it can be prompted. "Preserve the schema decisions" makes the generated artifact more deliberate. Timing matters too — compact at a phase boundary, after the plan is settled, not mid-task.
+خلاصه را مدل مینویسد، پس میشود به آن پرامپت داد. «تصمیمهای مربوط به شِما را حفظ کن» سندِ تولیدشده را عمدیتر میکند. زمانبندی هم مهم است — در مرز فازها فشرده کنید، بعد از اینکه برنامه تثبیت شد، نه وسط کار.
 
-Contrast with [clearing](#clearing), which drops everything and starts cold: compaction tries to carry the essentials across; clearing bets they're already written down somewhere better.
+در برابر [پاکسازی](#clearing) قرار میگیرد، که همهچیز را دور میریزد و سرد شروع میکند: فشردهسازی تلاش میکند چیزهای ضروری را منتقل کند؛ پاکسازی شرط میبندد که آنها از قبل در جای بهتری نوشته شدهاند.
 
-_Usage:_
+_کاربرد:_
 
-"[Context](#context)'s getting heavy and I still have the test pass to do."
+«[زمینه](#context) دارد سنگین میشود و هنوز باید تستها را پاس کنم.»
 
-"Compact before you start — write what must survive into the summary prompt so the new session keeps the schema decisions and drops the exploration."
+«قبل از شروع فشرده کن — چیزهایی که باید باقی بمانند را در پرامپت خلاصه بنویس تا نشست جدید تصمیمهای شِما را نگه دارد و کاوش را دور بیندازد.»
 
 ### Autocompact
 
-[Compaction](#compaction) triggered automatically by the [harness](#harness) when the [context window](#context-window) approaches full.
+[فشردهسازی](#compaction)ای که [بستر اجرایی](#harness) بهصورت خودکار فعال میکند وقتی [پنجره زمینه](#context-window) به پر شدن نزدیک میشود.
 
-The harness watches how full the context window is. When it crosses a threshold — often around 80% — it pauses, asks the [model](#model) to summarise the [session](#session) so far, and seeds a fresh session with the summary. Work then continues as if nothing happened.
+بستر اجرایی مراقب است پنجره زمینه چقدر پر شده. وقتی از آستانه رد شود — معمولاً حدود 80 درصد — مکث میکند، از [مدل](#model) میخواهد [نشست](#session) تا اینجا را خلاصه کند و نشست تازهای را با خلاصه تغذیه میکند. کار بعدش طوری ادامه پیدا میکند که انگار هیچ اتفاقی نیفتاده.
 
-Except something did happen. Compaction is lossy, and autocompact is lossy at a moment you didn't choose. A manual compact happens at a phase boundary, when you can tell the model what to preserve. Autocompact fires mid-task, whenever the threshold is hit — possibly halfway through a refactor, with the summary deciding for itself which of your decisions were worth keeping. The classic symptom: the [agent](#agent) carries on confidently but has quietly forgotten a constraint you established an hour ago, and you only notice when its work starts contradicting it.
+اما اتفاقی افتاده. فشردهسازی با اتلاف است، و فشردهسازی خودکار در لحظهای با اتلاف است که شما انتخابش نکردهاید. فشردهسازی دستی در مرز فاز اتفاق میافتد، وقتی میتوانید به مدل بگویید چه چیزی را حفظ کند. فشردهسازی خودکار وسط کار فعال میشود، هر وقت آستانه رد شود — شاید نیمه یک refactor، و خلاصه خودش تصمیم میگیرد کدام تصمیمهای شما ارزش نگهداشتن داشتهاند. نشانه کلاسیک: [عامل](#agent) با اطمینان ادامه میدهد اما بیسروصدا محدودیتی را که یک ساعت پیش تعیین کرده بودید فراموش کرده، و فقط وقتی متوجه میشوید که کارش شروع به تناقض با آن میکند.
 
-The defence is to not let it fire. Watch the context indicator and compact manually at a natural boundary, or write decisions into a plan doc or [handoff artifact](#handoff-artifact) on disk, where no summary can lose them. Most harnesses also let you customise the buffer — moving the threshold earlier or later, or turning autocompact off entirely — so you can tune how much headroom you keep before it fires.
+دفاع این است که نگذارید فعال شود. نشانگر زمینه را تماشا کنید و در یک مرز طبیعی دستی فشرده کنید، یا تصمیمها را در یک سند برنامه یا [سند انتقال زمینه](#handoff-artifact) روی دیسک بنویسید، جایی که هیچ خلاصهای نمیتواند گمشان کند. بیشتر بسترهای اجرایی به شما اجازه میدهند بافر را شخصیسازی کنید — آستانه را جلوتر یا عقبتر ببرید، یا فشردهسازی خودکار را کلاً خاموش کنید — تا بتوانید تنظیم کنید چقدر فضا قبل از فعال شدن نگه میدارید.
 
-_Usage:_
+_کاربرد:_
 
-"It doesn't seem to remember what we decided about the schema earlier."
+«به نظر نمیرسد یادش باشد قبلاً درباره شِما چه تصمیمی گرفتیم.»
 
-"Autocompact fired between [turns](#turn) — the early decisions got summarised and we must have lost something. Reload the plan doc, or compact manually next time so you control what gets kept."
+«فشردهسازی خودکار بین [نوبتها](#turn) فعال شد — تصمیمهای اولیه خلاصه شدند و حتماً چیزی را گم کردیم. سند برنامه را دوباره بارگذاری کن، یا دفعه بعد دستی فشرده کن تا خودت کنترل کنی چه چیزی نگه داشته میشود.»
 
 ## Section 6 — Memory and Steering
 
 ### Memory system
 
-A system that attempts to make an [agent](#agent) [stateful](#stateful) across [sessions](#session). Persists information into the [environment](#environment) during a session and reloads it into the [context window](#context-window) at the start of future ones, so the agent carries continuity beyond the user [clearing](#clearing) the session.
+سیستمی که تلاش میکند [عاملی](#agent) را در طول [نشستها](#session) [وضعیتدار](#stateful) کند. در طول یک نشست اطلاعات را در [محیط](#environment) ماندگار میکند و در شروع نشستهای بعدی دوباره در [پنجره زمینه](#context-window) بارگذاری میکند، تا عامل تداوم را فراتر از [پاکسازی](#clearing) نشست توسط کاربر حمل کند.
 
-A memory system has two halves. The write path: during a session, the agent records what it learned — a preference you stated, a fact about the project — as files in the environment. The read path: at session start, the [harness](#harness) loads those files, or an index of them, back into the context window. Many harnesses ship their own memory system — Claude Code's `/memory` is one — but you can also build one yourself: a directory of notes plus an instruction in [AGENTS.md](#agentsmd) to consult it.
+یک سیستم حافظه دو نیمه دارد. مسیر نوشتن: در طول نشست، عامل آنچه را یاد گرفته ثبت میکند — ترجیحی که گفتهاید، واقعیتی درباره پروژه — بهصورت فایلهایی در محیط. مسیر خواندن: در شروع نشست، [بستر اجرایی](#harness) آن فایلها یا فهرستی از آنها را دوباره در پنجره زمینه بارگذاری میکند. بسیاری از بسترهای اجرایی سیستم حافظه خودشان را دارند — `/memory` در Claude Code یکی از آنهاست — اما میتوانید خودتان هم بسازید: پوشهای از یادداشتها بهعلاوه یک دستورالعمل در [AGENTS.md](#agentsmd) برای مراجعه به آن.
 
-The same trade-offs as any always-loaded content apply. Memories accumulate, so most systems load a one-line index and leave the bodies behind [context pointers](#context-pointer) rather than inlining everything. And memories are [secondary sources](#secondary-source), so they drift: a fact recorded in March is loaded with equal confidence in June, after the project has moved on. A memory system needs pruning, the same way AGENTS.md does.
+همان بدهبستانهای هر محتوای همیشهبارگذاریشده برقرار است. حافظهها انباشته میشوند، پس بیشتر سیستمها یک فهرست یکخطی بارگذاری میکنند و متن اصلی را پشت [اشارهگرهای زمینه](#context-pointer) نگه میدارند بهجای اینکه همهچیز را درونخطی کنند. و حافظهها [منبعهای ثانویه](#secondary-source)اند، پس انحراف مییابند: واقعیتی که در مارس ثبت شده در ژوئن با همان اطمینان بارگذاری میشود، بعد از اینکه پروژه جلو رفته. سیستم حافظه هم مثل AGENTS.md به هرس کردن نیاز دارد.
 
-_Usage:_
+_کاربرد:_
 
-"I keep having to re-tell it I'm on Postgres, not MySQL."
+«مدام باید دوباره بگویمش که من Postgres دارم، نه MySQL.»
 
-"Wire up a memory system — write what it learns to the [filesystem](#filesystem) on the first [turn](#turn), reload it at session start. The [model](#model) itself is [stateless](#stateless); the memory layer fakes continuity."
+«یک سیستم حافظه راه بینداز — چیزهایی که یاد میگیرد را در اولین [نوبت](#turn) در [سیستم فایل](#filesystem) بنویس و در شروع نشست دوباره بارگذاری کن. خود [مدل](#model) [بیوضعیت](#stateless) است؛ لایه حافظه تداوم را جعل میکند.»
 
 ### AGENTS.md
 
-A file in the [environment](#environment) that the [harness](#harness) loads into the [context window](#context-window) at [session](#session) start — the project's standing brief to the [agent](#agent). Cross-harness convention; some harnesses also have their own variant (Claude Code's is CLAUDE.md).
+فایلی در [محیط](#environment) که [بستر اجرایی](#harness) در شروع [نشست](#session) آن را در [پنجره زمینه](#context-window) بارگذاری میکند — دستورالعمل دائمی پروژه به [عامل](#agent). قراردادی مشترک بین بسترهای اجرایی؛ برخی بسترهای اجرایی نسخه خودشان را هم دارند (نسخه Claude Code همان CLAUDE.md است).
 
-Because it loads automatically, it's one way to avoid repeating yourself across sessions. The [model](#model) is [stateless](#stateless) — a correction you give in one session is gone in the next, and you end up telling every fresh session that the project uses pnpm, that tests run with a particular flag, that a directory is generated and shouldn't be touched. When you've corrected the agent for the same thing twice, that correction is a candidate line for AGENTS.md.
+چون خودکار بارگذاری میشود، یکی از راههای پرهیز از تکرار حرفهایتان در نشستهای مختلف است. [مدل](#model) [بیوضعیت](#stateless) است — تصحیحی که در یک نشست میدهید در نشست بعدی رفته است، و آخرش مجبورید به هر نشست تازه بگویید که پروژه از pnpm استفاده میکند، که تستها با یک پرچم خاص اجرا میشوند، که یک پوشه تولیدشده است و نباید دستش زد. وقتی دو بار برای یک چیز عامل را تصحیح کردهاید، آن تصحیح کاندیدای یک خط برای AGENTS.md است.
 
-Suitable content is whatever the agent can't derive from the code: build and test commands, conventions the codebase doesn't make obvious, hard constraints ("never edit the generated client"). Short and declarative — it's a brief, not documentation.
+محتوای مناسب، هر چیزی است که عامل نمیتواند از کد استخراج کند: فرمانهای ساخت و تست، قراردادهایی که پایگاه کد آشکار نمیکند، محدودیتهای سخت («هرگز کلاینت تولیدشده را ویرایش نکن»). کوتاه و اعلامی — این یک دستورالعمل کوتاه است، نه مستندات.
 
-The trade-off is that everything in it is always loaded. Instructions accumulate, most of them irrelevant to any given task, and a long AGENTS.md both costs tokens and dilutes itself — the more instructions in context, the less reliably the model follows any one of them.
+بدهبستانش این است که همهچیز داخلش همیشه بارگذاری میشود. دستورالعملها انباشته میشوند، بیشترشان برای هر کار مشخصی بیربطاند، و یک AGENTS.md بلند هم هزینه توکن دارد هم خودش را رقیق میکند — هرچه دستورالعمل در زمینه بیشتر باشد، مدل با قابلیت اطمینان کمتری از تکبهتکشان پیروی میکند.
 
-_Avoid:_ using AGENTS.md for content that should be [progressively disclosed](#progressive-disclosure) — anything in it pays a [token](#token) cost every [turn](#turn), in every session, whether or not that session needs it. A style guide can go behind a [skill](#skill) or a [context pointer](#context-pointer) instead; keep AGENTS.md for the lines that apply everywhere.
+_نبایدها:_ از AGENTS.md برای محتوایی که باید [افشای تدریجی](#progressive-disclosure) شود استفاده نکنید — هر چیزی داخلش در هر [نوبت](#turn)، در هر نشستی، هزینه [توکن](#token) میپردازد، چه آن نشست به آن نیاز داشته باشد چه نه. راهنمای سبک میتواند پشت یک [مهارت](#skill) یا یک [اشارهگر زمینه](#context-pointer) برود؛ AGENTS.md را برای خطهایی نگه دارید که همهجا کاربرد دارند.
 
-_Usage:_
+_کاربرد:_
 
-"Why is every session starting with 4k tokens already burned?"
+«چرا هر نشستی با 4 هزار توکن سوختهشده شروع میشود؟»
 
-"Check AGENTS.md — someone pasted the entire style guide in there instead of putting it behind a skill."
+«AGENTS.md را چک کن — یک نفر کل راهنمای سبک را آنجا چسبانده بهجای اینکه پشت یک مهارت بگذاردش.»
 
 ### Progressive disclosure
 
-Loading only the [context](#context) an [agent](#agent) needs right now, with [context pointers](#context-pointer) to the rest. Borrowed from UI design, where it means showing users only the controls relevant to their current task and hiding the rest behind a click.
+بارگذاری فقط [زمینهای](#context) که [عاملی](#agent) همین حالا به آن نیاز دارد، با [اشارهگرهای زمینه](#context-pointer) برای بقیه. از طراحی رابط کاربری وام گرفته شده، جایی که یعنی فقط کنترلهای مرتبط با کار فعلی کاربر نشان داده شود و بقیه پشت یک کلیک پنهان بماند.
 
-The technique exists because context is a cost twice over. Every [token](#token) loaded up front is billed as [input tokens](#input-tokens) on every [turn](#turn), and every token spends [attention budget](#attention-budget) whether the agent needs it or not. An [AGENTS.md](#agentsmd) stuffed with the full style guide, deployment runbook, and database conventions makes the agent worse at all of them — the instructions that matter for the current task are diluted by the ones that don't. The tell is an agent that ignores rules you know are in its context: they're in there, but buried.
+این تکنیک وجود دارد چون زمینه دوبار هزینه دارد. هر [توکن](#token) که از ابتدا بارگذاری میشود در هر [نوبت](#turn) بهعنوان [توکن ورودی](#input-tokens) حساب میشود، و هر توکن [بودجه توجه](#attention-budget) خرج میکند، چه عامل به آن نیاز داشته باشد چه نه. یک [AGENTS.md](#agentsmd) پر از کل راهنمای سبک، runbook استقرار و قراردادهای پایگاه داده، عامل را در همه آنها بدتر میکند — دستورالعملهایی که برای کار فعلی مهماند توسط آنهایی که مهم نیستند رقیق میشوند. نشانهاش عاملی است که قوانینی را نادیده میگیرد که میدانید در زمینهاش هستند: آنجا هستند، اما دفن شدهاند.
 
-Progressive disclosure inverts this. Keep the always-loaded layer small — a sentence per topic and a pointer to where the detail lives. The agent reads the style guide when it's writing a component, the deployment runbook when it's deploying, and neither when it's fixing a test. [Skills](#skill) are the pattern built into the [harness](#harness): a short description loaded every [session](#session), the full instructions only when triggered.
+افشای تدریجی این را برعکس میکند. لایه همیشهبارگذاریشده را کوچک نگه دارید — برای هر موضوع یک جمله و یک اشارهگر به جایی که جزئیات زندگی میکند. عامل راهنمای سبک را میخواند وقتی کامپوننت مینویسد، runbook استقرار را میخواند وقتی استقرار انجام میدهد، و هیچکدام را نمیخواند وقتی تستی را درست میکند. [مهارتها](#skill) الگویی هستند که در [بستر اجرایی](#harness) تعبیه شده: توصیفی کوتاه که هر [نشست](#session) بارگذاری میشود، دستورالعملهای کامل فقط وقتی فعال میشوند.
 
-_Usage:_
+_کاربرد:_
 
-"Should I dump the entire style guide into AGENTS.md?"
+«باید کل راهنمای سبک را بریزم داخل AGENTS.md؟»
 
-"No — progressive disclosure. Reference the style guide as a skill the agent loads when it actually needs to write a component. AGENTS.md pays the token cost every turn."
+«نه — افشای تدریجی. به راهنمای سبک بهعنوان یک مهارت اشاره کن که عامل وقتی واقعاً نیاز دارد کامپوننت بنویسد بارگذاریش میکند. AGENTS.md هزینه توکن را هر نوبت میپردازد.»
 
 ### Context pointer
 
-A mention in one document that points to another, so the [agent](#agent) can pull it into the [context window](#context-window) only when the task calls for it. The unit [progressive disclosure](#progressive-disclosure) is built from.
+اشارهای در یک سند به سند دیگر، تا [عامل](#agent) بتواند آن را فقط وقتی کار ایجاب میکند وارد [پنجره زمینه](#context-window) کند. واحدی که [افشای تدریجی](#progressive-disclosure) از آن ساخته میشود.
 
-The reason to use a pointer (instead of inlining the content) is cost. A pointer is one line in the context window. The document behind it might be thousands of [tokens](#token), but those tokens cost nothing until the agent actually follows the pointer. Inline a 2,000-token runbook in [AGENTS.md](#agentsmd) and every [session](#session) pays for it; replace it with "deploy process: see `internal/deploy.md`" and only the sessions that deploy ever load it. The agent follows the pointer with a [tool call](#tool-call) when the task matches.
+دلیل استفاده از اشارهگر (بهجای درونخطی کردن محتوا) هزینه است. یک اشارهگر یک خط در پنجره زمینه است. سند پشتش شاید هزاران [توکن](#token) باشد، اما آن توکنها تا وقتی عامل واقعاً از اشارهگر دنبال نکند هیچ هزینهای ندارند. یک runbook 2000 توکنی را در [AGENTS.md](#agentsmd) درونخطی کنید و هر [نشست](#session) هزینهاش را میپردازد؛ بهجایش بنویسید «فرایند استقرار: به `internal/deploy.md` مراجعه کنید» و فقط نشستهایی که استقرار انجام میدهند آن را بارگذاری میکنند. عامل وقتی کار مطابقت داشته باشد با یک [فراخوانی ابزار](#tool-call) از اشارهگر دنبال میکند.
 
-A pointer needs two parts to work: a stable path, and enough description for the agent to know when following it is worth it. A bare path is a pointer the agent has no reason to follow; "see `internal/deploy.md`" with no hint of what's inside gets skipped by a session that needed it. Write the line so it matches how tasks present: "release, deploy, or rollback — read `internal/deploy.md` first".
+یک اشارهگر برای کار کردن به دو بخش نیاز دارد: یک مسیر پایدار، و توصیفی کافی تا عامل بداند چه زمانی دنبال کردنش ارزش دارد. یک مسیر لخت، اشارهگری است که عامل دلیلی برای دنبال کردن ندارد؛ «به `internal/deploy.md` مراجعه کنید» بدون هیچ نشانهای از داخلش، توسط نشستی که به آن نیاز داشته رد میشود. خط را طوری بنویسید که با شکل ارائه کارها مطابقت داشته باشد: «انتشار، استقرار یا بازگشت — اول `internal/deploy.md` را بخوانید».
 
-Pointers are everywhere once you look: lines in AGENTS.md, [skill](#skill) descriptions (the harness loads the description; the skill body waits behind it), filenames in a directory listing, links between docs.
+اشارهگرها همهجا هستند، کافی است نگاه کنید: خطهایی در AGENTS.md، توصیفهای [مهارت](#skill) (بستر اجرایی توصیف را بارگذاری میکند؛ بدنه مهارت پشت آن منتظر میماند)، نام فایلها در فهرست یک پوشه، پیوندهای بین سندها.
 
-A pointer can also tie a [secondary source](#secondary-source) back to the [primary source](#primary-source) it was derived from — the compaction summary that names the original transcript, the doc that names the source file it describes. This makes the secondary source's lossiness recoverable: when the summary turns out not to be enough, the agent follows the pointer and reads the original, instead of working from whatever the summary kept.
+یک اشارهگر میتواند [منبع ثانویه](#secondary-source) را هم به [منبع اولیه](#primary-source)ای که از آن مشتق شده پیوند بزند — خلاصه فشردهسازی که نام رونوشت اصلی را میبرد، سندی که نام فایلِ مبدأ را میبرد. این باعث میشود بااتلافیِ منبع ثانویه قابل بازیابی شود: وقتی خلاصه به اندازه کافی نباشد، عامل از اشارهگر دنبال میکند و اصل را میخواند، بهجای اینکه با هرچه خلاصه نگه داشته کار کند.
 
-_Avoid:_ "reference" — too dry; doesn't convey that following it pulls more context in. "Portal" — too florid.
+_نبایدها:_ «ارجاع» — خیلی خشک است؛ نمیرساند که دنبال کردنش زمینه بیشتری وارد میکند. «درگاه» — زیادی پرطمطراق.
 
-_Usage:_
+_کاربرد:_
 
-"AGENTS.md is getting huge."
+«AGENTS.md دارد خیلی بزرگ میشود.»
 
-"Most of it should be context pointers, not content. Keep the always-on rules inline; turn the deploy runbook and the style guide into skills and leave a context pointer behind."
+«بیشترش باید اشارهگر زمینه باشد، نه محتوا. قوانین همیشهروشن را درونخطی نگه دار؛ runbook استقرار و راهنمای سبک را مهارت کن و یک اشارهگر زمینه پشتش بگذار.»
 
 ### Skill
 
-A teachable capability bundled as a unit — instructions and resources for doing one task well, kept in the [environment](#environment) until a [context pointer](#context-pointer) pulls it into the [context window](#context-window) for the task at hand. The unit of [progressive disclosure](#progressive-disclosure) in a [harness](#harness).
+قابلیتی آموختنی که بهصورت یک واحد بستهبندی شده — دستورالعملها و منابع برای انجام خوب یک کار، در [محیط](#environment) نگه داشته میشود تا [اشارهگر زمینهای](#context-pointer) برای کارِ پیش رو وارد [پنجره زمینه](#context-window)ش کند. واحد [افشای تدریجی](#progressive-disclosure) در یک [بستر اجرایی](#harness).
 
-Skills are an open standard, defined at [agentskills.io](https://agentskills.io) — originally developed by Anthropic and since adopted by most major harnesses, so a skill written once works across them. The format is a folder containing:
+مهارتها یک استاندارد باز هستند، تعریفشده در [agentskills.io](https://agentskills.io) — ابتدا توسط Anthropic توسعه داده شد و از آن پس بیشتر بسترهای اجرایی اصلی آن را پذیرفتهاند، پس مهارتی که یک بار نوشته شود در همه آنها کار میکند. قالبش یک پوشه است شامل:
 
-- A `SKILL.md` file — metadata (a name and description, at minimum) plus the instructions themselves
-- Optionally, scripts the [agent](#agent) can run
-- Optionally, templates and reference material the instructions point to
+- یک فایل `SKILL.md` — فراداده (دستکم یک نام و یک توصیف) بهعلاوه خود دستورالعملها
+- اختیاری، اسکریپتهایی که [عامل](#agent) میتواند اجرا کند
+- اختیاری، قالبها و مواد مرجعی که دستورالعملها به آنها اشاره میکنند
 
-Only the name and description sit in [context](#context) by default. When the agent's task matches, it loads the rest. Until then, the skill takes up almost no room — a sentence or two of [tokens](#token), however large its full instructions are.
+فقط نام و توصیف بهصورت پیشفرض در [زمینه](#context) مینشینند. وقتی کار عامل مطابقت داشته باشد، بقیه را بارگذاری میکند. تا آن زمان، مهارت تقریباً هیچ جایی نمیگیرد — یکی دو جمله [توکن](#token)، هرچقدر هم دستورالعملهای کاملش بزرگ باشند.
 
-This distinguishes skills from [AGENTS.md](#agentsmd), which is loaded into every [session](#session) regardless of the task. A skill is read when a particular kind of work comes up — releasing, scaffolding a new service, writing a migration — and ignored the rest of the time.
+همین مهارتها را از [AGENTS.md](#agentsmd) متمایز میکند، که صرفنظر از کار، در هر [نشست](#session) بارگذاری میشود. یک مهارت وقتی خوانده میشود که نوع خاصی از کار پیش بیاید — انتشار، داربست یک سرویس جدید، نوشتن یک مهاجرت — و بقیه زمانها نادیده گرفته میشود.
 
-_Avoid:_ "[tool](#tool)" — a tool is what the agent _calls_; a skill is instructions it _reads_.
+_نبایدها:_ «[ابزار](#tool)» — ابزار چیزی است که عامل _صدا میزند_؛ مهارت دستورالعملهایی است که _میخواند_.
 
-_Usage:_
+_کاربرد:_
 
-"Where should I put the deploy runbook?"
+«runbook استقرار را کجا بگذارم؟»
 
-"As a skill — the agent loads it only when the task involves deploys. In AGENTS.md it'd burn tokens on every [turn](#turn) for something we use weekly."
+«بهعنوان یک مهارت — عامل فقط وقتی کارش به استقرار مربوط باشد بارگذاریش میکند. در AGENTS.md برای چیزی که هفتگی استفاده میکنیم هر [نوبت](#turn) توکن میسوزاند.»
 
 ### Subagent
 
-An [agent](#agent) spawned by another agent via a [tool call](#tool-call). Runs in its own [session](#session) with its own [context window](#context-window), and reports a single [tool result](#tool-result) back. Distinct from a [handoff](#handoff) — the parent specifically expects a return; a handoff has no return path. **Cannot spawn further subagents** — the tree is one level deep. Subagents exist to isolate [context](#context), not to compose hierarchies.
+[عاملی](#agent) که عامل دیگری از طریق یک [فراخوانی ابزار](#tool-call) ایجادش میکند. در [نشست](#session) خودش با [پنجره زمینه](#context-window) خودش اجرا میشود و یک [نتیجه ابزار](#tool-result) واحد گزارش میکند. با [انتقال زمینه](#handoff) تفاوت دارد — عامل والد صریحاً انتظار بازگشت دارد؛ انتقال زمینه مسیر بازگشت ندارد. **نمیتواند زیرعامل بیشتری ایجاد کند** — درخت فقط یک سطح عمق دارد. زیرعاملها برای ایزوله کردن [زمینه](#context) وجود دارند، نه برای ساختن سلسلهمراتب.
 
-The point is to keep noisy work out of the parent's context. A broad search or a long file-reading expedition produces pages of tool results, most of which matter only long enough to find the answer. Run inside the parent and all of it stays in the parent's context for the rest of the session. Run inside a subagent and the noise fills a disposable window instead — only the final report lands in the parent's context. The report is a [secondary source](#secondary-source): the parent gets the subagent's account of what it found, not the raw results, so anything the report leaves out is invisible to the parent.
+نکته، بیرون نگه داشتن کار پرسروصدا از زمینه عامل والد است. یک جستوجوی گسترده یا یک گشت طولانی فایلخواندن، صفحاتی نتیجه ابزار تولید میکند که بیشترشان فقط تا وقتی به اندازه کافی مهماند که جواب پیدا شود. اگر داخل عامل والد اجرا شود، همهاش تا پایان نشست در زمینه عامل والد میماند. اگر داخل یک زیرعامل اجرا شود، نویز بهجایش یک پنجره دورریختنی را پر میکند — فقط گزارش نهایی در زمینه عامل والد مینشیند. گزارش یک [منبع ثانویه](#secondary-source) است: عامل والد شرح زیرعامل از چیزی را که پیدا کرده میگیرد، نه نتیجههای خام، پس هر چیزی که گزارش جا انداخته برای عامل والد نامرئی است.
 
-Subagents also run concurrently — a parent can fan several out at once over independent pieces of work.
+زیرعاملها همزمان هم اجرا میشوند — یک عامل والد میتواند چندتایی را یکجا روی تکههای مستقل کار پخش کند.
 
-_Usage:_
+_کاربرد:_
 
-"The grep results are blowing out my context."
+«نتیجههای grep دارند زمینه من را منفجر میکنند.»
 
-"Spawn a subagent to do the search — it'll burn its own context window on the noise and report back the two file paths you actually need."
+«یک زیرعامل برای جستوجو ایجاد کن — نویز را با پنجره زمینه خودش میسوزاند و آن دو مسیر فایلی را که واقعاً لازم داری گزارش میکند.»
 
 ## Section 7 — Patterns of Work
 
 ### Human-in-the-loop
 
-A working pattern where one or more humans pair with the [agent](#agent) during a [session](#session) — reviewing, redirecting, or collaborating in real time. The human is present and engaged, not just gating individual actions.
+الگوی کاری که در آن یک یا چند انسان با [عامل](#agent) در طول [نشست](#session) همراه می‌شوند — بازبینی، تغییر مسیر یا همکاری در لحظه. انسان حضور دارد و درگیر است، نه فقط دروازه‌بانیِ تک‌به‌تک اقدام‌ها.
 
-The contrast is with [AFK](#afk) work, where the agent runs unattended and you judge the result afterwards. Human-in-the-loop means catching problems while they're still cheap: you see the agent reach for the wrong file, misread the requirement, or start down a dead end, and you redirect it in one sentence — rather than discovering twenty minutes of confident work built on that mistake. Agents don't reliably know when they're off track; left alone, they tend to push forward rather than stop and ask.
+در برابر کار [دور از کیبورد](#afk) قرار دارد، جایی که عامل بدون نظارت اجرا می‌شود و نتیجه را بعداً قضاوت می‌کنید. انسان در حلقه یعنی گرفتن مشکلات در حالی که هنوز ارزان‌اند: می‌بینید عامل سراغ فایل اشتباه می‌رود، نیاز را بد می‌خواند، یا وارد بن‌بست می‌شود، و با یک جمله تغییر مسیرش می‌دهید — به‌جای اینکه بیست دقیقه کارِ مطمئن را که روی همان اشتباه ساخته شده کشف کنید. عامل‌ها به‌طور مطمئن نمی‌دانند کی از مسیر خارج شده‌اند؛ تنها رهایشان کنید، معمولاً جلو می‌روند به‌جای اینکه بایستند و بپرسند.
 
-Which pattern fits depends on the work. Well-specified, low-risk, easy-to-verify tasks suit AFK. Tasks that are ambiguous, irreversible, or where you'd struggle to review the finished result — a schema migration, a tricky design decision, anything touching production — suit staying in the loop. The judgement call is essentially: how expensive is a wrong turn, and how late would you catch it?
+اینکه کدام الگو جواب می‌دهد به کار بستگی دارد. کارهای کاملاً مشخص، کم‌خطر و آسان برای راستی‌آزمایی به درد AFK می‌خورند. کارهایی که مبهم‌اند، برگشت‌ناپذیرند، یا بازبینی نتیجه نهاییشان دشوار است — مهاجرت شِما، تصمیم طراحی پیچیده، هر چیزی که به production می‌رسد — به درد ماندن در حلقه می‌خورند. قضاوت در نهایت این است: یک پیچ اشتباه چقدر هزینه دارد، و چقدر دیر می‌فهمیدش؟
 
-Some work is in-the-loop by nature, because your reactions are the input. [Grilling](#grilling) only works with you there to answer the questions; [prototyping](#prototyping) only works with you there to react to the artifact.
+بعضی کارها ذاتاً در حلقه‌اند، چون واکنش‌های شما ورودی‌اند. [پرسشگری](#grilling) فقط با حضور شما برای پاسخ دادن به سؤال‌ها کار می‌کند؛ [نمونه‌سازی اولیه](#prototyping) فقط با حضور شما برای واکنش به محصول کار می‌کند.
 
-Staying in the loop costs your attention, which is the scarce resource. Part of getting better with agents is moving more work safely out of the loop — with plans, [automated checks](#automated-check), and [human review](#human-review) at the end instead of supervision throughout.
+ماندن در حلقه توجه شما را مصرف می‌کند، و توجه منبع کمیاب است. بخشی از بهتر شدن در کار با عامل‌ها این است که کار بیشتری را به‌شکل امن از حلقه بیرون ببریم — با برنامه‌ها، [بررسی‌های خودکار](#automated-check)، و [بازبینی انسانی](#human-review) در پایان به‌جای نظارت در تمام طول.
 
-_Usage:_
+_کاربرد:_
 
-"Run this AFK overnight?"
+«این را امشب AFK اجرا کنم؟»
 
-"No, schema migration — keep it human-in-the-loop. I want to see each step and steer if it picks the wrong column to backfill from."
+«نه، مهاجرت شِماست — انسان در حلقه نگهش دار. می‌خواهم هر قدم را ببینم و اگر ستون اشتباهی را برای backfill انتخاب کرد تغییرش بدهم.»
 
 ### AFK
 
-Away from keyboard. A working pattern where the user kicks off a [session](#session) and leaves the [agent](#agent) to run unattended. The throughput multiplier of [AI](#ai) coding — many AFK sessions can run in parallel while you sleep, eat, or work on something else. Usually requires a permissive [permission mode](#permission-mode) plus [sandboxing](#sandbox) to be safe.
+دور از کیبورد. الگوی کاری که در آن کاربر [نشستی](#session) را شروع می‌کند و [عامل](#agent) را بدون نظارت رها می‌کند تا اجرا شود. ضریب توانِ [کدنویسی با هوش مصنوعی](#ai) — بسیاری از نشست‌های AFK می‌توانند به‌صورت موازی اجرا شوند در حالی که می‌خوابید، غذا می‌خورید یا روی چیز دیگری کار می‌کنید. معمولاً برای امن بودن به یک [حالت مجوز](#permission-mode) باز و یک [سندباکس](#sandbox) نیاز دارد.
 
-When you're not there, the agent handles ambiguity differently. While you're watching, an ambiguous decision surfaces as a question and you answer it; once you've walked away, the agent picks a default and keeps going, and every later decision builds on that guess. The characteristic failure is coming back to hours of finished, confident work built on a wrong call made in the first ten minutes. The work isn't sloppy — it's coherent, just coherent about the wrong thing.
+وقتی آنجا نیستید، عامل با ابهام طور دیگری برخورد می‌کند. تا وقتی تماشا می‌کنید، تصمیم مبهم به‌صورت سؤال بروز می‌کند و شما جوابش را می‌دهید؛ به محض اینکه دور می‌شوید، عامل یک پیش‌فرض برمی‌گزیند و ادامه می‌دهد، و هر تصمیم بعدی روی همان حدس ساخته می‌شود. شکست مشخصه این است: برمی‌گردید و ساعت‌ها کارِ تمام‌شده و مطمئن می‌بینید که روی تصمیم اشتباهی ساخته شده که در ده دقیقه اول گرفته شده. کار شلخته نیست — منسجم است، فقط منسجم درباره چیز اشتباه.
 
-Since you can't give input during the run, give it before and after instead. Before: resolve the ambiguity up front — a [grilling](#grilling) session, a written [spec](#spec) — so there are fewer gaps for the agent to fill alone. During: [automated checks](#automated-check) and [automated review](#automated-review) stand in for the attention you're not giving, failing fast on what can be caught mechanically. After: the run ends in something reviewable — a PR, not changes already merged. AFK doesn't remove [human review](#human-review); it defers all of it to the end, which is why what arrives at the end has to be worth reviewing. This is also why [AX](#ax) matters most in AFK runs — with no one watching, the environment is the only support the agent gets.
+چون نمی‌توانید وسط اجرا ورودی بدهید، قبل و بعدش بدهید. قبل: ابهام را از همان اول حل کنید — یک نشست [پرسشگری](#grilling)، یک [مشخصات](#spec) نوشته‌شده — تا جای کمتری برای پر کردن به تنهایی بماند. وسط: [بررسی‌های خودکار](#automated-check) و [بازبینی خودکار](#automated-review) جای توجهی را می‌گیرند که شما نمی‌دهید، و در همان چیزی که به‌صورت مکانیکی قابل گرفتن است زود شکست می‌خورند. بعد: اجرا به چیزی قابل بازبینی ختم شود — یک PR، نه تغییرهایی که قبلاً merge شده. AFK [بازبینی انسانی](#human-review) را حذف نمی‌کند؛ همه‌اش را به پایان موکول می‌کند، و به همین دلیل چیزی که در پایان می‌رسد باید ارزش بازبینی داشته باشد. به همین دلیل هم [تجربه عامل](#ax) بیشترین اهمیت را در اجراهای AFK دارد — وقتی کسی تماشا نمی‌کند، محیط تنها پشتیبانی است که عامل می‌گیرد.
 
-_Avoid:_ "background agent" — centers the machine ("running in the background") rather than the human pattern ("user has walked away"). AFK names the fact that matters: the user isn't watching.
+_نبایدها:_ «'background agent'» — ماشین را مرکز قرار می‌دهد («'running in the background'») به‌جای الگوی انسانی («'user has walked away'»). AFK واقعیتی را که مهم است نام‌گذاری می‌کند: کاربر تماشا نمی‌کند.
 
-_Usage:_
+_کاربرد:_
 
-"I'm running this AFK — three sandboxed agents on the refactor, reviewing the PRs in the morning."
+«این را AFK اجرا می‌کنم — سه عامل سندباکس‌شده روی بازسازی، صبح PRها را بازبینی می‌کنم.»
 
-"[Bypass permissions](#agent-mode)?"
+«[Bypass permissions](#agent-mode)؟»
 
-"Yeah, read-only [filesystem](#filesystem), no network."
+«آره، [سیستم فایل](#filesystem) فقط‌خواندنی، بدون شبکه.»
 
 ### Automated check
 
-A deterministic verification that runs in the [environment](#environment) — tests, type checks, lints, build, pre-commit hooks. Pass/fail, no judgement. The signal an [agent](#agent) can self-correct from without involving anyone else. A flaky test is a broken check, not a non-check; automated checks are deterministic _by design_.
+راستی‌آزمایی قطعی که در [محیط](#environment) اجرا می‌شود — تست‌ها، بررسی نوع، lint، بیلد، قلاب‌های pre-commit. قبول یا رد، بدون قضاوت. سیگنالی که [عامل](#agent) می‌تواند بدون درگیر کردن کس دیگری از روی آن خودش را اصلاح کند. تست ناپایدار یک بررسی خراب است، نه نبودِ بررسی؛ بررسی‌های خودکار _ماهیتاً_ قطعی‌اند.
 
-Self-correction works as a loop. The agent makes a change, runs the check as a [tool call](#tool-call), and the failure output lands in its [context window](#context-window) — a type error with a file and line, a failing assertion with expected and actual values. That's enough for the agent to fix the problem and run the check again, around and around until it passes, with no human in the loop. Determinism is what makes the loop trustworthy: the same code always produces the same verdict, so a pass means something. A flaky check poisons this — the agent "fixes" code that was fine, or retries past a real failure.
+اصلاح خودکار به‌صورت یک حلقه کار می‌کند. عامل تغییری ایجاد می‌کند، بررسی را به‌صورت [فراخوانی ابزار](#tool-call) اجرا می‌کند، و خروجی شکست در [پنجره زمینه](#context-window)‌اش می‌نشیند — خطای نوع با فایل و شماره خط، assertion ناموفق با مقادیر مورد انتظار و واقعی. همین برای عامل کافی است که مشکل را درست کند و بررسی را دوباره اجرا کند، دور و بر، تا پاس شود، بدون انسان در حلقه. قطعی بودن چیزی است که حلقه را قابل اعتماد می‌کند: همان کد همیشه همان حکم را تولید می‌کند، پس پاس شدن معنایی دارد. بررسی ناپایدار این را مسموم می‌کند — عامل کدی را که سالم بوده «درست» می‌کند، یا از یک شکست واقعی رد می‌شود.
 
-This is why good checks are a large part of a codebase's [AX](#ax). An agent in a repo with strict types, a fast test suite, and a linter catches most of its own mistakes before you see them; an agent in a repo with none of those ships whatever it produces. The difference matters most in [AFK](#afk) runs, where checks are the only verification happening during the run. But a check only catches what it asserts — green checks mean the asserted properties hold, not that the code is right. The judgement-shaped gaps are what [automated review](#automated-review) and [human review](#human-review) are for.
+به همین دلیل بررسی‌های خوب بخش بزرگی از [تجربه عامل](#ax) یک پایگاه کدند. عامل در مخزنی با نوع‌های سخت‌گیر، تست‌سوئیت سریع و linter بیشتر اشتباه‌های خودش را قبل از اینکه ببینید می‌گیرد؛ عامل در مخزنی که هیچ‌کدام را ندارد، هر چیزی که تولید می‌کند را تحویل می‌دهد. این تفاوت بیشترین اهمیت را در اجراهای [AFK](#afk) دارد، جایی که بررسی‌ها تنها راستی‌آزمایی‌ای هستند که وسط اجرا اتفاق می‌افتد. اما بررسی فقط چیزی را می‌گیرد که assert می‌کند — سبز بودن یعنی ویژگی‌های assertشده برقرارند، نه اینکه کد درست است. جاهای قضاوتی چیزی است که [بازبینی خودکار](#automated-review) و [بازبینی انسانی](#human-review) برایش هستند.
 
-_Avoid:_ "feedback loop" / "backpressure" — both lump checks together with review. _Avoid:_ "test" — tests are automated checks, but not all automated checks are tests.
+_نبایدها:_ «'feedback loop'» / «'backpressure'» — هر دو بررسی و بازبینی را با هم قاطی می‌کنند. _نبایدها:_ «'test'» — تست‌ها بررسی خودکارند، اما همه بررسی‌های خودکار تست نیستند.
 
-_Usage:_
+_کاربرد:_
 
-"The agent keeps shipping broken code in the AFK runs."
+«عامل در اجراهای AFK مدام کد خراب تحویل می‌دهد.»
 
-"What automated checks are wired into the [sandbox](#sandbox)?"
+«چه بررسی‌های خودکاری به [سندباکس](#sandbox) وصل شده؟»
 
-"Just the unit tests."
+«فقط تست‌های واحد.»
 
-"Add typecheck and lint — it'll self-correct from those before the PR ever lands."
+«typecheck و lint را هم اضافه کن — قبل از اینکه PR اصلاً برسد از روی آن‌ها خودش را اصلاح می‌کند.»
 
 ### Automated review
 
-An [agent](#agent) reviewing another agent's work, often with a different [model](#model) or [system prompt](#system-prompt). Non-deterministic: it forms a judgement. Runs anywhere — pre-merge on a PR, post-hoc on commit history, mid-session as a [subagent](#subagent). An LLM-as-judge in CI is automated review, not an [automated check](#automated-check); what the assertion _does_ decides the category, not where it runs.
+[عاملی](#agent) که کار عامل دیگر را بازبینی می‌کند، اغلب با [مدل](#model) یا [پرامپت سیستم](#system-prompt) متفاوت. غیرقطعی: قضاوت شکل می‌دهد. همه‌جا اجرا می‌شود — قبل از merge روی PR، پس از واقع روی تاریخچه commitها، وسط نشست به‌صورت [زیرعامل](#subagent). یک LLM به‌عنوان قاضی در CI بازبینی خودکار است، نه [بررسی خودکار](#automated-check)؛ این که assert چه _کاری_ می‌کند دسته را تعیین می‌کند، نه اینکه کجا اجرا می‌شود.
 
-The separation from the working agent is what makes it work. Asking the agent that wrote the code to review its own work gets you very little — the [session](#session) that produced the bug also contains the reasoning that produced it, and the agent reads its own conclusions back as confirmation. A reviewer with a fresh [context window](#context-window) has none of that attachment: it sees the diff the way a stranger would, which is what review depends on. A different model or a review-specific system prompt sharpens this further — different blind spots, and a system prompt scoped to what you actually care about (security, API contracts, performance) rather than a vague "look for problems".
+جدایی از عاملِ کارکننده چیزی است که آن را به کار می‌اندازد. از عاملِ نویسنده کد بخواهید کار خودش را بازبینی کند، چیز زیادی به دست نمی‌آورید — [نشستی](#session) که باگ را تولید کرده، استدلال تولیدکننده‌اش را هم در خود دارد، و عامل نتیجه‌گیری‌های خودش را به‌عنوان تأیید دوباره می‌خواند. بازبین با [پنجره زمینه](#context-window) تازه هیچ‌کدام از آن وابستگی‌ها را ندارد: دیف را طوری می‌بیند که یک غریبه می‌بیند، و بازبینی به همین بستگی دارد. مدل متفاوت یا پرامپت سیستم مخصوص بازبینی این را تیزتر می‌کند — نقطه کورهای متفاوت، و پرامپت سیستمی محدود به چیزی که واقعاً برایتان مهم است (امنیت، قراردادهای API، کارایی) به‌جای یک «'به دنبال مشکل بگرد'» مبهم.
 
-It slots between the other review layers. Automated checks are deterministic and catch what can be asserted mechanically; [human review](#human-review) is expensive and scales worst. Automated review sits in the middle: it catches judgement-shaped problems — a misleading function name, a missed edge case — at machine cost. Because it's non-deterministic, it can miss things and flag non-issues; treat it as a filter that raises the floor before a human looks, not a gate that replaces one.
+بین لایه‌های دیگر بازبینی جا می‌گیرد. بررسی‌های خودکار قطعی‌اند و چیزی را می‌گیرند که به‌صورت مکانیکی قابل assert است؛ [بازبینی انسانی](#human-review) گران است و بدترین مقیاس‌پذیری را دارد. بازبینی خودکار در وسط می‌نشیند: مشکلاتِ قضاوتی را می‌گیرد — نام تابع گمراه‌کننده، حالت مرزی از قلم افتاده — به هزینه ماشین. چون غیرقطعی است، می‌تواند چیزهایی را از دست بدهد و غیرمسئله‌ها را پرچم کند؛ به‌عنوان فیلتری با آن برخورد کنید که قبل از نگاه انسانی کف را بالا می‌برد، نه دروازه‌ای که جای آن را می‌گیرد.
 
-_Avoid:_ "AI review" / "agent review" — too vague to distinguish from the working agent itself.
+_نبایدها:_ «'AI review'» / «'agent review'» — آن‌قدر مبهم‌اند که نمی‌توانند از خود عاملِ کارکننده متمایز کنند.
 
-_Usage:_
+_کاربرد:_
 
-"We're getting too many bad PRs from the [AFK](#afk) runs."
+«از اجراهای [AFK](#afk) PRهای بد زیادی می‌گیریم.»
 
-"Add an automated review step before merge — different model, separate system prompt, scoped to security and contract changes."
+«یک مرحله بازبینی خودکار قبل از merge اضافه کن — مدل متفاوت، پرامپت سیستم جدا، محدود به تغییرهای امنیتی و قراردادی.»
 
 ### Human review
 
-The user reading the code the [agent](#agent) produced and forming a judgement on it. Reading the diff or the changed files counts; reading the agent's _description_ of what it did does not — narration is not the artifact. The description is a [secondary source](#secondary-source), written by the party being reviewed; the diff is the [primary source](#primary-source), and review means reading it.
+کاربر کدی را که [عامل](#agent) تولید کرده می‌خواند و درباره‌اش قضاوت شکل می‌دهد. خواندن دیف یا فایل‌های تغییرکرده حساب می‌شود؛ خواندن _شرحِ_ عامل از کاری که کرده حساب نمی‌شود — روایت، خودِ اثر نیست. شرح یک [منبع ثانویه](#secondary-source) است که طرفِ مورد بازبینی نوشته؛ دیف [منبع اولیه](#primary-source) است، و بازبینی یعنی خواندن آن.
 
-Agents raise the volume of code produced, so review becomes the bottleneck. One useful idea is layering different review strategies. [Automated checks](#automated-check) catch the mechanical failures, [automated review](#automated-review) catches the describable ones, and human review is reserved for what only you can judge — whether the change is the right change, whether the approach fits the codebase, whether this should exist at all.
+عامل‌ها حجم کد تولیدشده را بالا می‌برند، پس بازبینی گلوگاه می‌شود. یک ایده مفید لایه‌بندی استراتژی‌های مختلف بازبینی است. [بررسی‌های خودکار](#automated-check) شکست‌های مکانیکی را می‌گیرند، [بازبینی خودکار](#automated-review) شکست‌های قابل توصیف را می‌گیرد، و بازبینی انسانی برای چیزی محفوظ است که فقط شما می‌توانید قضاوت کنید — اینکه آیا تغییر، تغییر درستی است، آیا رویکرد به پایگاه کد می‌خورد، آیا اصلاً این چیز باید وجود داشته باشد.
 
-Review is also cheaper earlier. Reading a plan before work starts, or a small diff mid-flight, takes minutes; excavating a finished branch after an [AFK](#afk) run takes longer. Where you place the review checkpoint is a [human-in-the-loop](#human-in-the-loop) decision, not an afterthought.
+بازبینی زودتر ارزان‌تر هم هست. خواندن یک برنامه قبل از شروع کار، یا یک دیف کوچک وسط راه، چند دقیقه می‌برد؛ کندوکاو یک برنچ تمام‌شده بعد از اجرای [AFK](#afk) بیشتر طول می‌کشد. جایی که نقطه بازبینی را می‌گذارید یک تصمیم [انسان در حلقه](#human-in-the-loop) است، نه یک فکرِ آخرِ کار.
 
-_Avoid:_ "code review" alone — ambiguous between human and automated.
+_نبایدها:_ «'code review'» به‌تنهایی — مبهم است بین انسانی و خودکار.
 
-_Usage:_
+_کاربرد:_
 
-"I human-reviewed the AFK output."
+«خروجی AFK را بازبینی انسانی کردم.»
 
-"You read the diff or just the summary?"
+«دیف را خواندی یا فقط خلاصه را؟»
 
-"Diff. The summary said it deleted dead code — turned out the function was called from a generated file."
+«دیف را. خلاصه می‌گفت کد مرده را حذف کرده — معلوم شد تابع از یک فایل تولیدشده صدا زده می‌شود.»
 
 ### Vibe coding
 
-A working pattern where the user accepts the [agent](#agent)'s code without [human review](#human-review). The diff is treated as opaque — what matters is whether the program behaves, not what's inside. [Automated review](#automated-review) and [automated checks](#automated-check) may still run; vibe coding is silent on both.
+الگوی کاری که در آن کاربر کد [عامل](#agent) را بدون [بازبینی انسانی](#human-review) می‌پذیرد. دیف غیرشفاف فرض می‌شود — آنچه مهم است این است که برنامه رفتار درستی داشته باشد، نه اینکه داخلش چیست. [بازبینی خودکار](#automated-review) و [بررسی‌های خودکار](#automated-check) ممکن است همچنان اجرا شوند؛ ویب‌کدینگ درباره هیچ‌کدام نظر نمی‌دهد.
 
-The term comes from Andrej Karpathy, who [coined it in early 2025](https://x.com/karpathy/status/1886192184808149383): you "fully give in to the vibes" and "forget that the code even exists" — describe what you want, accept what comes back, and judge it by running it.
+این اصطلاح از Andrej Karpathy می‌آید که [اوایل 2025 آن را ساخت](https://x.com/karpathy/status/1886192184808149383): «'کاملاً تسلیم vibes می‌شوید'» و «'فراموش می‌کنید کد اصلاً وجود دارد'» — چیزی را که می‌خواهید توصیف کنید، آنچه برمی‌گردد را بپذیرید، و با اجرا کردنش قضاوتش کنید.
 
-Vibe coding trades inspection for speed. Reading diffs is usually the slowest step in agent-driven work, so dropping it removes the main bottleneck. For code whose failures are cheap — [prototypes](#prototyping), one-off scripts, internal tools — that's a reasonable trade. The risk scales with the code's lifespan and stakes.
+ویب‌کدینگ بازرسی را با سرعت عوض می‌کند. خواندن دیف‌ها معمولاً کندترین قدم کارِ عامل‌محور است، پس حذفش گلوگاه اصلی را برمی‌دارد. برای کدی که شکست‌هایش ارزان‌اند — [نمونه‌سازی اولیه](#prototyping)، اسکریپت‌های یک‌باره، ابزارهای داخلی — این معامله معقولی است. ریسک با عمر و اهمیت کد رشد می‌کند.
 
-The cost arrives later. Vibe-coded changes accumulate into a codebase nobody has read, and behaviour was the only thing checked — so anything behaviour doesn't surface, like a secret written to logs, a missing edge case, or quietly wrong data handling, ships unseen. The first time someone debugs the system is the first time anyone reads the code. With human review gone, whatever automated verification still runs — tests, types, automated review — is the only gate the code passes through.
+هزینه‌اش بعداً می‌رسد. تغییرهای ویب‌کدینگ‌شده در پایگاه کدی انباشته می‌شوند که هیچ‌کس نخوانده، و رفتار تنها چیزی بوده که بررسی شده — پس هر چیزی که رفتار بروزش نمی‌دهد، مثل یک راز که در لاگ‌ها نوشته شده، حالت مرزی از قلم افتاده، یا پردازش دادهِ آرام و غلط، بدون دیده شدن تحویل می‌شود. اولین بار که کسی سیستم را دیباگ می‌کند، اولین بار است که کسی کد را می‌خواند. با رفتن بازبینی انسانی، هر راستی‌آزمایی خودکاری که هنوز اجرا می‌شود — تست‌ها، نوع‌ها، بازبینی خودکار — تنها دروازه‌ای است که کد از آن عبور می‌کند.
 
-_Avoid:_ "vibe coding" as a synonym for "low-quality AI coding" — the term names the review stance, not the resulting code.
+_نبایدها:_ «'vibe coding'» به‌عنوان مترادف «'کدنویسی هوش مصنوعی کم‌کیفیت'» — این اصطلاح موضع بازبینی را نام‌گذاری می‌کند، نه کدِ حاصل را.
 
-_Usage:_
+_کاربرد:_
 
-"Did you read what it changed in the auth flow?"
+«خواندی چه چیزی را در جریان auth تغییر داده؟»
 
-"Vibe coded it — login still works, that's all I checked."
+«ویب‌کدینگ کردم — ورود هنوز کار می‌کند، فقط همین را چک کردم.»
 
-"Read the diff before you push, vibing on auth is how secrets leak into logs."
+«قبل از push دیف را بخوان، ویب کردن روی auth همین‌طوری است که رازها به لاگ‌ها نشت می‌کنند.»
 
 ### Design concept
 
-The shared understanding of what's being built, held in common between user and [agent](#agent) but separate from any asset. Brooks' term (_The Design of Design_): the conversation, [handoff artifacts](#handoff-artifact), and the code are all assets that try to capture or reach the design concept, but none of them _are_ it. Quality of the design concept is felt through the quality of the conversation that built it.
+درک مشترک از آنچه ساخته میشود، میان کاربر و [عامل](#agent) مشترک است اما جدا از هر دارایی. اصطلاح Brooks است (_The Design of Design_): گفتوگو، [سندهای انتقال زمینه](#handoff-artifact) و کد همگی داراییهاییاند که میکوشند مفهوم طراحی را ثبت کنند یا به آن برسند، اما هیچکدام _خودِ آن_ نیستند. کیفیت مفهوم طراحی از کیفیت گفتوگویی که آن را ساخت حس میشود.
 
-The term names the gap behind a familiar frustration: the agent writes exactly what you asked for and it's still wrong. The usual cause is that you hadn't fully figured out what you wanted. The design concept wasn't finished in your own head — your prompt captured the parts you'd worked out, and was silent on the parts you hadn't. The agent filled those silences with its own assumptions, because there was nothing to align with. Nothing malfunctioned. There was no shared design concept, because there wasn't yet a whole one to share.
+این اصطلاح شکاف پشت یک ناکامی آشنا را نامگذاری میکند: عامل دقیقاً همان چیزی را مینویسد که خواستهاید و باز هم اشتباه است. علت معمول این است که هنوز کاملاً نفهمیده بودید چه میخواهید. مفهوم طراحی در ذهن خودتان کامل نشده بود — پرامپت شما بخشهایی را ثبت کرده بود که به آنها رسیده بودید و درباره بخشهایی که نرسیده بودید ساکت بود. عامل آن سکوتها را با فرضهای خودش پر کرد، چون چیزی برای همسو شدن با آن وجود نداشت. هیچچیز خراب نشده بود. مفهوم طراحی مشترکی وجود نداشت، چون هنوز مفهوم کاملی برای به اشتراک گذاشتن نبود.
 
-You can tell a design concept is shared the same way you can with a colleague: the other party starts answering questions you haven't asked yet the way you would. Until then, the work is conversation — [grilling](#grilling) is the deliberate version — and writing a [spec](#spec) too early just captures the misalignment in a more durable asset. The design concept also moves as you learn; assets lag it, which is why a spec faithful to last week's understanding can still mislead this week's session.
+میتوانید بفهمید مفهوم طراحی مشترک است، همانطور که با یک همکار میفهمید: طرف مقابل شروع میکند به پاسخ دادن به سؤالهایی که هنوز نپرسیدهاید، همانطور که شما پاسخ میدادید. تا آن زمان، کار گفتوگوست — [پرسشگری](#grilling) نسخه عمدی آن است — و نوشتن زودهنگام [مشخصات](#spec) فقط ناهماهنگی را در دارایی ماندگارتری ثبت میکند. مفهوم طراحی هم با یاد گرفتن شما حرکت میکند؛ داراییها از آن عقب میمانند، و به همین دلیل مشخصاتی که به فهم هفته گذشته وفادار است باز هم میتواند نشست این هفته را گمراه کند.
 
-_Usage:_
+_کاربرد:_
 
-"It's writing exactly what I asked for and it's still wrong."
+«دقیقاً همان چیزی را مینویسد که خواستهام و باز هم اشتباه است.»
 
-"You don't share a design concept yet — it's filling gaps with assumptions. Keep talking until cancellation, refunds, and partial fulfilment all line up between you before you let it write a spec."
+«هنوز مفهوم طراحی مشترکی ندارید — دارد شکافها را با فرض پر میکند. به حرف زدن ادامه بده تا لغو، بازپرداخت و اجرای جزئی همگی بین شما هماهنگ شوند، بعد بگذار مشخصات بنویسد.»
 
 ### Grilling
 
-A technique for developing a [design concept](#design-concept) with an [agent](#agent): the agent interviews the user Socratically, one decision at a time, proposing a recommended answer for each. Slows the rush to a finished plan — no [handoff artifact](#handoff-artifact) is written until the concept stabilises.
+تکنیکی برای توسعه [مفهوم طراحی](#design-concept) با یک [عامل](#agent): عامل سقراطوار، یکییکی درباره هر تصمیم از کاربر میپرسد و برای هر کدام پاسخی پیشنهادی ارائه میدهد تا کاربر بتواند سریع تأیید یا ردش کند. شتاب به سمت یک برنامه تمامشده را کند میکند — هیچ [سند انتقال زمینهای](#handoff-artifact) تا وقتی مفهوم تثبیت نشده نوشته نمیشود.
 
-The technique exists because agents fill gaps silently. Asked to write a [spec](#spec) from a two-line prompt, the agent doesn't stop at the decisions you haven't made — it picks defaults and writes them in. The result looks complete, and the guesses are indistinguishable from the choices, so you discover them late: at review, or when the built feature handles an edge case in a way you never chose. Grilling inverts this — instead of guessing, the agent has to ask.
+این تکنیک وجود دارد چون عاملها شکافها را بیصدا پر میکنند. وقتی از او خواسته شود از یک پرامپت دولینی [مشخصات](#spec) بنویسد، عامل سر تصمیمهایی که نگرفتهاید نمیایستد — پیشفرض انتخاب میکند و مینویسدشان. نتیجه کامل به نظر میرسد و حدسها از انتخابها قابل تشخیص نیستند، پس دیر کشفشان میکنید: سر بازبینی، یا وقتی ویژگی ساختهشده حالتی مرزی را طوریکه هرگز انتخاب نکرده بودید مدیریت میکند. پرسشگری این را برعکس میکند — بهجای حدس زدن، عامل باید بپرسد، و تصمیمهای نگرفتهشده بهجای اینکه بیصدا در سند جا خوش کنند، در خود گفتوگو تصمیم گرفته میشوند.
 
-It's a [human-in-the-loop](#human-in-the-loop) technique: your answers are the input. When a question can't be answered in conversation — you'd have to see the thing — switch to [prototyping](#prototyping).
+تکنیکی است [انسان در حلقه](#human-in-the-loop): پاسخهای شما ورودیاند. وقتی سؤالی را نتوان در گفتوگو پاسخ داد — باید چیز را ببینید — به [نمونهسازی اولیه](#prototyping) بروید.
 
-_Usage:_
+_کاربرد:_
 
-"It went straight to writing the spec and got the cancellation logic wrong."
+«مستقیم رفت سراغ نوشتن مشخصات و منطق لغو را اشتباه درآورد.»
 
-"Grill it first — make it ask you about partial cancels, refunds, and timing before it commits anything to the doc. Cheaper to resolve in conversation than in code."
+«اول پرسشگریاش کن — بگذار از تو درباره لغو جزئی، بازپرداخت و زمانبندی بپرسد قبل از اینکه چیزی را به سند بسپارد. حل کردنش در گفتوگو از حل کردنش در کد ارزانتر است.»
 
 ### Prototyping
 
-Having the [agent](#agent) build a quick, rough version of something, for when conversation is too low-fidelity and you need a real artifact to talk about.
+از [عامل](#agent) بخواهید نسخهای سریع و خام از چیزی بسازد، برای وقتی که گفتوگو وضوح کافی ندارد و برای حرف زدن به یک چیز واقعی نیاز دارید.
 
-[Grilling](#grilling) resolves design decisions in conversation. Conversation is cheap, but it's low-fidelity: some questions can't be answered in words — how an interaction feels, whether an API shape is ergonomic in real calling code, whether the layout works at real data sizes. The interview hits a question and your honest answer is "I don't know, I'd have to see it." Past that point the discussion circles. Instead, have the agent build the thing, look at it, and come back to the conversation with an answer.
+[پرسشگری](#grilling) تصمیمهای طراحی را در گفتوگو حل میکند. گفتوگو ارزان است اما وضوح کم دارد: بعضی سؤالها را نمیشود با واژه پاسخ داد — یک تعامل چه حسی دارد، آیا شکل یک API در کد فراخوانی واقعی ارگونومیک است، آیا چیدمان در اندازههای واقعی داده جواب میدهد. مصاحبه به سؤالی میرسد و پاسخ صادقانه شما این است: «نمیدانم، باید ببینمش.» بعد از آن نقطه، بحث دور خودش میچرخد. بهجایش بگذارید عامل چیز را بسازد، نگاهش کنید و با یک پاسخ به گفتوگو برگردید.
 
-Agents lower the cost of building, which is what makes this practical. A rough version that used to take a day to mock up now takes minutes, so it's worth doing routinely. It's a [human-in-the-loop](#human-in-the-loop) technique: the prototype is there for you to react to.
+عاملها هزینه ساختن را پایین میآورند و همین این کار را عملی میکند. نسخه خامی که نمونه خامش قبلاً یک روز وقت میبرد حالا چند دقیقه طول میکشد، پس ارزشش را دارد که بهطور منظم انجامش دهید. تکنیکی است [انسان در حلقه](#human-in-the-loop): نمونه اولیه برای این هست که شما به آن واکنش نشان دهید.
 
-You usually don't stop at one look. Iterate with the prototype — react, ask for a change, react again — so each round resolves another decision against the real artifact, at a higher fidelity than conversation allows.
+معمولاً به یک نگاه بسنده نمیکنید. با نمونه اولیه تکرار کنید — واکنش نشان دهید، تغییری بخواهید، دوباره واکنش نشان دهید — تا هر دور تصمیم دیگری را در برابر چیز واقعی حل کند، با وضوحی بالاتر از آنچه گفتوگو اجازه میدهد.
 
-A prototype doesn't have to be all-scrappy. You can build the pieces you're actually evaluating to production quality, so when the decision lands, the component or API you reacted to can transfer into the real codebase. This makes prototyping essential material for the [spec](#spec) to reference.
+نمونه اولیه لازم نیست همهاش خام باشد. میتوانید قطعههایی را که واقعاً ارزیابی میکنید با کیفیت تولید بسازید، تا وقتی تصمیم گرفته شد، کامپوننت یا APIای که به آن واکنش نشان دادید بتواند به پایگاه کد واقعی منتقل شود. این نمونهسازی اولیه را به مادهای ضروری برای ارجاع [مشخصات](#spec) تبدیل میکند.
 
-_Usage:_
+_کاربرد:_
 
-"We've spent half an hour arguing about whether the wizard should be one page or three steps."
+«نیم ساعت است بحث میکنیم که ویزارد باید یک صفحه باشد یا سه مرحله.»
 
-"Words won't settle it — have the agent prototype both. We'll click through them and know in five minutes."
+«واژهها حلش نمیکنند — بگذار عامل از هر دو نمونه اولیه بسازد. کلیک میکنیم رویشان و تا پنج دقیقه دیگر میفهمیم.»
 
 ### DX
 
-Developer experience — how easy a codebase and its toolchain make it for humans to do good work. Good DX is fast feedback, clear error messages, documentation that answers the question you actually have, and setup that works on the first try. The term long predates AI coding; it's in this dictionary mainly as the contrast for [AX](#ax).
+تجربه توسعهدهنده — اینکه پایگاه کد و ابزارهایش چقدر کار خوب را برای انسان آسان میکنند. DX خوب یعنی بازخورد سریع، پیامهای خطای روشن، مستنداتی که به سؤال واقعی شما پاسخ میدهد، و راهاندازی که از اولین تلاش جواب میدهد. این اصطلاح خیلی قبلتر از کدنویسی با هوش مصنوعی وجود داشته؛ در این واژهنامه عمدتاً بهعنوان مقابل [تجربه عامل](#ax) آمده.
 
-DX is the interaction between the human and the codebase — nothing more. The main difference between the two audiences is that humans are [stateful](#stateful) and agents are [stateless](#stateless). A human learns the codebase once and carries that knowledge into every day after, which is why poor DX is survivable: they route around slow CI by batching their pushes, around missing docs by asking in Slack once, around confusing structure by remembering where things live. The workarounds accumulate, and a team ends up productive in a codebase that fights them.
+DX تعامل بین انسان و پایگاه کد است — نه بیشتر. تفاوت اصلی بین دو مخاطب این است که انسانها [وضعیتدار](#stateful)اند و عاملها [بیوضعیت](#stateless). انسان یک بار پایگاه کد را یاد میگیرد و آن دانش را به هر روز بعدش میبرد، و به همین دلیل DX ضعیف قابل تحمل است: با دستهبندی pushها از دور زدن CI کند، با یک بار پرسیدن در Slack از دور زدن مستندات ناقص، و با به خاطر سپردن محل چیزها از دور زدن ساختار گیجکننده. راههای دور زدن انباشته میشوند و تیم در پایگاه کدی که با آن میجنگد بهرهور میماند.
 
-[Agents](#agent) face the same codebase with none of that accumulation. Stateless across [sessions](#session), an agent re-learns the codebase from scratch every time — it benefits from the fast test suite and the clear error messages, but anything it figured out yesterday is gone unless it was written into the [environment](#environment), which the agent only perceives through [tool results](#tool-result). That's the gap AX names: the parts of DX that survive when the developer is an agent, plus concerns humans don't have, like keeping the [context window](#context-window) free.
+[عاملها](#agent) با همان پایگاه کد روبهرو میشوند اما هیچکدام از آن انباشت را ندارند. عامل بیوضعیت در طول [نشستها](#session) هر بار پایگاه کد را از صفر دوباره یاد میگیرد — از تستهای سریع و پیامهای خطای روشن سود میبرد، اما هر چیزی که دیروز فهمیده رفته، مگر اینکه در [محیط](#environment) نوشته شده باشد، چیزی که عامل فقط از طریق [نتیجههای ابزار](#tool-result) درکش میکند. این همان شکافی است که AX نامگذاری میکند: بخشهایی از DX که وقتی توسعهدهنده یک عامل باشد میمانند، بهعلاوه نگرانیهایی که انسانها ندارند، مثل آزاد نگه داشتن [پنجره زمینه](#context-window).
 
-The overlap means DX investment often improves AX for free — strict types, fast tests, and predictable structure help both. The divergence means it doesn't always: a beautiful onboarding doc helps a human for a week and an agent not at all unless it's reachable from [AGENTS.md](#agentsmd).
+همپوشانی یعنی سرمایهگذاری روی DX اغلب AX را رایگان بهتر میکند — تایپ سختگیرانه، تستهای سریع و ساختار قابل پیشبینی به هر دو کمک میکنند. واگرایی یعنی همیشه اینطور نیست: مستندات خوشآمدگویی زیبا یک هفته به انسان کمک میکند و به عامل هیچ، مگر اینکه از [AGENTS.md](#agentsmd) قابل دسترس باشد.
 
-_Usage:_
+_کاربرد:_
 
-"Our DX is fine — new hires are productive in a week."
+«DX ما خوب است — استخدامهای جدید در یک هفته بهرهور میشوند.»
 
-"Productive because someone sits with them for that week. The agent doesn't get that week; check the AX separately."
+«بهرهور چون یک نفر همان هفته کنارشان مینشیند. عامل آن هفته را نمیگیرد؛ AX را جداگانه بررسی کن.»
 
 ### AX
 
-Agent experience — how well the [environment](#environment) is set up for an [agent](#agent) to do good work in a codebase. The agent-facing counterpart to [DX](#dx). When the same agent performs well in one repo and badly in another — same [model](#model), same [harness](#harness) — the difference is usually AX. The instinct is to blame the model or rewrite the prompt; the fix is more often in the repo.
+تجربه عامل — اینکه [محیط](#environment) چقدر برای کار خوب یک [عامل](#agent) در پایگاه کد آماده است. همتای روبهعاملِ [تجربه توسعهدهنده](#dx). وقتی همان عامل در یک مخزن خوب کار میکند و در مخزن دیگر بد — همان [مدل](#model)، همان [بستر اجرایی](#harness) — تفاوت معمولاً AX است. غریزه میگوید مدل را مقصر بدانید یا پرامپت را بازنویسی کنید؛ راهحل بیشتر اوقات در مخزن است.
 
-Good AX has three main dimensions:
+AX خوب سه بعد اصلی دارد:
 
-| Dimension        | What good AX looks like                                                                                                                                                                                                                              |
-| ---------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Automated checks | Fast, deterministic [automated checks](#automated-check) — types, tests, lints — that the agent can self-correct from without a human                                                                                                          |
-| Architecture     | A codebase the agent can navigate without reading everything: predictable structure, a lot of behaviour behind small interfaces, names that say what things do                                                                                       |
-| Free context     | [AGENTS.md](#agentsmd), [skills](#skill), and [tools](#tool) kept lean, so most of the [context window](#context-window) is available for the task and the agent stays in the [smart zone](#smart-zone) instead of drowning |
+| بعد             | AX خوب چه شکلی است                                                                                                                                                                                                                    |
+| --------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| بررسیهای خودکار | [بررسیهای خودکار](#automated-check) سریع و قطعی — تایپها، تستها، lintها — که عامل بدون انسان بتواند از رویشان خودش را اصلاح کند                                                                                                 |
+| معماری          | پایگاه کدی که عامل بتواند بدون خواندن همهچیز در آن حرکت کند: ساختار قابل پیشبینی، رفتار زیاد پشت رابطهای کوچک، نامهایی که میگویند چیزها چه میکنند                                                                                     |
+| زمینه آزاد      | [AGENTS.md](#agentsmd)، [مهارتها](#skill) و [ابزارها](#tool) سبک نگه داشته شدهاند تا بیشتر [پنجره زمینه](#context-window) برای کار آزاد باشد و عامل در [منطقه هوشمند](#smart-zone) بماند بهجای اینکه غرق شود |
 
-AX and DX overlap — good checks and clean architecture help both audiences — but they diverge. Humans tolerate tribal knowledge, slow CI, and "ask Sarah about the billing module"; agents can't. Agents don't benefit from IDE tooltips or pretty dashboards; they need failures as text in a [tool result](#tool-result). A codebase can have good DX and poor AX.
+AX و DX همپوشانی دارند — بررسیهای خوب و معماری تمیز به هر دو مخاطب کمک میکنند — اما واگرا میشوند. انسانها دانش قبیلهای، CI کند و «درباره ماژول صورتحساب از سارا بپرس» را تحمل میکنند؛ عاملها نمیتوانند. عاملها از tooltipهای IDE یا داشبوردهای زیبا سودی نمیبرند؛ به خطاها بهصورت متن در [نتیجه ابزار](#tool-result) نیاز دارند. پایگاه کد میتواند DX خوب و AX ضعیف داشته باشد.
 
-_Avoid:_ treating AX as a synonym for DX — the audiences need different investments.
+_نبایدها:_ با AX مثل مترادف DX رفتار نکنید — مخاطبها سرمایهگذاری متفاوتی میخواهند.
 
-_Usage:_
+_کاربرد:_
 
-"The agent writes great code in the API repo and garbage in the frontend."
+«عامل در مخزن API کد عالی مینویسد و در فرانتاند زباله.»
 
-"The API repo has strict types and a fast test suite; the frontend has neither and forty always-loaded skills. That's an AX gap, not a model problem."
+«مخزن API تایپ سختگیرانه و تستهای سریع دارد؛ فرانتاند هیچکدام را ندارد و چهل مهارت همیشهبارگذاریشده هم دارد. این شکاف AX است، نه مشکل مدل.»
 

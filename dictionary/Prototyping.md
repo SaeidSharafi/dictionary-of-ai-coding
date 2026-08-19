@@ -1,19 +1,19 @@
 ---
-description: Having the agent build a quick, rough version when conversation is too low-fidelity and you need a real artifact to talk about.
+description: ساخت یک نسخه سریع و خام توسط عامل وقتی گفتوگو وضوح کافی ندارد و برای حرف زدن به چیز واقعی نیاز دارید.
 ---
 
-Having the [agent](./Agent.md) build a quick, rough version of something, for when conversation is too low-fidelity and you need a real artifact to talk about.
+از [عامل](./Agent.md) بخواهید نسخهای سریع و خام از چیزی بسازد، برای وقتی که گفتوگو وضوح کافی ندارد و برای حرف زدن به یک چیز واقعی نیاز دارید.
 
-[Grilling](./Grilling.md) resolves design decisions in conversation. Conversation is cheap, but it's low-fidelity: some questions can't be answered in words — how an interaction feels, whether an API shape is ergonomic in real calling code, whether the layout works at real data sizes. The interview hits a question and your honest answer is "I don't know, I'd have to see it." Past that point the discussion circles. Instead, have the agent build the thing, look at it, and come back to the conversation with an answer.
+[پرسشگری](./Grilling.md) تصمیمهای طراحی را در گفتوگو حل میکند. گفتوگو ارزان است اما وضوح کم دارد: بعضی سؤالها را نمیشود با واژه پاسخ داد — یک تعامل چه حسی دارد، آیا شکل یک API در کد فراخوانی واقعی ارگونومیک است، آیا چیدمان در اندازههای واقعی داده جواب میدهد. مصاحبه به سؤالی میرسد و پاسخ صادقانه شما این است: «نمیدانم، باید ببینمش.» بعد از آن نقطه، بحث دور خودش میچرخد. بهجایش بگذارید عامل چیز را بسازد، نگاهش کنید و با یک پاسخ به گفتوگو برگردید.
 
-Agents lower the cost of building, which is what makes this practical. A rough version that used to take a day to mock up now takes minutes, so it's worth doing routinely. It's a [human-in-the-loop](./Human-in-the-loop.md) technique: the prototype is there for you to react to.
+عاملها هزینه ساختن را پایین میآورند و همین این کار را عملی میکند. نسخه خامی که نمونه خامش قبلاً یک روز وقت میبرد حالا چند دقیقه طول میکشد، پس ارزشش را دارد که بهطور منظم انجامش دهید. تکنیکی است [انسان در حلقه](./Human-in-the-loop.md): نمونه اولیه برای این هست که شما به آن واکنش نشان دهید.
 
-You usually don't stop at one look. Iterate with the prototype — react, ask for a change, react again — so each round resolves another decision against the real artifact, at a higher fidelity than conversation allows.
+معمولاً به یک نگاه بسنده نمیکنید. با نمونه اولیه تکرار کنید — واکنش نشان دهید، تغییری بخواهید، دوباره واکنش نشان دهید — تا هر دور تصمیم دیگری را در برابر چیز واقعی حل کند، با وضوحی بالاتر از آنچه گفتوگو اجازه میدهد.
 
-A prototype doesn't have to be all-scrappy. You can build the pieces you're actually evaluating to production quality, so when the decision lands, the component or API you reacted to can transfer into the real codebase. This makes prototyping essential material for the [spec](./Spec.md) to reference.
+نمونه اولیه لازم نیست همهاش خام باشد. میتوانید قطعههایی را که واقعاً ارزیابی میکنید با کیفیت تولید بسازید، تا وقتی تصمیم گرفته شد، کامپوننت یا APIای که به آن واکنش نشان دادید بتواند به پایگاه کد واقعی منتقل شود. این نمونهسازی اولیه را به مادهای ضروری برای ارجاع [مشخصات](./Spec.md) تبدیل میکند.
 
-_Usage:_
+_کاربرد:_
 
-"We've spent half an hour arguing about whether the wizard should be one page or three steps."
+«نیم ساعت است بحث میکنیم که ویزارد باید یک صفحه باشد یا سه مرحله.»
 
-"Words won't settle it — have the agent prototype both. We'll click through them and know in five minutes."
+«واژهها حلش نمیکنند — بگذار عامل از هر دو نمونه اولیه بسازد. کلیک میکنیم رویشان و تا پنج دقیقه دیگر میفهمیم.»

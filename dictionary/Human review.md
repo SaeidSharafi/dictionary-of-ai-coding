@@ -1,19 +1,19 @@
 ---
-description: The user reading the code the agent produced and forming a judgement on it. Reading the diff counts; reading the summary doesn't.
+description: کاربر کدی را که عامل تولید کرده می‌خواند و درباره‌اش قضاوت شکل می‌دهد. خواندن دیف حساب می‌شود؛ خواندن خلاصه حساب نمی‌شود.
 ---
 
-The user reading the code the [agent](./Agent.md) produced and forming a judgement on it. Reading the diff or the changed files counts; reading the agent's _description_ of what it did does not — narration is not the artifact. The description is a [secondary source](./Secondary%20source.md), written by the party being reviewed; the diff is the [primary source](./Primary%20source.md), and review means reading it.
+کاربر کدی را که [عامل](./Agent.md) تولید کرده می‌خواند و درباره‌اش قضاوت شکل می‌دهد. خواندن دیف یا فایل‌های تغییرکرده حساب می‌شود؛ خواندن _شرحِ_ عامل از کاری که کرده حساب نمی‌شود — روایت، خودِ اثر نیست. شرح یک [منبع ثانویه](./Secondary%20source.md) است که طرفِ مورد بازبینی نوشته؛ دیف [منبع اولیه](./Primary%20source.md) است، و بازبینی یعنی خواندن آن.
 
-Agents raise the volume of code produced, so review becomes the bottleneck. One useful idea is layering different review strategies. [Automated checks](./Automated%20check.md) catch the mechanical failures, [automated review](./Automated%20review.md) catches the describable ones, and human review is reserved for what only you can judge — whether the change is the right change, whether the approach fits the codebase, whether this should exist at all.
+عامل‌ها حجم کد تولیدشده را بالا می‌برند، پس بازبینی گلوگاه می‌شود. یک ایده مفید لایه‌بندی استراتژی‌های مختلف بازبینی است. [بررسی‌های خودکار](./Automated%20check.md) شکست‌های مکانیکی را می‌گیرند، [بازبینی خودکار](./Automated%20review.md) شکست‌های قابل توصیف را می‌گیرد، و بازبینی انسانی برای چیزی محفوظ است که فقط شما می‌توانید قضاوت کنید — اینکه آیا تغییر، تغییر درستی است، آیا رویکرد به پایگاه کد می‌خورد، آیا اصلاً این چیز باید وجود داشته باشد.
 
-Review is also cheaper earlier. Reading a plan before work starts, or a small diff mid-flight, takes minutes; excavating a finished branch after an [AFK](./AFK.md) run takes longer. Where you place the review checkpoint is a [human-in-the-loop](./Human-in-the-loop.md) decision, not an afterthought.
+بازبینی زودتر ارزان‌تر هم هست. خواندن یک برنامه قبل از شروع کار، یا یک دیف کوچک وسط راه، چند دقیقه می‌برد؛ کندوکاو یک برنچ تمام‌شده بعد از اجرای [AFK](./AFK.md) بیشتر طول می‌کشد. جایی که نقطه بازبینی را می‌گذارید یک تصمیم [انسان در حلقه](./Human-in-the-loop.md) است، نه یک فکرِ آخرِ کار.
 
-_Avoid:_ "code review" alone — ambiguous between human and automated.
+_نبایدها:_ «'code review'» به‌تنهایی — مبهم است بین انسانی و خودکار.
 
-_Usage:_
+_کاربرد:_
 
-"I human-reviewed the AFK output."
+«خروجی AFK را بازبینی انسانی کردم.»
 
-"You read the diff or just the summary?"
+«دیف را خواندی یا فقط خلاصه را؟»
 
-"Diff. The summary said it deleted dead code — turned out the function was called from a generated file."
+«دیف را. خلاصه می‌گفت کد مرده را حذف کرده — معلوم شد تابع از یک فایل تولیدشده صدا زده می‌شود.»

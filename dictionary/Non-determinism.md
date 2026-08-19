@@ -1,17 +1,17 @@
 ---
-description: The same input can produce different output. A property of how models generate text and how providers serve requests.
+description: همان ورودی میتواند خروجی متفاوتی تولید کند. خاصیتی از نحوه تولید متن توسط مدلها و نحوه پاسخدهی ارائهدهندهها به درخواستها.
 ---
 
-The same input can produce different output. Run a [model](./Model.md) twice with identical [context](./Context.md) and you may get two different answers — sometimes a word, sometimes a completely different approach. Nothing in your code has to change for this to happen.
+همان ورودی میتواند خروجی متفاوتی تولید کند. یک [مدل](./Model.md) را دو بار با [زمینه](./Context.md) یکسان اجرا کنید و ممکن است دو پاسخ متفاوت بگیرید — گاهی یک واژه فرق میکند، گاهی رویکردی کاملاً متفاوت. برای اینکه این اتفاق بیفتد هیچ چیز در کد شما لازم نیست تغییر کند.
 
-It's a property of how models generate text, and how [model providers](./Model%20provider.md) serve [requests](./Model%20provider%20request.md). During [inference](./Inference.md), the model produces a probability distribution over possible next [tokens](./Token.md) and one is sampled from it — usually with some randomness on purpose, since always picking the most likely token produces repetitive, lower-quality text. One differently-sampled token early in a response changes every token after it, which is how a single different word becomes a completely different approach. Provider-side serving adds more variation on top: requests are batched together on shared hardware, and tiny floating-point differences between batches can tip a close call between two tokens. There's no setting you can flip to make it all go away.
+این خاصیت نحوه تولید متن توسط مدلهاست و نحوه پاسخدهی [ارائهدهندههای مدل](./Model%20provider.md) به [درخواستها](./Model%20provider%20request.md). هنگام [استنتاج](./Inference.md)، مدل یک توزیع احتمال روی [توکنهای](./Token.md) بعدی ممکن تولید میکند و یکی از آن توزیع نمونهبرداری میشود — معمولاً عمداً با کمی تصادف، چون همیشه محتملترین توکن را انتخاب کردن، متنی تکراری و کمعیار تولید میکند. یک توکن که در ابتدای پاسخ متفاوت نمونهبرداری شده، هر توکن بعد از خودش را تغییر میدهد؛ به این شکل یک واژه متفاوت به رویکردی کاملاً متفاوت تبدیل میشود. پاسخدهی سمت ارائهدهنده هم تنوع بیشتری روی آن اضافه میکند: درخواستها روی سختافزار مشترک دستهبندی میشوند و تفاوتهای ریز ممیز شناور بین دستهها میتواند یک رقابت نزدیک بین دو توکن را برگرداند. هیچ تنظیمی وجود ندارد که بتوانید بزنید تا همهاش از بین برود.
 
-Expect a spread of results from an [agent](./Agent.md) on the same task. Most responses fall within a reasonable bell curve of quality — that's why the non-determinism is tolerable at all — but the tails are real: some days the model will feel sharp; some days it'll feel like it's lost the plot. Same task, different rolls of the dice. This has two practical consequences. Retrying is a legitimate strategy: a failed attempt is one draw from the distribution, and a fresh attempt at the same task may simply land better. And verification matters more than it would with deterministic tools — you can't test an agent's behaviour once and rely on it repeating, so [automated checks](./Automated%20check.md) have to catch the bad draws.
+از یک [عامل](./Agent.md) روی همان کار، انتظار پراکندگی نتایج را داشته باشید. بیشتر پاسخها در یک منحنی زنگولهای معقول از کیفیت قرار میگیرند — به همین دلیل است که غیرقطعی بودن اصلاً قابل تحمل است — اما دُمها واقعیاند: بعضی روزها مدل تیز به نظر میرسد؛ بعضی روزها انگار رشته کار را گم کرده. همان کار، تاسهای متفاوت. این دو پیامد عملی دارد. تلاش دوباره یک استراتژی مشروع است: یک تلاش ناموفق یک بار کشیدن از توزیع است، و تلاش تازه روی همان کار ممکن است بهسادگی بهتر از آب دربیاید. و راستیآزمایی بیشتر از آنچه با ابزارهای قطعی اهمیت داشت اهمیت دارد — نمیتوانید رفتار یک عامل را یک بار تست کنید و به تکرارش اعتماد کنید، پس [بررسیهای خودکار](./Automated%20check.md) باید کششهای بد را بگیرند.
 
-Be careful not to over-narrativize this. Humans are pattern-matching machines, and a string of bad runs can feel like proof that "the model got worse this week." Usually it's just the distribution.
+مراقب باشید این را بیش از حد داستانی نکنید. انسانها ماشینهای تطبیق الگو هستند، و یک رشته اجراهای بد میتواند مثل اثری حس شود که «مدل این هفته بدتر شده». معمولاً فقط توزیع است.
 
-_Usage:_
+_کاربرد:_
 
-"Claude has been awful today. Did they ship a worse version?"
+«Claude امروز افتضاح بوده. مگر نسخه بدتری عرضه کردهاند؟»
 
-"Probably not — model output is non-deterministic. You're going to have good days and bad days on the same task. Try again tomorrow before you go looking for a cause."
+«احتمالاً نه — خروجی مدل غیرقطعی است. روی همان کار روزهای خوب و بد خواهی داشت. قبل از اینکه دنبال دلیل بگردی، فردا دوباره امتحان کن.»

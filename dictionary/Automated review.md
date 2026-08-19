@@ -1,17 +1,17 @@
 ---
-description: "An agent reviewing another agent's work, often with a different model or system prompt. Non-deterministic: it forms a judgement."
+description: عاملی که کار عامل دیگر را بازبینی می‌کند، اغلب با مدل یا پرامپت سیستم متفاوت. غیرقطعی: قضاوت شکل می‌دهد.
 ---
 
-An [agent](./Agent.md) reviewing another agent's work, often with a different [model](./Model.md) or [system prompt](./System%20prompt.md). Non-deterministic: it forms a judgement. Runs anywhere — pre-merge on a PR, post-hoc on commit history, mid-session as a [subagent](./Subagent.md). An LLM-as-judge in CI is automated review, not an [automated check](./Automated%20check.md); what the assertion _does_ decides the category, not where it runs.
+[عاملی](./Agent.md) که کار عامل دیگر را بازبینی می‌کند، اغلب با [مدل](./Model.md) یا [پرامپت سیستم](./System%20prompt.md) متفاوت. غیرقطعی: قضاوت شکل می‌دهد. همه‌جا اجرا می‌شود — قبل از merge روی PR، پس از واقع روی تاریخچه commitها، وسط نشست به‌صورت [زیرعامل](./Subagent.md). یک LLM به‌عنوان قاضی در CI بازبینی خودکار است، نه [بررسی خودکار](./Automated%20check.md)؛ این که assert چه _کاری_ می‌کند دسته را تعیین می‌کند، نه اینکه کجا اجرا می‌شود.
 
-The separation from the working agent is what makes it work. Asking the agent that wrote the code to review its own work gets you very little — the [session](./Session.md) that produced the bug also contains the reasoning that produced it, and the agent reads its own conclusions back as confirmation. A reviewer with a fresh [context window](./Context%20window.md) has none of that attachment: it sees the diff the way a stranger would, which is what review depends on. A different model or a review-specific system prompt sharpens this further — different blind spots, and a system prompt scoped to what you actually care about (security, API contracts, performance) rather than a vague "look for problems".
+جدایی از عاملِ کارکننده چیزی است که آن را به کار می‌اندازد. از عاملِ نویسنده کد بخواهید کار خودش را بازبینی کند، چیز زیادی به دست نمی‌آورید — [نشستی](./Session.md) که باگ را تولید کرده، استدلال تولیدکننده‌اش را هم در خود دارد، و عامل نتیجه‌گیری‌های خودش را به‌عنوان تأیید دوباره می‌خواند. بازبین با [پنجره زمینه](./Context%20window.md) تازه هیچ‌کدام از آن وابستگی‌ها را ندارد: دیف را طوری می‌بیند که یک غریبه می‌بیند، و بازبینی به همین بستگی دارد. مدل متفاوت یا پرامپت سیستم مخصوص بازبینی این را تیزتر می‌کند — نقطه کورهای متفاوت، و پرامپت سیستمی محدود به چیزی که واقعاً برایتان مهم است (امنیت، قراردادهای API، کارایی) به‌جای یک «'به دنبال مشکل بگرد'» مبهم.
 
-It slots between the other review layers. Automated checks are deterministic and catch what can be asserted mechanically; [human review](./Human%20review.md) is expensive and scales worst. Automated review sits in the middle: it catches judgement-shaped problems — a misleading function name, a missed edge case — at machine cost. Because it's non-deterministic, it can miss things and flag non-issues; treat it as a filter that raises the floor before a human looks, not a gate that replaces one.
+بین لایه‌های دیگر بازبینی جا می‌گیرد. بررسی‌های خودکار قطعی‌اند و چیزی را می‌گیرند که به‌صورت مکانیکی قابل assert است؛ [بازبینی انسانی](./Human%20review.md) گران است و بدترین مقیاس‌پذیری را دارد. بازبینی خودکار در وسط می‌نشیند: مشکلاتِ قضاوتی را می‌گیرد — نام تابع گمراه‌کننده، حالت مرزی از قلم افتاده — به هزینه ماشین. چون غیرقطعی است، می‌تواند چیزهایی را از دست بدهد و غیرمسئله‌ها را پرچم کند؛ به‌عنوان فیلتری با آن برخورد کنید که قبل از نگاه انسانی کف را بالا می‌برد، نه دروازه‌ای که جای آن را می‌گیرد.
 
-_Avoid:_ "AI review" / "agent review" — too vague to distinguish from the working agent itself.
+_نبایدها:_ «'AI review'» / «'agent review'» — آن‌قدر مبهم‌اند که نمی‌توانند از خود عاملِ کارکننده متمایز کنند.
 
-_Usage:_
+_کاربرد:_
 
-"We're getting too many bad PRs from the [AFK](./AFK.md) runs."
+«از اجراهای [AFK](./AFK.md) PRهای بد زیادی می‌گیریم.»
 
-"Add an automated review step before merge — different model, separate system prompt, scoped to security and contract changes."
+«یک مرحله بازبینی خودکار قبل از merge اضافه کن — مدل متفاوت، پرامپت سیستم جدا، محدود به تغییرهای امنیتی و قراردادی.»

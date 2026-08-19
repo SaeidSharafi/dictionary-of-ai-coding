@@ -1,5 +1,5 @@
 ---
-description: A preset bundling a permission mode with behavioral instructions injected into the system prompt. Can flip mid-session.
+description: پیش‌تنظیمی که حالت مجوز را با دستورالعمل‌های رفتاری تزریق‌شده در پرامپت سیستم ترکیب می‌کند. می‌تواند وسط نشست عوض شود.
 aliases:
   - plan mode
   - accept-edits
@@ -7,20 +7,20 @@ aliases:
   - YOLO mode
 ---
 
-A preset that shapes how the [agent](./Agent.md) operates at runtime — bundles a [permission mode](./Permission%20mode.md) with behavioral instructions injected into the [system prompt](./System%20prompt.md). Examples: a default that prompts on risky calls, a **plan mode** that blocks edits and steers the agent toward research, an **accept-edits** mode that auto-approves edits, a **bypass permissions** mode (colloquially **YOLO mode**) that auto-approves everything. Can flip [mid-session](./Session.md).
+پیش‌تنظیمی که شکل کار [عامل](./Agent.md) را در زمان اجرا تعیین می‌کند — یک [حالت مجوز](./Permission%20mode.md) را با دستورالعمل‌های رفتاری که در [پرامپت سیستم](./System%20prompt.md) تزریق می‌شوند ترکیب می‌کند. مثال‌ها: حالت پیش‌فرض که روی فراخوانی‌های پرخطر می‌پرسد، یک **حالت plan** که ویرایش‌ها را مسدود می‌کند و عامل را به سمت تحقیق می‌برد، یک حالت **accept-edits** که ویرایش‌ها را خودکار تأیید می‌کند، و یک حالت **bypass permissions** (به‌طور عامیانه **حالت YOLO**) که همه‌چیز را خودکار تأیید می‌کند. می‌تواند وسط [نشست](./Session.md) عوض شود.
 
-The bundling is what distinguishes a mode from a bare permission setting. A permission mode is only a gate: it decides which [tool calls](./Tool%20call.md) go through. A gate alone produces an agent that wants to edit but can't — it proposes the write, gets blocked, and tries another way. The injected instructions remove the want: plan mode doesn't just block edits, it tells the agent it's in a planning phase, so it reads, asks, and proposes instead of straining against the gate. Gate and steer point the same direction.
+همین ترکیب‌کردن است که حالت را از یک تنظیم مجوزِ خام متمایز می‌کند. حالت مجوز فقط یک دروازه است: تصمیم می‌گیرد کدام [فراخوانی‌های ابزار](./Tool%20call.md) عبور کنند. یک دروازه به‌تنهایی عاملی می‌سازد که می‌خواهد ویرایش کند اما نمی‌تواند — نوشتن را پیشنهاد می‌کند، مسدود می‌شود و راه دیگری را امتحان می‌کند. دستورالعمل‌های تزریق‌شده خواستن را از بین می‌برند: حالت plan فقط ویرایش‌ها را مسدود نمی‌کند، به عامل می‌گوید در فاز برنامه‌ریزی است، پس می‌خواند، می‌پرسد و پیشنهاد می‌دهد به‌جای اینکه با دروازه بجنگد. دروازه و هدایت در یک جهت اشاره می‌کنند.
 
-In practice, you change mode as your trust changes over the course of a task. The same task can pass through several modes: plan mode while the approach is still being shaped, the prompting default for the first delicate edits, accept-edits once the agent has shown it understands the change, bypass for an [AFK](./AFK.md) run inside a [sandbox](./Sandbox.md). Changing mode costs you nothing: the conversation continues exactly where it was, with new permissions and new instructions. If you find yourself approving every prompt without reading it, the mode is set tighter than your actual trust; if you keep rejecting edits, it's set looser.
+در عمل، حالت را عوض می‌کنید چون اعتمادتان در طول یک کار تغییر می‌کند. همان کار می‌تواند از چند حالت عبور کند: حالت plan تا وقتی رویکرد هنوز در حال شکل‌گیری است، پیش‌فرضِ پرسشگر برای اولین ویرایش‌های ظریف، accept-edits وقتی عامل نشان داده که تغییر را می‌فهمد، bypass برای یک اجرای [دور از کیبورد](./AFK.md) داخل یک [سندباکس](./Sandbox.md). عوض کردن حالت هیچ هزینه‌ای ندارد: گفت‌وگو دقیقاً همان‌جا که بود ادامه پیدا می‌کند، با مجوزها و دستورالعمل‌های تازه. اگر می‌بینید هر پرامپت را بدون خواندنش تأیید می‌کنید، حالت از اعتماد واقعی شما سفت‌تر تنظیم شده؛ اگر مدام ویرایش‌ها را رد می‌کنید، شل‌تر است.
 
-_Vendor terms:_ Claude Code calls these "permission modes," Codex calls them "approval modes" — both predate behavioral bundling.
+_اصطلاح فروشنده‌ها:_ Claude Code به این‌ها 'permission modes' می‌گوید، Codex به آن‌ها 'approval modes' می‌گوید — هر دو از بسته‌بندی رفتاری قدیمی‌ترند.
 
-_Usage:_
+_کاربرد:_
 
-"It keeps editing files when I just want a plan."
+«وقتی فقط یک برنامه می‌خواهم، مدام فایل‌ها را ویرایش می‌کند.»
 
-"Switch to plan mode — it'll block writes and stay in research."
+«به حالت plan برو — نوشتن را مسدود می‌کند و در تحقیق می‌ماند.»
 
-"What about for the AFK run later?"
+«برای اجرای دور از کیبوردِ بعدی چه؟»
 
-"Bypass mode, but only inside the sandbox."
+«حالت bypass، اما فقط داخل سندباکس.»

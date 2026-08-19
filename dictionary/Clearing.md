@@ -1,17 +1,17 @@
 ---
-description: Ending the current session and starting a fresh one. The next message begins with an empty session and an empty context window.
+description: پایان دادن به نشست جاری و شروع یک نشست تازه. پیام بعدی با نشستی خالی و پنجره زمینهای خالی آغاز میشود.
 ---
 
-Ending the current [session](./Session.md) and starting a fresh one. The next message begins with an empty session and an empty [context window](./Context%20window.md). Usually user-driven.
+پایان دادن به [نشست](./Session.md) جاری و شروع یک نشست تازه. پیام بعدی با نشستی خالی و [پنجره زمینهای](./Context%20window.md) خالی آغاز میشود. معمولاً توسط کاربر انجام میشود.
 
-Clearing is the cure for a polluted context. A session accumulates everything: failed attempts, wrong turns, stale [tool results](./Tool%20result.md), abandoned plans. The [model](./Model.md) re-reads all of it on every [turn](./Turn.md), and bad history drags on new work. Deep into a long session the [agent](./Agent.md) gets vaguer and less obedient — instructions you gave clearly get ignored, quality slips, and prodding it to do better doesn't help, because the noise it's wading through is still in its [context](./Context.md). Clearing removes the noise.
+پاکسازی، درمان زمینه آلوده است. نشست همهچیز را انباشته میکند: تلاشهای ناموفق، مسیرهای اشتباه، [نتیجه ابزارهای](./Tool%20result.md) کهنه، برنامههای رهاشده. [مدل](./Model.md) در هر [نوبت](./Turn.md) همه آنها را دوباره میخواند و تاریخچه بد، کار تازه را عقب میکشد. در عمق یک نشست طولانی، [عامل](./Agent.md) مبهمتر و کماطاعتتر میشود — دستورهایی که واضح دادهاید نادیده گرفته میشوند، کیفیت کار میافتد و تشویق کردنش به انجام بهتر هم فایده ندارد، چون نویزی که در آن دستوپا میزند هنوز در [زمینه](./Context.md)اش است. پاکسازی نویز را از بین میبرد.
 
-Clearing doesn't erase the conversation. Most [harnesses](./Harness.md) keep session history on your computer, so the transcript is still there to read or resume. What's gone is the agent's working state: the model is [stateless](./Stateless.md), so the new session knows nothing the old one knew. If the session holds decisions or progress the next one will need, have the agent write a [handoff artifact](./Handoff%20artifact.md) first, then start the new session by pointing at it.
+پاکسازی گفتوگو را پاک نمیکند. بیشتر [بسترهای اجرایی](./Harness.md) تاریخچه نشست را روی رایانه شما نگه میدارند، پس رونوشت هنوز آنجاست که خوانده شود یا ادامه داده شود. چیزی که از بین رفته وضعیت کاری عامل است: مدل [بیوضعیت](./Stateless.md) است، پس نشست جدید هیچکدام از دانستههای نشست قبلی را ندارد. اگر نشست تصمیمها یا پیشرفتی دارد که نشست بعدی به آن نیاز خواهد داشت، اول از عامل بخواهید یک [سند انتقال زمینه](./Handoff%20artifact.md) بنویسد، بعد نشست جدید را با اشاره به همان سند شروع کنید.
 
-Compare [compaction](./Compaction.md), which summarises the session into the new context instead of starting empty. Clearing is the blunter tool: nothing carries over, including the junk.
+مقایسه کنید با [فشردهسازی](./Compaction.md)، که نشست را خلاصه میکند و خلاصه را وارد زمینه جدید میکند بهجای اینکه خالی شروع کند. پاکسازی ابزار خشنتری است: هیچچیز منتقل نمیشود، حتی زبالهها.
 
-_Usage:_
+_کاربرد:_
 
-"It's stuck looping on the failing test."
+«توی حلقه تست ناموفق گیر کرده.»
 
-"Just clear it — start a fresh session with the plan doc and the test file. No point fighting the existing context."
+«فقط پاکش کن — یک نشست تازه با سند برنامه و فایل تست شروع کن. جنگیدن با زمینه موجود بیفایده است.»

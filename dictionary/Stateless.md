@@ -1,15 +1,15 @@
 ---
-description: Carries no information forward. The model is stateless across requests; an agent is stateless across sessions by default.
+description: هیچ اطلاعاتی را به جلو نمی‌برد. مدل بین درخواست‌ها بی‌وضعیت است؛ عامل هم به‌طور پیش‌فرض بین نشست‌ها بی‌وضعیت است.
 ---
 
-Carries no information forward. The [model](./Model.md) is stateless across [model provider requests](./Model%20provider%20request.md) — each request resends the full [context window](./Context%20window.md), because the model has no way to see anything else. An [agent](./Agent.md) is stateless across [sessions](./Session.md) by default: a new session starts empty, with no trace of prior ones. Counterpart to [stateful](./Stateful.md).
+هیچ اطلاعاتی را به جلو نمی‌برد. [مدل](./Model.md) بین [درخواست‌های به ارائه‌دهنده مدل](./Model%20provider%20request.md) بی‌وضعیت است — هر درخواست کل [پنجره زمینه](./Context%20window.md) را دوباره می‌فرستد، چون مدل هیچ راه دیگری برای دیدن ندارد. یک [عامل](./Agent.md) به‌طور پیش‌فرض بین [نشست‌ها](./Session.md) بی‌وضعیت است: نشست تازه خالی شروع می‌شود و هیچ اثری از نشست‌های قبلی ندارد. مقابلِ [وضعیت‌دار](./Stateful.md).
 
-The model itself is permanently stateless: its [parameters](./Parameters.md) are frozen after [training](./Training.md), and nothing you do at [inference](./Inference.md) changes them. The model doesn't learn from your corrections, doesn't remember being told the same thing yesterday, and isn't getting to know you — however much the conversation feels otherwise. The feeling of continuity within a session is manufactured by the [harness](./Harness.md), which keeps the transcript and re-sends it with every request. The model isn't remembering the conversation; it's re-reading it.
+خود مدل برای همیشه بی‌وضعیت است: [پارامترهایش](./Parameters.md) بعد از [آموزش](./Training.md) منجمد می‌شوند و هیچ کاری که در [استنتاج](./Inference.md) انجام دهید آن‌ها را تغییر نمی‌دهد. مدل از اصلاح‌های شما یاد نمی‌گیرد، به خاطر نمی‌آورد که دیروز همان مطلب به او گفته شده، و در حال شناختن شما نیست — هرچقدر هم که گفت‌وگو غیر از این حس بدهد. حس پیوستگی درون یک نشست را [بستر اجرایی](./Harness.md) می‌سازد؛ بستر اجرایی رونوشت را نگه می‌دارد و با هر درخواست دوباره می‌فرستدش. مدل گفت‌وگو را به خاطر نمی‌آورد؛ دارد دوباره می‌خواندش.
 
-The practical consequence: if you want something remembered across sessions, you have to write it down somewhere the agent will read it back. That's what [AGENTS.md](./AGENTS.md.md) files, [memory systems](./Memory%20system.md), and [handoff artifacts](./Handoff%20artifact.md) are — files that get loaded into the [context](./Context.md) of future sessions, standing in for the memory the model doesn't have. When the agent keeps making a mistake you've corrected before, the question isn't why it didn't learn — it can't — but where that correction should be written down so every future session reads it.
+نتیجه عملی این است: اگر می‌خواهید چیزی بین نشست‌ها به خاطر بماند، باید آن را جایی بنویسید که عامل بتواند دوباره بخواندش. فایل‌های [AGENTS.md](./AGENTS.md.md)، [سیستم‌های حافظه](./Memory%20system.md) و [سندهای انتقال زمینه](./Handoff%20artifact.md) برای همین هستند — فایل‌هایی که در [زمینه](./Context.md) نشست‌های آینده بارگذاری می‌شوند و جای حافظه‌ای را می‌گیرند که مدل ندارد. وقتی عامل مرتباً همان اشتباهی را می‌کند که قبلاً اصلاحش کرده‌اید، پرسش این نیست که چرا یاد نگرفت — نمی‌تواند — بلکه این است که آن اصلاح کجا نوشته شود تا هر نشست آینده‌ای بخواندش.
 
-_Usage:_
+_کاربرد:_
 
-"Why does it forget the convention every time I [clear](./Clearing.md)?"
+«چرا هر بار که [پاک‌سازی](./Clearing.md) می‌کنم قرارداد را فراموش می‌کند؟»
 
-"The model's stateless — the new session starts empty. If you want it carried, write it to AGENTS.md or a memory file the harness loads at session start."
+«مدل بی‌وضعیت است — نشست تازه خالی شروع می‌شود. اگر می‌خواهید حفظ شود، در AGENTS.md یا یک فایل حافظه بنویسید که بستر اجرایی هنگام شروع نشست بارگذاری می‌کند.»

@@ -1,24 +1,24 @@
 ---
-description: Input tokens the provider has cached from a previous request via its prefix cache, billed at a much lower rate.
+description: توکنهای ورودی که ارائهدهنده از یک درخواست قبلی از طریق کش پیشوندش کش کرده و با نرخ بسیار کمتری محاسبه میشوند.
 ---
 
-[Input tokens](./Input%20tokens.md) the [provider](./Model%20provider.md) has cached from a previous [model provider request](./Model%20provider%20request.md) so it doesn't have to re-process them. When consecutive requests share a prefix, the provider reuses the work via its [prefix cache](./Prefix%20cache.md) and bills the cached portion at a much lower rate. The lever that makes long [sessions](./Session.md) affordable — without it, every [turn](./Turn.md) re-pays for the whole history.
+[توکنهای ورودی](./Input%20tokens.md)ای که [ارائهدهنده](./Model%20provider.md) از یک [درخواست به ارائهدهنده مدل](./Model%20provider%20request.md) قبلی کش کرده تا مجبور نباشد دوباره پردازششان کند. وقتی درخواستهای پیاپی پیشوندی مشترک دارند، ارائهدهنده از طریق [کش پیشوند](./Prefix%20cache.md) کار را دوباره استفاده میکند و بخش کششده را با نرخ بسیار کمتری محاسبه میکند. اهرمی که [نشستهای](./Session.md) طولانی را مقرونبهصرفه میکند — بدون آن، هر [نوبت](./Turn.md) دوباره بابت کل تاریخچه پول میدهد.
 
-The reason this matters is how sessions are billed. The [model](./Model.md) is [stateless](./Stateless.md), so every request resends the entire conversation — [system prompt](./System%20prompt.md), every message, every [tool result](./Tool%20result.md) — as input tokens. By turn fifty, each request carries fifty turns of history, and you'd pay full rate on all of it, every time. The cache changes the maths: tokens the provider has already processed in an identical prefix are billed as cache tokens, often at a tenth of the input rate or less. On a long session, most of what you send is cache tokens, and the bill stays sane.
+دلیلی که این مهم است نحوه محاسبه صورتحساب نشستهاست. [مدل](./Model.md) [بیوضعیت](./Stateless.md) است، پس هر درخواست کل گفتوگو را دوباره میفرستد — [پرامپت سیستم](./System%20prompt.md)، هر پیام، هر [نتیجه ابزار](./Tool%20result.md) — بهصورت توکنهای ورودی. تا نوبت پنجاهم، هر درخواست پنجاه نوبت تاریخچه حمل میکند و هر بار بابت همهاش با قیمت کامل پول میدادید. کش حسابوکتاب را عوض میکند: توکنهایی که ارائهدهنده قبلاً در یک پیشوند یکسان پردازش کرده بهعنوان توکنهای کش محاسبه میشوند، اغلب با یکدهم نرخ ورودی یا کمتر. در یک نشست طولانی، بیشتر چیزی که میفرستید توکنهای کشاند و صورتحساب معقول میماند.
 
-An example shows when tokens are cached and when they're not. Each letter stands for a block of conversation content; each request sends the conversation so far:
+یک مثال نشان میدهد توکنها کی کش میشوند و کی نه. هر حرف نماینده یک بلوک از محتوای گفتوگوست؛ هر درخواست گفتوگو تا اینجا را میفرستد:
 
-| Request sends | Cached  | Billed at full rate | Why                                               |
-| ------------- | ------- | ------------------- | ------------------------------------------------- |
-| `AB`          | nothing | `AB`                | First request — nothing to match against          |
-| `ABC`         | `AB`    | `C`                 | `AB` is an exact prefix of the previous request   |
-| `ABCD`        | `ABC`   | `D`                 | Prefix still intact                               |
-| `AXCD`        | `A`     | `XCD`               | An edit changed `B` to `X`; the match fails there |
+| درخواست میفرستد | کششده | با قیمت کامل محاسبه میشود | چرا                                                       |
+| --------------- | ----- | ------------------------- | --------------------------------------------------------- |
+| `AB`            | هیچ   | `AB`                      | اولین درخواست — چیزی برای تطبیق وجود ندارد                |
+| `ABC`           | `AB`  | `C`                       | `AB` پیشوند دقیق درخواست قبلی است                         |
+| `ABCD`          | `ABC` | `D`                       | پیشوند هنوز دستنخورده است                                 |
+| `AXCD`          | `A`   | `XCD`                     | یک ویرایش `B` را به `X` تغییر داد؛ تطبیق آنجا شکست میخورد |
 
-The cache is fragile in a specific way: it matches exact prefixes. If anything changes earlier in the conversation — the [harness](./Harness.md) reorders content, a timestamp updates, a file's representation shifts — the cache misses from that point onward and everything after it is billed at full input rate. Caches also expire after a few minutes of inactivity, so a session resumed after a long pause re-pays its history once. When a session's cost jumps without an obvious cause, compare cache tokens to input tokens in the usage report — a broken cache shows up there first.
+کش به شکلی خاص شکننده است: پیشوندهای دقیق را تطبیق میدهد. اگر هر چیزی زودتر در گفتوگو تغییر کند — [بستر اجرایی](./Harness.md) محتوا را مرتب کند، یک برچسب زمانی بهروز شود، نمایش یک فایل عوض شود — کش از همان نقطه به بعد از دست میرود و هر چیزی بعد از آن با قیمت کامل ورودی محاسبه میشود. کشها هم بعد از چند دقیقه بیکاری منقضی میشوند، پس نشستی که بعد از یک مکث طولانی از سر گرفته میشود یک بار بابت تاریخچهاش دوباره پول میدهد. وقتی هزینه یک نشست بدون دلیل روشنی جهش میکند، توکنهای کش را با توکنهای ورودی در گزارش مصرف مقایسه کنید — کش خراب اول آنجا خودش را نشان میدهد.
 
-_Usage:_
+_کاربرد:_
 
-"Cost on long sessions is brutal — eight bucks for a refactor."
+«هزینه نشستهای طولانی بیرحمانه است — هشت دلار برای یک بازسازی کد.»
 
-"Check the cache tokens. If the harness is reordering the system prompt or files between turns, the prefix breaks and you re-pay full input rate every request."
+«توکنهای کش را بررسی کن. اگر بستر اجرایی پرامپت سیستم یا فایلها را بین نوبتها مرتب میکند، پیشوند میشکند و در هر درخواست دوباره نرخ کامل ورودی را میپردازی.»

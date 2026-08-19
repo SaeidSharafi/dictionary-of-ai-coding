@@ -1,17 +1,17 @@
 ---
-description: A protocol for plugging external tool servers into a harness — how an agent gets tools beyond what the harness ships with.
+description: پروتکلی برای وصل کردن سرورهای ابزار بیرونی به بستر اجرایی — چطور عامل ابزارهایی فراتر از آنچه بستر اجرایی با خود دارد به دست می‌آورد.
 ---
 
-**Model Context Protocol.** A protocol for plugging external tool servers into a [harness](./Harness.md) — how an [agent](./Agent.md) gets [tools](./Tool.md) beyond what the harness ships with. The agent never "calls MCP"; it calls a tool, and the harness happens to have gotten that tool from an MCP server. Also exposes resources (read-only data) and prompts (reusable templates), but tool provision is the primary use.
+**Model Context Protocol.** پروتکلی برای وصل کردن سرورهای ابزار بیرونی به [بستر اجرایی](./Harness.md) — یعنی چطور یک [عامل](./Agent.md) [ابزارهایی](./Tool.md) فراتر از آنچه بستر اجرایی با خود دارد به دست می‌آورد. عامل هرگز «MCP را صدا نمی‌زند»؛ یک ابزار را صدا می‌زند، و بستر اجرایی اتفاقاً آن ابزار را از یک سرور MCP گرفته. همچنین منابع (داده‌های فقط‌خواندنی) و پرامپت‌ها (قالب‌های قابل استفاده دوباره) را هم در معرض دید می‌گذارد، اما کاربرد اصلی‌اش فراهم کردن ابزار است.
 
-The protocol solves an integration problem. Without a standard, every harness would need its own Linear integration, its own Slack integration, its own database integration — written and maintained separately for each. With MCP, the integration is written once as a server, and any MCP-compatible harness can use it. The harness connects to the server, the server advertises what tools it offers, and those tools become available to the agent alongside the built-in ones.
+پروتکل یک مشکل یکپارچه‌سازی را حل می‌کند. بدون استاندارد، هر بستر اجرایی به یکپارچه‌سازی Linear خودش، یکپارچه‌سازی Slack خودش و یکپارچه‌سازی پایگاه داده خودش نیاز داشت — که برای هر کدام جدا نوشته و نگهداری می‌شد. با MCP، یکپارچه‌سازی یک بار به‌صورت سرور نوشته می‌شود و هر بستر اجرایی سازگار با MCP می‌تواند از آن استفاده کند. بستر اجرایی به سرور وصل می‌شود، سرور اعلام می‌کند چه ابزارهایی ارائه می‌دهد، و آن ابزارها کنار ابزارهای داخلی در دسترس عامل قرار می‌گیرند.
 
-The cost is paid in [context](./Context.md). Every tool a server advertises arrives as a definition — name, description, parameter schema — and the [model](./Model.md) can only call tools it knows about. The naive approach loads every definition into the [context window](./Context%20window.md) up front: install a few generous servers and a [session](./Session.md) starts with thousands of [tokens](./Token.md) of tool schemas before you've typed anything, spending [attention budget](./Attention%20budget.md) on tools the task will never use.
+هزینه‌اش در [زمینه](./Context.md) پرداخت می‌شود. هر ابزاری که یک سرور اعلام می‌کند به‌صورت یک تعریف وارد می‌شود — نام، توصیف، شمای پارامتر — و [مدل](./Model.md) فقط می‌تواند ابزارهایی را صدا بزند که از آن‌ها خبر دارد. رویکرد ساده‌لوحانه همه تعریف‌ها را از همان ابتدا در [پنجره زمینه](./Context%20window.md) بارگذاری می‌کند: چند سرور پرمایه نصب کنید و یک [نشست](./Session.md) با هزاران [توکن](./Token.md) شمای ابزار شروع می‌شود، قبل از اینکه حتی چیزی تایپ کرده باشید، و [بودجه توجه](./Attention%20budget.md) را روی ابزارهایی خرج می‌کند که کار هرگز استفاده‌شان نخواهد کرد.
 
-Many harnesses now mitigate this with tool search: instead of the full definitions, the context holds a [context pointer](./Context%20pointer.md) to the available tools — the agent searches for a tool by name or purpose and loads its definition only when it needs it. If your harness doesn't do this, the up-front cost still applies, and it's worth enabling only the servers a project actually needs.
+بسیاری از بسترهای اجرایی حالا این را با جست‌وجوی ابزار کم می‌کنند: به‌جای تعریف‌های کامل، زمینه یک [اشاره‌گر زمینه](./Context%20pointer.md) به ابزارهای موجود نگه می‌دارد — عامل ابزار را با نام یا کاربرد جست‌وجو می‌کند و تعریفش را فقط وقتی نیاز دارد بارگذاری می‌کند. اگر بستر اجرایی شما این کار را نمی‌کند، هزینه اولیه همچنان برقرار است و ارزشش را دارد که فقط سرورهایی را فعال کنید که پروژه واقعاً به آن‌ها نیاز دارد.
 
-_Usage:_
+_کاربرد:_
 
-"The agent needs to read tickets from Linear."
+«عامل باید تیکت‌ها را از Linear بخواند.»
 
-"Configure the harness to use the Linear MCP server — it exposes the Linear API as tools the agent can call. Saves you writing custom tool wrappers."
+«بستر اجرایی را طوری تنظیم کن که از سرور MCP مربوط به Linear استفاده کند — API لینیر را به‌صورت ابزارهایی که عامل می‌تواند صدا بزند در معرض دید می‌گذارد. از نوشتن wrapperهای ابزار سفارشی بی‌نیازت می‌کند.»

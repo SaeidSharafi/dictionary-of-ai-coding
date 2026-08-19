@@ -1,20 +1,20 @@
 ---
-description: Transferring agent context from one session to another, with no return path. Carry mechanism varies — artifact, compaction, others.
+description: انتقال زمینه عامل از یک نشست به نشست دیگر، بدون مسیر بازگشت. سازوکار انتقال متفاوت است — سند، فشردهسازی و موارد دیگر.
 ---
 
-Transferring [agent](./Agent.md) [context](./Context.md) from one [session](./Session.md) to another. The carry mechanism varies — a written [handoff artifact](./Handoff%20artifact.md), an in-memory summary ([compaction](./Compaction.md)), and others. Distinct from [clearing](./Clearing.md) (no transfer at all). Reasons vary: switching roles (planner → implementer), kicking off an [AFK](./AFK.md) run, fanning out to parallel sessions, or freeing up [context window](./Context%20window.md) room.
+انتقال [زمینه](./Context.md) [عامل](./Agent.md) از یک [نشست](./Session.md) به نشست دیگر. سازوکار انتقال متفاوت است — [سند انتقال زمینه](./Handoff%20artifact.md) نوشتهشده، خلاصهای در حافظه ([فشردهسازی](./Compaction.md)) و موارد دیگر. با [پاکسازی](./Clearing.md) تفاوت دارد (هیچ انتقالی در کار نیست). دلایل هم متفاوتاند: عوض کردن نقش (از برنامهریز به پیادهساز)، شروع یک اجرای [دور از کیبورد](./AFK.md)، پخش کار بین نشستهای موازی، یا آزاد کردن جا در [پنجره زمینه](./Context%20window.md).
 
-The receiving session starts with zero context — the [model](./Model.md) is [stateless](./Stateless.md), and nothing from the old session is visible to the new one. Whatever the next session needs has to be carried explicitly; everything else is gone. "No return path" is the constraint that shapes the carry: the new session can't ask the old one what it meant, so the carried material has to stand on its own.
+نشست گیرنده با صفر زمینه شروع میکند — [مدل](./Model.md) [بیوضعیت](./Stateless.md) است و هیچچیز از نشست قبلی برای نشست جدید دیده نمیشود. هر چیزی که نشست بعدی نیاز دارد باید صریحاً منتقل شود؛ بقیه از بین رفته. «نبود مسیر بازگشت» محدودیتی است که شکل انتقال را تعیین میکند: نشست جدید نمیتواند از نشست قبلی بپرسد منظورش چه بوده، پس مواد منتقلشده باید بهتنهایی سرپا بایستند.
 
-| Mechanism        | Form                                        | Properties                                                                               |
-| ---------------- | ------------------------------------------- | ---------------------------------------------------------------------------------------- |
-| Handoff artifact | File in the [environment](./Environment.md) | You can read and correct it before anything depends on it; reusable across many sessions |
-| Compaction       | Summary in the context window               | Automatic and cheap; harder to inspect; feeds one successor                              |
+| سازوکار          | شکل                               | ویژگیها                                                                                                         |
+| ---------------- | --------------------------------- | --------------------------------------------------------------------------------------------------------------- |
+| سند انتقال زمینه | فایلی در [محیط](./Environment.md) | میتوانید قبل از اینکه چیزی به آن وابسته شود بخوانیدش و اصلاحش کنید؛ در بسیاری از نشستها قابل استفاده دوباره است |
+| فشردهسازی        | خلاصهای در پنجره زمینه            | خودکار و ارزان؛ بازرسیاش سختتر است؛ فقط یک نشست جانشین را تغذیه میکند                                           |
 
-The visible failure of a bad handoff is relitigation: the new session re-opens decisions the old one had settled, because the carry recorded what was decided but not why. Judge a handoff by what a session with zero context could do with it.
+شکست آشکار یک انتقال بد، بازگشتن به بحث است: نشست جدید تصمیمهایی را که نشست قبلی بسته بود دوباره باز میکند، چون در انتقال نوشته شده چه چیزی تصمیم گرفته شده، نه چرا. یک انتقال را با این معیار قضاوت کنید: نشستی با صفر زمینه با آن چه میتواند بکند.
 
-_Usage:_
+_کاربرد:_
 
-"Planning session is getting heavy — should I just keep going?"
+«نشست برنامهریزی دارد سنگین میشود — بهتر است همینطور ادامه بدهم؟»
 
-"Do a handoff. Write the decisions to a doc, clear, start the implementation in a fresh session reading from it."
+«یک انتقال زمینه انجام بده. تصمیمها را بنویس توی یک سند، پاک کن، و پیادهسازی را در یک نشست تازه شروع کن که از همان سند میخواند.»

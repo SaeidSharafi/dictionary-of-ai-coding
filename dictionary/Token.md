@@ -1,19 +1,19 @@
 ---
-description: The atomic unit a model reads and writes. Roughly word-sized but not exactly. Context window size, cost, and latency all count tokens.
+description: واحد اتمی که مدل میخواند و مینویسد. تقریباً هماندازه یک واژه، نه دقیقاً. اندازه پنجره زمینه، هزینه و تأخیر همگی بر حسب توکناند.
 ---
 
-The atomic unit a [model](./Model.md) reads and writes. Roughly word-sized but not exactly — common words are one token, rare or long ones split into several. [Context window](./Context%20window.md) size, cost, and latency are all counted in tokens.
+واحد اتمی که یک [مدل](./Model.md) میخواند و مینویسد. تقریباً هماندازه یک واژه است اما نه دقیقاً — واژههای رایج یک توکناند، واژههای کمیاب یا بلند به چند توکن تقسیم میشوند. اندازه [پنجره زمینه](./Context%20window.md)، هزینه و تأخیر همگی بر حسب توکن سنجیده میشوند.
 
-Text becomes tokens via a tokenizer: a fixed vocabulary of tens of thousands of fragments, learned before [training](./Training.md), that splits any input into a sequence of vocabulary entries. The model never sees characters or words — every piece of text is converted to tokens on the way in, and [next-token prediction](./Next-token%20prediction.md) produces output one token at a time on the way out.
+متن از طریق یک توکنساز به توکن تبدیل میشود: واژگان ثابتی از دهها هزار قطعه که قبل از [آموزش](./Training.md) یاد گرفته شده و هر ورودی را به دنبالهای از مدخلهای واژگان میشکند. مدل هرگز کاراکتر یا واژه نمیبیند — هر تکه متن هنگام ورود به توکن تبدیل میشود، و [پیشبینی توکن بعدی](./Next-token%20prediction.md) هنگام خروج، خروجی را یکییکی تولید میکند.
 
-As a rule of thumb, a token is about three-quarters of an English word, so a thousand tokens is roughly 750 words. Code is less predictable: common keywords and idioms tokenize compactly, while generated identifiers, hashes, base64 blobs, and minified output split into many tokens per "word". The pattern: text that appeared often in the tokenizer's source material gets short, efficient encodings; text that didn't gets chopped into many small pieces. A hash like `a3f9c2e1` never appeared anywhere, so it splits into many tokens, while `function` is one. This is why a small-looking file full of unusual strings can occupy a surprising share of the context window.
+بهعنوان یک قاعده سرانگشتی، هر توکن حدود سهچهارم یک واژه انگلیسی است، پس هزار توکن تقریباً 750 واژه میشود. کد کمتر قابل پیشبینی است: کلیدواژهها و اصطلاحات رایج فشرده توکنسازی میشوند، در حالی که شناسههای تولیدشده، هشها، تودههای base64 و خروجی minified به توکنهای زیادی به ازای هر «واژه» تقسیم میشوند. الگو این است: متنی که در مواد منبع توکنساز زیاد ظاهر شده رمزگذاری کوتاه و کارآمد میگیرد؛ متنی که ظاهر نشده به تکههای کوچک زیادی خرد میشود. هشی مثل `a3f9c2e1` هیچجا ظاهر نشده، پس به توکنهای زیادی تقسیم میشود، در حالی که `function` یک توکن است. به همین دلیل فایلی که کوچک به نظر میرسد ولی پر از رشتههای غیرمعمول است میتواند سهم غیرمنتظرهای از پنجره زمینه را اشغال کند.
 
-Tokens are the unit everything else is measured in. Cost is per token — providers bill [input tokens](./Input%20tokens.md) and [output tokens](./Output%20tokens.md) separately. Speed is tokens per second, since output is generated one token at a time. And the context window is a fixed number of tokens, so the token count of your files decides how much fits.
+توکن واحدی است که همهچیز دیگر با آن سنجیده میشود. هزینه به ازای هر توکن است — ارائهدهندهها [توکنهای ورودی](./Input%20tokens.md) و [توکنهای خروجی](./Output%20tokens.md) را جداگانه محاسبه میکنند. سرعت بر حسب توکن در ثانیه است، چون خروجی یکییکی تولید میشود. و پنجره زمینه تعداد ثابتی توکن است، پس تعداد توکنهای فایلهای شما تعیین میکند چقدر جا میشود.
 
-_Avoid:_ "word" — token boundaries don't match word boundaries, and tokens-per-second / tokens-per-dollar are the units that actually matter.
+_نبایدها:_ «واژه» — مرز توکنها با مرز واژهها منطبق نیست، و واحدهایی که واقعاً اهمیت دارند توکن در ثانیه / توکن به ازای هر دلار است.
 
-_Usage:_
+_کاربرد:_
 
-"How big is this prompt going to be?"
+«این پرامپت چقدر بزرگ خواهد بود؟»
 
-"Run it through the tokenizer — the schema's compact but the JSON keys are weird, so they'll split into more tokens than you think."
+«از توکنساز ردش کن — اسکیمای فشرده است اما کلیدهای JSON عجیباند، پس به توکنهای بیشتری از آنچه فکر میکنی تقسیم میشوند.»

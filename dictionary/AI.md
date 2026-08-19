@@ -1,27 +1,27 @@
 ---
-description: A moving label, not a technology. Points at whatever computers can newly, impressively do — right now, large language models.
+description: یک عنوان سیال و متغیر، نه یک فناوری ثابت. به هر چیزی اشاره میکند که رایانهها تازه و چشمگیر انجام میدهند — در حال حاضر، مدلهای زبانی بزرگ.
 ---
 
-A moving label, not a technology. "AI" doesn't name a fixed thing the way [model](./Model.md) or [token](./Token.md) does — it points at whatever computers can newly, impressively do. Right now it points at large language models. It has pointed at very different things before:
+یک عنوان سیال و متغیر، نه یک فناوری ثابت. «هوش مصنوعی» چیز ثابتی را مثل [مدل](./Model.md) یا [توکن](./Token.md) نامگذاری نمیکند — به هر چیزی اشاره میکند که رایانهها تازه و چشمگیر انجام میدهند. در حال حاضر به مدلهای زبانی بزرگ اشاره میکند و قبلاً هم به چیزهای بسیار متفاوتی اشاره کرده است:
 
-| Era       | What "AI" meant                                                                                       |
-| --------- | ----------------------------------------------------------------------------------------------------- |
-| 1950s     | Symbolic reasoning — theorem provers, checkers programs.                                              |
-| 1960s–70s | Rule-based symbolic programs — ELIZA, SHRDLU.                                                         |
-| 1980s     | Expert systems — thousands of hand-written if-then rules encoding human expertise.                    |
-| 1990s     | Game-tree search — Deep Blue beating Kasparov (1997). Researchers avoided the word "AI" entirely      |
-| 2000s     | Statistical machine learning — spam filters, recommenders. Still sold as "machine learning", not "AI" |
-| 2010s     | Deep learning — image recognition (AlexNet, 2012), AlphaGo (2016).                                    |
-| 2020s     | Large language models — ChatGPT (2022) made "AI" mean chatbots                                        |
+| دوره        | معنای «هوش مصنوعی»                                                                                                    |
+| ----------- | --------------------------------------------------------------------------------------------------------------------- |
+| دهه 1950    | استدلال نمادین — اثباتکنندههای قضیه، برنامههای بازی داما.                                                             |
+| دهه 1960–70 | برنامههای نمادین قاعدهمند — ELIZA، SHRDLU.                                                                            |
+| دهه 1980    | سیستمهای خبره — هزاران قاعده if-then دستنویس که خبرگی انسانی را در خود رمزگذاری میکنند.                               |
+| دهه 1990    | جستجوی درخت بازی — Deep Blue که Kasparov را شکست داد (1997). پژوهشگران کاملاً از واژه «هوش مصنوعی» اجتناب کردند       |
+| دهه 2000    | یادگیری ماشینی آماری — فیلترهای هرزنامه، پیشنهادگرها. هنوز هم بهعنوان 'machine learning' فروخته میشد، نه «هوش مصنوعی» |
+| دهه 2010    | یادگیری عمیق — تشخیص تصویر (AlexNet، 2012)، AlphaGo (2016).                                                           |
+| دهه 2020    | مدلهای زبانی بزرگ — ChatGPT (2022) «هوش مصنوعی» را مترادف چتبات کرد                                                   |
 
-The pointer moves by a known mechanism, sometimes called the AI effect: once a technique works reliably, it gets renamed — it's "just" search, "just" statistics — and "AI" slides forward to the next unsolved thing. The observation is old. Bertram Raphael put it this way in 1971: "AI is a collective name for problems which we do not yet know how to solve properly by computer." Larry Tesler's version, from around 1979: "Intelligence is whatever machines haven't done yet."
+نشانگر با سازوکاری شناختهشده حرکت میکند که گاهی «اثر هوش مصنوعی» نامیده میشود: وقتی یک تکنیک بهطور مطمئن کار میکند، نام تازهای میگیرد — «فقط» جستوجوست، «فقط» آمار — و «هوش مصنوعی» به جلو میلغزد تا به مسئله حلنشده بعدی برسد. این مشاهده قدیمی است. Bertram Raphael در 1971 آن را اینطور بیان کرد: «هوش مصنوعی نامی جمعی برای مسائلی است که هنوز نمیدانیم چطور درست با رایانه حلشان کنیم.» نسخه Larry Tesler از حدود 1979: «هوش یعنی هر کاری که ماشینها هنوز انجامش ندادهاند.»
 
-This is why conversations about AI so often talk past each other. A claim like "AI can't reason" or "AI is overhyped" carries a hidden timestamp — it may be about expert systems, about 2010s image classifiers, or about last month's LLM, and each reference supports a different conclusion. When a discussion about AI stalls, the fix is usually to swap the word for whichever precise term is actually meant: the model, the [harness](./Harness.md), the [agent](./Agent.md), the [context](./Context.md) it was given.
+به همین دلیل گفتوگوهای درباره هوش مصنوعی اغلب از کنار هم رد میشوند. ادعایی مثل «هوش مصنوعی نمیتواند استدلال کند» یا «هوش مصنوعی بیش از حد تبلیغ شده» زمانپنهان دارد — ممکن است درباره سیستمهای خبره باشد، درباره دستهبندهای تصویر دهه 2010، یا درباره LLM ماه گذشته، و هر ارجاع از نتیجه متفاوتی پشتیبانی میکند. وقتی بحثی درباره هوش مصنوعی به بنبست میرسد، راهحل معمول این است که واژه را با همان اصطلاح دقیقی که واقعاً منظور است عوض کنید: مدل، [بستر اجرایی](./Harness.md)، [عامل](./Agent.md)، یا [زمینه](./Context.md)ای که به آن داده شده.
 
-_Avoid:_ "AI" in any technical claim — name the part you mean instead. "AI coding" as a label for the practice is fine; "the AI is hallucinating" is not.
+_نبایدها:_ «هوش مصنوعی» در هر ادعای فنی — بهجای آن، همان بخشی را که منظورتان است نام ببرید. «کدنویسی با هوش مصنوعی» بهعنوان برچسب این کار اشکالی ندارد؛ اما «هوش مصنوعی در حال توهم است» درست نیست.
 
-_Usage:_
+_کاربرد:_
 
-"The CTO wants to know whether AI could handle the triage queue."
+«مدیر فناوری میخواهد بداند آیا هوش مصنوعی میتواند از پس صف triage بربیاید.»
 
-"Translate that before scoping it — she means an LLM in a harness with access to the ticket system. 'AI' on its own isn't a spec."
+«قبل از اینکه محدوده کار را مشخص کنی، اول آن را ترجمه کن — منظورش یک LLM در بستر اجرایی است که به سیستم تیکتها دسترسی دارد. 'AI' بهتنهایی یک مشخصات نیست.»

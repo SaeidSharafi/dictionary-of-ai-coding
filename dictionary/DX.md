@@ -1,19 +1,19 @@
 ---
-description: "Developer experience: how easy a codebase and its toolchain make it for humans to do good work — docs, feedback speed, errors."
+description: تجربه توسعهدهنده — اینکه پایگاه کد و ابزارهایش چقدر کار خوب را برای انسان آسان میکنند: مستندات، سرعت بازخورد، خطاها.
 aliases:
   - Developer experience
 ---
 
-Developer experience — how easy a codebase and its toolchain make it for humans to do good work. Good DX is fast feedback, clear error messages, documentation that answers the question you actually have, and setup that works on the first try. The term long predates AI coding; it's in this dictionary mainly as the contrast for [AX](./AX.md).
+تجربه توسعهدهنده — اینکه پایگاه کد و ابزارهایش چقدر کار خوب را برای انسان آسان میکنند. DX خوب یعنی بازخورد سریع، پیامهای خطای روشن، مستنداتی که به سؤال واقعی شما پاسخ میدهد، و راهاندازی که از اولین تلاش جواب میدهد. این اصطلاح خیلی قبلتر از کدنویسی با هوش مصنوعی وجود داشته؛ در این واژهنامه عمدتاً بهعنوان مقابل [تجربه عامل](./AX.md) آمده.
 
-DX is the interaction between the human and the codebase — nothing more. The main difference between the two audiences is that humans are [stateful](./Stateful.md) and agents are [stateless](./Stateless.md). A human learns the codebase once and carries that knowledge into every day after, which is why poor DX is survivable: they route around slow CI by batching their pushes, around missing docs by asking in Slack once, around confusing structure by remembering where things live. The workarounds accumulate, and a team ends up productive in a codebase that fights them.
+DX تعامل بین انسان و پایگاه کد است — نه بیشتر. تفاوت اصلی بین دو مخاطب این است که انسانها [وضعیتدار](./Stateful.md)اند و عاملها [بیوضعیت](./Stateless.md). انسان یک بار پایگاه کد را یاد میگیرد و آن دانش را به هر روز بعدش میبرد، و به همین دلیل DX ضعیف قابل تحمل است: با دستهبندی pushها از دور زدن CI کند، با یک بار پرسیدن در Slack از دور زدن مستندات ناقص، و با به خاطر سپردن محل چیزها از دور زدن ساختار گیجکننده. راههای دور زدن انباشته میشوند و تیم در پایگاه کدی که با آن میجنگد بهرهور میماند.
 
-[Agents](./Agent.md) face the same codebase with none of that accumulation. Stateless across [sessions](./Session.md), an agent re-learns the codebase from scratch every time — it benefits from the fast test suite and the clear error messages, but anything it figured out yesterday is gone unless it was written into the [environment](./Environment.md), which the agent only perceives through [tool results](./Tool%20result.md). That's the gap AX names: the parts of DX that survive when the developer is an agent, plus concerns humans don't have, like keeping the [context window](./Context%20window.md) free.
+[عاملها](./Agent.md) با همان پایگاه کد روبهرو میشوند اما هیچکدام از آن انباشت را ندارند. عامل بیوضعیت در طول [نشستها](./Session.md) هر بار پایگاه کد را از صفر دوباره یاد میگیرد — از تستهای سریع و پیامهای خطای روشن سود میبرد، اما هر چیزی که دیروز فهمیده رفته، مگر اینکه در [محیط](./Environment.md) نوشته شده باشد، چیزی که عامل فقط از طریق [نتیجههای ابزار](./Tool%20result.md) درکش میکند. این همان شکافی است که AX نامگذاری میکند: بخشهایی از DX که وقتی توسعهدهنده یک عامل باشد میمانند، بهعلاوه نگرانیهایی که انسانها ندارند، مثل آزاد نگه داشتن [پنجره زمینه](./Context%20window.md).
 
-The overlap means DX investment often improves AX for free — strict types, fast tests, and predictable structure help both. The divergence means it doesn't always: a beautiful onboarding doc helps a human for a week and an agent not at all unless it's reachable from [AGENTS.md](./AGENTS.md.md).
+همپوشانی یعنی سرمایهگذاری روی DX اغلب AX را رایگان بهتر میکند — تایپ سختگیرانه، تستهای سریع و ساختار قابل پیشبینی به هر دو کمک میکنند. واگرایی یعنی همیشه اینطور نیست: مستندات خوشآمدگویی زیبا یک هفته به انسان کمک میکند و به عامل هیچ، مگر اینکه از [AGENTS.md](./AGENTS.md.md) قابل دسترس باشد.
 
-_Usage:_
+_کاربرد:_
 
-"Our DX is fine — new hires are productive in a week."
+«DX ما خوب است — استخدامهای جدید در یک هفته بهرهور میشوند.»
 
-"Productive because someone sits with them for that week. The agent doesn't get that week; check the AX separately."
+«بهرهور چون یک نفر همان هفته کنارشان مینشیند. عامل آن هفته را نمیگیرد؛ AX را جداگانه بررسی کن.»

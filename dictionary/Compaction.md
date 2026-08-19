@@ -1,17 +1,17 @@
 ---
-description: A handoff done in-memory: the previous session's history is summarised and seeds a fresh session. Lossy — detail traded for headroom.
+description: انتقال زمینهای که در حافظه انجام میشود: تاریخچه نشست قبلی خلاصه میشود و نشست تازهای را تغذیه میکند. با اتلاف — جزئیات در ازای فضا.
 ---
 
-A [handoff](./Handoff.md) done in-memory: the previous [session](./Session.md)'s history is summarised, and the summary seeds a fresh session. Lossy by design: the transcript is a [primary source](./Primary%20source.md), the summary a [secondary source](./Secondary%20source.md) — detail traded for headroom. Triggered manually by the user, or automatically via [autocompact](./Autocompact.md).
+[انتقال زمینهای](./Handoff.md) که در حافظه انجام میشود: تاریخچه [نشست](./Session.md) قبلی خلاصه میشود و خلاصه، یک نشست تازه را تغذیه میکند. ذاتاً با اتلاف است: رونوشت یک [منبع اولیه](./Primary%20source.md) است و خلاصه یک [منبع ثانویه](./Secondary%20source.md) — جزئیات در ازای فضا قربانی میشوند. بهصورت دستی توسط کاربر فعال میشود، یا خودکار از طریق [فشردهسازی خودکار](./Autocompact.md).
 
-The mechanism: the [context window](./Context%20window.md) is finite, and a long session fills it — every [tool result](./Tool%20result.md), every file read, every wrong turn stays in history. When it gets heavy, the [harness](./Harness.md) asks the [model](./Model.md) to summarise the session, throws the original history away, and seeds a fresh session with the summary. Whatever didn't make it into the summary is gone from the context. Some harnesses soften this by keeping the old transcript on disk and leaving a [context pointer](./Context%20pointer.md) to it in the summary — the secondary source links back to its primary source, so a detail the summary lost can be recovered by re-reading the original.
+سازوکار: [پنجره زمینه](./Context%20window.md) متناهی است و یک نشست طولانی آن را پر میکند — هر [نتیجه ابزار](./Tool%20result.md)، هر فایل خواندهشده، هر مسیر اشتباه در تاریخچه میماند. وقتی سنگین میشود، [بستر اجرایی](./Harness.md) از [مدل](./Model.md) میخواهد نشست را خلاصه کند، تاریخچه اصلی را دور میریزد و نشست تازهای را با خلاصه تغذیه میکند. هر چیزی که به خلاصه راه نیافته از زمینه رفته. برخی بسترهای اجرایی این را نرم میکنند: رونوشت قبلی را روی دیسک نگه میدارند و یک [اشارهگر زمینه](./Context%20pointer.md) به آن در خلاصه میگذارند — منبع ثانویه به منبع اولیهاش پیوند میخورد، پس جزئیاتی که خلاصه گم کرده با دوباره خواندن اصل، بازیابی میشود.
 
-The summary is written by the model, so it can be prompted. "Preserve the schema decisions" makes the generated artifact more deliberate. Timing matters too — compact at a phase boundary, after the plan is settled, not mid-task.
+خلاصه را مدل مینویسد، پس میشود به آن پرامپت داد. «تصمیمهای مربوط به شِما را حفظ کن» سندِ تولیدشده را عمدیتر میکند. زمانبندی هم مهم است — در مرز فازها فشرده کنید، بعد از اینکه برنامه تثبیت شد، نه وسط کار.
 
-Contrast with [clearing](./Clearing.md), which drops everything and starts cold: compaction tries to carry the essentials across; clearing bets they're already written down somewhere better.
+در برابر [پاکسازی](./Clearing.md) قرار میگیرد، که همهچیز را دور میریزد و سرد شروع میکند: فشردهسازی تلاش میکند چیزهای ضروری را منتقل کند؛ پاکسازی شرط میبندد که آنها از قبل در جای بهتری نوشته شدهاند.
 
-_Usage:_
+_کاربرد:_
 
-"[Context](./Context.md)'s getting heavy and I still have the test pass to do."
+«[زمینه](./Context.md) دارد سنگین میشود و هنوز باید تستها را پاس کنم.»
 
-"Compact before you start — write what must survive into the summary prompt so the new session keeps the schema decisions and drops the exploration."
+«قبل از شروع فشرده کن — چیزهایی که باید باقی بمانند را در پرامپت خلاصه بنویس تا نشست جدید تصمیمهای شِما را نگه دارد و کاوش را دور بیندازد.»

@@ -1,15 +1,15 @@
 ---
-description: The process that sets a model's parameters by exposing it to vast amounts of text and adjusting to improve next-token prediction.
+description: فرایندی که پارامترهای مدل را تعیین میکند، با قرار دادن مدل در معرض حجم عظیمی از متن و تنظیم پارامترها برای بهبود پیشبینی توکن بعدی.
 ---
 
-The process that sets a [model](./Model.md)'s [parameters](./Parameters.md), by exposing it to vast amounts of text and adjusting parameters to improve [next-token prediction](./Next-token%20prediction.md). A one-time, expensive process done by the [model provider](./Model%20provider.md). Encompasses both pre-training (the bulk run) and post-training (later refinements like instruction-following and safety); the distinction doesn't matter at this glossary's level.
+فرایندی که [مدل](./Model.md) را، یعنی [پارامترهای](./Parameters.md) آن را، تعیین میکند، با قرار دادن مدل در معرض حجم عظیمی از متن و تنظیم پارامترها برای بهبود [پیشبینی توکن بعدی](./Next-token%20prediction.md). فرایندی یکباره و پرهزینه که [ارائهدهنده مدل](./Model%20provider.md) انجامش میدهد. هم پیشآموزش (اجرای اصلی) را در بر میگیرد هم پساآموزش (اصلاحهای بعدی مثل پیروی از دستورالعمل و ایمنی)؛ در سطح این واژهنامه این تمایز مهم نیست.
 
-The mechanism is repetition at scale: show the model a stretch of text, have it predict the next [token](./Token.md), nudge the parameters toward whatever the actual next token was, and repeat across trillions of tokens. Nothing is stored as facts or rules — everything the model "knows" is a side effect of getting better at prediction, compressed into the parameters as [parametric knowledge](./Parametric%20knowledge.md).
+سازوکارش تکرار در مقیاس بزرگ است: یک تکه متن به مدل نشان دهید، از آن بخواهید [توکن](./Token.md) بعدی را پیشبینی کند، پارامترها را به سمت همان توکن واقعی بعدی هل بدهید، و این کار را روی تریلیونها توکن تکرار کنید. هیچ چیزی بهصورت حقیقت یا قاعده ذخیره نمیشود — هر آنچه مدل «میداند» عارضه جانبی بهتر شدن در پیشبینی است که بهصورت [دانش پارامتری](./Parametric%20knowledge.md) در پارامترها فشرده شده.
 
-Two consequences matter day to day. Training ends at a point in time, so the model has a [knowledge cutoff](./Knowledge%20cutoff.md) — it hasn't seen the library version you upgraded to last month. And training is not something you can do: when the model doesn't know your codebase, your conventions, or your internal APIs, the fix is never "teach the model" — it's putting that material into [context](./Context.md), the one input you control.
+دو پیامد در کار روزمره اهمیت دارند. آموزش در یک مقطع زمانی پایان مییابد، پس مدل یک [برش دانش](./Knowledge%20cutoff.md) دارد — نسخه کتابخانهای که ماه گذشته ارتقا دادید را ندیده است. و آموزش کاری نیست که شما بتوانید انجام دهید: وقتی مدل پایگاه کد، قراردادها یا APIهای داخلی شما را نمیشناسد، راهحل هرگز «به مدل یاد بده» نیست — بلکه گذاشتن آن مطالب در [زمینه](./Context.md) است، تنها ورودی که در اختیار دارید.
 
-_Usage:_
+_کاربرد:_
 
-"Can we get it to know our internal API?"
+«میشود کاری کنیم API داخلی ما را یاد بگیرد؟»
 
-"Not via training — that's a months-long process by the model provider. Load the API docs into context instead, that's the lever you actually have."
+«نه از طریق آموزش — آن فرایندی چندماهه است که ارائهدهنده مدل انجام میدهد. بهجایش مستندات API را در زمینه بار کن؛ این اهرمی است که واقعاً در اختیار داری.»

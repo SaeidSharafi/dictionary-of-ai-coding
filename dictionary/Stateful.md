@@ -1,24 +1,24 @@
 ---
-description: Carries information forward. Sessions are stateful across turns; agents can be made stateful across sessions via a memory system.
+description: اطلاعات را به جلو می‌برد. نشست‌ها بین نوبت‌ها وضعیت‌دارند؛ عامل‌ها را می‌توان با سیستم حافظه بین نشست‌ها وضعیت‌دار کرد.
 ---
 
-Carries information forward. A [session](./Session.md) is stateful across [turns](./Turn.md) — [context](./Context.md) accumulates as the session runs, which is why long sessions drift into the [dumb zone](./Smart%20zone.md). An [agent](./Agent.md) can be made stateful across **sessions** by adding a [memory system](./Memory%20system.md) that persists information into the [environment](./Environment.md) and reloads it at the start of future sessions. The [model](./Model.md) is never stateful; any apparent continuity is the [harness](./Harness.md) re-feeding context. Counterpart to [stateless](./Stateless.md).
+اطلاعات را به جلو می‌برد. یک [نشست](./Session.md) بین [نوبت‌ها](./Turn.md) وضعیت‌دار است — [زمینه](./Context.md) با پیش رفتن نشست انباشته می‌شود و به همین دلیل نشست‌های طولانی به [منطقه کُند](./Smart%20zone.md) کشیده می‌شوند. یک [عامل](./Agent.md) را می‌توان با افزودن یک [سیستم حافظه](./Memory%20system.md) که اطلاعات را در [محیط](./Environment.md) ذخیره می‌کند و در شروع نشست‌های آینده دوباره بارگذاری می‌کند، بین **نشست‌ها** وضعیت‌دار کرد. [مدل](./Model.md) هرگز وضعیت‌دار نیست؛ هر پیوستگی ظاهری، [بستر اجرایی](./Harness.md) است که دارد زمینه را دوباره می‌خوراند. مقابلِ [بی‌وضعیت](./Stateless.md).
 
-Where state lives at each layer:
+وضعیت در هر لایه کجا زندگی می‌کند:
 
-| Layer       | Stateful?       | How                                                                                                                    |
-| ----------- | --------------- | ---------------------------------------------------------------------------------------------------------------------- |
-| Model       | Never           | [Parameters](./Parameters.md) are frozen; it sees only what's in each request                                          |
-| Session     | Across turns    | The harness appends every message and [tool result](./Tool%20result.md) to the context                                 |
-| Harness     | Across sessions | Memory files, [AGENTS.md](./AGENTS.md.md), [handoff artifacts](./Handoff%20artifact.md) — written down, reloaded later |
-| Environment | Always          | Files persist whether or not any session is running                                                                    |
+| لایه        | وضعیت‌دار؟  | چطور                                                                                                                                       |
+| ----------- | ----------- | ------------------------------------------------------------------------------------------------------------------------------------------ |
+| مدل         | هرگز        | [پارامترها](./Parameters.md) منجمدند؛ فقط آنچه در هر درخواست است را می‌بیند                                                                |
+| نشست        | بین نوبت‌ها | بستر اجرایی هر پیام و [نتیجه ابزار](./Tool%20result.md) را به زمینه اضافه می‌کند                                                           |
+| بستر اجرایی | بین نشست‌ها | فایل‌های حافظه، [AGENTS.md](./AGENTS.md.md)، [سندهای انتقال زمینه](./Handoff%20artifact.md) — نوشته می‌شوند، بعداً دوباره بارگذاری می‌شوند |
+| محیط        | همیشه       | فایل‌ها ماندگارند، چه نشستی در جریان باشد چه نباشد                                                                                         |
 
-Each layer's statefulness is built by re-reading something stored a layer below: the session feels continuous because the harness re-sends the message history to the stateless model, and the agent remembers across sessions because the harness re-loads files from the environment. No state is ever stored in the model itself.
+وضعیت‌دار بودن هر لایه با دوباره خواندن چیزی ساخته می‌شود که یک لایه پایین‌تر ذخیره شده: نشست پیوسته حس می‌شود چون بستر اجرایی تاریخچه پیام‌ها را برای مدل بی‌وضعیت دوباره می‌فرستد، و عامل بین نشست‌ها به خاطر می‌آورد چون بستر اجرایی فایل‌هایی را از محیط دوباره بارگذاری می‌کند. هیچ وضعیتی هرگز در خود مدل ذخیره نمی‌شود.
 
-State isn't always wanted. Everything carried forward influences what comes next, so a wrong assumption made early in a session is carried forward too. [Clearing](./Clearing.md) is the deliberate act of throwing session state away and starting from what's written down.
+وضعیت همیشه خواسته‌شده نیست. هر چیزی که به جلو منتقل می‌شود بر چیز بعدی اثر می‌گذارد، پس یک فرض غلط که اوایل نشست گرفته شده هم به جلو منتقل می‌شود. [پاک‌سازی](./Clearing.md) عمل عمدی دور ریختن وضعیت نشست و شروع کردن از چیزی است که نوشته شده.
 
-_Usage:_
+_کاربرد:_
 
-"It remembered my preferences from yesterday — does that mean the model learned them?"
+«ترجیح‌های دیروزم را به خاطر داشت — یعنی مدل آن‌ها را یاد گرفته؟»
 
-"No, the agent's stateful because the harness wrote them to a memory file and reloaded them at session start. The model itself saw nothing of yesterday."
+«نه، عامل وضعیت‌دار است چون بستر اجرایی آن‌ها را در یک فایل حافظه نوشت و در شروع نشست دوباره بارگذاری کرد. خود مدل هیچ‌چیز از دیروز ندید.»

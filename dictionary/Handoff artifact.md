@@ -1,19 +1,19 @@
 ---
-description: A document used as the carry mechanism for a handoff — written by one session to be read by another.
+description: سندی که بهعنوان سازوکار انتقال برای یک انتقال زمینه استفاده میشود — توسط یک نشست نوشته میشود تا نشست دیگری بخواندش.
 ---
 
-A document used as the carry mechanism for a [handoff](./Handoff.md) — written to the [environment](./Environment.md) by one [session](./Session.md) to be read by another. [Specs](./Spec.md), [tickets](./Ticket.md), and plan docs are all handoff artifacts.
+سندی که بهعنوان سازوکار انتقال برای یک [انتقال زمینه](./Handoff.md) استفاده میشود — توسط یک [نشست](./Session.md) در [محیط](./Environment.md) نوشته میشود تا نشست دیگری بخواندش. [مشخصاتها](./Spec.md)، [تیکتها](./Ticket.md) و سندهای برنامه همگی سند انتقال زمینهاند.
 
-The reason to write one: the [model](./Model.md) is [stateless](./Stateless.md), so nothing in a session survives [clearing](./Clearing.md) it. Decisions, constraints, half-finished plans — all gone with the [context](./Context.md) that held them. The environment persists. Writing the important state into a file moves it somewhere the next session can read it back from.
+دلیل نوشتنش: [مدل](./Model.md) [بیوضعیت](./Stateless.md) است، پس هیچچیز در یک نشست از [پاکسازی](./Clearing.md) جان به در نمیبرد. تصمیمها، محدودیتها، برنامههای نیمهتمام — همه همراه با [زمینه](./Context.md)ای که نگهشان داشته از بین میروند. محیط ماندگار است. نوشتن وضعیتِ مهم در یک فایل، آن را به جایی منتقل میکند که نشست بعدی بتواند از آن بخواند.
 
-The artifact is a [secondary source](./Secondary%20source.md) — an account of the session's work, not the work itself. That's what makes it small enough to brief a fresh session, and also why it can mislead one: it records what the writing session believed, and anything it left out or got wrong is invisible to the reader. Where a claim matters, the next session should verify it against the [primary source](./Primary%20source.md) — the code, the tests — rather than inherit it.
+سند یک [منبع ثانویه](./Secondary%20source.md) است — شرح کار نشست، نه خودِ کار. همین باعث میشود بهاندازه کافی کوچک باشد که یک نشست تازه را خلاصهوار راه بیندازد، و همین هم باعث میشود بتواند گمراهش کند: آنچه را که نشستِ نویسنده باور داشته ثبت میکند، و هرچه جا انداخته یا اشتباه گرفته برای خواننده نامرئی است. هر جا ادعایی مهم است، نشست بعدی باید آن را در برابر [منبع اولیه](./Primary%20source.md) راستیآزمایی کند — کد، تستها — بهجای اینکه به ارث ببردش.
 
-A good artifact is written to be read into a session that has zero context. Concrete file paths rather than "the file we discussed". What was decided and why, so the next session doesn't relitigate it. What's done and what's left. It helps to tell the writing session where the artifact is headed: "write a handoff doc for a fresh session that knows nothing about this work".
+یک سند خوب طوری نوشته میشود که در نشستی با صفر زمینه خوانده شود. مسیر فایلهای عینی، نه «همان فایلی که دربارهاش حرف زدیم». چه چیزی تصمیم گرفته شده و چرا، تا نشست بعدی دوباره به بحث بازش نکند. چه چیزی انجام شده و چه چیزی مانده. کمک میکند به نشستِ نویسنده بگویید سند کجا میرود: «برای یک نشست تازه که هیچچیز درباره این کار نمیداند، یک سند انتقال بنویس».
 
-The alternative carry mechanism is [compaction](./Compaction.md), which summarises in-memory. The artifact has two advantages: it lives on disk where you can read and correct it before anything depends on it, and it can be reused — the same spec can brief five parallel sessions.
+سازوکار جایگزین [فشردهسازی](./Compaction.md) است که در حافظه خلاصهسازی میکند. سند دو مزیت دارد: روی دیسک زندگی میکند، جایی که میتوانید قبل از وابسته شدن هر چیزی به آن، بخوانیدش و اصلاحش کنید؛ و قابل استفاده دوباره است — همان مشخصات میتواند پنج نشست موازی را خلاصهوار راه بیندازد.
 
-_Usage:_
+_کاربرد:_
 
-"How do I split this between the planning [agent](./Agent.md) and the implementing one?"
+«چطور این را بین [عامل](./Agent.md) برنامهریز و عامل پیادهساز تقسیم کنم؟»
 
-"Have the planner write a handoff artifact — file paths, decisions, constraints. The implementer's session opens with a pointer to the artifact and works from it as its brief."
+«بگذار برنامهریز یک سند انتقال زمینه بنویسد — مسیر فایلها، تصمیمها، محدودیتها. نشست پیادهساز با اشاره به سند باز میشود و از روی آن بهعنوان دستور کارش کار میکند.»

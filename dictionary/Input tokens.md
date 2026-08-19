@@ -1,15 +1,15 @@
 ---
-description: Tokens the harness sends on each model provider request. Billed at a lower rate than output tokens.
+description: توکنهایی که بستر اجرایی در هر درخواست به ارائهدهنده مدل میفرستد. با نرخ کمتری نسبت به توکنهای خروجی محاسبه میشود.
 ---
 
-[Tokens](./Token.md) the [harness](./Harness.md) sends on each [model provider request](./Model%20provider%20request.md) — the [system prompt](./System%20prompt.md), the conversation history, [tool results](./Tool%20result.md), everything the [model](./Model.md) reads before it writes. Billed at a lower rate than [output tokens](./Output%20tokens.md), because they are less expensive to process than output tokens.
+[توکنهایی](./Token.md) که [بستر اجرایی](./Harness.md) در هر [درخواست به ارائهدهنده مدل](./Model%20provider%20request.md) میفرستد — یعنی [پرامپت سیستم](./System%20prompt.md)، تاریخچه گفتوگو، [نتیجههای ابزار](./Tool%20result.md) و هر چیز دیگری که [مدل](./Model.md) قبل از شروع به نوشتن میخواند. این توکنها با نرخ کمتری نسبت به [توکنهای خروجی](./Output%20tokens.md) محاسبه میشوند، چون پردازششان از پردازش توکنهای خروجی ارزانتر است.
 
-When doing [AI](./AI.md) coding, input tokens make up most of your bill. The model is [stateless](./Stateless.md), so each [turn](./Turn.md) re-sends the entire [session](./Session.md) as input: your first message, every response, every tool result since. The input for turn fifty contains the previous forty-nine turns. A single model provider request might produce a few hundred output tokens but re-send a hundred thousand input tokens of accumulated history.
+وقتی با [هوش مصنوعی](./AI.md) کدنویسی میکنید، توکنهای ورودی بیشترین سهم را در صورتحساب شما دارند. مدل [بیوضعیت](./Stateless.md) است، پس هر [نوبت](./Turn.md) باید کل [نشست](./Session.md) را بهصورت ورودی دوباره بفرستد: اولین پیام شما، هر پاسخی که دادهاید، هر نتیجه ابزاری که از آن زمان به دست آمده. ورودی نوبت پنجاهم، چهلونه نوبت قبلی را هم در خودش دارد. یک درخواست واحد به ارائهدهنده مدل ممکن است فقط چند صد توکن خروجی تولید کند، اما در همان حال صد هزار توکن ورودی از تاریخچه انباشتهشده را دوباره میفرستد.
 
-The [prefix cache](./Prefix%20cache.md) reduces the cost: history that exactly matches a previous request is billed as cheap [cache tokens](./Cache%20tokens.md) rather than full-price input. When input costs still hurt, the fix is to shrink what gets re-sent — [clearing](./Clearing.md) or [compacting](./Compaction.md) between tasks.
+[کش پیشوند](./Prefix%20cache.md) این هزینه را پایین میآورد: تاریخیهای که دقیقاً با یک درخواست قبلی منطبق است بهعنوان [توکنهای کش](./Cache%20tokens.md) ارزان محاسبه میشود، نه بهعنوان ورودی با قیمت کامل. وقتی هزینه ورودی هنوز آزاردهنده است، راهحل این است که چیزی را که دوباره فرستاده میشود کوچک کنید — یعنی بین کارها [پاکسازی](./Clearing.md) یا [فشردهسازی](./Compaction.md) انجام دهید.
 
-_Usage:_
+_کاربرد:_
 
-"Bill's high but the [agent](./Agent.md)'s barely writing anything."
+«صورتحساب بالاست ولی [عامل](./Agent.md) بهسختی چیزی مینویسد.»
 
-"It's the input tokens — every turn re-sends the whole session. Without the prefix cache you re-pay for the history each request."
+«مشکل از توکنهای ورودی است — هر نوبت کل نشست را دوباره میفرستد. بدون کش پیشوند، در هر درخواست دوباره بابت کل تاریخچه پول میدهی.»

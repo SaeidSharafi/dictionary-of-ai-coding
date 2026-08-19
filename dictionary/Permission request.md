@@ -1,25 +1,25 @@
 ---
-description: What the harness shows the user before executing a tool call that isn't pre-approved. The mechanism for putting a human in the loop.
+description: چیزی که بستر اجرایی قبل از اجرای فراخوانی ابزاری که از پیش تأیید نشده به کاربر نشان می‌دهد. سازوکار گذاشتن انسان در حلقه.
 ---
 
-What the [harness](./Harness.md) shows the user before executing a [tool call](./Tool%20call.md) that isn't pre-approved. The [model](./Model.md) produces a tool call; instead of running it immediately, the harness pauses and asks. Approve and it runs; deny and the harness reports the denial back to the model as a [tool result](./Tool%20result.md). The mechanism by which a harness puts a human in the [loop](./Human-in-the-loop.md) for risky or sensitive actions.
+چیزی که [بستر اجرایی](./Harness.md) قبل از اجرای یک [فراخوانی ابزار](./Tool%20call.md) از پیش تأییدنشده به کاربر نشان می‌دهد. [مدل](./Model.md) فراخوانی ابزار را تولید می‌کند؛ به‌جای اجرای فوری آن، بستر اجرایی مکث می‌کند و می‌پرسد. تأیید کنید و اجرا می‌شود؛ رد کنید و بستر اجرایی رد شدن را به‌صورت یک [نتیجه ابزار](./Tool%20result.md) به مدل برمی‌گرداند. سازوکاری که با آن یک بستر اجرایی برای اقدام‌های پرخطر یا حساس یک انسان را در [حلقه](./Human-in-the-loop.md) می‌گذارد.
 
-The lifecycle of a permission request:
+چرخه عمر یک درخواست مجوز:
 
-| Step | Who     | What happens                                                                            |
-| ---- | ------- | --------------------------------------------------------------------------------------- |
-| 1    | Model   | Produces a tool call                                                                    |
-| 2    | Harness | Checks it against the [permission mode](./Permission%20mode.md) and any saved approvals |
-| 3    | Harness | Pre-approved: executes immediately. Otherwise: pauses and shows the request             |
-| 4    | User    | Approves once, approves for the rest of the [session](./Session.md), or denies          |
-| 5    | Harness | Executes the call, or sends the denial back as a tool result                            |
+| مرحله | چه کسی      | چه اتفاقی می‌افتد                                                                        |
+| ----- | ----------- | ---------------------------------------------------------------------------------------- |
+| 1     | مدل         | یک فراخوانی ابزار تولید می‌کند                                                           |
+| 2     | بستر اجرایی | آن را با [حالت مجوز](./Permission%20mode.md) و هر تأیید ذخیره‌شده تطبیق می‌دهد           |
+| 3     | بستر اجرایی | از پیش تأییدشده: فوراً اجرا می‌کند. در غیر این صورت: مکث می‌کند و درخواست را نشان می‌دهد |
+| 4     | کاربر       | یک بار تأیید می‌کند، برای بقیه [نشست](./Session.md) تأیید می‌کند، یا رد می‌کند           |
+| 5     | بستر اجرایی | فراخوانی را اجرا می‌کند، یا رد شدن را به‌صورت نتیجه ابزار برمی‌گرداند                    |
 
-Denying a request steers the agent. The model reads the denial like any other tool result and reacts to it — it tries a different approach, or asks what you'd prefer. Most harnesses let you attach a message to the denial, which turns the request into a steering point: "not like that, use the migration script instead" lands exactly when the model is deciding what to do next.
+رد کردن یک درخواست، عامل را هدایت می‌کند. مدل رد شدن را مثل هر نتیجه ابزار دیگری می‌خواند و به آن واکنش نشان می‌دهد — رویکرد دیگری را امتحان می‌کند، یا می‌پرسد چه چیزی را ترجیح می‌دهید. بیشتر بسترهای اجرایی به شما اجازه می‌دهند پیامی به رد شدن بچسبانید، که درخواست را به یک نقطه هدایت تبدیل می‌کند: «نه این‌طوری، به‌جایش اسکریپت مهاجرت را استفاده کن» دقیقاً در لحظه‌ای می‌رسد که مدل دارد تصمیم می‌گیرد بعد چه کند.
 
-The cost is that every request is a synchronous wait on you. The [agent](./Agent.md) sits blocked until you answer, which is fine while you're watching and a problem when you're not — an agent that triggers requests constantly can't be left to work [AFK](./AFK.md). The permission mode is the dial: which calls run freely, which ask first, ideally with a [sandbox](./Sandbox.md) making it safe to widen the free set.
+هزینه‌اش این است که هر درخواست یک انتظار همزمان از شماست. [عامل](./Agent.md) تا وقتی جواب ندهید مسدود می‌ماند، که وقتی تماشایش می‌کنید خوب است و وقتی نه مشکل است — عاملی که مدام درخواست ایجاد می‌کند را نمی‌شود رها کرد تا [دور از کیبورد](./AFK.md) کار کند. حالت مجوز همان پیچ تنظیم است: کدام فراخوانی‌ها آزادانه اجرا می‌شوند، کدام‌ها اول می‌پرسند، و ایده‌آل این است که یک [سندباکس](./Sandbox.md) باز کردن مجموعه آزاد را امن کند.
 
-_Usage:_
+_کاربرد:_
 
-"It's been blocked on a permission request for ten minutes — I was in a meeting."
+«ده دقیقه است روی یک درخواست مجوز مسدود شده — تو جلسه بودم.»
 
-"That's the cost of human-in-the-loop. Pre-approve the safe [tools](./Tool.md) so the request only fires on the actually-risky calls."
+«این هزینه انسان در حلقه است. [ابزارهای](./Tool.md) امن را از پیش تأیید کن تا درخواست فقط روی فراخوانی‌های واقعاً پرخطر فعال شود.»

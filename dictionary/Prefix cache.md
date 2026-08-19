@@ -1,15 +1,15 @@
 ---
-description: The provider-side store that lets consecutive requests skip re-processing a shared prefix, billing those tokens at a lower rate.
+description: ذخیرهساز سمت ارائهدهنده که به درخواستهای پیاپی اجازه میدهد از پردازش دوباره پیشوند مشترک صرفنظر کنند؛ آن توکنها با نرخ کمتری محاسبه میشوند.
 ---
 
-The [provider](./Model%20provider.md)-side store that lets consecutive [model provider requests](./Model%20provider%20request.md) skip re-processing a shared prefix. When the start of a request matches the start of a recent one — same [system prompt](./System%20prompt.md), same history up to some point — the provider reuses its prior work and bills those [tokens](./Token.md) as [cache tokens](./Cache%20tokens.md) at a much lower rate.
+ذخیرهساز سمت [ارائهدهنده](./Model%20provider.md) که به [درخواستهای پیاپی به ارائهدهنده مدل](./Model%20provider%20request.md) اجازه میدهد از پردازش دوباره یک پیشوند مشترک صرفنظر کنند. وقتی شروع یک درخواست با شروع یک درخواست اخیر منطبق است — همان [پرامپت سیستم](./System%20prompt.md)، همان تاریخچه تا یک نقطه — ارائهدهنده کار قبلیاش را دوباره استفاده میکند و آن [توکنها](./Token.md) را با نرخ بسیار کمتری بهعنوان [توکنهای کش](./Cache%20tokens.md) محاسبه میکند.
 
-The cache pays off because sessions grow append-only. Every request re-sends the whole history as [input tokens](./Input%20tokens.md) (see that entry for why), and in a normal [session](./Session.md) the history only changes at the end — each request is the previous one plus a few new messages. The provider processes the long shared beginning once, stores the result, and picks up from where the prefix ends. Without the cache, a 50-[turn](./Turn.md) session would pay to re-process turn one fifty times.
+کش بهصرفه میشود چون نشستها فقط-افزودنی رشد میکنند. هر درخواست کل تاریخچه را بهصورت [توکنهای ورودی](./Input%20tokens.md) دوباره میفرستد (برای چراییاش همان مدخل را ببینید)، و در یک [نشست](./Session.md) عادی تاریخچه فقط در انتها تغییر میکند — هر درخواست همان درخواست قبلی است بهعلاوه چند پیام تازه. ارائهدهنده شروع طولانی مشترک را یک بار پردازش میکند، نتیجه را ذخیره میکند و از جایی که پیشوند تمام میشود ادامه میدهد. بدون کش، یک نشست 50-[نوبتی](./Turn.md) باید پردازش نوبت اول را پنجاه بار میپرداخت.
 
-Caches also expire. How long an entry stays warm varies per model provider — typically minutes, not hours. Leave a session idle past the window and the next request rebuilds the prefix at full price once before caching resumes. This is mostly a [harness](./Harness.md) builder's concern; as a user, the visible effect is that requests after a long pause cost more than the ones before it.
+کشها هم منقضی میشوند. اینکه یک مدخل چقدر گرم میماند بسته به ارائهدهنده مدل فرق میکند — معمولاً چند دقیقه، نه چند ساعت. اگر نشستی را بیشتر از آن بازه بیکار بگذارید، درخواست بعدی یک بار پیشوند را با قیمت کامل میسازد تا کش دوباره شروع شود. این بیشتر دغدغه سازنده [بستر اجرایی](./Harness.md) است؛ بهعنوان کاربر، اثر قابل مشاهدهاش این است که درخواستهای بعد از یک مکث طولانی بیشتر از درخواستهای قبلش هزینه دارند.
 
-_Usage:_
+_کاربرد:_
 
-"Why did the bill spike halfway through the session?"
+«چرا صورتحساب وسط نشست جهش کرد؟»
 
-"Harness started injecting the current time into the system prompt every turn. Prefix cache breaks at the first changed token, so every request after that billed at full rate."
+«بستر اجرایی شروع کرد به تزریق زمان فعلی در پرامپت سیستم در هر نوبت. کش پیشوند در اولین توکن تغییرکرده میشکند، پس هر درخواست بعد از آن با قیمت کامل محاسبه شد.»

@@ -1,23 +1,23 @@
 ---
-description: A teachable capability bundled as a unit — kept out of the context window until a context pointer pulls it in for the task at hand.
+description: قابلیتی آموختنی که بهصورت یک واحد بستهبندی شده — بیرون از پنجره زمینه نگه داشته میشود تا اشارهگر زمینهای برای کارِ پیش رو واردش کند.
 ---
 
-A teachable capability bundled as a unit — instructions and resources for doing one task well, kept in the [environment](./Environment.md) until a [context pointer](./Context%20pointer.md) pulls it into the [context window](./Context%20window.md) for the task at hand. The unit of [progressive disclosure](./Progressive%20disclosure.md) in a [harness](./Harness.md).
+قابلیتی آموختنی که بهصورت یک واحد بستهبندی شده — دستورالعملها و منابع برای انجام خوب یک کار، در [محیط](./Environment.md) نگه داشته میشود تا [اشارهگر زمینهای](./Context%20pointer.md) برای کارِ پیش رو وارد [پنجره زمینه](./Context%20window.md)ش کند. واحد [افشای تدریجی](./Progressive%20disclosure.md) در یک [بستر اجرایی](./Harness.md).
 
-Skills are an open standard, defined at [agentskills.io](https://agentskills.io) — originally developed by Anthropic and since adopted by most major harnesses, so a skill written once works across them. The format is a folder containing:
+مهارتها یک استاندارد باز هستند، تعریفشده در [agentskills.io](https://agentskills.io) — ابتدا توسط Anthropic توسعه داده شد و از آن پس بیشتر بسترهای اجرایی اصلی آن را پذیرفتهاند، پس مهارتی که یک بار نوشته شود در همه آنها کار میکند. قالبش یک پوشه است شامل:
 
-- A `SKILL.md` file — metadata (a name and description, at minimum) plus the instructions themselves
-- Optionally, scripts the [agent](./Agent.md) can run
-- Optionally, templates and reference material the instructions point to
+- یک فایل `SKILL.md` — فراداده (دستکم یک نام و یک توصیف) بهعلاوه خود دستورالعملها
+- اختیاری، اسکریپتهایی که [عامل](./Agent.md) میتواند اجرا کند
+- اختیاری، قالبها و مواد مرجعی که دستورالعملها به آنها اشاره میکنند
 
-Only the name and description sit in [context](./Context.md) by default. When the agent's task matches, it loads the rest. Until then, the skill takes up almost no room — a sentence or two of [tokens](./Token.md), however large its full instructions are.
+فقط نام و توصیف بهصورت پیشفرض در [زمینه](./Context.md) مینشینند. وقتی کار عامل مطابقت داشته باشد، بقیه را بارگذاری میکند. تا آن زمان، مهارت تقریباً هیچ جایی نمیگیرد — یکی دو جمله [توکن](./Token.md)، هرچقدر هم دستورالعملهای کاملش بزرگ باشند.
 
-This distinguishes skills from [AGENTS.md](./AGENTS.md.md), which is loaded into every [session](./Session.md) regardless of the task. A skill is read when a particular kind of work comes up — releasing, scaffolding a new service, writing a migration — and ignored the rest of the time.
+همین مهارتها را از [AGENTS.md](./AGENTS.md.md) متمایز میکند، که صرفنظر از کار، در هر [نشست](./Session.md) بارگذاری میشود. یک مهارت وقتی خوانده میشود که نوع خاصی از کار پیش بیاید — انتشار، داربست یک سرویس جدید، نوشتن یک مهاجرت — و بقیه زمانها نادیده گرفته میشود.
 
-_Avoid:_ "[tool](./Tool.md)" — a tool is what the agent _calls_; a skill is instructions it _reads_.
+_نبایدها:_ «[ابزار](./Tool.md)» — ابزار چیزی است که عامل _صدا میزند_؛ مهارت دستورالعملهایی است که _میخواند_.
 
-_Usage:_
+_کاربرد:_
 
-"Where should I put the deploy runbook?"
+«runbook استقرار را کجا بگذارم؟»
 
-"As a skill — the agent loads it only when the task involves deploys. In AGENTS.md it'd burn tokens on every [turn](./Turn.md) for something we use weekly."
+«بهعنوان یک مهارت — عامل فقط وقتی کارش به استقرار مربوط باشد بارگذاریش میکند. در AGENTS.md برای چیزی که هفتگی استفاده میکنیم هر [نوبت](./Turn.md) توکن میسوزاند.»

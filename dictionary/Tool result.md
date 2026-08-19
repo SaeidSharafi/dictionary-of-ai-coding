@@ -1,25 +1,25 @@
 ---
-description: What the harness sends back after executing a tool call — file contents, output, or error. The agent's only view of the environment.
+description: همان چیزی که بستر اجرایی بعد از اجرای فراخوانی ابزار برمی‌گرداند — محتوای فایل، خروجی یا خطا. تنها نمای عامل از محیط.
 ---
 
-What the [harness](./Harness.md) sends back after executing a [tool call](./Tool%20call.md) — the file contents, the command output, the error. The [agent](./Agent.md)'s only view of the [environment](./Environment.md). Travels back to the [model](./Model.md) in the _next_ [model provider request](./Model%20provider%20request.md), where the model decides what to do with it. Tool call and tool result are two ends of the same exchange, both inside one [turn](./Turn.md).
+همان چیزی که [بستر اجرایی](./Harness.md) بعد از اجرای یک [فراخوانی ابزار](./Tool%20call.md) برمی‌گرداند — محتوای فایل، خروجی فرمان، خطا. تنها نمای [عامل](./Agent.md) از [محیط](./Environment.md). به [مدل](./Model.md) برمی‌گردد، در _درخواست بعدی_ [به ارائه‌دهنده مدل](./Model%20provider%20request.md) — جایی که مدل تصمیم می‌گیرد با آن چه کند. فراخوانی ابزار و نتیجه ابزار دو سر یک مبادله‌اند، هر دو داخل یک [نوبت](./Turn.md).
 
-The lifecycle of a tool result:
+چرخه عمر یک نتیجه ابزار:
 
-| Step | Who     | What happens                                                               |
-| ---- | ------- | -------------------------------------------------------------------------- |
-| 1    | Harness | Executes the tool call — runs the command, reads the file                  |
-| 2    | Harness | Captures the outcome: output, contents, or error                           |
-| 3    | Harness | Appends it to the [context](./Context.md) as a message                     |
-| 4    | Harness | Sends the whole context to the provider in the next model provider request |
-| 5    | Model   | Reads the result and decides: another tool call, or a final answer         |
+| مرحله | چه کسی      | چه اتفاقی می‌افتد                                                      |
+| ----- | ----------- | ---------------------------------------------------------------------- |
+| 1     | بستر اجرایی | فراخوانی ابزار را اجرا می‌کند — فرمان را اجرا می‌کند، فایل را می‌خواند |
+| 2     | بستر اجرایی | نتیجه را ضبط می‌کند: خروجی، محتوا یا خطا                               |
+| 3     | بستر اجرایی | آن را به‌عنوان پیام به [زمینه](./Context.md) اضافه می‌کند              |
+| 4     | بستر اجرایی | کل زمینه را در درخواست بعدی به ارائه‌دهنده مدل می‌فرستد                |
+| 5     | مدل         | نتیجه را می‌خواند و تصمیم می‌گیرد: فراخوانی ابزار دیگر، یا پاسخ نهایی  |
 
-The result stays in the context for the rest of the [session](./Session.md). Tool results are usually the bulk of a coding session's context: every file read, every test run, every search lands in full and keeps occupying [tokens](./Token.md) long after it stopped being useful. A few large results — a verbose test log, a generated file read whole — can push a session toward the edge of the [context window](./Context%20window.md) faster than the conversation itself does.
+نتیجه تا پایان [نشست](./Session.md) در زمینه می‌ماند. نتیجه ابزارها معمولاً بخش اعظم زمینه یک نشست کدنویسی‌اند: هر فایل خوانده‌شده، هر اجرای تست، هر جست‌وجو کامل وارد می‌شود و مدت زیادی بعد از اینکه دیگر مفید نبود [توکن‌ها](./Token.md) را اشغال می‌کند. چند نتیجه بزرگ — یک لاگ تست پرحرف، یک فایل تولیدشده که کامل خوانده شده — می‌توانند نشست را سریع‌تر از خود گفت‌وگو به لبه [پنجره زمینه](./Context%20window.md) برسانند.
 
-Because the result is all the model sees, the model has no way to check the environment behind it. If the output was truncated, the command silently failed, or the harness returned an error instead of the contents, the model reasons from what it was given. When the agent's picture of your system seems wrong, the tool results are where to look: somewhere in the transcript is a result that says something different from what you know to be true.
+چون نتیجه تنها چیزی است که مدل می‌بیند، مدل هیچ راهی برای بررسی محیط پشت آن ندارد. اگر خروجی بریده شده، فرمان بی‌صدا شکست خورده، یا بستر اجرایی به‌جای محتوا خطا برگردانده، مدل از روی همان چیزی که به آن داده شده استدلال می‌کند. وقتی تصویر عامل از سیستم شما غلط به نظر می‌رسد، نتیجه ابزارها همان‌جاست که باید نگاه کرد: جایی در رونوشت نتیجه‌ای هست که چیزی متفاوت از آنچه می‌دانید درست است می‌گوید.
 
-_Usage:_
+_کاربرد:_
 
-"It's reasoning about the file like it's empty."
+«دارد درباره فایل طوری استدلال می‌کند که انگار خالی است.»
 
-"The tool result came back as a permission denial, not the contents. The model only saw the error string — it has no other way to see the file."
+«نتیجه ابزار به‌صورت رد مجوز برگشت، نه محتوا. مدل فقط رشته خطا را دید — راه دیگری برای دیدن فایل ندارد.»

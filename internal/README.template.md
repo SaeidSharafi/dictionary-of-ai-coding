@@ -10,23 +10,23 @@
 
 # AI Coding Dictionary
 
-**AI coding can feel like it's just for experts**. Unexplained jargon. Mysterious failures. Bills that don't seem to match the work.
+**کدنویسی با هوش مصنوعی ممکن است حس و حال یک حرفه تخصصی را بدهد**. اصطلاح‌های بی‌توضیح. خرابی‌های مرموز. قبض‌هایی که با کار انجام‌شده نمی‌خوانند.
 
-It isn't, really. A lot of the confusion is manufactured: **there's a whole VC-funded economy that benefits from keeping it hard to understand**.
+در واقع این‌طور نیست. بخش زیادی از این سردرگمی ساختگی است: **یک اقتصاد کامل با پول سرمایه‌گذاری خطرپذیر وجود دارد که از سخت‌فهم نگه داشتن این حوزه سود می‌برد**.
 
-The basic terms of engagement are learnable in an afternoon. Once you have them, the whole thing stops feeling like guesswork.
+اصطلاحات پایه در یک بعدازظهر یاد گرفتنی‌اند. وقتی به دست‌تان بیایند، دیگر همه‌چیز شبیه حدس و گمان نیست.
 
-Why does context degrade? Why is the bill so high? Why does the same prompt behave differently from one day to the next?
+چرا زمینه افت می‌کند؟ چرا قبض این‌قدر بالا است؟ چرا یک پرامپت یکسان از روزی به روز دیگر رفتار متفاوتی دارد؟
 
-Each has a clean answer, once someone tells you the words to use.
+هر کدام یک پاسخ روشن دارند، به شرطی که کسی واژه‌های درست را به شما بگوید.
 
-That's what this dictionary is for. **The vocabulary of AI coding, translated into plain English**.
+این دقیقاً کاری است که این فرهنگ لغت می‌کند. **واژگان کدنویسی با هوش مصنوعی، به زبان ساده**.
 
-**Want more than the vocabulary?** Join 62,000+ developers at **[aihero.dev/newsletter](https://www.aihero.dev/s/dictionary-newsletter)** for my latest skills, thinking on AI engineering, and the resources that'll keep you ahead of the curve.
+**بیشتر از واژگان می‌خواهید؟** به بیش از 62,000 توسعه‌دهنده در **[aihero.dev/newsletter](https://www.aihero.dev/s/dictionary-newsletter)** بپیوندید برای تازه‌ترین مهارت‌ها، اندیشه درباره مهندسی هوش مصنوعی، و منابعی که شما را جلوتر از منحنی نگه می‌دارد.
 
 ---
 
-## Table of contents
+## فهرست مطالب
 
 <!-- TOC -->
 

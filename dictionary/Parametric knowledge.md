@@ -1,17 +1,17 @@
 ---
-description: What the model knows from training, stored in its parameters. Frozen at training time. Counterpart to contextual knowledge.
+description: آنچه مدل از آموزش می‌داند، در پارامترهایش ذخیره شده. در زمان آموزش منجمد می‌شود. در برابر دانش زمینه‌ای.
 ---
 
-What the [model](./Model.md) "knows" from [training](./Training.md), stored in its [parameters](./Parameters.md). Frozen at training time — the model can't see its own parameters or update them. Detail is lost in the squeeze: billions of facts cram into a fixed number of parameters, and the rare ones blur. Source of fluency on common topics, and of fabrication on uncommon ones. Counterpart to [contextual knowledge](./Contextual%20knowledge.md).
+آنچه [مدل](./Model.md) از [آموزش](./Training.md) «می‌داند» و در [پارامترهایش](./Parameters.md) ذخیره شده. در زمان آموزش منجمد می‌شود — مدل نمی‌تواند پارامترهای خودش را ببیند یا به‌روزشان کند. در این فشرده‌سازی جزئیات از بین می‌رود: میلیاردها واقعیت در تعداد ثابتی پارامتر جا می‌شوند و موارد کمیاب محو می‌شوند. منبع روان بودن در موضوعات رایج، و منبع جعل در موضوعات نامعمول. در برابر [دانش زمینه‌ای](./Contextual%20knowledge.md).
 
-Parametric knowledge is not stored as facts. Training never gives the model a database to look things up in; it adjusts parameters until the model predicts text well, and a model that predicts text about a topic well behaves as if it knows the topic. How reliable the knowledge is tracks how often something appeared in the training data: a topic with millions of examples is reproduced accurately, for a topic with only a handful, the model guesses based on what similar topics look like. Reproducing and guessing are the same process to the model, so it can't tell which one it's doing. A fabricated answer arrives with the same fluency as a correct one. [Hallucination](./Hallucination.md) is the model guessing wrong.
+دانش پارامتری به‌صورت واقعیت ذخیره نمی‌شود. آموزش هرگز به مدل پایگاه‌داده‌ای نمی‌دهد که در آن جست‌وجو کند؛ پارامترها را تنظیم می‌کند تا مدل متن را خوب پیش‌بینی کند، و مدلی که متن درباره یک موضوع را خوب پیش‌بینی می‌کند طوری رفتار می‌کند که انگار آن موضوع را می‌داند. میزان اطمینان به دانش، دنباله‌روی این است که چیزی چند بار در داده‌های آموزشی ظاهر شده: موضوعی با میلیون‌ها نمونه دقیق بازتولید می‌شود؛ برای موضوعی که فقط چند نمونه دارد، مدل بر اساس شباهت موضوعات مشابه حدس می‌زند. بازتولید و حدس زدن برای مدل یک فرایند واحدند، پس نمی‌تواند تشخیص دهد کدام را انجام می‌دهد. پاسخ جعلی با همان روانی پاسخ درست می‌رسد. [توهم](./Hallucination.md) همان حدس غلط مدل است.
 
-Parametric knowledge also ages. The parameters stop changing at the [knowledge cutoff](./Knowledge%20cutoff.md), so a library released or renamed after that date doesn't exist in them, and an API that changed is remembered in its old form.
+دانش پارامتری هم کهنه می‌شود. پارامترها از [برش دانش](./Knowledge%20cutoff.md) به بعد تغییر نمی‌کنند، پس کتابخانه‌ای که بعد از آن تاریخ عرضه یا تغییر نام داده در آن‌ها وجود ندارد، و API که عوض شده به شکل قدیمی‌اش به خاطر سپرده می‌شود.
 
-For both gaps — too rare and too recent — the remedy is the same: the knowledge can't be added to the parameters, so it has to be supplied as contextual knowledge instead.
+برای هر دو شکاف — خیلی کمیاب و خیلی تازه — راه‌حل یکسان است: دانش را نمی‌توان به پارامترها اضافه کرد، پس باید به‌جایش به‌صورت دانش زمینه‌ای تأمین شود.
 
-_Usage:_
+_کاربرد:_
 
-"It writes flawless React but invents methods on our internal SDK."
+«کد React بی‌نقص می‌نویسد اما روی SDK داخلی ما متد اختراع می‌کند.»
 
-"React is dense in the parametric knowledge — millions of training examples. Your SDK isn't, so the model fills in plausible-looking shapes. Load the SDK docs into [context](./Context.md)."
+«React در دانش پارامتری چگال است — میلیون‌ها نمونه آموزشی. SDK شما نیست، پس مدل شکل‌های محتمل‌نما پر می‌کند. مستندات SDK را در [زمینه](./Context.md) بار کن.»

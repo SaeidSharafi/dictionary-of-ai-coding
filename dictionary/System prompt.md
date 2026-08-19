@@ -1,17 +1,17 @@
 ---
-description: The instructions the harness prepends to every model provider request — the agent's standing brief. Usually stable across a session.
+description: دستورالعمل‌هایی که بستر اجرایی به ابتدای هر درخواست به ارائه‌دهنده مدل می‌افزاید — دستورالعمل دائمی عامل. معمولاً در طول یک نشست ثابت است.
 ---
 
-The instructions the [harness](./Harness.md) prepends to every [model provider request](./Model%20provider%20request.md) — the [agent](./Agent.md)'s standing brief: who it is, how to behave, which [tools](./Tool.md) it can call, what conventions to follow. Usually stable across a [session](./Session.md).
+دستورالعمل‌هایی که [بستر اجرایی](./Harness.md) به ابتدای هر [درخواست به ارائه‌دهنده مدل](./Model%20provider%20request.md) اضافه می‌کند — دستورالعمل دائمی [عامل](./Agent.md): چه کسی است، چگونه رفتار کند، کدام [ابزار](./Tool.md) را می‌تواند فراخوانی کند، از چه قراردادهایی پیروی کند. معمولاً در طول یک [نشست](./Session.md) ثابت است.
 
-The system prompt is written by the harness vendor, not by you, and in coding harnesses it's big — often tens of thousands of [tokens](./Token.md) of behavioural rules, tool descriptions, and edge-case handling, all paid as [input tokens](./Input%20tokens.md) on every [turn](./Turn.md). Your own standing instructions ride along with it: files like [AGENTS.md](./AGENTS.md.md) are loaded next to the system prompt at the start of the session, so the [model](./Model.md) reads the vendor's brief and yours together before it ever sees your message.
+پرامپت سیستم را فروشنده بستر اجرایی می‌نویسد، نه شما، و در بسترهای اجرایی کدنویسی بزرگ است — اغلب ده‌ها هزار [توکن](./Token.md) قاعده رفتاری، توصیف ابزارها و مدیریت حالت‌های مرزی، که همگی به‌عنوان [توکن‌های ورودی](./Input%20tokens.md) در هر [نوبت](./Turn.md) حساب می‌شوند. دستورالعمل‌های دائمی خودتان هم همراه آن می‌آیند: فایل‌هایی مثل [AGENTS.md](./AGENTS.md.md) در شروع نشست کنار پرامپت سیستم بارگذاری می‌شوند تا [مدل](./Model.md) دستورالعمل فروشنده و دستورالعمل شما را با هم بخواند، پیش از آنکه اصلاً پیام شما را ببیند.
 
-Because it's identical on every request, it forms the start of the [prefix cache](./Prefix%20cache.md) — which is part of why harnesses keep it fixed for a whole session rather than editing it as they go.
+چون در هر درخواست یکسان است، شروعِ [کش پیشوند](./Prefix%20cache.md) را می‌سازد — و این بخشی از دلیل این است که بسترهای اجرایی آن را برای کل یک نشست ثابت نگه می‌دارند، به‌جای اینکه در مسیر ویرایشش کنند.
 
-Models are trained to prioritise the system prompt over user messages. So when an agent insists on a convention you never asked for, or formats output in a way you can't shake, it's usually obeying its system prompt — and your message is losing the argument. Some harnesses are customisable: they give you full access to the system prompt, so you can read what the agent is actually being told and change it.
+مدل‌ها طوری آموزش می‌بینند که پرامپت سیستم را بر پیام‌های کاربر اولویت دهند. پس وقتی عاملی بر قراردادی اصرار می‌کند که هرگز نخواسته‌اید، یا خروجی را طوریکه نمی‌توانید عوضش کنید قالب‌بندی می‌کند، معمولاً دارد از پرامپت سیستم خود اطاعت می‌کند — و پیام شما دارد این کشمکش را می‌بازد. بعضی بسترهای اجرایی قابل‌شخصی‌سازی‌اند: دسترسی کامل به پرامپت سیستم به شما می‌دهند تا ببینید واقعاً به عامل چه گفته می‌شود و تغییرش دهید.
 
-_Usage:_
+_کاربرد:_
 
-"Two harnesses, same model, totally different behavior on the same prompt."
+«دو بستر اجرایی، همان مدل، رفتار کاملاً متفاوت روی همان پرامپت.»
 
-"Different system prompts. One's tuned for terse code edits, the other for explaining — that's where the divergence lives, before your message even arrives."
+«پرامپت‌های سیستم متفاوت. یکی برای ویرایش‌های کدِ کوتاه تنظیم شده، دیگری برای توضیح دادن — اختلاف همین‌جاست، پیش از آنکه پیام شما اصلاً برسد.»

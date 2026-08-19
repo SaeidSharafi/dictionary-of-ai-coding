@@ -1,17 +1,17 @@
 ---
-description: Compaction triggered automatically by the harness when the context window approaches full.
+description: فشردهسازیای که بستر اجرایی بهصورت خودکار فعال میکند وقتی پنجره زمینه به پر شدن نزدیک میشود.
 ---
 
-[Compaction](./Compaction.md) triggered automatically by the [harness](./Harness.md) when the [context window](./Context%20window.md) approaches full.
+[فشردهسازی](./Compaction.md)ای که [بستر اجرایی](./Harness.md) بهصورت خودکار فعال میکند وقتی [پنجره زمینه](./Context%20window.md) به پر شدن نزدیک میشود.
 
-The harness watches how full the context window is. When it crosses a threshold — often around 80% — it pauses, asks the [model](./Model.md) to summarise the [session](./Session.md) so far, and seeds a fresh session with the summary. Work then continues as if nothing happened.
+بستر اجرایی مراقب است پنجره زمینه چقدر پر شده. وقتی از آستانه رد شود — معمولاً حدود 80 درصد — مکث میکند، از [مدل](./Model.md) میخواهد [نشست](./Session.md) تا اینجا را خلاصه کند و نشست تازهای را با خلاصه تغذیه میکند. کار بعدش طوری ادامه پیدا میکند که انگار هیچ اتفاقی نیفتاده.
 
-Except something did happen. Compaction is lossy, and autocompact is lossy at a moment you didn't choose. A manual compact happens at a phase boundary, when you can tell the model what to preserve. Autocompact fires mid-task, whenever the threshold is hit — possibly halfway through a refactor, with the summary deciding for itself which of your decisions were worth keeping. The classic symptom: the [agent](./Agent.md) carries on confidently but has quietly forgotten a constraint you established an hour ago, and you only notice when its work starts contradicting it.
+اما اتفاقی افتاده. فشردهسازی با اتلاف است، و فشردهسازی خودکار در لحظهای با اتلاف است که شما انتخابش نکردهاید. فشردهسازی دستی در مرز فاز اتفاق میافتد، وقتی میتوانید به مدل بگویید چه چیزی را حفظ کند. فشردهسازی خودکار وسط کار فعال میشود، هر وقت آستانه رد شود — شاید نیمه یک refactor، و خلاصه خودش تصمیم میگیرد کدام تصمیمهای شما ارزش نگهداشتن داشتهاند. نشانه کلاسیک: [عامل](./Agent.md) با اطمینان ادامه میدهد اما بیسروصدا محدودیتی را که یک ساعت پیش تعیین کرده بودید فراموش کرده، و فقط وقتی متوجه میشوید که کارش شروع به تناقض با آن میکند.
 
-The defence is to not let it fire. Watch the context indicator and compact manually at a natural boundary, or write decisions into a plan doc or [handoff artifact](./Handoff%20artifact.md) on disk, where no summary can lose them. Most harnesses also let you customise the buffer — moving the threshold earlier or later, or turning autocompact off entirely — so you can tune how much headroom you keep before it fires.
+دفاع این است که نگذارید فعال شود. نشانگر زمینه را تماشا کنید و در یک مرز طبیعی دستی فشرده کنید، یا تصمیمها را در یک سند برنامه یا [سند انتقال زمینه](./Handoff%20artifact.md) روی دیسک بنویسید، جایی که هیچ خلاصهای نمیتواند گمشان کند. بیشتر بسترهای اجرایی به شما اجازه میدهند بافر را شخصیسازی کنید — آستانه را جلوتر یا عقبتر ببرید، یا فشردهسازی خودکار را کلاً خاموش کنید — تا بتوانید تنظیم کنید چقدر فضا قبل از فعال شدن نگه میدارید.
 
-_Usage:_
+_کاربرد:_
 
-"It doesn't seem to remember what we decided about the schema earlier."
+«به نظر نمیرسد یادش باشد قبلاً درباره شِما چه تصمیمی گرفتیم.»
 
-"Autocompact fired between [turns](./Turn.md) — the early decisions got summarised and we must have lost something. Reload the plan doc, or compact manually next time so you control what gets kept."
+«فشردهسازی خودکار بین [نوبتها](./Turn.md) فعال شد — تصمیمهای اولیه خلاصه شدند و حتماً چیزی را گم کردیم. سند برنامه را دوباره بارگذاری کن، یا دفعه بعد دستی فشرده کن تا خودت کنترل کنی چه چیزی نگه داشته میشود.»
