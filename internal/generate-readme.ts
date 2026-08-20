@@ -21,7 +21,7 @@ const LINK_RE = /\[([^\]]+)\]\(\.\/([^)]+)\.md\)/g;
 // Any relative markdown link, to distinguish entry links from broken/non-entry ones.
 const ANY_RELATIVE_LINK_RE = /\[[^\]]+\]\(\.\/[^)]+\)/g;
 const FRONTMATTER_DESC_RE = /^description:\s*(.+)$/m;
-const DESCRIPTION_MAX = 140;
+const DESCRIPTION_MAX = 160;
 
 type Section = { heading: string; terms: string[] };
 
