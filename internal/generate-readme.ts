@@ -170,7 +170,14 @@ function main(): void {
           `${term}.md: description is ${description.length} chars, max ${DESCRIPTION_MAX}: ${description}`
         );
       validateLinks(term, rest, onDisk);
-      parts.push(`### ${term}`, "", rewriteLinks(rest.trimEnd()), "");
+      parts.push(
+        `### ${term}`,
+        "",
+        `> ${description}`,
+        "",
+        rewriteLinks(rest.trimEnd()),
+        ""
+      );
     }
   }
 
